@@ -15,6 +15,11 @@ $grey_3: #414141;
 $grey_4: #2a2929;
 $grey_5: #110e08;
 
+body,
+html {
+	margin: 0;
+	padding: 0;
+}
 a {
 	text-decoration: none;
 	color: $grey_1;

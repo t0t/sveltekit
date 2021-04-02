@@ -2,8 +2,6 @@
     export let switchOn;
 </script>
 
-
-
 <section id="auto-play-cont">
     <!-- Rounded switch -->
     <label class="switch">
@@ -27,8 +25,8 @@
         position: absolute;
         left: 0;
         bottom: -30px;
-        background-color: white;
-        box-shadow: 0 0 3px black;
+        background-color: $white;
+        box-shadow: 0 0 3px $black;
         padding: 5px 0;
         border-radius: 5px;
     }
