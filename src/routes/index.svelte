@@ -1,7 +1,7 @@
 <script>
 	import QuoteRotator from '$lib/quoterotator/QuoteRotator.svelte';
-	import Footer from '$lib/Footer.svelte';
-
+	import FlipCard from "$lib/flashcard/FlipCard.svelte"
+	import Skillsbar from "$lib/skillsbar/Skillsbar.svelte";
 </script>
 
 <svelte:head>
@@ -9,3 +9,5 @@
 </svelte:head>
 
 <QuoteRotator />
+<FlipCard/>
+<Skillsbar />

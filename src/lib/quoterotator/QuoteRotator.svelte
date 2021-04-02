@@ -1,38 +1,41 @@
 <script>
-	import { quotes } from './quoteData.js';
+	import {
+		quotes
+	} from '$lib/data/quoteData.js';
 	import Quote from './Quote.svelte';
 	import Dot from './Dot.svelte';
 	import AutoPlayBtn from './AutoPlayBtn.svelte';
-	
+
 	/* ADVANCE QUOTE */
 	let quoteIndex = 0;
 	$: console.log(quoteIndex)
 	$: quote = quotes[quoteIndex].quote;
 	$: author = quotes[quoteIndex].author;
+	$: image = quotes[quoteIndex].image;
 	$: console.log(quoteIndex)
-	
+
 	const nextQuote = () => {
-		if (quoteIndex === quotes.length-1) {
+		if (quoteIndex === quotes.length - 1) {
 			quoteIndex = 0;
 		} else {
 			quoteIndex += 1;
-		}		
+		}
 	}
-	
+
 	const prevQuote = () => {
 		if (quoteIndex === 0) {
-			quoteIndex = quotes.length-1;
+			quoteIndex = quotes.length - 1;
 		} else {
 			quoteIndex -= 1;
-		}	
+		}
 	}
-	
+
 	/* AUTO PLAY */
 	let switchOn = false;
 	$: console.log(autoAdvance);
 	let autoAdvance;
 	let autoPlaying = false;
-	
+
 	const handleAutoAdv = () => {
 		if (switchOn) {
 			autoAdvance = setInterval(nextQuote, 5000);
@@ -41,7 +44,7 @@
 			clearInterval(autoAdvance);
 			autoPlaying = false;
 		}
-	}	
+	}
 </script>
 
 <main>
@@ -49,7 +52,7 @@
 
 		<!-- THE QUOTE -->
 		{#key quote}
-			<Quote {quote} {author} />
+			<Quote {quote} {author} {image}/>
 		{/key}
 		
 		<!-- Next/prev buttons -->
@@ -103,12 +106,10 @@
 	.dot-container {
 		text-align: center;
 		padding: 20px;
-		background: $grey_2;
 		position: relative;
 		bottom: 0;
 	}
 	
-
 	/* Next & previous buttons */
 	.prev, .next {
 		cursor: pointer;
@@ -117,7 +118,7 @@
 		width: auto;
 		margin-top: -30px;
 		padding: 16px;
-		color: grey_4;
+		color: $grey_0;
 		font-weight: bold;
 		font-size: 20px;
 		border-radius: 0 3px 3px 0;
@@ -128,14 +129,12 @@
 		left: 0;
 	}
 
-	/* Position the "next button" to the right */
 	.next {
 		position: absolute;
 		right: 0;
 		border-radius: 3px 0 0 3px;
 	}
 
-	/* On hover, add a black background color with a little bit see-through */
 	.prev:hover, .next:hover {
 		background-color: rgba($black,0.8);
 		color: $white;
