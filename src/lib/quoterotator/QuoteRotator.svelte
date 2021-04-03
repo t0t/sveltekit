@@ -47,8 +47,7 @@
 	}
 </script>
 
-<main>
-	<div class="slideshow-container">
+<div class="slideshow-container">
 
 		<!-- THE QUOTE -->
 		{#key quote}
@@ -57,39 +56,33 @@
 		
 		<!-- Next/prev buttons -->
 		<span href="#prev" 
-					class="prev" 
-					class:not-clickable={autoPlaying}
-					title="previous quote" 
-					on:click={prevQuote}>&#10094;</span>
+				class="prev" 
+				class:not-clickable={autoPlaying}
+				title="previous quote" 
+				on:click={prevQuote}>&#10094;</span>
 		
 		<span href="#next" 
-					class="next" 
-					class:not-clickable={autoPlaying}
-					title="next quote" 
-					on:click={nextQuote}>&#10095;</span>
+				class="next" 
+				class:not-clickable={autoPlaying}
+				title="next quote" 
+				on:click={nextQuote}>&#10095;</span>
 	</div>
 
 	<!-- Dots/bullets/indicators -->
 	<div class="dot-container">
 		{#each quotes as quote, i}
 			<Dot counter={i} 
-					 {quoteIndex}
-					 {autoPlaying}
-					 attribution={quote.author}
-					 on:click={() => quoteIndex = i}/>
+				{quoteIndex}
+				{autoPlaying}
+				attribution={quote.author}
+				on:click={() => quoteIndex = i}/>
 		{/each}
 		
 		<AutoPlayBtn bind:switchOn on:change={handleAutoAdv} />
 	</div>
-</main>	
 
 <style lang="scss">	
 	@use "../../app.scss" as *;
-
-	main {
-		width: 100%;
-		height: auto;
-	}
 	
 	/* Slideshow container */
 	.slideshow-container {
@@ -99,13 +92,13 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		height: 250px;
+		height: 50vh;
 	}
 
 	/* The dot/bullet/indicator container */
 	.dot-container {
 		text-align: center;
-		padding: 20px;
+		padding: $h2;
 		position: relative;
 		bottom: 0;
 	}
@@ -116,11 +109,11 @@
 		position: absolute;
 		top: 50%;
 		width: auto;
-		margin-top: -30px;
-		padding: 16px;
+		margin-top: -$h2;
+		padding: $h2;
 		color: $grey_0;
 		font-weight: bold;
-		font-size: 20px;
+		@include type-setting(1);
 		border-radius: 0 3px 3px 0;
 		user-select: none;
 	}

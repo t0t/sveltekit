@@ -1,14 +1,8 @@
 export const skillLevels = [{
-		skill: 'HTML',
-		percent: 75,
+		skill: 'HTML / CSS-Sass / SVG',
+		percent: 85,
 		color: 'red',
 		delTime: 0
-	},
-	{
-		skill: 'CSS',
-		percent: 75,
-		color: 'blue',
-		delTime: 500
 	},
 	{
 		skill: 'JavaScript / Svelte',
@@ -17,21 +11,21 @@ export const skillLevels = [{
 		delTime: 1000
 	},
 	{
-		skill: 'Python',
-		percent: 15,
+		skill: 'Blender / Python Scripting',
+		percent: 35,
 		color: 'green',
 		delTime: 1500
 	},
 	{
 		skill: '3D Printing',
-		percent: 55,
+		percent: 65,
 		color: 'rebeccapurple',
 		delTime: 2500
 	},
 	{
 		skill: 'Three JS',
-		percent: 25,
-		color: 'rebeccapurple',
+		percent: 28,
+		color: 'black',
 		delTime: 2500
 	}
 ];

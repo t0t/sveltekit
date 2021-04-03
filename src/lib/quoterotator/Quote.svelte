@@ -38,6 +38,7 @@ style="background-image: url({image});">
 	q,
 	p {
 		max-width: 75%;
+		@include type-setting(1);
 	}
 
 	.author {
