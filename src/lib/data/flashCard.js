@@ -1,11 +1,11 @@
 export const flashCard = [
 	{
-		word: "Sephirot",
-		image: "/img/bg1.jpg"
+		word: "Velociraptor",
+		image: "/img/velociraptor.jpg"
 	},
 	{
-		word: "vesica piscis",
-		image: "/img/bg2.jpg"
+		word: "Raptor Delta",
+		image: "/img/raptordelta.jpeg"
 	},
 	{
 		word: "vesica piscis",

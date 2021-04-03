@@ -3,10 +3,10 @@
     export let text = '';
     export let img = '';
     export let variante = 0;
-    let modificador = ['Light', 'Dark', 'Colored', 'Light2'];
+    let modificador = ['variante_0', 'variante_1'];
 </script>
 
-<div class="SectionHalf {modificador[variante]}">
+<div class="Banner {modificador[variante]}">
     <div class="BannerMedia">
         {#if img}
             <slot name="hasimage">
@@ -17,7 +17,7 @@
         <slot name="hasSVG"></slot>
     </div>
 
-    <div class="SectionHalfText">
+    <div class="BannerText">
         <h2>{title}</h2>
         <p>{@html text}</p>
         <slot />
@@ -27,7 +27,7 @@
 <style lang="scss">
 	@use "../../app.scss" as *;
 
-    .SectionHalf {
+    .Banner {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-areas: 'media' 'texto';
@@ -35,6 +35,7 @@
         img {
             width: 100%;
         }
+
         :global(video) {
             width: 100%;
             object-fit: cover;
@@ -53,7 +54,7 @@
             grid-area: media;
         }
 
-        .SectionHalfText {
+        .BannerText {
             display: grid;
             justify-items: start;
             align-self: center;
@@ -78,26 +79,10 @@
             }
         }
     }
-    .Light {
-        /* background-color: $grey_1; */
-        color: $grey_3;
-        p {
-            color: $grey_3;
-        }
-    }
-    .Dark {
+    .variante_0 {
         background-color: $grey_5;
     }
-    .Colored {
+    .variante_1 {
         color: $black;
-        background-color: $grey_1;
-        min-height: 100vh;
-    }
-    .Light2 {
-        background-color: $grey_0;
-        color: $grey_5;
-        p {
-            color: $grey_5;
-        }
     }
 </style>

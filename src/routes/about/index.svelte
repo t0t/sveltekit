@@ -1,7 +1,8 @@
 <script>
-    import Skillsbar from "$lib/skillsbar/Skillsbar.svelte";
+    import Section from "$lib/Section.svelte";
+    import AboutMeTxt from "$lib/aboutmetxt/AboutMeTxt.svelte";
 </script>
 
-<h1>About page</h1>
-
-<Skillsbar />
+<Section id="aboutmetxt" variante={1}>
+	<AboutMeTxt />
+</Section>
