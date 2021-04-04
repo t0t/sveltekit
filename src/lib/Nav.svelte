@@ -1,24 +1,23 @@
 <script>
-    export let pages = [];
-    // export let current_page;
-    const setCurrentPage = (e) => {
-        current_page = e.srcElement.firstChild.data
-        console.log(current_page)
-    }
-    console.log("ss",current_page)
+    import { pages } from "$lib/data/pages.js";
+    export let current_page;
 </script>
 
 <nav>
-    {#each pages as page}
-        <a href="{page.url}"
-        on:click={setCurrentPage}
-        >{page.name}</a>
+    {#each pages as {url, name}}
+        <a href="{url}"
+        on:click
+        class:active={name === current_page}
+        >
+            {name}
+        </a>
     {/each}
 </nav>
 
 <style lang="scss">
+    @use "../app.scss" as *;
     nav {
-        padding: 30px;
+        padding: $h3;
         text-align: center;
         a {
             &:hover {
@@ -26,4 +25,7 @@
             }    
         }
     }
+    .active {
+		background-color: $grey_0;
+	}
 </style>

@@ -67,12 +67,6 @@
 </section>
 
 <style>
-	@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
-
-	* {
-		box-sizing: border-box;
-		font-family: 'Josefin Sans', sans-serif;
-	}
 
 	.lightbox {
 		position: fixed;
