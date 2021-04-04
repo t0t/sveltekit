@@ -31,14 +31,16 @@
     nav {
         display: grid;
         grid-auto-flow: column;
-
         padding-top: 0;
+
         button {
             padding: $h0 $h1;
             border: none;
-            background-color: $grey_1;
+            color: $grey_0;
+            background-color: $grey_3;
             &:hover {
-                background-color: $grey_0;
+                background-color: $grey_1;
+                color: $grey_5;
                 cursor: pointer;
             }
         }
@@ -48,7 +50,7 @@
         padding: $h3;
     }
     .active {
-        color: $grey_0;
-        background-color: $grey_5;
+        color: $grey_5;
+        background-color: $grey_0;
     }
 </style>

@@ -5,7 +5,7 @@
     import TabHeaders from "$lib/tabheaders/TabHeaders.svelte";
 </script>
 
-<Section id="cover" variante={1}>
+<Section id="cover" variante={3}>
 	<Cover
 		title={coverData[3].title}
 		subtitle={coverData[3].subtitle}

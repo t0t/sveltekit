@@ -22,7 +22,6 @@
         background-size: cover;
         background-position: top center;
         position: relative;
-        background-color: $grey_4;
         display: flex;
         flex-direction: column;
         align-items: start;

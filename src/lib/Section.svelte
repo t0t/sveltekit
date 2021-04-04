@@ -4,7 +4,8 @@
     let modificador = [
         "Variante_0",
         "Variante_1",
-        "Variante_2"
+        "Variante_2",
+        "Variante_3"
     ];
 </script>
 
@@ -33,5 +34,9 @@
         display: grid;
         place-content: center;
         background-color: $grey_5;
+    }
+    .Variante_3 {
+        background-color: $grey_4;
+        padding: 0;
     }
 </style>

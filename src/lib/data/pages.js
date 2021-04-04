@@ -5,3 +5,8 @@ export const pages = [
     {name: "philosophy", url: "/philosophy"},
     {name: "lab", url: "/lab"}
 ]
+export const secondaryNav = [
+    {name: "artwork", url: "/artworks"},
+    {name: "philosophy", url: "/philosophy"},
+    {name: "lab", url: "/lab"}
+]
