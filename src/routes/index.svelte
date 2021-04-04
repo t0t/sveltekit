@@ -1,8 +1,19 @@
 <script>
 	import QuoteRotator from '$lib/quoterotator/QuoteRotator.svelte';
 	import CtaBanner from "$lib/ctabanner/CtaBanner.svelte";
+	import Cover from "$lib/Cover.svelte";
+	import { coverData } from "$lib/data/coverData.js";	
 	import Section from "$lib/Section.svelte";
 </script>
+
+<Section id="cover" variante={1}>
+	<Cover
+		title={coverData[0].title}
+		subtitle={coverData[0].subtitle}
+		text={coverData[0].text}
+		img={coverData[0].img}
+	/>
+</Section>
 
 <Section id="quoterotator" variante={1}>
 	<QuoteRotator />
