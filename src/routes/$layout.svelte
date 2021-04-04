@@ -14,7 +14,10 @@
 </svelte:head>
 
 <main>
-	<Nav on:click={setCurrentPage} {current_page} />
+	<Nav 	on:click={setCurrentPage} 
+			{current_page} 
+			variante={1}
+	/>
 	
 	<section>
 		<slot />
@@ -23,19 +26,7 @@
 	<Footer />
 </main>
 
-<style lang="scss">
+<!-- <style lang="scss">
 	@use "../app.scss" as *;
-    nav {
-        padding: $h3;
-        text-align: center;
-        a {
-            &:hover {
-                color: black;
-            }    
-        }
-    }
-	.active {
-		background-color: $grey_0;
-	}
 	
-</style>
+</style> -->
