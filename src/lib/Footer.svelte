@@ -1,11 +1,14 @@
+<script>
+    import Links from "$lib/Links.svelte"
+</script>
+
 <footer>
-    <p>This is the default site footer</p>
-    <slot />
+    <Links />
 </footer>
 
 <style lang="scss">
     footer {
-        padding: 20px;
+        padding: 0;
         background-color: #f3f3f3;
     }
 </style>

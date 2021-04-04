@@ -1,9 +1,6 @@
 <script>
-    import BannerTexto from "./BannerTexto.svelte";
+    import AboutMe from "./AboutMe.svelte";
+    import { aboutmeData } from '$lib/data/aboutMe.js';
 </script>
 
-<BannerTexto 
-    header="About me title" 
-    texto="txt about me" 
-    img="./img/avatar.jpg"
-/>
+<AboutMe {...aboutmeData} />
