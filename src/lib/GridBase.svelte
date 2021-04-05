@@ -7,39 +7,43 @@
 </script>
 
 <div class={modificador[variante]}>
-    <slot/>
+    <div><slot name="subarea1"></slot></div>
+    <div><slot></slot></div>
+    <div><slot name="subarea2"></slot></div>
 </div>
 
 <style lang="scss">
 	@use "../app.scss" as *;
-
+    
     .Grid_0 {
+        display: grid;
+        min-height: 50vh;
+        grid-template-areas: 
+            "main"
+            "subarea1"
+            "subarea2"
+        ;
         @include media(s2) {
-            display: grid;
-            /* justify-content: center; */
             grid-template-areas: 
-                "el1 el2"
-                "el1 el3"
+                "main main main subarea1"
+                "main main main subarea2"
             ;
-            grid-template-columns: 1fr 0.1fr 0.1fr;
-            background-color: yellow;
-            width: 100%;
         }
-
-        &:nth-child(1) {
-            grid-area: el1;
-            width: 100%;
-            height: auto;
+        *:nth-child(1) {
+            grid-area: subarea1;
+            background-color: $grey_3;
+            display: grid;
+            place-content: center;
         }
-        &:nth-child(2) {
-            grid-area: el2;
-
-            /* width: 100px; */
+        *:nth-child(2) {
+            grid-area: main;
+            background-color: grey_2;
         }
-        &:nth-child(3) {
-            grid-area: el3;
-            /* width: 50px; */
-            background-color: red;
+        *:nth-child(3) {
+            grid-area: subarea2;
+            display: grid;
+            place-content: center;
+            background-color: $grey_1;
         }
     }
     .Grid_1 {

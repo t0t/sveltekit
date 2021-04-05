@@ -77,10 +77,13 @@
     </g>
   </svg>
 
-  <Form on:submit={addItem} variante={1}>
-    <Input bind:value placeholder="Your word"/>
-    <Button variante={6} text="Add" />
-  </Form>
-
-  <Button on:click={() => save(svg)} variante={1} text="Download svg" />
+  <div slot="subarea1">
+    <Form on:submit={addItem} variante={1}>
+      <Input bind:value placeholder="Your word"/>
+      <Button variante={6} text="Add" />
+    </Form>
+  </div>
+  <div slot="subarea2">
+    <Button on:click={() => save(svg)} variante={1} text="Download svg" />
+  </div>
 </GridBase>
