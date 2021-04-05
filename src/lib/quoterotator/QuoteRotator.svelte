@@ -93,6 +93,10 @@
 		align-items: center;
 		justify-content: center;
 		height: 50vh;
+		
+		@include media(s3) {
+			height: 100vh;
+		}
 	}
 
 	/* The dot/bullet/indicator container */

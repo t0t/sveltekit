@@ -72,37 +72,11 @@
 			}
 		}
 	}
-
-	.Light {
-		background-color: $grey_1;
-		color: $grey_3;
-
-		p {
-			color: $grey_3;
-		}
-	}
-
-	.Dark {
-		background-color: $grey_3;
-	}
-
-	.Colored {
-		background-color: $grey_4;
-	}
-
-	.Light2 {
-		background-color: $grey_0;
-		color: $grey_5;
-
-		p {
-			color: $grey_5;
-		}
-	}
 </style>
 
 <svelte:window bind:innerWidth bind:innerHeight />
 
-<section class="PhiSvg {modificador[variante]}">
+<main class="PhiSvg">
 
 	<div class="BannerMedia">
 
@@ -137,4 +111,4 @@
 			}} />
 	</div>
 
-</section>
+</main>

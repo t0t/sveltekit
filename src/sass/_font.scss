@@ -81,11 +81,6 @@ i {
   font-style: italic;
 }
 
-// a,
-// a:visited {
-//   color:red;
-// }
-
 em {
   color: $grey_2;
   font-weight: $weight_normal;
@@ -136,7 +131,6 @@ h4 {
 small,
 p,
 dl {
-  text-align: left;
   @include type-setting(0);
 }
 p {

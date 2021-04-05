@@ -16,7 +16,7 @@
 	</GridBase>
 </Section> -->
 
-<Section id="cover" variante={1}>
+<Section id="cover" variante={3}>
 	<Cover
 		title={coverData[0].title}
 		subtitle={coverData[0].subtitle}

@@ -1,81 +1,73 @@
 <script>
-    // import {animateScroll} from "svelte-scrollto";
-    // import { backIn } from 'svelte/easing';
     import Button from '$lib/Button.svelte';
 
-    export let title = " "
-    export let subtitle = " "
-    export let text = " "
-    export let img = " "
+    export let title = ""
+    export let subtitle = ""
+    export let text = ""
+    export let img = ""
     export let is_home = false
     export let is_products_page = false
+
+    export let variante = 0
+    const modificador = [
+        "Cover_0",
+        "Cover_1",
+        "Cover_2"
+    ]
 
     let innerWidth, innerHeight, y;
 </script>
 
 <style lang="scss">	
 	@use "../app.scss" as *;
-    
-    .Cover {
-        height: 100px;
-        color: $highlight;
-        background-size: cover;
-        background-position: top center;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        background-repeat: no-repeat;
-        padding-left: 90px;
-        padding-top: 35px;
-        background-image: none;
-        
-        @include media(s2) { 
-            background-attachment: fixed;
-        }
 
-        @include media(s2) {
-            padding: $h3;
-            justify-content: center;
-            height: 100vh;
-            background-position: center;
-            display: grid;
-            align-items: end;
-            grid-template-areas: "title" "text";
-            text-align: center;
-        }
-        
-        .CoverTitle {
-            @include media(s1) {
-                grid-area: title;
-                display: flex;
-                flex-direction: column;
-            }
-        }
-        .CoverSubTitle {
-            margin-top: 0;
-            text-shadow: none;
-            display: none;
-
-            @include media(s2) {
-                display: inherit;
-                color: $grey_0;
-            }
-        }
-        .CoverText {
-            display: none;
-            @include media(s2) {
-                display: inherit;
-                padding-top: $h2;
-                grid-area: text;
-                border-top: 1px dotted $grey_0;
-            }
-        }
-    }
     .is_home {
         height: 27vh;
         @include media(s2) {
             height: 100vh;
+        }
+    }
+    .Cover_0 {
+        display: grid;
+        place-content: center;
+        min-height: 50vh;
+        background-color: $grey_4;
+        text-align: center;
+        padding: 0 $h2;
+        color: $grey_1;
+        
+        @include media(s2) {
+            /* background-color: $grey_5; */
+            color: $grey_0;
+            grid-template-areas: "title" "text";
+            background-size: cover;
+            background-position: top center;
+            background-attachment: fixed;
+            height: 100vh;
+            background-position: center;
+        }
+    }
+    .Cover_1 {
+        display: grid;
+        place-content: center;
+        min-height: 50vh;
+        color: $grey_4;
+        background-color: $highlight;
+        text-align: left;
+        padding: 0 $h2;
+        @include media(s2) {
+            text-align: center;
+        }
+    }
+    .Cover_2 {
+        display: grid;
+        place-content: center;
+        min-height: 50vh;
+        color: $grey_5;
+        background-color: $grey_1;
+        text-align: center;
+        @include media(s2) {
+            min-height: 100vh;
         }
     }
 </style>
@@ -83,7 +75,7 @@
 <svelte:window bind:innerWidth bind:innerHeight bind:scrollY={y} />
 
 <header 
-    class="Cover"
+    class={modificador[variante]}
     class:is_home
     style=" 
     opacity: { 1 - Math.max(0, y / (innerHeight/1.5))};
@@ -96,11 +88,12 @@
             <h2 class="CoverSubTitle"> {@html subtitle} </h2>
         </span>
     </h1>
-    <p>{text}</p>
-
-    {#if is_products_page}
+    
     <div class="CoverText">
-        <Button variante={5} text="ᐯ"/>
+        <p>{text}</p>
+    
+        {#if is_products_page}
+            <Button variante={5} text="ᐯ"/>
+        {/if}
     </div>
-    {/if}
 </header>

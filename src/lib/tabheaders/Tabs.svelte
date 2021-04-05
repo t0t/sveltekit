@@ -36,8 +36,8 @@
         button {
             padding: $h2 $h1;
             border: none;
-            color: $grey_0;
-            background-color: $grey_3;
+            color: $grey_4;
+            background-color: $grey_0;
             &:hover {
                 background-color: $grey_1;
                 color: $grey_5;
@@ -46,11 +46,10 @@
         }
     }
     article {
-        color: $grey_4;
         padding: $h3;
     }
     .active {
-        color: $grey_5;
-        background-color: $grey_0;
+        color: $black;
+        background-color: $grey_1;
     }
 </style>

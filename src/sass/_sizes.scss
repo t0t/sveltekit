@@ -35,3 +35,7 @@ $h-4: 0.09rem;
 @mixin margin-bottom($level: 0) {
     margin-bottom: size($level);
 }
+
+svg {
+    max-height: 90vh;
+}

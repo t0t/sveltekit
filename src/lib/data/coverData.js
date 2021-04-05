@@ -20,7 +20,7 @@ export const coverData = [
     {
         title: "+0+1234",
         subtitle: "<span class='tachado'>My</span> A Holistic Philosophy",
-        text: "dddd",
-        img: "./img/bg3.jpg"
+        text: "Sentir Orden Forma Conexión",
+        img: "./img/bg4.jpg"
     }
 ]

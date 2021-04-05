@@ -17,8 +17,8 @@ $tertiary: $grey_3;
 $quaternary: $grey_5;
 
 // Specials
-$highlight: #e8b28a;
-$highlight_1: $highlight;
+$highlight: rgb(232, 178, 138);
+$highlight_1: rgba($white, 0.65);
 $highlight_2: lighten( $highlight, 3% );
 $highlight_3: lighten( $highlight, 0.1% );
 

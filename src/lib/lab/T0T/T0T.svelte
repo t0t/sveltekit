@@ -65,7 +65,7 @@
     }
 </style>
 
-<GridBase variante={0}>
+<GridBase variante={1}>
   <svg bind:this={svg} viewBox="-1 -1 {canvas.width} {canvas.height}">
     <g transform="translate(150,150) scale(0.7)" >
       {#each circles as circle}
@@ -83,7 +83,7 @@
   <div slot="subarea1">
     <hgroup>
       <h2>Meta-Mapa +0+1234</h2>
-      <p>Crea y descarga tu mapa</p>
+      <p>Cualquier palabra que escribas se ordena naturalmente en una de estas zonas.</p>
     </hgroup>
     <Form on:submit={addItem} variante={1}>
       <Input bind:value placeholder="Your word"/>

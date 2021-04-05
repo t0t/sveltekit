@@ -7,7 +7,7 @@
 	import Section from "$lib/Section.svelte";
 </script>
 
-<Section id="cover" variante={1}>
+<Section id="cover" variante={3}>
 	<Cover
 		title={coverData[1].title}
 		subtitle={coverData[1].subtitle}

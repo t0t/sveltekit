@@ -19,20 +19,21 @@
         display: grid;
         min-height: 50vh;
         grid-template-areas: 
-            "main"
+            "subarea0"
             "subarea1"
             "subarea2"
         ;
         @include media(s2) {
+            grid-template-rows: 1fr 1fr;
             grid-template-areas: 
-                "main main main subarea1"
-                "main main main subarea2"
+                "subarea0 subarea1"
+                "subarea0 subarea2"
             ;
         }
         *:nth-child(1) {
             grid-area: subarea1;
             display: grid;
-            place-content: center;
+            align-self: end;
         }
         *:nth-child(2) {
             grid-area: main;
@@ -44,5 +45,35 @@
         }
     }
     .Grid_1 {
+        display: grid;
+        min-height: 50vh;
+        /* gap: $h3; */
+        grid-template-areas: 
+            "subarea0"
+            "subarea1"
+            "subarea2"
+        ;
+        @include media(s2) {
+            grid-template-areas: 
+                "subarea0 subarea1"
+                "subarea0 subarea2"
+            ;
+        }
+        *:nth-child(1) {
+            grid-area: subarea1;
+            display: grid;
+            align-self: end;
+            text-align: center;
+        }
+        *:nth-child(2) {
+            grid-area: subarea0;
+            min-width: 50vw;
+        }
+        *:nth-child(3) {
+            grid-area: subarea2;
+            display: grid;
+            align-self: start;
+            place-content: center;
+        }
     }
 </style>
