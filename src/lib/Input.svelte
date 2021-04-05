@@ -1,31 +1,35 @@
 <script>
-    export let value = ''
-    export let placeholder = '"...בראשית ברא אלהים"'
-    const onInput = (e) => (value = e.target.value)
-  </script>
+	export let value = '';
+	export let placeholder = '"...בראשית ברא אלהים"';
+	const onInput = (e) => (value = e.target.value);
+</script>
+
+<style lang="scss">
+	@use "../app.scss" as *;
+
+	*:focus {
+		outline: none;
+	}
+	input {
+		@include type-setting(1);
+		padding: $h1;
+		border: none;
+		background-color: $white;
   
-  <style type="text/scss">
-    *:focus {
-      outline: none;
-    }
-    input {
-      font-size: 2em;
-      padding: var(--basepadding);
-      border: none;
-      background-color: #e5e5e5;
-      &:focus-within {
-        background-color: var(--white);
-        color: var(--black);
-        &::placeholder {
-          color: transparent;
-        }
-      }
-      border-top-left-radius: var(--basepadding);
-      border-bottom-left-radius: var(--basepadding);
-      &::placeholder {
-          color: var(--secondary);
-      }
-    }
-  </style>
-  
-  <input {value} {placeholder} type="" name="" on:input={onInput} />
+		&:focus-within {
+			background-color: $highlight;
+			color: $grey_5;
+
+			&::placeholder {
+				color: transparent;
+			}
+		}
+		border-top-left-radius: $h2;
+		border-bottom-left-radius: $h2;
+		&::placeholder {
+			color: $grey_4;
+		}
+	}
+</style>
+
+<input {value} {placeholder} type="" name="" on:input={onInput} />

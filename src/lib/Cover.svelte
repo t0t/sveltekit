@@ -93,7 +93,7 @@
     <h1 class="CoverTitle">
         {title} <br>
         <span>
-            <h2 class="CoverSubTitle"> {subtitle} </h2>
+            <h2 class="CoverSubTitle"> {@html subtitle} </h2>
         </span>
     </h1>
     <p>{text}</p>

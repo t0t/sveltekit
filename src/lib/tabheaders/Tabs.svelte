@@ -34,7 +34,7 @@
         padding-top: 0;
 
         button {
-            padding: $h0 $h1;
+            padding: $h2 $h1;
             border: none;
             color: $grey_0;
             background-color: $grey_3;

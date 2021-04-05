@@ -1,43 +1,42 @@
 <script>
 	import Lightbox from './Lightbox.svelte';
-	  import ImageDisplay from './ImageDisplay.svelte';
-	  
-	  let modalOpen = false;
-	  // $: console.log(modalOpen);
-	  
-	  let imageShowingIndex = 0;
-	  
-	  const handleImgClick = (e) => {
-		  imageShowingIndex = Number(e.target.id);
-		  modalOpen = true;
-	  }
-	  
-  </script>
-  
-  <!-- The Modal/Lightbox -->
-  {#if modalOpen}
-	  <Lightbox on:click={() => modalOpen = false} {imageShowingIndex} />
-  {:else}
-	  <ImageDisplay on:click={handleImgClick} />	
-  {/if}
-	  
-  <!-- Button to open Lightbox -->		
-  <section>		
-	  <button on:click={() => modalOpen = true}>
-		  Lightbox
-	  </button>		
-  </section>
+	import Button from '$lib/Button.svelte';
+	import ImageDisplay from './ImageDisplay.svelte';
 
-<style>
+	let modalOpen = false;
+	// $: console.log(modalOpen);
 
-	/* Position the image container (needed to position the left and right arrows) */
-	.container {
+	let imageShowingIndex = 0;
+
+	const handleImgClick = (e) => {
+		imageShowingIndex = Number(e.target.id);
+		modalOpen = true;
+	};
+</script>
+
+<style lang="scss">
+	@use "../../app.scss"as *;
+
+	aside {
+		display: grid;
+		place-items: center;
+		padding-bottom: $h3;
+	}
+
+	/* .container {
 		position: relative;
-	}
-
-	.thumbnails-row {
-		width: 100%;
-		display: flex;
-		align-self: flex-end;
-	}
+	} */
 </style>
+
+<!-- The Modal/Lightbox -->
+{#if modalOpen}
+	<Lightbox on:click={() => (modalOpen = false)} {imageShowingIndex} />
+{:else}
+	<ImageDisplay on:click={handleImgClick} />
+{/if}
+
+<!-- Button to open Lightbox -->
+<aside>
+	<Button variante={2} text="View gallery" on:click={() => (modalOpen = true)} />
+</aside>
+

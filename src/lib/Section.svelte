@@ -26,15 +26,18 @@
     .Variante_0 {
         background-color: $grey_0;
     }
+
     .Variante_1 {
         background-color: $grey_0;
         padding: 0;
     }
+
     .Variante_2 {
         display: grid;
         place-content: center;
         background-color: $grey_5;
     }
+
     .Variante_3 {
         background-color: $grey_4;
         padding: 0;

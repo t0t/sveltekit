@@ -18,8 +18,8 @@ export const coverData = [
         img: "./img/bg1.jpg"
     },
     {
-        title: "Philosophy",
-        subtitle: "+0+1234",
+        title: "+0+1234",
+        subtitle: "<span class='tachado'>My</span> A Holistic Philosophy",
         text: "dddd",
         img: "./img/bg3.jpg"
     }

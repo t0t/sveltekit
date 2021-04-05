@@ -25,3 +25,16 @@
     background-color: $white; 
     text-shadow: none;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+// Extras
+.tachado {
+    text-decoration: line-through;
+}
+.not-clickable {
+    pointer-events: none;
+}

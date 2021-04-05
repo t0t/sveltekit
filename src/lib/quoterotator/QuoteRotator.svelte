@@ -132,9 +132,5 @@
 		background-color: rgba($black,0.8);
 		color: $white;
 		text-decoration: none;
-	}	
-	
-	.not-clickable {
-		pointer-events: none;
 	}
 </style>

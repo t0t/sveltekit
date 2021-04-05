@@ -4,13 +4,16 @@
     export let is_submit = false;
     export let target = "_blank";
     export let variante = 0;
+    export let valorinput;
+
     let modificador = [
         "Light",
         "Dark",
-        "Colored",
+        "Variante_2",
         "ColoredInvert",
         "UnicodeIcon",
-        "ScrollTo"
+        "ScrollTo",
+        "Variante_6"
     ];
 </script>
 
@@ -21,9 +24,6 @@
         background-color: transparent;
         user-select: none;
         &:focus {
-            /* outline-width: 1px;
-            outline-style: dotted;
-            outline-color: unset;             */
             border: none;
         }
     }
@@ -33,15 +33,16 @@
         font-size: inherit;
         display: flex;
         align-items: center;
-        padding: $h0 $h1;
+        padding: $h1 $h2;
         text-decoration: none;
         border-width: 1px;
-        border-style: solid;
-        border-radius: 4px;
+        border-style: dotted;
+        /* border-radius: 0; */
         @include margin-top(1);
         @include margin-bottom(1);
         max-width: $h8;
         position: relative;
+
         &:after {
             font-size: $h2;
             padding-left: $h0;
@@ -69,9 +70,12 @@
             border-color: $grey_1;
         }
     }
-    .Colored {
-        color: $grey_2;
+    .Variante_2 {
+        color: $grey_1;
         border-color: $grey_2;
+        margin-bottom: 0;
+        margin-top: 0;
+
         &:hover {
             color: $grey_5;
             background-color: $grey_0;
@@ -112,6 +116,24 @@
             color: $grey_0;
         }
     }
+    .Variante_6 {
+        display: block;
+        border: none;
+        text-align: center;
+        margin: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: $h2;
+        border-bottom-right-radius: $h2;
+        
+        @include type-setting(1);
+        color: $grey_1;
+        background-color: $grey_4;
+        &:hover {
+            background-color: $highlight_2;
+            color: $grey_5;
+        }
+    }
 </style>
 
 {#if url}
@@ -123,7 +145,10 @@
         {text}
     </button>
 {:else}
-    <button on:click class="{modificador[variante]}">
+    <button on:click 
+    class="{modificador[variante]}"
+    class:not-clickable={valorinput==""}
+    >
         {text}
     </button>
 {/if}

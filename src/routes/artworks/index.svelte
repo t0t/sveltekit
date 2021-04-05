@@ -1,12 +1,10 @@
 <script>
-	// import ProductGallery from "$lib/productgallery/ProductGallery.svelte"
 	import { coverData } from "$lib/data/coverData.js";	
 	import FlipCard from "$lib/flashcard/FlipCard.svelte"
 	import SlideGallery from "$lib/slidegallery/SlideGallery.svelte"
 	import LightboxGallery from "$lib/lightboxgallery/LightboxGallery.svelte"
 	import Cover from "$lib/Cover.svelte";
 	import Section from "$lib/Section.svelte";
-
 </script>
 
 <Section id="cover" variante={1}>
@@ -22,14 +20,10 @@
 	<SlideGallery/>
 </Section>
 
-<Section id="lightboxgallery" variante={2}>
+<Section id="lightboxgallery" variante={3}>
 	<LightboxGallery/>
 </Section>
 
 <Section id="flipcard" variante={2}>
 	<FlipCard/>
 </Section>
-
-<style>
-
-</style>

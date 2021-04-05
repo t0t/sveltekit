@@ -3,41 +3,47 @@
 	import { images } from '$lib/data/imageData.js';
 </script>
 
+<style lang="scss">
+	@use "../../app.scss" as *;
 
-<style>
+	.DemoGallery {
+		padding: $h3;
+		text-align: center;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: $h2;
 
-.demo-img-row {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}	
+		@include media(s2) {
+			grid-template-columns: repeat(auto-fill, minmax(133px, 20%));
+			place-content: center;
+			gap: $h2;
+		}
+	}
 	
-.demo-cont {
-  width: 25%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}	
+	img {
+		border-radius: 50%;
+		transition: .2s;
+		cursor: pointer;
+		place-self: center;
+		
+		@include media(s2) {
+			margin: $h2;
+			/* max-width: 50vw; */
+		}
+	}
 	
-img {
-	width: 50%;
-	margin: 10px;
-	border: .5vw solid white;
-	transition: .2s;
-	cursor: pointer;
-}		
-	
-img:hover {   
-  box-shadow: 0 0 13px rgba(0, 0, 0, .8);
-}	
+	@include media(s2) {
+		img:hover {   
+			box-shadow: 0 $h1 $h2 rgba($grey_5, 0.5);
+			transform: scale(1.05);
+		}
+	}
 </style>
 
 
 <!-- Image Row -->
-<div class="demo-img-row">
+<div class="DemoGallery">
 	{#each images as {id, imgurl, name}}
-		<div class="demo-cont">
-			<img {id} src={imgurl} alt={name} on:click />
-		</div>
+		<img {id} src={imgurl} alt={name} on:click />
 	{/each}
 </div>

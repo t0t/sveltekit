@@ -29,91 +29,93 @@
 	const goToSlide = (slideID) => (imageShowingIndex = Number(slideID));
 </script>
 
-<section class="lightbox" in:fly={{ x: -300 }} out:fade>
+<div class="lightbox" in:fly={{ x: -300 }} out:fade>
 	<span class="close cursor" on:click>&#10007;</span>
 
-	<main>
-		<!-- image gallery -->
-		<div class="container">
-			<Slide
-				image={image.imgurl}
-				altTag={image.name}
-				attr={image.attribution}
-				slideNo={image.id + 1}
-				totalSlides={images.length}
+	<!-- image gallery -->
+	<Slide
+		image={image.imgurl}
+		altTag={image.name}
+		attr={image.description}
+		slideNo={image.id + 1}
+		totalSlides={images.length}
+	/>
+
+	<!-- Image text -->
+	<Caption
+		caption={images[imageShowingIndex].description}
+		on:prevClick={prevSlide}
+		on:nextClick={nextSlide}
+	/>
+
+	<!-- Thumbnail images -->
+	<div class="Thumbnails">
+		{#each images as { id, imgurl, name }}
+			<Thumbnail
+				thumbImg={imgurl}
+				altTag={name}
+				{id}
+				selected={Number(imageShowingIndex) === id}
+				on:click={() => goToSlide(id)}
 			/>
-		</div>
+		{/each}
+	</div>
+</div>
 
-		<!-- Image text -->
-		<Caption
-			caption={images[imageShowingIndex].name}
-			on:prevClick={prevSlide}
-			on:nextClick={nextSlide}
-		/>
-
-		<!-- Thumbnail images -->
-		<div class="thumbnails-row">
-			{#each images as { id, imgurl, name }}
-				<Thumbnail
-					thumbImg={imgurl}
-					altTag={name}
-					{id}
-					selected={Number(imageShowingIndex) === id}
-					on:click={() => goToSlide(id)}
-				/>
-			{/each}
-		</div>
-	</main>
-</section>
-
-<style>
+<style lang="scss">
+	@use "../../app.scss"as *;
 
 	.lightbox {
 		position: fixed;
-		z-index: 1;
+		z-index: 9999;
 		left: 0;
 		top: 0;
+		display: grid;
+		grid-template-areas: 
+			"slide thumb"
+			"slide thumb"
+			"captio thumb"
+		;
 		width: 100%;
-		height: 100%;
-		overflow: auto;
-		background-color: #000;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		height: 100vh;
+		overflow: hidden;
+		background-color: $grey_5;
+
+		@include media(s3) {
+			overflow: auto;
+			grid-template-areas: 
+				"captio slide thumb"
+			;
+		}
 	}
 
-	main {
-		width: 50vw;
-		display: flex;
-		flex-direction: column;
-		background-color: #000;
-	}
-
-	/* Position the image container (needed to position the left and right arrows) */
-	.container {
-		position: relative;
-	}
-
-	.thumbnails-row {
-		width: 100%;
-		display: flex;
-		align-self: flex-end;
+	.Thumbnails {
+		grid-area: thumb;
+		width: $h4;
+		margin-top: $h4;
+		overflow-y: auto;
+    	/* height: 60vh; */
+		@include media(s2) {
+			width: $h5;
+			gap: $h2;
+			overflow-y: auto;
+		}
 	}
 
 	/* The Close Button */
 	.close {
-		color: #ddd;
+		padding: $h1;
+		color: $highlight;
 		position: absolute;
-		top: 3%;
-		right: 3%;
-		font-size: 1.5rem;
-		font-weight: 200;
+		z-index: 1000;
+		top: $h0;
+		right: $h1;
+		@include type-setting(1);
 	}
 
 	.close:hover,
 	.close:focus {
-		color: #999;
-		text-decoration: none;
+		color: $grey_0;
 		cursor: pointer;
 	}
 </style>

@@ -18,13 +18,13 @@
 
 <!-- LAB Experiments-->
 <Section id="phi" variante={1}>
-	<PhiSvg variante={2} title="phi title" text="testttt" />
+	<PhiSvg variante={2} title="La Divina Proporción" text="<p>Sentir el Orden da Forma a la Conexión. Diseño generativo en <code>JS</code> y <code>SVG</code> de la proporción áurea. <br> <small><i>Basado en una demo de Tan Li Hau.</i></small></p>" />
 </Section>
 
 <Section id="t0t" variante={4}>
 	<T0T />
 </Section>
 
-<Section id="gematria" variante={0}>
+<Section id="gematria" variante={2}>
 	<Gematria />
 </Section>
