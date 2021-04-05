@@ -78,7 +78,6 @@ small {
 }
 
 i {
-  // color: $grey_4;
   font-style: italic;
 }
 
@@ -142,6 +141,10 @@ dl {
 }
 p {
   margin-bottom: $h0;
+}
+
+hgroup {
+  margin-bottom: $h2;
 }
 // p:not(:first-child) {
 //   background-color: red;

@@ -70,18 +70,6 @@
 				margin-right: $h2;
 				max-width: $bp1;
 			}
-
-			h2 {
-				font-weight: bold;
-				margin-top: $h0;
-				margin-right: 0;
-				margin-bottom: $h0;
-				margin-left: 0;
-
-				@include media(s1) {
-					font-weight: inherit;
-				}
-			}
 		}
 	}
 
@@ -133,10 +121,10 @@
 	</div>
 
 	<div class="PhiSvgText">
-		<h2>{title}</h2>
-		<p>
-			{@html text}
-		</p>
+		<hgroup>
+			<h2>{title}</h2>
+			<p>{@html text}</p>
+		</hgroup>
 		<div class="controls">
 			<input type="number" bind:value={angle} step="0.001" />
 			<input type="range" bind:value={$tweenedCount} min={0} max={numDots} />

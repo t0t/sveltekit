@@ -31,19 +31,16 @@
         }
         *:nth-child(1) {
             grid-area: subarea1;
-            background-color: $grey_3;
             display: grid;
             place-content: center;
         }
         *:nth-child(2) {
             grid-area: main;
-            background-color: grey_2;
         }
         *:nth-child(3) {
             grid-area: subarea2;
             display: grid;
             place-content: center;
-            background-color: $grey_1;
         }
     }
     .Grid_1 {

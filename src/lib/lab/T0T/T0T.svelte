@@ -60,6 +60,9 @@
         stroke: $grey_1;
         stroke-width: 4;
     }
+    hgroup, p {
+      text-align: center;
+    }
 </style>
 
 <GridBase variante={0}>
@@ -78,6 +81,10 @@
   </svg>
 
   <div slot="subarea1">
+    <hgroup>
+      <h2>Meta-Mapa +0+1234</h2>
+      <p>Crea y descarga tu mapa</p>
+    </hgroup>
     <Form on:submit={addItem} variante={1}>
       <Input bind:value placeholder="Your word"/>
       <Button variante={6} text="Add" />

@@ -1,20 +1,20 @@
 <script>
 	import { coverData } from "$lib/data/coverData.js";	
 	import Section from "$lib/Section.svelte";
-	import GridBase from "$lib/GridBase.svelte";
+	// import GridBase from "$lib/GridBase.svelte";
 	import QuoteRotator from '$lib/quoterotator/QuoteRotator.svelte';
 	import CtaBanner from "$lib/ctabanner/CtaBanner.svelte";
 	import Cover from "$lib/Cover.svelte";
 	import NavSecondary from "$lib/NavSecondary.svelte";
 </script>
 
-<Section variante={3}>
+<!-- <Section variante={3}>
 	<GridBase>
 		<div slot="subarea1">header</div>
 		<div><p>hole</p></div>
 		<div slot="subarea2">footer</div>
 	</GridBase>
-</Section>
+</Section> -->
 
 <Section id="cover" variante={1}>
 	<Cover
