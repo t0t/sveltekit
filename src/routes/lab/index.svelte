@@ -21,7 +21,7 @@
 	<PhiSvg variante={2} title="La Divina Proporción" text="<p>Sentir el Orden da Forma a la Conexión. Diseño generativo en <code>JS</code> y <code>SVG</code> de la proporción áurea. <br> <small><i>Basado en una demo de Tan Li Hau.</i></small></p>" />
 </Section>
 
-<Section id="t0t" variante={4}>
+<Section id="t0t" variante={1}>
 	<T0T />
 </Section>
 

@@ -4,7 +4,7 @@
     export let is_submit = false;
     export let target = "_blank";
     export let variante = 0;
-    export let valorinput;
+    export let valorinput = "input";
 
     let modificador = [
         "Light",

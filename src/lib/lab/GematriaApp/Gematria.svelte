@@ -1,4 +1,5 @@
 <script>
+	import Form from '$lib/Form.svelte';
 	import Button from '$lib/Button.svelte';
 	import Input from '$lib/Input.svelte';
 	import Alert from '$lib/Alert.svelte';
@@ -117,77 +118,65 @@
 </script>
 
 <style lang="scss">
-	@use "../../../app.scss" as *;
+	@use "../../../app.scss"as *;
 
-	h3 {
+	header {
+		text-align: center;
 		margin-bottom: $h2;
 	}
 
-  .result {
-    color: $grey_1;
-    font-weight: bold;
-    @include type-setting(4);
-  }
+	.result {
+		color: $grey_1;
+		font-weight: bold;
+		@include type-setting(4);
+	}
 
 	small {
 		display: block;
 		@include type-setting(0);
 		margin: $h1;
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
 	}
 
 	main {
-		height: 100vh;
 		display: grid;
-		grid-template-columns: 1fr;
-		align-content: center;
-		justify-items: center;
+		place-items: center;
 		text-align: center;
 	}
 
-  p,
-  small {
-    text-align: center;
-  }
-
-	form {
-		display: grid;
-		max-width: 600px;
-		grid-template-columns: 1fr 0.5fr;
-		grid-template-areas: 'i b';
-		justify-content: center;
-		align-content: center;
+	p,
+	small {
+		text-align: center;
 	}
 </style>
 
+<header>
+	<h2>Gematria App</h2>
+	<p>Lo que valen las palabras hebreas</p>
+</header>
+
 <main>
-	<header>
-		<h2>Gematria App</h2>
-		<p>Lo que valen las palabras hebreas</p>
-	</header>
+	<h2 class="result">{counter}</h2>
 
-	<section>
-		<h2 class="result">{counter}</h2>
-		<form name="myForm" on:submit|preventDefault={handleSubmit}>
-			<Input bind:value={valorinput} />
-			<Button variante={6} text="Go!"
-			{valorinput} />
-		</form>
+	<Form on:submit={handleSubmit} variante={0}>
+		<Input bind:value={valorinput} />
+		<Button variante={6} text="Go!" {valorinput} />
+	</Form>
 
-		{#if haserror == true}
-			<Alert>{errormessage}</Alert>
-		{/if}
-	</section>
-
-	<footer>
-		<small>בראשית ברא אלהים את השמים ואת הארץ (Génesis, 1)</small>
-		<small>
-			<a href="https://tanach.us/Server.txt?Genesis*&content=Consonants" target="_blank"> 
-        Puedes tomar los textos hebreos directamente del Codex de Leningrado
-			</a>
-		</small>
-	</footer>
+	{#if haserror == true}
+		<Alert>{errormessage}</Alert>
+	{/if}
 </main>
+
+<footer>
+	<small>בראשית ברא אלהים את השמים ואת הארץ (Génesis, 1)</small>
+	<small>
+		<a href="https://tanach.us/Server.txt?Genesis*&content=Consonants" target="_blank"> 
+	Puedes tomar los textos hebreos directamente del Codex de Leningrado
+		</a>
+	</small>
+</footer>

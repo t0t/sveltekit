@@ -1,7 +1,10 @@
 <script>
+  // import {fade} from 'svelte/transition';
+  import GridBase from "$lib/GridBase.svelte";
   import Draggable from "./Draggable.svelte";
+  import Form from "$lib/Form.svelte";
+  import Input from "$lib/Input.svelte";
   import Button from "$lib/Button.svelte";
-  import {fade} from 'svelte/transition';
 
   let x = 0
   let y = 0;
@@ -27,6 +30,21 @@
     // Anade al array el texto del input 
     new_items = [...new_items, value]
   }
+
+  let svg = null;
+  const save = (svg, name = 'your-01234-map.svg') => {
+		svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+		let svgData = svg.outerHTML;
+		let preface = '<?xml version="1.0" standalone="no"?>\r\n';
+		let svgBlob = new Blob([preface, svgData], {type:"image/svg+xml;charset=utf-8"});
+		let svgUrl = URL.createObjectURL(svgBlob);
+		let downloadLink = document.createElement("a");
+		downloadLink.href = svgUrl;
+		downloadLink.download = name;
+		document.body.appendChild(downloadLink);
+		downloadLink.click();
+		document.body.removeChild(downloadLink);
+}
 </script>
 
 <style lang="scss">	
@@ -39,35 +57,30 @@
     }
     circle {
         fill: none;
-        stroke: $grey_0;
+        stroke: $grey_1;
         stroke-width: 4;
     }
-    .controls {
-        padding: 4px;
-    }
-    svg {}
 </style>
 
-<svg viewBox="-1 -1 {canvas.width} {canvas.height}" transform="">
-  <g transform="translate(150,150) scale(0.7)">
-    {#each circles as circle}
-    <circle cx={circle.cx} cy={circle.cy} r={circle.r} id={circle.id} />
-    {/each}
-    <!-- matrix( scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY() ) -->
-    {#each items as item}
-      <Draggable x={item.xpos} y={item.ypos}>{item.id}</Draggable>
-    {/each}
-  
-    {#each new_items as new_i}
-      <Draggable {x} {y}>{new_i}</Draggable>
-    {/each}
-  </g>
+<GridBase variante={0}>
+  <svg bind:this={svg} viewBox="-1 -1 {canvas.width} {canvas.height}">
+    <g transform="translate(150,150) scale(0.7)" >
+      {#each circles as circle}
+      <circle cx={circle.cx} cy={circle.cy} r={circle.r} id={circle.id} fill="none" stroke="black"/>
+      {/each}
+      {#each items as item}
+        <Draggable x={item.xpos} y={item.ypos}>{item.id}</Draggable>
+      {/each}
+      {#each new_items as new_i}
+        <Draggable {x} {y}>{new_i}</Draggable>
+      {/each}
+    </g>
   </svg>
 
-<div class="controls" transition:fade>
-  <form on:submit|preventDefault={addItem}>
-    <input bind:value placeholder="infinitud, espíritu, alma, mente, cuerpo">
-    <Button variante={1} text="Añade item al mapa" />
-  </form>
-</div>
-<slot></slot>
+  <Form on:submit={addItem} variante={1}>
+    <Input bind:value placeholder="Your word"/>
+    <Button variante={6} text="Add" />
+  </Form>
+
+  <Button on:click={() => save(svg)} variante={1} text="Download svg" />
+</GridBase>

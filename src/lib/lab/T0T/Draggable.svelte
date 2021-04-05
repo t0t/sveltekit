@@ -32,6 +32,7 @@
 
 <svelte:window on:mouseup={stop} />
 <text x={x} y={y} 
+    font-size="55"
     on:mousedown={start}
     on:mousemove={move}
     class="draggable"
