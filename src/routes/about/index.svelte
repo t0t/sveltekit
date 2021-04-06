@@ -4,7 +4,7 @@
     import Skillsbar from "$lib/skillsbar/Skillsbar.svelte";
 </script>
 
-<Section id="aboutmetxt" variante={1}>
+<Section id="aboutmetxt" variante={3}>
 	<AboutMeTxt />
 </Section>
 

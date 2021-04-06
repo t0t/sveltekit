@@ -2,6 +2,7 @@
     import { coverData } from "$lib/data/coverData.js";	
 	import GridBase from "$lib/GridBase.svelte";
     import Cover from "$lib/Cover.svelte";
+    import Svg from "$lib/Svg.svelte";
     import Section from "$lib/Section.svelte";
     import TabHeaders from "$lib/tabheaders/TabHeaders.svelte";
 </script>
@@ -13,16 +14,12 @@
 		title={coverData[3].title}
 		subtitle={coverData[3].subtitle}
 		text={coverData[3].text}
+		img={coverData[3].img}
 	/>
 </Section>
 
 <Section variante={0}>
 	<GridBase variante={1}>
-		<hgroup slot="subarea1">
-			<h2>+0+1234</h2>
-			<h3>Hacia el encuentro con todo lo que Es</h3>
-			<h4>+0+1234 consiste en una hermenéutica de la Creación que observa experiencialmente sus principios universales. Ancestralmente 5 símbolos numéricos representan las partes de Todo.</h4>
-		</hgroup>
 
 		<svg fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 193 169">
 			<path fill="none" stroke="#000" stroke-width=".7" d="M4 165l31-53 30 53H4zm62 0l30-53 31 53H66zm61 0l31-53 30 53h-61zm-92-54l31-53 30 53H35zm61 0l31-53 31 53H96zM66 58L96 5l31 53H66z"/>
@@ -38,6 +35,12 @@
 			<circle cx="123.2" cy="98.5" r="6" transform="translate(-17 -8) scale(.67024)"/>
 		</svg>
 
+		<hgroup slot="subarea1">
+			<h2>+0+1234</h2>
+			<h3>Hacia el encuentro con todo lo que Es</h3>
+			<h4>+0+1234 consiste en una hermenéutica de la Creación que observa experiencialmente sus principios universales. Ancestralmente 5 símbolos numéricos representan las partes de Todo.</h4>
+		</hgroup>
+
 		<nav slot="subarea2">
 			<a href="https://slides.com/sergiofores/" target="_blank">Slides</a> 
 			<a href="https://docs.google.com/document/d/15oUQRghNb_lihCFGJ9Ls0z1PyihD_a18v1V3AohVqQ4/edit?usp=sharing" target="_blank">Libro</a>
@@ -45,6 +48,55 @@
 	</GridBase>
 </Section>
 
-<Section id="tabheaders" variante={3}>
+<Section variante={0}>
+	<GridBase variante={0}>
+
+		<img src="./img/logo.svg" alt="">
+	
+		<div slot="subarea1">
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum porro id debitis ullam sequi natus, et distinctio impedit reprehenderit quas in nihil, maxime consequuntur iste ut nesciunt sed laboriosam ex.</p>
+		</div>
+
+		<div slot="subarea2">
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum porro id debitis ullam sequi natus, et distinctio impedit reprehenderit quas in nihil, maxime consequuntur iste ut nesciunt sed laboriosam ex.</p>
+		</div>
+	</GridBase>
+</Section>
+
+<Section variante={0}>
+	<GridBase variante={2}>
+
+		<img src="./img/01234_bn.svg" alt="">
+		
+		<div slot="subarea1">
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum porro id debitis ullam sequi natus, et distinctio impedit reprehenderit quas in nihil, maxime consequuntur iste ut nesciunt sed laboriosam ex.</p>
+		</div>
+
+		<div slot="subarea2">
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum porro id debitis ullam sequi natus, et distinctio impedit reprehenderit quas in nihil, maxime consequuntur iste ut nesciunt sed laboriosam ex.</p>
+			
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum porro id debitis ullam sequi natus, et distinctio impedit reprehenderit quas in nihil, maxime consequuntur iste ut nesciunt sed laboriosam ex.</p>
+		</div>
+	</GridBase>
+</Section>
+
+<Section variante={4}>
+	<GridBase variante={2}>
+
+		<img src="./img/grafico-8.svg" alt="">
+		
+		<div slot="subarea1">
+			<p><strong>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum porro id debitis ullam sequi natus, et distinctio impedit reprehenderit quas in nihil, maxime consequuntur iste ut nesciunt sed laboriosam ex.</strong></p>
+		</div>
+
+		<div slot="subarea2">
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum porro id debitis ullam sequi natus, et distinctio impedit reprehenderit quas in nihil, maxime consequuntur iste ut nesciunt sed laboriosam ex.</p>
+			
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum porro id debitis ullam sequi natus, et distinctio impedit reprehenderit quas in nihil, maxime consequuntur iste ut nesciunt sed laboriosam ex.</p>
+		</div>
+	</GridBase>
+</Section>
+
+<Section id="tabheaders" variante={5}>
 	<TabHeaders />
 </Section>

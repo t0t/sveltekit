@@ -37,7 +37,6 @@
         color: $grey_1;
         
         @include media(s2) {
-            /* background-color: $grey_5; */
             color: $grey_0;
             grid-template-areas: "title" "text";
             background-size: cover;
@@ -66,8 +65,12 @@
         color: $grey_5;
         background-color: $grey_1;
         text-align: center;
+        
         @include media(s2) {
             min-height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
     }
 </style>

@@ -3,7 +3,7 @@
 	import Section from "$lib/Section.svelte";
 	// import GridBase from "$lib/GridBase.svelte";
 	import QuoteRotator from '$lib/quoterotator/QuoteRotator.svelte';
-	import CtaBanner from "$lib/ctabanner/CtaBanner.svelte";
+	import CtaBanner from "$lib/CtaBanner.svelte";
 	import Cover from "$lib/Cover.svelte";
 	import NavSecondary from "$lib/NavSecondary.svelte";
 </script>
@@ -25,14 +25,14 @@
 	/>
 </Section>
 
-<Section id="navsecondary" variante={1}>
+<Section id="navsecondary" variante={3}>
 	<NavSecondary />
 </Section>
 
-<Section id="quoterotator" variante={1}>
+<Section id="quoterotator" variante={3}>
 	<QuoteRotator />
 </Section>
 
-<Section id="ctabanner" variante={1}>
+<Section id="ctabanner" variante={2}>
 	<CtaBanner />
 </Section>

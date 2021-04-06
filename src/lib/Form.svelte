@@ -24,10 +24,12 @@
     }
 
     .Form_1 {
-        display: grid;
-        grid-template-areas: "input button";
-        /* grid-template-columns: 1fr auto; */
         margin-inline: auto;
+
+        @include media(s3) {
+            display: grid;
+            grid-template-areas: "input button";
+        }
 
         &:nth-child(1){
             grid-area: input;

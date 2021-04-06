@@ -37,6 +37,6 @@
 
 <!-- Button to open Lightbox -->
 <aside>
-	<Button variante={2} text="View gallery" on:click={() => (modalOpen = true)} />
+	<Button variante={1} text="View gallery" on:click={() => (modalOpen = true)} />
 </aside>
 

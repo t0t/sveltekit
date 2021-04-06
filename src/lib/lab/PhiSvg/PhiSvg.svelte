@@ -51,7 +51,6 @@
 		}
 
 		.controls {
-			margin-top: $h2;
 			margin-bottom: $h2;
 			width: 100%;
 			display: grid;
@@ -62,14 +61,7 @@
 			display: grid;
 			justify-items: start;
 			align-self: center;
-			justify-self: center;
 			grid-area: texto;
-
-			@include media(s2) {
-				margin-bottom: 0;
-				margin-right: $h2;
-				max-width: $bp1;
-			}
 		}
 	}
 </style>
@@ -95,10 +87,8 @@
 	</div>
 
 	<div class="PhiSvgText">
-		<hgroup>
 			<h2>{title}</h2>
 			<p>{@html text}</p>
-		</hgroup>
 		<div class="controls">
 			<input type="number" bind:value={angle} step="0.001" />
 			<input type="range" bind:value={$tweenedCount} min={0} max={numDots} />

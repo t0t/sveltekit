@@ -15,7 +15,12 @@
 		padding: $h1;
 		border: none;
 		background-color: $white;
-  
+		
+		@include media(s3) {
+			border-top-left-radius: $h2;
+			border-bottom-left-radius: $h2;
+		}
+
 		&:focus-within {
 			background-color: $highlight;
 			color: $grey_5;
@@ -24,8 +29,7 @@
 				color: transparent;
 			}
 		}
-		border-top-left-radius: $h2;
-		border-bottom-left-radius: $h2;
+
 		&::placeholder {
 			color: $grey_4;
 		}

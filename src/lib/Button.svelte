@@ -121,14 +121,18 @@
         border: none;
         text-align: center;
         margin: 0;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-        border-top-right-radius: $h2;
-        border-bottom-right-radius: $h2;
-        
         @include type-setting(1);
         color: $grey_1;
         background-color: $grey_4;
+        width: 100%;
+        
+        @include media(s3) {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: $h2;
+            border-bottom-right-radius: $h2;
+		}
+        
         &:hover {
             background-color: $highlight_2;
             color: $grey_5;

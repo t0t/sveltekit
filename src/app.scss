@@ -38,3 +38,10 @@ img {
 .not-clickable {
     pointer-events: none;
 }
+
+video {
+    width: 100%;
+    object-fit: cover;
+    /* mix-blend-mode: luminosity; */
+    /* border-radius: $h2; */
+}
