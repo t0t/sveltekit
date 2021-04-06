@@ -36,11 +36,11 @@
 	<QuoteRotator />
 </Section>
 
-<Section variante={6}>
+<Section variante={3}>
 	<GridBase variante={5}>
 
 		<Img 
-			variante={3}
+			variante={1}
 			src="./img/02234-14.jpg" 
 			alt="Presentation"
 		/>

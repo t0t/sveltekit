@@ -2,6 +2,7 @@
     import GridBase from "$lib/GridBase.svelte"
     import Section from "$lib/Section.svelte"
     import Article from "$lib/Article.svelte"
+    // import Button from "$lib/Button.svelte"
 	export let tabsContent = [];
 	export let activeTabValue = 1;
 
@@ -43,7 +44,6 @@
         }
 
         button {
-            padding: $h1 $h2;
             border: none;
             color: $grey_4;
             font-size: inherit;

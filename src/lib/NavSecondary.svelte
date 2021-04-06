@@ -1,16 +1,15 @@
 <script>
     import { secondaryNav } from "$lib/data/pages.js";
+    import Button from "$lib/Button.svelte";
 </script>
 
 <nav>
     {#each secondaryNav as {url, name}}
-        <a 
-            href="{url}"
-            class="NavItem"
-            role="navigation" 
-        >
-            {name}
-        </a>
+        <Button 
+            variante={4}
+            {url}
+            text={name}
+        />
     {/each}
 </nav>
 
@@ -19,26 +18,17 @@
 
     nav {
         display: grid;
-        grid-template-columns: repeat(auto-fill, 300px);
-        gap: $h4;
-        justify-content: center;
-        align-content: center;
+        gap: $h3;
         background-color: $highlight;
-        width: 100%;
         min-height: 50vh;
-        padding: $h4 0;
-        margin-left: auto;
-        margin-right: auto;
+        padding: $h3;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 270px));
+        place-content: center;
         
-        a {
-            text-align: center;
-            /* display: block; */
-            width: 100%;
-            border: none;
-            color: $grey_5;
-            p {
-                text-align: center;
-            }
+        @include media(s3) {
+            grid-template-columns: repeat(3, 1fr);
+            gap: $h3;
+            place-items: center;
         }
     }
 </style>

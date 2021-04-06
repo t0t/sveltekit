@@ -14,10 +14,10 @@
 
 <Section id="cover" variante={3}>
 	<Cover
+	variante={1}
 		title={coverData[1].title}
 		subtitle={coverData[1].subtitle}
 		text={coverData[1].text}
-		img={coverData[1].img}
 	/>
 </Section>
 
@@ -25,11 +25,11 @@
 	<SlideGallery/>
 </Section> -->
 
-<Section variante={2} id="video">
+<Section variante={1} id="video">
 	<VideoBanner/>
 </Section>
 
-<Section id="lightboxgallery" variante={3}>
+<Section id="lightboxgallery" variante={0}>
 	<LightboxGallery/>
 </Section>
 
@@ -50,11 +50,11 @@
 	</GridBase>
 </Section>
 
-<Section variante={2}>
+<Section variante={3}>
 	<GridBase variante={5}>
 
 		<Img 
-			variante={1}
+			variante={4}
 			src="./img/cover4.jpg" 
 			alt="Presentation"
 		/>
@@ -66,7 +66,7 @@
 
 		<div slot="subarea1">
 			<Button
-				variante={0}
+				variante={1}
 				text="Chat-Whatsapp"
 				url="https://api.whatsapp.com/send?phone=+34619549032"
         	/>

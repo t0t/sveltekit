@@ -89,7 +89,7 @@
 	.slideshow-container {
 		position: relative;
 		height: 50vh;
-		margin-bottom: $h1;
+		/* margin-bottom: $h1; */
 		
 		@include media(s3) {
 			height: 70vh;

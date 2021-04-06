@@ -19,9 +19,7 @@
 			variante={1}
 	/>
 	
-	<section>
-		<slot />
-	</section>
+	<slot />
 
 	<Footer />
 </main>

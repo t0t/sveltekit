@@ -27,13 +27,13 @@
         }
     }
     .Section_0 {
-        
         min-height: 50vh;
         color: $grey_5;
         background-color: $grey_0;
     }
     
     .Section_1 {
+        padding: 0;
         min-height: 50vh;
         color: $white;
         background-color: $grey_3;
@@ -57,6 +57,7 @@
         padding: $h3;
     }
     .Section_5 {
+        padding: 0;
         min-height: 50vh;
         color: $grey_5;
         background-color: $white;

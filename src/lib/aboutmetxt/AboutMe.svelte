@@ -57,6 +57,9 @@
             }
         }
     }
+    .timeline {
+        text-align: left;
+    }
 </style>
 
 <section class="AboutMe">
@@ -74,7 +77,7 @@
         }}>{#if idioma_switch}English{:else}Español{/if}</button>
     </div>
 
-    <dl>
+    <dl class="timeline">
     {#if idioma_switch}
         {@html text}
     {:else}

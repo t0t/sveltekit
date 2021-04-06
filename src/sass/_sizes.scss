@@ -39,3 +39,42 @@ $h-4: 0.09rem;
 svg {
     max-height: 90vh;
 }
+
+// BUTTONS
+$button_2: ($h1 $h2);
+$button_3: ($h2 $h3);
+$button_4: ($h3 $h4);
+
+
+
+
+// // PADDINGS
+// .p0{ padding: 0; }
+// .p1 { padding: $h1; }
+// %p2 { padding: $h2; }
+// .p3 { padding: $h3; }
+// .p4 { padding: $h4; }
+
+// .pt0 { padding-top: 0; }
+// .pt1 { padding-top: $h1; }
+// .pt2 { padding-top: $h2; }
+// .pt3 { padding-top: $h3; }
+// .pt4 { padding-top: $h4; }
+
+// .pr0 { padding-right: 0; }
+// .pr1 { padding-right: $h1; }
+// .pr2 { padding-right: $h2; }
+// .pr3 { padding-right: $h3; }
+// .pr4 { padding-right: $h4; }
+
+// .pb0 { padding-bottom: 0; }
+// .pb1 { padding-bottom: $h1; }
+// .pb2 { padding-bottom: $h2; }
+// .pb3 { padding-bottom: $h3; }
+// .pb4 { padding-bottom: $h4; }
+
+// .pl0 { padding-left: 0; }
+// .pl1 { padding-left: $h1; }
+// .pl2 { padding-left: $h2; }
+// .pl3 { padding-left: $h3; }
+// .pl4 { padding-left: $h4; }

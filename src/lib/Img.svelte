@@ -26,7 +26,9 @@
     .Img_1 { 
         min-height: 50vh;
         object-fit: fill;
-        border-top: $h3 solid $grey_1;
+        @include media(s3) {
+            border-top: $h3 solid $grey_1;
+        }
     }
     .Img_2 {
         min-height: 50vh;
@@ -53,7 +55,10 @@
         background-position: center;
         max-width: 100%;
         min-height: 50vh;
-        border-bottom: $h3 solid $grey_4;
+
+        @include media(s2) {
+            border-bottom: $h3 solid $grey_4;
+        }
     }
     .Img_5 {
         border-bottom: $h3 solid $grey_4;

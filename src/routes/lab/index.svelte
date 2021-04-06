@@ -28,6 +28,6 @@
 </Section>
 
 <!-- Gematria App -->
-<Section id="gematria" variante={1}>
+<Section id="gematria" variante={4}>
 	<Gematria />
 </Section>
