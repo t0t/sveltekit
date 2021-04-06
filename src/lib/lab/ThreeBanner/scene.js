@@ -1,10 +1,10 @@
 import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
+// import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
 // import { fetchData } from "./fetch.js"
 // import * as dat from "dat.gui"
 // import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 // import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
-import { GLTFExporter } from 'three/examples/jsm/exporters/GLTFExporter.js';
+// import { GLTFExporter } from 'three/examples/jsm/exporters/GLTFExporter.js';
 
 //GUI Debug
 // const gui = new dat.GUI({closed:true})
@@ -12,10 +12,10 @@ import { GLTFExporter } from 'three/examples/jsm/exporters/GLTFExporter.js';
 
 // Sizes
 const sizes = {
-  // width: 300,
-  // height: 150
-  width: window.innerWidth,
-  height: window.innerHeight
+  width: 300,
+  height: 150
+  // width: window.innerWidth,
+  // height: window.innerHeight
 }
 
 // Cámara
@@ -157,11 +157,11 @@ const resize = () => {
 };
 
 export const createScene = (el) => {
-  const controls = new OrbitControls(camera,el)
-  controls.enabled = false;
-  controls.enableZoom = false;
-  controls.enableDamping = true
-  controls.update()
+  // const controls = new OrbitControls(camera,el)
+  // controls.enabled = false;
+  // controls.enableZoom = false;
+  // controls.enableDamping = true
+  // controls.update()
   renderer = new THREE.WebGLRenderer(
     { 
       antialias: true, 

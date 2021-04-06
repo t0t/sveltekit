@@ -5,6 +5,7 @@
     import PhiSvg from '$lib/lab/PhiSvg/PhiSvg.svelte';
     import T0T from '$lib/lab/T0T/T0T.svelte';
     import Gematria from '$lib/lab/GematriaApp/Gematria.svelte';
+    // import ThreeBanner from '$lib/lab/ThreeBanner/ThreeBanner.svelte';
 </script>
 
 <!-- LAB Experiments-->
@@ -31,3 +32,7 @@
 <Section id="gematria" variante={1}>
 	<Gematria />
 </Section>
+
+<!-- <Section id="threebanner" variante={1}>
+	<ThreeBanner variante={3} title="efe" text="rgr" />
+</Section> -->

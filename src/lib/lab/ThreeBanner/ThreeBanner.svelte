@@ -24,8 +24,8 @@
     ];
 </script>
 
-<style lang="scss">
-    @use "../../../sass/_index.scss" as *;
+<style lang="scss">	
+	@use "../../../app.scss" as *;
 
     .ThreeBanner {
         display: grid;
