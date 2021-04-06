@@ -1,9 +1,12 @@
 <script>
 	import { coverData } from "$lib/data/coverData.js";	
 	import Section from "$lib/Section.svelte";
+	import GridBase from "$lib/GridBase.svelte";
 	// import GridBase from "$lib/GridBase.svelte";
 	import QuoteRotator from '$lib/quoterotator/QuoteRotator.svelte';
-	import CtaBanner from "$lib/CtaBanner.svelte";
+	// import VideoBanner from "$lib/VideoBanner.svelte";
+	import Img from "$lib/Img.svelte";
+	import Button from "$lib/Button.svelte";
 	import Cover from "$lib/Cover.svelte";
 	import NavSecondary from "$lib/NavSecondary.svelte";
 </script>
@@ -33,6 +36,45 @@
 	<QuoteRotator />
 </Section>
 
-<Section id="ctabanner" variante={2}>
-	<CtaBanner />
+<Section variante={6}>
+	<GridBase variante={5}>
+
+		<Img 
+			variante={3}
+			src="./img/02234-14.jpg" 
+			alt="Presentation"
+		/>
+		
+		<div slot="subarea2">
+			<h2>Mas info</h2>
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, exercitationem repudiandae iusto impedit sint magnam totam earum neque, corporis, dolores pariatur. Maiores, perspiciatis praesentium? Totam sint libero hic laborum veniam.</p>
+		</div>
+
+		<div slot="subarea1">
+			<!-- <Button
+				variante={0}
+				text="Chat-Whatsapp"
+				url="https://api.whatsapp.com/send?phone=+34619549032"
+        	/> -->
+		</div>
+
+	</GridBase>
+</Section>
+
+<Section variante={3}>
+	<GridBase variante={4}>
+
+		<Img 
+			variante={4}
+			src="./img/cover4.jpg" 
+			alt="Presentation"
+		/>
+		
+		<div slot="subarea1">
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, exercitationem repudiandae iusto impedit sint magnam totam earum neque, corporis, dolores pariatur. Maiores, perspiciatis praesentium? Totam sint libero hic laborum veniam.</p>
+		</div>
+
+		<div slot="subarea2"></div>
+
+	</GridBase>
 </Section>

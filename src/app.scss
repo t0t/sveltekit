@@ -20,6 +20,10 @@
     outline-style: dotted;
 }
 
+body {
+    background-color: $grey_3;
+}
+
 ::selection { 
     color: $black; 
     background-color: $white; 

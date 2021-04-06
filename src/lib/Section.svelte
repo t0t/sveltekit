@@ -7,7 +7,8 @@
         "Section_2",
         "Section_3",
         "Section_4",
-        "Section_5"
+        "Section_5",
+        "Section_6"
     ];
 </script>
 
@@ -55,5 +56,10 @@
         min-height: 50vh;
         color: $grey_5;
         background-color: $white;
+    }
+    .Section_6 {
+        min-height: 50vh;
+        color: $grey_0;
+        background-color: $grey_3;
     }
 </style>

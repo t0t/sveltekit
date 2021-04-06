@@ -66,20 +66,21 @@
 				class:not-clickable={autoPlaying}
 				title="next quote" 
 				on:click={nextQuote}>&#10095;</span>
+				
+				<!-- Dots/bullets/indicators -->
+				<div class="dot-container">
+					{#each quotes as quote, i}
+						<Dot counter={i} 
+							{quoteIndex}
+							{autoPlaying}
+							attribution={quote.author}
+							on:click={() => quoteIndex = i}/>
+					{/each}
+					
+					<AutoPlayBtn bind:switchOn on:change={handleAutoAdv} />
+				</div>
 	</div>
 
-	<!-- Dots/bullets/indicators -->
-	<div class="dot-container">
-		{#each quotes as quote, i}
-			<Dot counter={i} 
-				{quoteIndex}
-				{autoPlaying}
-				attribution={quote.author}
-				on:click={() => quoteIndex = i}/>
-		{/each}
-		
-		<AutoPlayBtn bind:switchOn on:change={handleAutoAdv} />
-	</div>
 
 <style lang="scss">	
 	@use "../../app.scss" as *;
@@ -87,24 +88,23 @@
 	/* Slideshow container */
 	.slideshow-container {
 		position: relative;
-		background-color: $grey_1;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
 		height: 50vh;
+		margin-bottom: $h1;
 		
 		@include media(s3) {
-			height: 100vh;
+			height: 70vh;
 		}
 	}
 
 	/* The dot/bullet/indicator container */
 	.dot-container {
-		text-align: center;
-		padding: $h2;
-		position: relative;
-		bottom: 0;
+		position: absolute;
+		bottom: -10px;
+		right: 0;
+		width: 75%;
+		@include media(s2) {
+			width: 30%;
+		}
 	}
 	
 	/* Next & previous buttons */

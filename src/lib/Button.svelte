@@ -7,7 +7,7 @@
     export let valorinput = "input";
 
     let modificador = [
-        "Light",
+        "Button_0",
         "Dark",
         "Variante_2",
         "ColoredInvert",
@@ -52,6 +52,16 @@
         }
     }
     
+    .Button_0 {
+        color: $grey_1;
+        border-color: $grey_1;
+        margin: 0;
+        &:hover {
+            color: $grey_5;
+            background-color: $grey_1;
+            border-color: $grey_1;
+        }
+    }
     .Dark {
         color: $grey_5;
         border-color: $grey_5;
@@ -59,15 +69,6 @@
             color: $grey_0;
             background-color: $quaternary;
             border-color: $quaternary;
-        }
-    }
-    .Light {
-        color: $grey_1;
-        border-color: $grey_1;
-        &:hover {
-            color: $grey_5;
-            background-color: $grey_1;
-            border-color: $grey_1;
         }
     }
     .Variante_2 {

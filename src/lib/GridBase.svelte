@@ -5,7 +5,8 @@
         "Grid_1",
         "Grid_2",
         "Grid_3",
-        "Grid_4"
+        "Grid_4",
+        "Grid_5"
     ];
 </script>
 
@@ -185,6 +186,50 @@
             display: grid;
             align-self: start;
             place-content: center;
+        }
+    }
+    .Grid_5 {
+        display: grid;
+        min-height: 50vh;
+        /* margin-left: $h2; */
+        gap: $h3;
+        grid-template-areas: 
+            "subarea0"
+            "subarea2"
+            "subarea1"
+        ;
+        @include media(s2) {
+            grid-template-areas: 
+                "subarea0 subarea2"
+                "subarea0 subarea1"
+            ;
+        }
+        *:nth-child(1) {
+            grid-area: subarea1;
+            justify-self: center;
+                
+            
+            @include media(s2) {
+                justify-self: start;
+                align-self: start;
+            }
+        }
+        *:nth-child(2) {
+            grid-area: subarea0;
+            min-width: 50vw;
+        }
+        *:nth-child(3) {
+            grid-area: subarea2;
+            display: grid;
+            margin-left: $h3;
+            margin-right: $h3;
+            text-align: center;
+            
+            @include media(s2) {
+                text-align: inherit;
+                padding-top: $h3;
+                margin-left: 0;
+            }
         }
     }
 </style>

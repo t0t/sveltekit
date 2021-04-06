@@ -15,7 +15,7 @@
         height: 15px;
         width: 15px;
         margin: 0 5px;
-        background-color: $grey_3;
+        background-color: $grey_1;
         border-radius: 50%;
         display: inline-block;
         transition: background-color 0.3s ease;
@@ -24,7 +24,7 @@
     /* Add a background color to the active dot/circle */
     .active,
     .dot:hover {
-        background-color: $black;
+        background-color: $highlight;
     }
 
     .not-clickable {
