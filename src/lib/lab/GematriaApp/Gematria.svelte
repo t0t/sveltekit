@@ -123,6 +123,7 @@
 	header {
 		text-align: center;
 		margin-bottom: $h2;
+		color: inherit;
 	}
 
 	main {
@@ -133,22 +134,21 @@
 			"resultado"
 			"form"
 		;
-		@include media(s2) {
-		}
-		/* grid-template-columns: 1fr 1fr; */
+		color: inherit;
 	}
 	.position-form {
 		grid-area: form;
 	}
 	.result {
 		grid-area: resultado;
-		color: $grey_1;
+		
 		font-weight: bold;
 		@include type-setting(4);
 	}
 	p,
 	small {
 		text-align: center;
+		color: inherit;
 	}
 	small {
 		display: block;

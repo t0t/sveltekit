@@ -6,10 +6,11 @@
 	@use "../app.scss" as *;
 
 	.Alert {
-		color: $white;
+		color: $black;
 		padding: $h1;
 		display: none;
 		position: relative;
+		background-color: $highlight;
 	}
 	.haserror {
 		margin-top: $h1;

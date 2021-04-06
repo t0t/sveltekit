@@ -47,7 +47,7 @@
 	};
 </script>
 
-<GridBase variante={1}>
+<GridBase variante={0}>
 	<svg bind:this={svg} viewBox="-1 -1 {canvas.width} {canvas.height}">
 		<g transform="translate(150,150) scale(0.7)">
 			{#each circles as circle}
