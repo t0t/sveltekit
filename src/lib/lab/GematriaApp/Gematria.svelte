@@ -125,32 +125,39 @@
 		margin-bottom: $h2;
 	}
 
+	main {
+		text-align: center;
+		display: grid;
+		place-content: center;
+		grid-template-areas: 
+			"resultado"
+			"form"
+		;
+		@include media(s2) {
+		}
+		/* grid-template-columns: 1fr 1fr; */
+	}
+	.position-form {
+		grid-area: form;
+	}
 	.result {
+		grid-area: resultado;
 		color: $grey_1;
 		font-weight: bold;
 		@include type-setting(4);
 	}
-
+	p,
+	small {
+		text-align: center;
+	}
 	small {
 		display: block;
-		@include type-setting(0);
 		margin: $h1;
 
 		a {
 			color: inherit;
 			text-decoration: none;
 		}
-	}
-
-	main {
-		display: grid;
-		place-items: center;
-		text-align: center;
-	}
-
-	p,
-	small {
-		text-align: center;
 	}
 </style>
 
@@ -162,10 +169,12 @@
 <main>
 	<h2 class="result">{counter}</h2>
 
-	<Form on:submit={handleSubmit} variante={0}>
-		<Input bind:value={valorinput} />
-		<Button variante={6} text="Go!" {valorinput} />
-	</Form>
+	<div class="position-form">
+		<Form on:submit={handleSubmit} variante={1}>
+			<Input bind:value={valorinput} />
+			<Button variante={6} text="Go!" {valorinput} />
+		</Form>
+	</div>
 
 	{#if haserror == true}
 		<Alert>{errormessage}</Alert>

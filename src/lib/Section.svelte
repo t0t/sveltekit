@@ -20,16 +20,20 @@
 
 <style lang="scss">	
 	@use "../app.scss" as *;
-    
+    section {
+        padding: $h2;
+        @include media(s2){
+            padding: $h3;
+        }
+    }
     .Section_0 {
-        padding: $h3;
+        
         min-height: 50vh;
         color: $grey_5;
         background-color: $grey_0;
     }
     
     .Section_1 {
-        padding: $h3;
         min-height: 50vh;
         color: $white;
         background-color: $grey_3;

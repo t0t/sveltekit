@@ -40,7 +40,9 @@
         /* border-radius: 0; */
         @include margin-top(1);
         @include margin-bottom(1);
-        max-width: $h8;
+        /* max-width: $h8; */
+        margin-right: auto;
+        margin-left: auto;
         position: relative;
 
         &:after {
