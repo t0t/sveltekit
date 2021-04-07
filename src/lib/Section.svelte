@@ -7,7 +7,8 @@
         "Section_2",
         "Section_3",
         "Section_4",
-        "Section_5"
+        "Section_5",
+        "Section_6"
     ];
 </script>
 
@@ -19,16 +20,20 @@
 
 <style lang="scss">	
 	@use "../app.scss" as *;
-    
+    section {
+        padding: $h2;
+        @include media(s2){
+            padding: $h3;
+        }
+    }
     .Section_0 {
-        padding: $h3;
         min-height: 50vh;
         color: $grey_5;
         background-color: $grey_0;
     }
     
     .Section_1 {
-        padding: $h3;
+        padding: 0;
         min-height: 50vh;
         color: $white;
         background-color: $grey_3;
@@ -52,8 +57,14 @@
         padding: $h3;
     }
     .Section_5 {
+        padding: 0;
         min-height: 50vh;
         color: $grey_5;
         background-color: $white;
+    }
+    .Section_6 {
+        min-height: 50vh;
+        color: $grey_0;
+        background-color: $grey_3;
     }
 </style>

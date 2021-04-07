@@ -7,7 +7,7 @@
 	@use "../../app.scss" as *;
 
 	.DemoGallery {
-		padding: $h3;
+		padding-bottom: $h3;
 		text-align: center;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);

@@ -4,16 +4,20 @@
 	// import SlideGallery from "$lib/slidegallery/SlideGallery.svelte"
 	import LightboxGallery from "$lib/lightboxgallery/LightboxGallery.svelte"
 	import Cover from "$lib/Cover.svelte";
+	import Img from "$lib/Img.svelte";
+	import Button from "$lib/Button.svelte";
+	// import ContactBanner from "$lib/contactbanner/ContactBanner.svelte";
 	import Section from "$lib/Section.svelte";
+	import VideoBanner from "$lib/VideoBanner.svelte";
 	import GridBase from "$lib/GridBase.svelte";
 </script>
 
 <Section id="cover" variante={3}>
 	<Cover
+	variante={1}
 		title={coverData[1].title}
 		subtitle={coverData[1].subtitle}
 		text={coverData[1].text}
-		img={coverData[1].img}
 	/>
 </Section>
 
@@ -21,31 +25,54 @@
 	<SlideGallery/>
 </Section> -->
 
-<Section variante={2}>
-	<GridBase variante={4}>
+<Section variante={1} id="video">
+	<VideoBanner/>
+</Section>
 
-		<video poster="/img/cover3.jpg" loop playsinline controls="controls">
-			<source
-				src="/img/desdelapoesiadelamateria.webm"
-				type="video/webm" />
-			<source
-				src="/img/desdelapoesiadelamateria.mp4"
-				type="video/mp4" />
-			<p>Ups! Su navegador no soporta vídeos HTML5.</p>
-		</video>
+<Section id="lightboxgallery" variante={0}>
+	<LightboxGallery/>
+</Section>
+
+<Section variante={4}>
+	<GridBase variante={2}>
+
+		<img src="./img/grafico-8.svg" alt="">
 		
 		<div slot="subarea1">
-			<p>Desde la poesía de la materia</p>
+			<p><strong>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum porro id debitis ullam sequi natus, et distinctio impedit reprehenderit quas in nihil, maxime consequuntur iste ut nesciunt sed laboriosam ex.</strong></p>
 		</div>
 
 		<div slot="subarea2">
-			<p>Todo son formas de arte simbólicas en si mismas y, como tales, cumplen una función mediadora capaz de abrirle lo real a la conciencia.</p>
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum porro id debitis ullam sequi natus, et distinctio impedit reprehenderit quas in nihil, maxime consequuntur iste ut nesciunt sed laboriosam ex.</p>
+			
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum porro id debitis ullam sequi natus, et distinctio impedit reprehenderit quas in nihil, maxime consequuntur iste ut nesciunt sed laboriosam ex.</p>
 		</div>
 	</GridBase>
 </Section>
 
-<Section id="lightboxgallery" variante={3}>
-	<LightboxGallery/>
+<Section variante={3}>
+	<GridBase variante={5}>
+
+		<Img 
+			variante={4}
+			src="./img/cover4.jpg" 
+			alt="Presentation"
+		/>
+		
+		<div slot="subarea2">
+			<h2>Mas info</h2>
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, exercitationem repudiandae iusto impedit sint magnam totam earum neque, corporis, dolores pariatur. Maiores, perspiciatis praesentium? Totam sint libero hic laborum veniam.</p>
+		</div>
+
+		<div slot="subarea1">
+			<Button
+				variante={1}
+				text="Chat-Whatsapp"
+				url="https://api.whatsapp.com/send?phone=+34619549032"
+        	/>
+		</div>
+
+	</GridBase>
 </Section>
 
 <!-- <Section id="flipcard" variante={2}>

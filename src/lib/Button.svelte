@@ -2,47 +2,43 @@
     export let text = "";
     export let url = "";
     export let is_submit = false;
-    export let target = "_blank";
+    export let target = false;
     export let variante = 0;
     export let valorinput = "input";
 
-    let modificador = [
-        "Light",
-        "Dark",
-        "Variante_2",
-        "ColoredInvert",
-        "UnicodeIcon",
-        "ScrollTo",
-        "Variante_6"
+    $: modificador = [
+        "Button_0",
+        "Button_1",
+        "Button_2",
+        "Button_3",
+        "Button_4",
+        "Button_5",
+        "Button_6",
+        "Button_7"
     ];
 </script>
 
 <style lang="scss">
     @use "../app.scss" as *;
 
-    button {
+    :global(button),
+    .button {
         background-color: transparent;
-        user-select: none;
-        &:focus {
-            border: none;
-        }
-    }
-
-    a,
-    button {
+        /* user-select: none; */
+        padding: $button_2;
         font-size: inherit;
         display: flex;
         align-items: center;
-        padding: $h1 $h2;
+        justify-content: center;
+        text-align: center;
         text-decoration: none;
         border-width: 1px;
         border-style: dotted;
-        /* border-radius: 0; */
-        @include margin-top(1);
-        @include margin-bottom(1);
-        max-width: $h8;
         position: relative;
 
+        &:focus {
+            border: none;
+        }
         &:after {
             font-size: $h2;
             padding-left: $h0;
@@ -52,25 +48,26 @@
         }
     }
     
-    .Dark {
-        color: $grey_5;
-        border-color: $grey_5;
-        &:hover {
-            color: $grey_0;
-            background-color: $quaternary;
-            border-color: $quaternary;
-        }
-    }
-    .Light {
+    .Button_0 {
         color: $grey_1;
         border-color: $grey_1;
+        margin: 0;
         &:hover {
             color: $grey_5;
             background-color: $grey_1;
             border-color: $grey_1;
         }
     }
-    .Variante_2 {
+    .Button_1 {
+        color: $grey_5;
+        border-color: $grey_5;
+        &:hover a {
+            color: $grey_0;
+            background-color: $quaternary;
+            border-color: $quaternary;
+        }
+    }
+    .Button_2 {
         color: $grey_1;
         border-color: $grey_2;
         margin-bottom: 0;
@@ -82,7 +79,7 @@
             border-color: $grey_0;
         }
     }
-    .ColoredInvert {
+    .Button_3 {
         color: $grey_1;
         border-color: $grey_1;
         &:hover {
@@ -91,19 +88,29 @@
             border-color: $grey_0;
         }
     }
-    .UnicodeIcon {
-        color: $white;
-        border: none;
+    .Button_4 {
+        color: $grey_3;
+        border: 1px double $grey_5;
         margin: 0;
+        /* padding: $button_4; */
+        background-color: $highlight_2;
+        @include type-setting(0);
+        border-radius: 50%;
+        width: $h6;
+        height: $h6;
+        /* align-self: center; */
+        
         @include media(s2) {
-            color: $highlight;
+            @include type-setting(1);
+            width: $h7;
+            height: $h7;
         }
-        @include type-setting(2);
         &:hover {
-            color: $grey_0;
+            color: $highlight_2;
+            background-color: $grey_4;
         }
     }
-    .ScrollTo {
+    .Button_5 {
         color: $black;
         border: none;
         text-align: center;
@@ -116,7 +123,7 @@
             color: $grey_0;
         }
     }
-    .Variante_6 {
+    .Button_6 {
         display: block;
         border: none;
         text-align: center;
@@ -138,21 +145,41 @@
             color: $grey_5;
         }
     }
+    .Button_7 {
+        color: $grey_1;
+        background-color: $grey_4;
+        border: none;
+        padding: $button_3;
+
+        &:hover {
+            color: $grey_0;
+            background-color: $black;
+        }
+    }
 </style>
 
-{#if url}
-    <a href="{url}" target="{target}" class="{modificador[variante]}">
+{#if target}
+    <a 
+        class="button {modificador[variante]}"
+        href="{url}" 
+        target="{target}">
+        {text}
+    </a>
+{:else if !target && url}
+    <a 
+        class="button {modificador[variante]}"
+        href="{url}">
         {text}
     </a>
 {:else if is_submit}
-    <button on:click type="submit" class="{modificador[variante]}">
+    <button on:click type="submit" 
+            class="{modificador[variante]}">
         {text}
     </button>
 {:else}
     <button on:click 
-    class="{modificador[variante]}"
-    class:not-clickable={valorinput==""}
-    >
+            class="{modificador[variante]}"
+            class:not-clickable={valorinput==""}>
         {text}
     </button>
 {/if}

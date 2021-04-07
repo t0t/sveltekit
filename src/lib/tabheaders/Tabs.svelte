@@ -2,6 +2,10 @@
     import GridBase from "$lib/GridBase.svelte"
     import Section from "$lib/Section.svelte"
     import Article from "$lib/Article.svelte"
+    // import Button from "$lib/Button.svelte"
+	import List from "$lib/List/List.svelte"
+	import ListItem from "$lib/List/ListItem.svelte"
+
 	export let tabsContent = [];
 	export let activeTabValue = 1;
 
@@ -25,7 +29,13 @@
                 <figcaption>{item.subtitle}</figcaption>
             </figure>
             <p>{@html item.content}</p>
-            <small slot="subarea2">{item.tags}</small>
+            <div slot="subarea2">
+                <List tipo={0} variante={1}>
+                    {#each item.tags as tag}
+                    <ListItem tipo={0} variante={2}>{tag}</ListItem>
+                    {/each}
+                </List>
+            </div>
         </GridBase>
     </Article>
     {/if}
@@ -43,7 +53,6 @@
         }
 
         button {
-            padding: $h1 $h2;
             border: none;
             color: $grey_4;
             font-size: inherit;

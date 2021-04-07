@@ -5,6 +5,7 @@
 </script>
 
 <GridBase variante={4}>
+
 	<video poster="/img/cover3.jpg" loop playsinline controls="controls">
 		<source
 			src="/img/desdelapoesiadelamateria.webm"
@@ -20,10 +21,6 @@
 	</div>
 
 	<div slot="subarea2">
-		<Button
-            variante={0}
-            text="cta text"
-            url="#"
-        />
+		<p>Todo son formas de arte simbólicas en si mismas y, como tales, cumplen una función mediadora capaz de abrirle lo real a la conciencia.</p>
 	</div>
 </GridBase>

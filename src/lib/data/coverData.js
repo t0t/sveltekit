@@ -22,5 +22,11 @@ export const coverData = [
         subtitle: "<span class='tachado'>My</span> A Holistic Philosophy",
         text: "Sentir Orden Forma Conexión",
         img: "./img/circle.svg"
+    },
+    {
+        title: "Holistic Prototype",
+        subtitle: "A Frontend Design System",
+        text: "Svelte.js, Sass...",
+        img: "./img/bg2.jpg"
     }
 ]

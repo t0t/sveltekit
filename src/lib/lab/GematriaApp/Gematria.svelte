@@ -122,35 +122,42 @@
 
 	header {
 		text-align: center;
-		margin-bottom: $h2;
+		color: inherit;
 	}
-
+	
+	main {
+		margin-bottom: $h2;
+		text-align: center;
+		display: grid;
+		place-content: center;
+		grid-template-areas: 
+			"resultado"
+			"form"
+		;
+		color: inherit;
+	}
+	.position-form {
+		grid-area: form;
+	}
 	.result {
-		color: $grey_1;
+		grid-area: resultado;
+		
 		font-weight: bold;
 		@include type-setting(4);
 	}
-
-	small {
-		display: block;
-		@include type-setting(0);
-		margin: $h1;
-
-		a {
-			color: inherit;
-			text-decoration: none;
-		}
-	}
-
-	main {
-		display: grid;
-		place-items: center;
-		text-align: center;
-	}
-
 	p,
 	small {
 		text-align: center;
+		color: inherit;
+	}
+	small {
+		display: block;
+		/* margin-top: $h1; */
+
+		a {
+			color: $highlight;
+			text-decoration: none;
+		}
 	}
 </style>
 
@@ -162,10 +169,12 @@
 <main>
 	<h2 class="result">{counter}</h2>
 
-	<Form on:submit={handleSubmit} variante={0}>
-		<Input bind:value={valorinput} />
-		<Button variante={6} text="Go!" {valorinput} />
-	</Form>
+	<div class="position-form">
+		<Form on:submit={handleSubmit} variante={1}>
+			<Input bind:value={valorinput} />
+			<Button variante={6} text="Go!" {valorinput} />
+		</Form>
+	</div>
 
 	{#if haserror == true}
 		<Alert>{errormessage}</Alert>
@@ -176,7 +185,7 @@
 	<small>בראשית ברא אלהים את השמים ואת הארץ (Génesis, 1)</small>
 	<small>
 		<a href="https://tanach.us/Server.txt?Genesis*&content=Consonants" target="_blank"> 
-	Puedes tomar los textos hebreos directamente del Codex de Leningrado
+			Codex de Leningrado
 		</a>
 	</small>
 </footer>

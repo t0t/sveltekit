@@ -69,7 +69,6 @@ const coords = [
 
 const vertices = new Float32Array( coords );
 
-console.log(coords)
 geometry2.setAttribute( 'position', new THREE.BufferAttribute( vertices, 3 ) );
 const material2 = new THREE.MeshBasicMaterial( {
   color: "white", 
@@ -108,7 +107,6 @@ scene.add( gridHelper );
 //       } }
 //     );
 // 	scene.add( gltf.scene )
-//   console.log(gltf.scene)
 // })
 
 //GUI Debug
@@ -133,7 +131,6 @@ scene.add( gridHelper );
 // // link.style.display = 'none';
 // document.body.appendChild( link );
 // const canvas = document.querySelectorAll(".wegl")
-// console.log(canvas)
 
 // Animations
 const clock = new THREE.Clock()

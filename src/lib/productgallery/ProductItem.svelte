@@ -12,7 +12,6 @@
     let transform_effect; //efecto de use function on enter viewport
     const showDescription = (e) => {
         active = !active
-        console.log(e.target)
     }
 </script>
 

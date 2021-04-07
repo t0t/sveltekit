@@ -23,22 +23,29 @@ style="background-image: url({image});">
 		background-size: cover;
 		display: grid;
 		place-items: center;
+		place-content: center;
 		width: 100%;
 		height: inherit;
-		text-align: justify;
+		text-align: center;
 		position: absolute;
+		/* margin-bottom: $h5; */
 		/*	NOTE: Use with #key -- You just need the direct children position to always be in the same place (i.e. fixed), regardless of their position in DOM (well, for this transition at least) */
 	}
 
 	q {
-		color: $white;
+		color: $grey_0;
 		align-self: end;
 	}
 	
 	q,
 	p {
+		font-style: italic;
+		@include type-setting(0);
 		max-width: 75%;
-		@include type-setting(1);
+	
+		@include media(s3) {
+			@include type-setting(1);
+		};
 	}
 
 	.author {

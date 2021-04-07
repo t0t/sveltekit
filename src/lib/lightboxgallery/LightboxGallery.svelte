@@ -4,7 +4,6 @@
 	import ImageDisplay from './ImageDisplay.svelte';
 
 	let modalOpen = false;
-	// $: console.log(modalOpen);
 
 	let imageShowingIndex = 0;
 
@@ -37,6 +36,6 @@
 
 <!-- Button to open Lightbox -->
 <aside>
-	<Button variante={1} text="View gallery" on:click={() => (modalOpen = true)} />
+	<Button variante={7} text="View gallery" on:click={() => (modalOpen = true)} />
 </aside>
 

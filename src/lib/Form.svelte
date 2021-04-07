@@ -2,7 +2,7 @@
     export let name = "My form group";
     export let variante = 0;
     const modificador = [
-        "Variante_0",
+        "Form_0",
         "Form_1"
     ]
 </script>
@@ -18,15 +18,14 @@
 <style lang="scss">
 	@use "../app.scss" as *;
 
-    .Variante_0 {
+    .Form_0 {
         display: flex;
         flex-direction: row;
     }
 
     .Form_1 {
-        margin-inline: auto;
-
-        @include media(s3) {
+        @include media(s2) {
+            margin-inline: auto;
             display: grid;
             grid-template-areas: "input button";
         }
@@ -36,7 +35,9 @@
         }
         &:nth-child(2){
             grid-area: button;
-            width: fit-content;
+            @include media(s3) {
+                width: fit-content;
+            }
         }
     }
 </style>

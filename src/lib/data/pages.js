@@ -1,12 +1,14 @@
 export const pages = [
-    {name: "Wellcome", url: "/"},
-    {name: "Artwork", url: "/artworks"},
-    {name: "Philosophy", url: "/philosophy"},
-    {name: "Lab", url: "/lab"},
+    {name: "Landing Page", url: "/"},
+    {name: "3D printed Artwork", url: "/artworks"},
+    {name: "+0+1234 Project", url: "/philosophy"},
+    {name: "Holistic Prototype", url: "/prototype"},
+    {name: "Code Laboratory", url: "/lab"},
     {name: "About me", url: "/about"}
 ]
 export const secondaryNav = [
     {name: "artwork", url: "/artworks"},
-    {name: "philosophy", url: "/philosophy"},
+    {name: "+0+1234", url: "/philosophy"},
+    {name: "Holistic Prototype", url: "/prototype"},
     {name: "lab", url: "/lab"}
 ]
