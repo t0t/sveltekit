@@ -4,7 +4,6 @@
 	import ImageDisplay from './ImageDisplay.svelte';
 
 	let modalOpen = false;
-	// $: console.log(modalOpen);
 
 	let imageShowingIndex = 0;
 

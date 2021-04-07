@@ -6,7 +6,6 @@
 
 	/* IMAGE TO SHOW */
 	let imageShowingIndex = 0;
-	$: console.log(imageShowingIndex);
 	$: image = images[imageShowingIndex];
 
 	const nextSlide = () => {

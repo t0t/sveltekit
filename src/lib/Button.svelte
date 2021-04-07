@@ -34,8 +34,6 @@
         text-decoration: none;
         border-width: 1px;
         border-style: dotted;
-        /* margin-right: auto;
-        margin-left: auto; */
         position: relative;
 
         &:focus {
@@ -94,17 +92,18 @@
         color: $grey_3;
         border: 1px double $grey_5;
         margin: 0;
-        padding: $button_4;
+        /* padding: $button_4; */
         background-color: $highlight_2;
-        @include type-setting(1);
-        width: $h7;
-        height: $h7;
+        @include type-setting(0);
         border-radius: 50%;
-        /* max-width: 100%;
-        height: auto; */
+        width: $h6;
+        height: $h6;
+        /* align-self: center; */
         
         @include media(s2) {
-            /* @include type-setting(1); */
+            @include type-setting(1);
+            width: $h7;
+            height: $h7;
         }
         &:hover {
             color: $highlight_2;

@@ -122,11 +122,11 @@
 
 	header {
 		text-align: center;
-		margin-bottom: $h2;
 		color: inherit;
 	}
-
+	
 	main {
+		margin-bottom: $h2;
 		text-align: center;
 		display: grid;
 		place-content: center;
@@ -152,10 +152,10 @@
 	}
 	small {
 		display: block;
-		margin: $h1;
+		/* margin-top: $h1; */
 
 		a {
-			color: inherit;
+			color: $highlight;
 			text-decoration: none;
 		}
 	}
@@ -185,7 +185,7 @@
 	<small>בראשית ברא אלהים את השמים ואת הארץ (Génesis, 1)</small>
 	<small>
 		<a href="https://tanach.us/Server.txt?Genesis*&content=Consonants" target="_blank"> 
-	Puedes tomar los textos hebreos directamente del Codex de Leningrado
+			Codex de Leningrado
 		</a>
 	</small>
 </footer>

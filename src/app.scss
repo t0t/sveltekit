@@ -4,7 +4,6 @@
 @import "./sass/_sizes.scss";
 @import "./sass/_font.scss";
 @import "./sass/_forms.scss";
-@import "./sass/_nav.scss";
 @import "./sass/_animation.scss";
 
 :root {
@@ -47,5 +46,10 @@ video {
     width: 100%;
     object-fit: cover;
     /* mix-blend-mode: luminosity; */
-    /* border-radius: $h2; */
+}
+
+// Centra svg's dentro de links
+a > svg {
+    display: flex;
+    justify-content: center;
 }

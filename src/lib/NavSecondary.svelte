@@ -19,16 +19,21 @@
     nav {
         display: grid;
         gap: $h3;
-        background-color: $highlight;
         min-height: 50vh;
         padding: $h3;
-        grid-template-columns: repeat(auto-fill, minmax(100px, 270px));
+        grid-template-columns: repeat(auto-fit, 260px);
         place-content: center;
+        place-items: center;
         
         @include media(s3) {
             grid-template-columns: repeat(3, 1fr);
             gap: $h3;
             place-items: center;
+        }
+        
+        a &:nth-child(2) {
+            background-color: red;
+            
         }
     }
 </style>

@@ -8,11 +8,9 @@
 
 	/* ADVANCE QUOTE */
 	let quoteIndex = 0;
-	$: console.log(quoteIndex)
 	$: quote = quotes[quoteIndex].quote;
 	$: author = quotes[quoteIndex].author;
 	$: image = quotes[quoteIndex].image;
-	$: console.log(quoteIndex)
 
 	const nextQuote = () => {
 		if (quoteIndex === quotes.length - 1) {
@@ -32,7 +30,6 @@
 
 	/* AUTO PLAY */
 	let switchOn = false;
-	$: console.log(autoAdvance);
 	let autoAdvance;
 	let autoPlaying = false;
 

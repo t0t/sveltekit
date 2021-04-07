@@ -57,6 +57,12 @@
         @include media(s2) {
             text-align: center;
         }
+        .CoverTitle {
+            color: $secondary;
+            span {
+                color: $grey_4;
+            }
+        }
     }
     .Cover_2 {
         display: grid;

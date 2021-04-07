@@ -13,7 +13,6 @@
     });
     onDestroy( () => {
         el = null
-        // console.log(`destroyed Three component ${el}`)
     });
     export let variante = 0;
     let modificador = [
