@@ -1,39 +1,21 @@
 <script>
     import { secondaryNav } from "$lib/data/pages.js";
+    import List from "$lib/List/List.svelte";
+    import ListItem from "$lib/List/ListItem.svelte";
     import Button from "$lib/Button.svelte";
 </script>
 
-<nav>
+<List tipo={3} variante={4}>
+
     {#each secondaryNav as {url, name}}
-        <Button 
-            variante={4}
-            {url}
-            text={name}
-        />
+
+        <ListItem tipo={2} variante={5}
+        href={url} alt={name}>{name}</ListItem>
+
     {/each}
-</nav>
 
-<style lang="scss">
+</List>
+
+<!-- <style lang="scss">
     @use "../app.scss" as *;
-
-    nav {
-        display: grid;
-        gap: $h3;
-        min-height: 50vh;
-        padding: $h3;
-        grid-template-columns: repeat(auto-fit, 260px);
-        place-content: center;
-        place-items: center;
-        
-        @include media(s3) {
-            grid-template-columns: repeat(3, 1fr);
-            gap: $h3;
-            place-items: center;
-        }
-        
-        a &:nth-child(2) {
-            background-color: red;
-            
-        }
-    }
-</style>
+</style> -->
