@@ -57,8 +57,8 @@
 		<div slot="subarea2">
 
 			<List tipo={3} variante={0}>
-				<ListItem tipo={2} variante={0} href="https://github.com/t0t/sveltekit" alt="" target="_blank">
-					<Button variante={1} text="Repositorio en Github" />
+				<ListItem tipo={2} variante={4} href="https://github.com/t0t/sveltekit" alt="" target="_blank">
+					<Button variante={3} text="Repositorio en Github" />
 				</ListItem>
 			</List>
 		

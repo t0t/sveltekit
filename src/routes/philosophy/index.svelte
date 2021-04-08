@@ -5,6 +5,9 @@
     import Svg from "$lib/Svg.svelte";
     import Section from "$lib/Section.svelte";
     import TabHeaders from "$lib/tabheaders/TabHeaders.svelte";
+	import List from "$lib/List/List.svelte"    
+	import ListItem from "$lib/List/ListItem.svelte" 
+	import Button from "$lib/Button.svelte";
 </script>
 
 <!-- My Philosophy -->
@@ -35,16 +38,23 @@
 			<circle cx="123.2" cy="98.5" r="6" transform="translate(-17 -8) scale(.67024)"/>
 		</svg>
 
-		<hgroup slot="subarea1">
+		<div slot="subarea1">
 			<h2>+0+1234</h2>
 			<h3>Hacia el encuentro con todo lo que Es</h3>
 			<h4>+0+1234 consiste en una hermenéutica de la Creación que observa experiencialmente sus principios universales. Ancestralmente 5 símbolos numéricos representan las partes de Todo.</h4>
-		</hgroup>
+			<List tipo={3} variante={2}>
+				<ListItem tipo={2} variante={0} href="https://slides.com/sergiofores/" alt="" target="_blank">
+					<Button variante={3} text="Slides" />
+				</ListItem>
+				<ListItem tipo={2} variante={0} href="https://docs.google.com/document/d/15oUQRghNb_lihCFGJ9Ls0z1PyihD_a18v1V3AohVqQ4/edit?usp=sharing" alt="" target="_blank">
+					<Button variante={3} text="Libro" />
+				</ListItem>
+			</List>
+		</div>
 
-		<nav slot="subarea2">
-			<a href="https://slides.com/sergiofores/" target="_blank">Slides</a> 
-			<a href="https://docs.google.com/document/d/15oUQRghNb_lihCFGJ9Ls0z1PyihD_a18v1V3AohVqQ4/edit?usp=sharing" target="_blank">Libro</a>
-		</nav>
+		<span slot="subarea2">
+			
+		</span>
 	</GridBase>
 </Section>
 

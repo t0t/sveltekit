@@ -24,20 +24,14 @@
     :global(button),
     .button {
         background-color: transparent;
-        /* user-select: none; */
-        padding: $button_2;
         font-size: inherit;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         text-align: center;
         text-decoration: none;
-        border-width: 1px;
-        border-style: dotted;
-        position: relative;
+        border: none;
+        width: 100%;
 
         &:focus {
-            border: none;
+        border: none;
         }
         &:after {
             font-size: $h2;
@@ -49,7 +43,8 @@
     }
     
     .Button_0 {
-        color: $grey_1;
+        padding: $h2;
+        color: $grey_4;
         border-color: $grey_1;
         margin: 0;
         &:hover {
@@ -57,36 +52,21 @@
             background-color: $grey_1;
             border-color: $grey_1;
         }
+        &:focus {
+            background-color: #fff;
+        }
     }
     .Button_1 {
         color: $grey_5;
-        border-color: $grey_5;
-        &:hover a {
-            color: $grey_0;
-            background-color: $quaternary;
-            border-color: $quaternary;
-        }
+        width: 100%;
     }
     .Button_2 {
         color: $grey_1;
-        border-color: $grey_2;
         margin-bottom: 0;
         margin-top: 0;
-
-        &:hover {
-            color: $grey_5;
-            background-color: $grey_0;
-            border-color: $grey_0;
-        }
     }
     .Button_3 {
-        color: $grey_1;
-        border-color: $grey_1;
-        &:hover {
-            color: $grey_5;
-            background-color: $grey_0;
-            border-color: $grey_0;
-        }
+        color: inherit;
     }
     .Button_4 {
         color: $grey_3;
@@ -128,7 +108,9 @@
         border: none;
         text-align: center;
         margin: 0;
-        @include type-setting(1);
+        padding-left: $h2;
+        padding-right: $h2;
+        @include type-setting(0);
         color: $grey_1;
         background-color: $grey_4;
         width: 100%;

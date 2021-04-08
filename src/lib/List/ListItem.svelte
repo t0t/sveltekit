@@ -4,7 +4,7 @@
 	export let target = "";
 	export let tipo = 0;
 	export let variante = 0;
-	const clase = ['ListItem_0', 'ListItem_1', 'ListItem_2'];
+	const clase = ['ListItem_0', 'ListItem_1', 'ListItem_2','ListItem_3','ListItem_4'];
 </script>
 
 {#if tipo === 0}
@@ -33,7 +33,17 @@
     
 	.ListItem_0 {
         text-align: center;
+		padding: $h1;
+		border-top: 1px solid $grey_5;
+		border-right: 1px solid $grey_5;
+		border-bottom: 1px solid $grey_5;
         @include type-setting(0);
+		height: 100%;
+			color: $grey_4;
+		&:hover {
+			color: $white;
+			background-color: $grey_4;
+		}
 	}
 	.ListItem_1 {
 		color: $grey_2;
@@ -45,5 +55,20 @@
         font-style: italic;
 		color: $highlight;
         align-self: start;
+	}
+	.ListItem_3 {
+		color: $grey_4;
+        align-self: start;
+	}
+	.ListItem_4 {
+        @include type-setting(0);
+		padding: $h1;
+		border: 1px solid $grey_5;
+		color: $grey_4;
+        align-self: start;
+		&:hover {
+			color: $white;
+			background-color: $grey_4;
+		}
 	}
 </style>
