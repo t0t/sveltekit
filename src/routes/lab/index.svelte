@@ -1,6 +1,6 @@
 <script>
     import { coverData } from "$lib/data/coverData.js";	
-    import Cover from "$lib/Cover.svelte";
+    import Header from "$lib/Header.svelte";
     import Section from "$lib/Section.svelte";
     import PhiSvg from '$lib/lab/PhiSvg/PhiSvg.svelte';
     import T0T from '$lib/lab/T0T/T0T.svelte';
@@ -10,7 +10,8 @@
 
 <!-- LAB Experiments-->
 <Section id="cover" variante={3}>
-	<Cover
+	<Header
+		tipo={1}
 		variante={1}
 		title={coverData[2].title}
 		subtitle={coverData[2].subtitle}

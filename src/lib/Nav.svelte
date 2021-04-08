@@ -58,6 +58,11 @@
 <style lang="scss">
     @use "../app.scss" as *;
 
+    :global(nav>a) {
+        color: $primary;
+        text-decoration: none;
+    }
+
     .Variante_0 {
         padding: $h3;
         text-align: center;
@@ -87,8 +92,6 @@
             padding-bottom: $h0;
             @include type-setting(1);
             background-color: $black;
-            border-top-right-radius: $h1;
-            border-bottom-right-radius: $h1;
             
             @include media(s2) {
                 @include type-setting(0);
@@ -114,8 +117,8 @@
         .ButtonNav {
             position: fixed;
             z-index: 1000;
-            top: $h2;
-            left: $h2;
+            top: 21px;
+            left: 21px;
             &:hover {
                 cursor: pointer;
             }

@@ -2,7 +2,7 @@
     import GridBase from "$lib/GridBase.svelte"
     import Section from "$lib/Section.svelte"
     import Article from "$lib/Article.svelte"
-    // import Button from "$lib/Button.svelte"
+    import Button from "$lib/Button.svelte"
 	import List from "$lib/List/List.svelte"
 	import ListItem from "$lib/List/ListItem.svelte"
 
@@ -12,13 +12,16 @@
 	const handleClick = (tabValue) => () => (activeTabValue = tabValue);
 </script>
 
-<nav>
+<List tipo={3} variante={3}>
 	{#each tabsContent as item}
-        <button 
-        class={activeTabValue === item.id ? 'active' : ''}
-        on:click={ handleClick(item.id) }>{item.title}</button>
+    <ListItem tipo={1}>
+        <span class={activeTabValue === item.id ? 'active' : ''}>
+            <Button variante={0}
+            on:click={ handleClick(item.id) } text={item.title} />
+        </span>
+    </ListItem>
 	{/each}
-</nav>
+</List>
 
 {#each tabsContent as item}
     {#if activeTabValue == item.id}
@@ -43,28 +46,6 @@
 
 <style lang="scss">
 	@use "../../app.scss"as *;
-	
-    nav {
-        display: grid;
-        grid-auto-flow: column;
-        @include media(s2) {
-            justify-content: center;
-            background-color: $grey_1;
-        }
-
-        button {
-            border: none;
-            color: $grey_4;
-            font-size: inherit;
-            background-color: $grey_0;
-
-            &:hover {
-                background-color: $white;
-                color: $grey_5;
-                cursor: pointer;
-            }
-        }
-    }
 
     figcaption {
         padding: $h1;
@@ -74,5 +55,10 @@
     .active {
         color: $black;
         background-color: $white;
+        width: 100%;
+    }
+    span {
+        text-align: center;
+        width: 100%;
     }
 </style>

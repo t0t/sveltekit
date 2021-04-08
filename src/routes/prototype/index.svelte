@@ -1,6 +1,6 @@
 <script>
     import { coverData } from "$lib/data/coverData.js";	
-    import Cover from "$lib/Cover.svelte";
+    import Header from "$lib/Header.svelte";
     import Section from "$lib/Section.svelte";
     import TabHeaders from "$lib/tabheaders/TabHeaders.svelte";
     import Button from "$lib/Button.svelte";
@@ -11,7 +11,8 @@
 
 <!-- Holistic Prototype -->
 <Section id="cover" variante={3}>
-	<Cover
+	<Header
+		tipo={2}
 		variante={1}
 		title={coverData[4].title}
 		subtitle={coverData[4].subtitle}
@@ -57,8 +58,8 @@
 		<div slot="subarea2">
 
 			<List tipo={3} variante={0}>
-				<ListItem tipo={2} variante={0} href="https://github.com/t0t/sveltekit" alt="" target="_blank">
-					<Button variante={1} text="Repositorio en Github" />
+				<ListItem tipo={2} variante={4} href="https://github.com/t0t/sveltekit" alt="" target="_blank">
+					<Button variante={3} text="Repositorio en Github" />
 				</ListItem>
 			</List>
 		

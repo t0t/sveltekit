@@ -2,7 +2,7 @@
 	export let tipo = 0;
 	export let variante = 0;
     export let marker = "";
-	const clase = ['List_0', 'List_1', 'List_2'];
+	const clase = ['List_0', 'List_1', 'List_2','List_3','List_4'];
 </script>
 
 {#if tipo === 0}
@@ -75,10 +75,40 @@
 		place-items: center;
 		color: $grey_2;
 	}
+	/* Grouped borderer buttons */
 	.List_2 {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr );
-		gap: $h1;
-		color: $highlight;
+		grid-template-columns: repeat(auto-fit, minmax(90px, 0.25fr));
+		margin-top: $h2;
+		place-content: center;
+
+		:global(a:nth-child(1)) {
+			border-left: 1px solid $grey_3;
+		}
+	}
+	/* tabs */
+	.List_3 { 
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(90px, 0.25fr));
+		place-content: center;
+		background-color: $grey_0;
+		:global(a:nth-child(1)) {
+			border-left: 1px solid $grey_3;
+		}
+	}
+	/* Nav horizontal grande */
+	.List_4 { 
+		display: grid;
+		min-height: 50vh;
+		grid-template-columns: repeat(auto-fit, minmax(177px, 0.186fr));
+		text-align: center;
+		place-content: center;
+		place-items: center;
+		background-color: $primary;
+		padding: $h2 0;
+
+		@include media(s3) {
+			grid-template-columns: repeat(auto-fit, minmax(245px, 0.186fr));
+		}
 	}
 </style>

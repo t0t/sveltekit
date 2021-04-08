@@ -17,7 +17,7 @@ export const quotes = [
 	{
 		quote: "Expecting the world to treat you fairly because you are a good person is a little like expecting the bull not to attack you because you are a vegetarian.",
 		author: "Denis Wholey",
-		image: "/img/bg4.jpg"
+		image: "/img/img3.jpg"
 	},
 	{
 		quote: "Life begins at 40 - but so do fallen arches, rheumatism, faulty eyesight, and the tendency to tell a story to the same person, three or four times.",

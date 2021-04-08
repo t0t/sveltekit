@@ -94,7 +94,7 @@
 			<input type="range" bind:value={$tweenedCount} min={0} max={numDots} />
 		</div>
 		<Button
-			variante={0}
+			variante={7}
 			text="Play"
 			on:click={() => {
 				$tweenedCount = $tweenedCount > 0 ? 0 : numDots;
