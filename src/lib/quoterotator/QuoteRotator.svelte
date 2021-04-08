@@ -95,11 +95,12 @@
 	/* The dot/bullet/indicator container */
 	.dot-container {
 		position: absolute;
-		bottom: -10px;
-		right: 0;
-		width: 75%;
+		bottom: 20px;
+		left: 0;
+		margin-left: 43%;
+		width: 15%;
 		@include media(s2) {
-			width: 30%;
+			/* width: 30%; */
 		}
 	}
 	
@@ -114,7 +115,7 @@
 		color: $grey_0;
 		font-weight: bold;
 		@include type-setting(1);
-		border-radius: 0 3px 3px 0;
+		border-radius: 50%;
 		user-select: none;
 	}
 	
@@ -125,7 +126,6 @@
 	.next {
 		position: absolute;
 		right: 0;
-		border-radius: 3px 0 0 3px;
 	}
 
 	.prev:hover, .next:hover {
