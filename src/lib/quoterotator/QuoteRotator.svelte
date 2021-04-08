@@ -46,37 +46,37 @@
 
 <div class="slideshow-container">
 
-		<!-- THE QUOTE -->
-		{#key quote}
-			<Quote {quote} {author} {image}/>
-		{/key}
+	<!-- THE QUOTE -->
+	{#key quote}
+		<Quote {quote} {author} {image}/>
+	{/key}
+	
+	<!-- Next/prev buttons -->
+	<span 	href="#prev" 
+			class="prev" 
+			class:not-clickable={autoPlaying}
+			title="previous quote" 
+			on:click={prevQuote}>&#10094;</span>
+	
+	<span 	href="#next" 
+			class="next" 
+			class:not-clickable={autoPlaying}
+			title="next quote" 
+			on:click={nextQuote}>&#10095;</span>
+			
+	<!-- Dots/bullets/indicators -->
+	<div class="dot-container">
+		{#each quotes as quote, i}
+			<Dot counter={i} 
+				{quoteIndex}
+				{autoPlaying}
+				attribution={quote.author}
+				on:click={() => quoteIndex = i}/>
+		{/each}
 		
-		<!-- Next/prev buttons -->
-		<span href="#prev" 
-				class="prev" 
-				class:not-clickable={autoPlaying}
-				title="previous quote" 
-				on:click={prevQuote}>&#10094;</span>
-		
-		<span href="#next" 
-				class="next" 
-				class:not-clickable={autoPlaying}
-				title="next quote" 
-				on:click={nextQuote}>&#10095;</span>
-				
-				<!-- Dots/bullets/indicators -->
-				<div class="dot-container">
-					{#each quotes as quote, i}
-						<Dot counter={i} 
-							{quoteIndex}
-							{autoPlaying}
-							attribution={quote.author}
-							on:click={() => quoteIndex = i}/>
-					{/each}
-					
-					<AutoPlayBtn bind:switchOn on:change={handleAutoAdv} />
-				</div>
+		<AutoPlayBtn bind:switchOn on:change={handleAutoAdv} />
 	</div>
+</div>
 
 
 <style lang="scss">	
@@ -86,10 +86,9 @@
 	.slideshow-container {
 		position: relative;
 		height: 50vh;
-		/* margin-bottom: $h1; */
 		
 		@include media(s3) {
-			height: 70vh;
+			height: 75vh;
 		}
 	}
 

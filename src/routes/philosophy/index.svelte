@@ -1,7 +1,7 @@
 <script>
     import { coverData } from "$lib/data/coverData.js";	
 	import GridBase from "$lib/GridBase.svelte";
-    import Cover from "$lib/Cover.svelte";
+    import Header from "$lib/Header.svelte";
     import Svg from "$lib/Svg.svelte";
     import Section from "$lib/Section.svelte";
     import TabHeaders from "$lib/tabheaders/TabHeaders.svelte";
@@ -12,14 +12,21 @@
 
 <!-- My Philosophy -->
 <Section id="philosophy" variante={3}>
-	<Cover
-		variante={2}
+	<Header
+		tipo={1}
+		variante={3}
 		title={coverData[3].title}
 		subtitle={coverData[3].subtitle}
 		text={coverData[3].text}
 		img={coverData[3].img}
 	/>
 </Section>
+
+<Header
+	tipo={1} variante={1}
+	title="Sentir Orden Forma Conexión"
+	subtitle=""
+/>
 
 <Section variante={0}>
 	<GridBase variante={1}>
@@ -39,7 +46,7 @@
 		</svg>
 
 		<div slot="subarea1">
-			<h2>+0+1234</h2>
+			<h2>Tetractys</h2>
 			<h3>Hacia el encuentro con todo lo que Es</h3>
 			<h4>+0+1234 consiste en una hermenéutica de la Creación que observa experiencialmente sus principios universales. Ancestralmente 5 símbolos numéricos representan las partes de Todo.</h4>
 			<List tipo={3} variante={2}>
@@ -106,6 +113,12 @@
 		</div>
 	</GridBase>
 </Section>
+
+<Header
+	tipo={1} variante={3}
+	title="Los 5 Principios Universales"
+	subtitle=""
+/>
 
 <Section id="tabheaders" variante={5}>
 	<TabHeaders />

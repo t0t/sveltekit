@@ -7,20 +7,13 @@
 	// import VideoBanner from "$lib/VideoBanner.svelte";
 	import Img from "$lib/Img.svelte";
 	import Button from "$lib/Button.svelte";
-	import Cover from "$lib/Cover.svelte";
+	import Header from "$lib/Header.svelte";
 	import NavSecondary from "$lib/NavSecondary.svelte";
 </script>
 
-<!-- <Section variante={3}>
-	<GridBase>
-		<div slot="subarea1">header</div>
-		<div><p>hole</p></div>
-		<div slot="subarea2">footer</div>
-	</GridBase>
-</Section> -->
-
 <Section id="cover" variante={3}>
-	<Cover
+	<Header
+		tipo={2}
 		title={coverData[0].title}
 		subtitle={coverData[0].subtitle}
 		text={coverData[0].text}
@@ -36,6 +29,12 @@
 	<QuoteRotator />
 </Section>
 
+<Header
+	tipo={1} variante={3}
+	title="Percibir la conexión esencial de todo"
+	subtitle=""
+/>
+
 <Section variante={3}>
 	<GridBase variante={5}>
 
@@ -46,16 +45,15 @@
 		/>
 		
 		<div slot="subarea2">
-			<h2>Mas info</h2>
-			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, exercitationem repudiandae iusto impedit sint magnam totam earum neque, corporis, dolores pariatur. Maiores, perspiciatis praesentium? Totam sint libero hic laborum veniam.</p>
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, exercitationem repudiandae iusto impedit sint magnam totam earum neque.</p>
 		</div>
 
 		<div slot="subarea1">
-			<!-- <Button
-				variante={0}
+			<Button
+				variante={7}
 				text="Chat-Whatsapp"
 				url="https://api.whatsapp.com/send?phone=+34619549032"
-        	/> -->
+        	/>
 		</div>
 
 	</GridBase>

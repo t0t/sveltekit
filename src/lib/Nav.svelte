@@ -117,8 +117,8 @@
         .ButtonNav {
             position: fixed;
             z-index: 1000;
-            top: $h2;
-            left: $h2;
+            top: 21px;
+            left: 21px;
             &:hover {
                 cursor: pointer;
             }

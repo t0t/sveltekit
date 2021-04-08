@@ -3,7 +3,7 @@
 	// import FlipCard from "$lib/flashcard/FlipCard.svelte"
 	// import SlideGallery from "$lib/slidegallery/SlideGallery.svelte"
 	import LightboxGallery from "$lib/lightboxgallery/LightboxGallery.svelte"
-	import Cover from "$lib/Cover.svelte";
+	import Header from "$lib/Header.svelte";
 	import Img from "$lib/Img.svelte";
 	import Button from "$lib/Button.svelte";
 	// import ContactBanner from "$lib/contactbanner/ContactBanner.svelte";
@@ -13,8 +13,9 @@
 </script>
 
 <Section id="cover" variante={3}>
-	<Cover
-	variante={1}
+	<Header
+		tipo={2}
+		variante={1}
 		title={coverData[1].title}
 		subtitle={coverData[1].subtitle}
 		text={coverData[1].text}
@@ -29,9 +30,15 @@
 	<VideoBanner/>
 </Section>
 
+<Header tipo={1} variante={4}
+	title="Galería" />
+
 <Section id="lightboxgallery" variante={0}>
 	<LightboxGallery/>
 </Section>
+
+<Header tipo={1} variante={3}
+	title="Mi proceso creativo" />
 
 <Section variante={4}>
 	<GridBase variante={2}>
