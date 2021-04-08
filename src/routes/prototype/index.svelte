@@ -124,6 +124,12 @@
 	</GridBase>
 </Section>
 
+<Header
+	tipo={1} variante={1}
+	title="Ceros y Unos."
+	subtitle=""
+/>
+
 <Section id="UIPrototype" variante={7}>
 	<Tabs {tabHeaders} />
 </Section>
