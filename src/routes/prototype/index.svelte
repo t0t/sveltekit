@@ -2,11 +2,12 @@
     import { coverData } from "$lib/data/coverData.js";	
     import Header from "$lib/Header.svelte";
     import Section from "$lib/Section.svelte";
-    import TabHeaders from "$lib/tabheaders/TabHeaders.svelte";
     import Button from "$lib/Button.svelte";
     import GridBase from "$lib/GridBase.svelte";
 	import List from "$lib/List/List.svelte"    
-	import ListItem from "$lib/List/ListItem.svelte"    
+	import ListItem from "$lib/List/ListItem.svelte"
+	import { tabHeaders } from "$lib/data/tabsContent.js";
+	import Tabs from "$lib/tabheaders/Tabs.svelte";    
 </script>
 
 <!-- Holistic Prototype -->
@@ -43,13 +44,13 @@
 				tipo={0} 
 				variante={0}
 				marker="./img/marker.svg">
-				<ListItem tipo={0} variante={3}>
+				<ListItem tipo={0} variante={6}>
 					Simple, ligero, limpio y claro.
 				</ListItem>
-				<ListItem tipo={0} variante={3}>
+				<ListItem tipo={0} variante={6}>
 					Completo, funcional, versátil y ordenado.
 				</ListItem>
-				<ListItem tipo={0} variante={3}>
+				<ListItem tipo={0} variante={6}>
 					etc
 				</ListItem>
 			</List>
@@ -123,6 +124,6 @@
 	</GridBase>
 </Section>
 
-<Section id="tabheaders" variante={5}>
-	<TabHeaders />
+<Section id="UIPrototype" variante={7}>
+	<Tabs {tabHeaders} />
 </Section>

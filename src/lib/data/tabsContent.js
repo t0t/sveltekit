@@ -1,4 +1,4 @@
-export const tabsContent = [
+export const tabHeaders = [
         {
             id: 0,
             title: "0. Cifra",

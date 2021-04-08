@@ -1,13 +1,15 @@
 <script>
     import { coverData } from "$lib/data/coverData.js";	
+    import { tabHeaders } from "$lib/data/tabsContent.js";	
 	import GridBase from "$lib/GridBase.svelte";
     import Header from "$lib/Header.svelte";
     import Svg from "$lib/Svg.svelte";
     import Section from "$lib/Section.svelte";
-    import TabHeaders from "$lib/tabheaders/TabHeaders.svelte";
+    import Tabs from "$lib/tabheaders/Tabs.svelte";
 	import List from "$lib/List/List.svelte"    
 	import ListItem from "$lib/List/ListItem.svelte" 
 	import Button from "$lib/Button.svelte";
+
 </script>
 
 <!-- My Philosophy -->
@@ -120,6 +122,6 @@
 	subtitle=""
 />
 
-<Section id="tabheaders" variante={5}>
-	<TabHeaders />
+<Section id="principios" variante={7}>
+	<Tabs {tabHeaders} />
 </Section>

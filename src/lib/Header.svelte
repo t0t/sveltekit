@@ -14,7 +14,8 @@
         "Header_1",
         "Header_2",
         "Header_3",
-        "Header_4"
+        "Header_4",
+        "Header_5"
     ]
 
     let innerWidth, innerHeight, y;
@@ -93,10 +94,18 @@
     }
     .Header_4 {
         text-align: center;
-        padding-top: $h3;
-        padding-bottom: $h2;
+        padding: $h3;
         color: $grey_2;
         background-color: $grey_4;
+        h1 {
+            @include type-setting(1);
+        }
+    }
+    .Header_5 {
+        text-align: center;
+        padding: $h3;
+        color: $grey_2;
+        background-color: $white;
         h1 {
             @include type-setting(1);
         }

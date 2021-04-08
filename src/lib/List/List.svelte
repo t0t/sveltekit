@@ -91,7 +91,7 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(90px, 0.25fr));
 		place-content: center;
-		background-color: $grey_0;
+		background-color: $grey_3;
 		:global(a:nth-child(1)) {
 			border-left: 1px solid $grey_3;
 		}

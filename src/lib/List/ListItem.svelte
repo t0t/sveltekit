@@ -57,7 +57,7 @@
         align-self: start;
 	}
 	.ListItem_3 {
-		color: $grey_4;
+		color: $grey_0;
         align-self: start;
 	}
 	.ListItem_4 {

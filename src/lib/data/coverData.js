@@ -6,9 +6,9 @@ export const coverData = [
         img: "./img/cover3.jpg"
     },
     {
-        title: "Artwork",
-        subtitle: "3D printed art",
-        text: "Obra plástica",
+        title: "Sergio Forés",
+        subtitle: "Cristalizo corrientes de formas",
+        text: "3D Printed Artworks",
         img: "./img/bg2.jpg"
     },
     {

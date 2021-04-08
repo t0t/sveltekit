@@ -1,15 +1,17 @@
 <script>
 	import { coverData } from "$lib/data/coverData.js";	
-	// import FlipCard from "$lib/flashcard/FlipCard.svelte"
-	// import SlideGallery from "$lib/slidegallery/SlideGallery.svelte"
+	import Tabs from "$lib/tabheaders/Tabs.svelte";
+	import { tabHeaders } from "$lib/data/miProceso.js"
 	import LightboxGallery from "$lib/lightboxgallery/LightboxGallery.svelte"
 	import Header from "$lib/Header.svelte";
 	import Img from "$lib/Img.svelte";
 	import Button from "$lib/Button.svelte";
-	// import ContactBanner from "$lib/contactbanner/ContactBanner.svelte";
 	import Section from "$lib/Section.svelte";
 	import VideoBanner from "$lib/VideoBanner.svelte";
 	import GridBase from "$lib/GridBase.svelte";
+	import List from "$lib/List/List.svelte"
+	import ListItem from "$lib/List/ListItem.svelte"
+	import Article from "$lib/Article.svelte"
 </script>
 
 <Section id="cover" variante={3}>
@@ -22,23 +24,20 @@
 	/>
 </Section>
 
-<!-- <Section id="slidegallery" variante={0}>
-	<SlideGallery/>
-</Section> -->
-
 <Section variante={1} id="video">
 	<VideoBanner/>
 </Section>
 
-<Header tipo={1} variante={4}
-	title="Galería" />
+<Header tipo={1} variante={4} title="Galería" />
 
 <Section id="lightboxgallery" variante={0}>
 	<LightboxGallery/>
 </Section>
 
-<Header tipo={1} variante={3}
-	title="Mi proceso creativo" />
+<Header tipo={1} variante={4} title="El proceso es El Proceso" />
+<Section id="proceso" variante={7}>
+	<Tabs {tabHeaders} />
+</Section>
 
 <Section variante={4}>
 	<GridBase variante={2}>
@@ -60,10 +59,9 @@
 <Section variante={3}>
 	<GridBase variante={5}>
 
-		<Img 
-			variante={4}
-			src="./img/cover4.jpg" 
-			alt="Presentation"
+		<Img 	variante={4}
+				src="./img/cover4.jpg" 
+				alt="Presentation"
 		/>
 		
 		<div slot="subarea2">
@@ -81,7 +79,3 @@
 
 	</GridBase>
 </Section>
-
-<!-- <Section id="flipcard" variante={2}>
-	<FlipCard/>
-</Section> -->
