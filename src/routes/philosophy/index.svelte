@@ -75,7 +75,9 @@
 	
 		<div slot="subarea1">
 			<Header tipo={3}
-			variante={7} title="Hay una verdad que puede ser conocida…"
+					variante={7} 
+					textalign="align-left"
+					title="Hay una verdad que puede ser conocida…"
 			/>
 			<p>¿Percibes 2 
 				ese orden 1 
@@ -103,7 +105,9 @@
 		
 		<div slot="subarea1">
 			<Header tipo={3}
-			variante={6} title="Percibes cualquier cosa como lo que és; un símbolo"
+					variante={6} 
+					textalign="align-left"
+					title="Percibes cualquier cosa como lo que és; un símbolo"
 			/>
 		</div>
 

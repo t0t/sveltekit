@@ -33,6 +33,7 @@
                 "subarea1 subarea0"
                 "subarea2 subarea0"
             ;
+            grid-row-gap: $h2;
         }
         *:nth-child(1) {
             grid-area: subarea1;
@@ -61,6 +62,7 @@
             "subarea2"
         ;
         @include media(s2) {
+            grid-row-gap: $h2;
             grid-template-areas: 
                 "subarea0 subarea1"
                 "subarea0 subarea2"
@@ -96,15 +98,16 @@
             "subarea2"
         ;
         @include media(s2) {
+            grid-row-gap: $h2;
             grid-template-areas: 
                 "subarea0 subarea1"
                 "subarea0 subarea2"
             ;
+            grid-template-rows: auto auto;
         }
         *:nth-child(1) {
             grid-area: subarea1;
             align-self: end;
-
         }
         *:nth-child(2) {
             grid-area: subarea0;
@@ -118,16 +121,12 @@
             display: grid;
             align-self: start;
             place-content: center;
-        }
-
-        /* @include media(s2) {
-            *:nth-child(3),
-            *:nth-child(1) {
-                text-align: right;
+            @include media(s2) {
+                place-content: start;
             }
-        } */
-        
+        }        
     }
+
     .Grid_3 {
         display: grid;
         min-height: 50vh;
@@ -159,6 +158,7 @@
             place-content: center;
         }
     }
+
     .Grid_4 {
         display: grid;
         min-height: 50vh;
@@ -171,7 +171,7 @@
         padding-bottom: $h3;
 
         @include media(s2) {
-            gap: $h3;
+            grid-row-gap: $h2;
             padding-bottom: 0;
             grid-template-areas: 
                 "subarea1 subarea0"
@@ -200,6 +200,7 @@
 
         }
     }
+    
     .Grid_5 {
         display: grid;
         min-height: 50vh;
@@ -222,8 +223,6 @@
         *:nth-child(1) {
             grid-area: subarea1;
             justify-self: center;
-            background-color: pink;
-                
             @include media(s2) {
                 justify-self: start;
                 align-self: start;
@@ -232,7 +231,7 @@
         *:nth-child(2) {
             grid-area: subarea0;
             min-width: 50vw;
-            align-self: end;
+            align-self: center;
         }
         *:nth-child(3) {
             grid-area: subarea2;
@@ -241,7 +240,6 @@
             margin-right: $h3;
             padding-bottom: $h2;
             text-align: center;
-            
             @include media(s2) {
                 text-align: inherit;
                 padding-bottom: 0;

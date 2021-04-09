@@ -34,7 +34,10 @@
 	<LightboxGallery/>
 </Section>
 
-<Header tipo={1} variante={4} title="El proceso es El Proceso" />
+<Header tipo={1} variante={4} 
+textalign="align-center"
+title="El proceso es El Proceso" />
+
 <Section id="proceso" variante={7}>
 	<Tabs {tabHeaders} />
 </Section>
@@ -66,7 +69,9 @@
 		
 		<div slot="subarea2">
 			<Header tipo={3}
-			variante={7} title="¿Interesado en alguna pieza?"
+			variante={7} 
+			textalign="align-left"
+			title="¿Interesado en alguna pieza?"
 			/>
 			<p>Puedes obtener más información contactándome en las redes o por Whatsapp</p>
 		</div>

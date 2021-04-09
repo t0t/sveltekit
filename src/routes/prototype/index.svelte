@@ -33,6 +33,7 @@
 			<Header
 				tipo={3}
 				variante={6}
+				textalign="align-left"
 				title="Svelte Kit"
 				subtitle="El mejor hábitat para CSS, HTML y JS"
 			/>
@@ -53,6 +54,7 @@
 			<Header
 				tipo={3}
 				variante={6}
+				textalign="align-left"
 				title="SCSS"
 				subtitle="Diseño y prototipado al más bajo nivel"
 			/>
@@ -95,6 +97,7 @@
 			<Header
 				tipo={3}
 				variante={6}
+				textalign="align-left"
 				title="Download"
 				subtitle="Actualización y mejora contínua"
 			/>

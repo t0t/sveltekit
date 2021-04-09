@@ -103,11 +103,12 @@ li {}
 h1 {
   @include type-setting(1);
   font-weight: bold;
+
   @include media(s2) {
-    @include type-setting(3);
+    @include type-setting(2);
   }
   @include media(s3) {
-    @include type-setting(2);
+    @include type-setting(3);
   }
   @include media(s5) {
     @include type-setting(4);
@@ -183,5 +184,16 @@ sub {
 }
 
 figcaption {
+  text-align: left;
+}
+
+
+.align-right {
+  text-align: right;
+}
+.align-center {
+  text-align: center;
+}
+.align-left {
   text-align: left;
 }
