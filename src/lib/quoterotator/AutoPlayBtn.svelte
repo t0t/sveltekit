@@ -12,20 +12,21 @@
 
 <style lang="scss">
     @use "../../app.scss"as *;
+    $size: 15px;
 
     .switch-cont {
         position: absolute;
-        right: $h1;
-        bottom: -$h0;
+        right: 0;
+        bottom: 1px;
 
         &:hover:after {
             content: "Auto-play";
-            width: $h4;
+            width: 60px;
             position: absolute;
-            right: $h2;
+            right: -$h3;
             top: -$h2;
-            background-color: $white;
-            /* padding: 5px 0; */
+            background-color: $highlight;
+            text-align: center;
             border-radius: $h0;
             @include type-setting(-1);
         }
@@ -35,8 +36,8 @@
     .switch {
         position: relative;
         display: inline-block;
-        width: $h4;
-        height: 35px;
+        width: $size;
+        height: $size;
     }
 
     /* Hide default HTML checkbox */
@@ -61,10 +62,10 @@
     .slider:before {
         position: absolute;
         content: "";
-        height: $h2;
-        width: $h2;
-        left: 4px;
-        bottom: 4px;
+        height: $size;
+        width: $size;
+        left: 0;
+        bottom: 0;
         background-color: $highlight_1;
         transition: .4s;
     }
@@ -73,12 +74,12 @@
         background-color: $highlight;
     }
 
-    /* input:focus+.slider {
-        box-shadow: 0 0 1px $grey_4;
-    } */
+    input:focus+.slider {
+        background-color: $grey_5;
+    }
 
     input:checked+.slider:before {
-        transform: translateX(26px);
+        transform: translateX($size);
     }
 
     /* Rounded sliders */

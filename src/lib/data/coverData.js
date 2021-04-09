@@ -1,14 +1,14 @@
 export const coverData = [
     {
-        title: "+0+1234",
+        title: "Sergio Forés",
         subtitle: "Hermenéutica Holística",
         text: "Descifrando la Creación, en la intersección del arte, la tecnología y los saberes tradicionales. Un cierto tipo de orden que conforma un cierto tipo de conexión.",
         img: "./img/cover3.jpg"
     },
     {
-        title: "Artwork",
-        subtitle: "3D printed art",
-        text: "Obra plástica",
+        title: "Impresión 3D",
+        subtitle: "Cristalizo corrientes de formas",
+        text: "3D Printed Artworks",
         img: "./img/bg2.jpg"
     },
     {

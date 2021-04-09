@@ -8,7 +8,8 @@
         "Section_3",
         "Section_4",
         "Section_5",
-        "Section_6"
+        "Section_6",
+        "Section_7",
     ];
 </script>
 
@@ -66,5 +67,17 @@
         min-height: 50vh;
         color: $grey_0;
         background-color: $grey_3;
+    }
+    .Section_7 {
+        min-height: 50vh;
+        color: $grey_2;
+        background-color: $grey_0;
+        padding: 0;
+        @include media(s3) {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: $bp3;
+            
+        }
     }
 </style>

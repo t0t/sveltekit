@@ -5,7 +5,7 @@
     import Header from "$lib/Header.svelte";
 </script>
 
-<Section id="aboutmetxt" variante={3}>
+<Section id="aboutmetxt" variante={7}>
 	<AboutMeTxt />
 </Section>
 

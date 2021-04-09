@@ -1,13 +1,15 @@
 <script>
     import { coverData } from "$lib/data/coverData.js";	
+    import { tabHeaders } from "$lib/data/tabsContent.js";	
 	import GridBase from "$lib/GridBase.svelte";
     import Header from "$lib/Header.svelte";
     import Svg from "$lib/Svg.svelte";
     import Section from "$lib/Section.svelte";
-    import TabHeaders from "$lib/tabheaders/TabHeaders.svelte";
+    import Tabs from "$lib/tabheaders/Tabs.svelte";
 	import List from "$lib/List/List.svelte"    
 	import ListItem from "$lib/List/ListItem.svelte" 
 	import Button from "$lib/Button.svelte";
+
 </script>
 
 <!-- My Philosophy -->
@@ -46,9 +48,14 @@
 		</svg>
 
 		<div slot="subarea1">
-			<h2>Tetractys</h2>
+			<Header tipo={3}
+			variante={7} title="Tetractys"
+			/>
 			<h3>Hacia el encuentro con todo lo que Es</h3>
 			<h4>+0+1234 consiste en una hermenéutica de la Creación que observa experiencialmente sus principios universales. Ancestralmente 5 símbolos numéricos representan las partes de Todo.</h4>
+		</div>
+
+		<span slot="subarea2">
 			<List tipo={3} variante={2}>
 				<ListItem tipo={2} variante={0} href="https://slides.com/sergiofores/" alt="" target="_blank">
 					<Button variante={3} text="Slides" />
@@ -57,10 +64,6 @@
 					<Button variante={3} text="Libro" />
 				</ListItem>
 			</List>
-		</div>
-
-		<span slot="subarea2">
-			
 		</span>
 	</GridBase>
 </Section>
@@ -71,11 +74,24 @@
 		<img src="./img/logo.svg" alt="">
 	
 		<div slot="subarea1">
-			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum porro id debitis ullam sequi natus, et distinctio impedit reprehenderit quas in nihil, maxime consequuntur iste ut nesciunt sed laboriosam ex.</p>
+			<Header tipo={3}
+			variante={7} title="Hay una verdad que puede ser conocida…"
+			/>
+			<p>¿Percibes 2 
+				ese orden 1 
+				atravesándote 0
+				 en la forma 4
+				 del encuentro 3? 
+				Es lo inefable conociéndose a través de la Creación. 
+				01234 son las llaves de tus ojos. 
+				Éstas son las cosas que yo he visto, 
+				a dónde me llevan las corrientes de todas las formas..
+				</p>
 		</div>
 
 		<div slot="subarea2">
-			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum porro id debitis ullam sequi natus, et distinctio impedit reprehenderit quas in nihil, maxime consequuntur iste ut nesciunt sed laboriosam ex.</p>
+			<p>A medida que uno va averiguando cosas se va dando cuenta de que las cosas que uno puede llegar a saber quieren ser conocidas. Están ocultas y a la vez no lo están. Hay un juego ahí entre lo velado y lo revelado, como si lo uno no tuviera sentido sin lo otro.
+			</p>
 		</div>
 	</GridBase>
 </Section>
@@ -86,13 +102,15 @@
 		<img src="./img/01234_bn.svg" alt="">
 		
 		<div slot="subarea1">
-			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum porro id debitis ullam sequi natus, et distinctio impedit reprehenderit quas in nihil, maxime consequuntur iste ut nesciunt sed laboriosam ex.</p>
+			<Header tipo={3}
+			variante={6} title="Percibes cualquier cosa como lo que és; un símbolo"
+			/>
 		</div>
 
 		<div slot="subarea2">
-			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum porro id debitis ullam sequi natus, et distinctio impedit reprehenderit quas in nihil, maxime consequuntur iste ut nesciunt sed laboriosam ex.</p>
+			<p>Funciona como un Tetris; el objetivo no es amontonar piezas sino disolverlas, ¡que desaparezcan!</p>
 			
-			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum porro id debitis ullam sequi natus, et distinctio impedit reprehenderit quas in nihil, maxime consequuntur iste ut nesciunt sed laboriosam ex.</p>
+			<p>Los 5 arjés. Estructura dinámica sobre la que se asienta toda la Creación.</p>
 		</div>
 	</GridBase>
 </Section>
@@ -103,13 +121,13 @@
 		<img src="./img/grafico-8.svg" alt="">
 		
 		<div slot="subarea1">
-			<p><strong>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum porro id debitis ullam sequi natus, et distinctio impedit reprehenderit quas in nihil, maxime consequuntur iste ut nesciunt sed laboriosam ex.</strong></p>
+			<p><strong>Y cuanto más perceptible es su inexistencia más presente está.</strong></p>
 		</div>
 
 		<div slot="subarea2">
-			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum porro id debitis ullam sequi natus, et distinctio impedit reprehenderit quas in nihil, maxime consequuntur iste ut nesciunt sed laboriosam ex.</p>
+			<p>En ocasiones ni siquiera necesitas no estar viendo algo para estar viendo algo. Si vamos a descifrar la Creación vamos a tener que acostumbrarnos a las paradojas.</p>
 			
-			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum porro id debitis ullam sequi natus, et distinctio impedit reprehenderit quas in nihil, maxime consequuntur iste ut nesciunt sed laboriosam ex.</p>
+			<p>Del griego hermeneutikos; Hermeneuo (Yo descifro) y Tekné (Arte, técnica, tejer). La Hermenéutica nace como "el arte o la técnica de explicar, descifrar o interpretar". Así que para explicar o descifrar algo, luego veremos el qué, primeramente yo tengo que hacer una hermenéutica de ese "algo", averiguar algo que vendrá recogido en alguna otra parte. </p>
 		</div>
 	</GridBase>
 </Section>
@@ -120,6 +138,6 @@
 	subtitle=""
 />
 
-<Section id="tabheaders" variante={5}>
-	<TabHeaders />
+<Section id="principios" variante={7}>
+	<Tabs {tabHeaders} />
 </Section>

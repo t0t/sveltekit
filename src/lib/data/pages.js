@@ -7,8 +7,24 @@ export const pages = [
     {name: "About me", url: "/about"}
 ]
 export const secondaryNav = [
-    {name: "artwork", url: "/artworks"},
-    {name: "+0+1234", url: "/philosophy"},
-    {name: "Holistic Prototype", url: "/prototype"},
-    {name: "lab", url: "/lab"}
+    {
+        name: "Impresión 3D", 
+        url: "/artworks",
+        description: "Arte"
+    },
+    {
+        name: "Cosmovisión", 
+        url: "/philosophy",
+        description: "+0+1234"
+    },
+    {
+        name: "Diseño Holistico", 
+        url: "/prototype",
+        description: "Desarrollo prototipos"
+    },
+    {
+        name: "Laboratorio", 
+        url: "/lab",
+        description: "Experimentación"
+    }
 ]

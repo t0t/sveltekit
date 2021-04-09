@@ -5,6 +5,7 @@
 @import "./sass/_font.scss";
 @import "./sass/_forms.scss";
 @import "./sass/_animation.scss";
+@import "./sass/_prism-theme.scss";
 
 :root {
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
@@ -52,4 +53,8 @@ video {
 a > svg {
     display: flex;
     justify-content: center;
+}
+
+svg {
+    width: 100%;
 }

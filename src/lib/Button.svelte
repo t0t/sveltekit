@@ -14,7 +14,8 @@
         "Button_4",
         "Button_5",
         "Button_6",
-        "Button_7"
+        "Button_7",
+        "Button_8"
     ];
 </script>
 
@@ -132,10 +133,23 @@
         background-color: $grey_4;
         border: none;
         padding: $button_3;
+        display: block;
 
         &:hover {
             color: $grey_0;
             background-color: $black;
+        }
+    }
+    .Button_8 {
+        padding: $h2;
+        color: $grey_1;
+        margin: 0;
+        &:hover {
+            color: $grey_5;
+            background-color: $grey_1;
+        }
+        &:focus {
+            background-color: #fff;
         }
     }
 </style>

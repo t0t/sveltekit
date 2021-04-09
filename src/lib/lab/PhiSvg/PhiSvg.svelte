@@ -1,5 +1,8 @@
 <script>
 	import Button from '$lib/Button.svelte';
+	import Header from '$lib/Header.svelte';
+	import List from '$lib/List/List.svelte';
+	import ListItem from '$lib/List/ListItem.svelte';
 	import { tweened } from 'svelte/motion';
 	export let title = '';
 	export let text = '';
@@ -68,6 +71,12 @@
 
 <svelte:window bind:innerWidth bind:innerHeight />
 
+
+<Header
+	tipo={3} variante={6}
+	{title}
+	subtitle={text} />
+
 <main class="PhiSvg">
 
 	<div class="BannerMedia">
@@ -87,18 +96,21 @@
 	</div>
 
 	<div class="PhiSvgText">
-			<h2>{title}</h2>
-			<p>{@html text}</p>
+
 		<div class="controls">
 			<input type="number" bind:value={angle} step="0.001" />
 			<input type="range" bind:value={$tweenedCount} min={0} max={numDots} />
 		</div>
-		<Button
-			variante={7}
-			text="Play"
+	
+		<List tipo={3} variante={5}>
+			<ListItem tipo={3} 
+			variante={6}
 			on:click={() => {
 				$tweenedCount = $tweenedCount > 0 ? 0 : numDots;
-			}} />
+			}}>
+				Play
+			</ListItem>
+		</List>
 	</div>
 
 </main>

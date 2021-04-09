@@ -4,7 +4,7 @@
 	export let target = "";
 	export let tipo = 0;
 	export let variante = 0;
-	const clase = ['ListItem_0', 'ListItem_1', 'ListItem_2','ListItem_3','ListItem_4','ListItem_5'];
+	const clase = ['ListItem_0', 'ListItem_1', 'ListItem_2','ListItem_3','ListItem_4','ListItem_5', 'ListItem_6','ListItem_7'];
 </script>
 
 {#if tipo === 0}
@@ -13,6 +13,8 @@
     <slot class={clase[variante]}></slot>
 {:else if tipo === 2}
     <a class={clase[variante]} {href} {alt} {target}><slot/></a>
+{:else if tipo === 3}
+    <button class={clase[variante]} on:click><slot/></button>
 {:else}
 	<div class={clase[variante]}> <slot /> </div>
 {/if}
@@ -57,7 +59,7 @@
         align-self: start;
 	}
 	.ListItem_3 {
-		color: $grey_4;
+		color: $grey_0;
         align-self: start;
 	}
 	.ListItem_4 {
@@ -82,6 +84,41 @@
 		place-items: center;
 		width: $h6;
 		height: $h6;
+		&:hover {
+			color: $white;
+			background-color: $grey_4;
+		}
+		@include media(s3) {
+			width: $h6 + $h4;
+			height: $h6 + $h4;
+		}
+		@include media(s4) {
+			@include type-setting(1);
+			width: $h6 + $h4;
+			height: $h6 + $h4;
+		}
+	}
+	.ListItem_6 {
+		text-decoration: none;
+		color: $grey_2;
+		@include type-setting(0)
+	}
+	.ListItem_7 {
+		@include type-setting(0);
+		padding: $h1;
+		border-radius: 50%;
+		border: 1px solid $grey_0;
+		color: $grey_0;
+		display: grid;
+		place-items: center;
+		place-content: center;
+		width: $h6;
+		height: $h6;
+		
+		:global(span) {
+			color: $primary;
+			@include type-setting(0);
+		}
 		&:hover {
 			color: $white;
 			background-color: $grey_4;

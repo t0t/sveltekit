@@ -5,6 +5,9 @@
 	import Form from '$lib/Form.svelte';
 	import Input from '$lib/Input.svelte';
 	import Button from '$lib/Button.svelte';
+	import Header from '$lib/Header.svelte';
+	import List from '$lib/List/List.svelte';
+	import ListItem from '$lib/List/ListItem.svelte';
 
 	let x = 0;
 	let y = 0;
@@ -70,17 +73,25 @@
 	</svg>
 
 	<div slot="subarea1">
-		<hgroup>
-			<h2>Meta-Mapa +0+1234</h2>
-			<p>Cualquier palabra que escribas se ordena naturalmente en una de estas zonas.</p>
-		</hgroup>
+		<Header
+			tipo={3} variante={7}
+			title="Meta-Mapa +0+1234"
+			subtitle="Escribe y ordena conceptos en el mapa +0+1234" />
+
 		<Form on:submit={addItem} variante={1}>
 			<Input bind:value placeholder="Your word" />
 			<Button variante={6} text="Add" />
 		</Form>
 	</div>
+
 	<div slot="subarea2">
-		<Button on:click={() => save(svg)} variante={1} text="Download svg" />
+		<List tipo={3} variante={5}>
+			<ListItem tipo={3} 
+			variante={6}
+			on:click={() => save(svg)}>
+				Download svg
+			</ListItem>
+		</List>
 	</div>
 </GridBase>
 
@@ -96,9 +107,5 @@
 		fill: none;
 		stroke: $grey_1;
 		stroke-width: 4;
-	}
-	hgroup,
-	p {
-		text-align: center;
 	}
 </style>
