@@ -103,17 +103,14 @@ li {}
 h1 {
   @include type-setting(1);
   font-weight: bold;
-  // @include media(s1) {
-  //   @include type-setting(2);
-  // }
   @include media(s2) {
     @include type-setting(3);
   }
   @include media(s3) {
-    @include type-setting(4);
+    @include type-setting(2);
   }
   @include media(s5) {
-    @include type-setting(5);
+    @include type-setting(4);
   }
 }
 

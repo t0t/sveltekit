@@ -2,7 +2,7 @@
 	export let tipo = 0;
 	export let variante = 0;
     export let marker = "";
-	const clase = ['List_0', 'List_1', 'List_2','List_3','List_4'];
+	const clase = ['List_0', 'List_1', 'List_2','List_3','List_4', 'List_5'];
 </script>
 
 {#if tipo === 0}
@@ -66,6 +66,7 @@
     
 	.List_0 {
         color: $black;
+		text-align: left;
 	}
 	.List_1 {
 		margin-top: $h1;
@@ -99,16 +100,20 @@
 	/* Nav horizontal grande */
 	.List_4 { 
 		display: grid;
+		width: 100vw;
 		min-height: 50vh;
 		grid-template-columns: repeat(auto-fit, minmax(177px, 0.186fr));
 		text-align: center;
 		place-content: center;
 		place-items: center;
-		background-color: $primary;
-		padding: $h2 0;
+		/* padding: $h2 0; */
 
 		@include media(s3) {
 			grid-template-columns: repeat(auto-fit, minmax(245px, 0.186fr));
 		}
+	}
+	.List_5 {
+		display: grid;
+		place-items: center;
 	}
 </style>

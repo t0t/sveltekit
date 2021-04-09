@@ -1,12 +1,12 @@
 export const quotes = [
 	{
-		quote: "The road to success is always under construction.",
-		author: "Lily Tomlin",
+		quote: "Aquel que sabe contar hasta cuatro puede conocer el universo entero",
+		author: "Pitágoras",
 		image: "/img/bg1.jpg"
 	},
 	{
-		quote: "A day without sunshine is like, you know, night.",
-		author: "Steve Martin",
+		quote: "Lo que la realidad es, es su símbolo; el es, es el símbolo de lo real",
+		author: "Raimon Panikkar",
 		image: "/img/bg2.jpg"
 	},
 	{

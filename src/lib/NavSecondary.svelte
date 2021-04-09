@@ -1,16 +1,26 @@
 <script>
-    import { secondaryNav } from "$lib/data/pages.js";
     import List from "$lib/List/List.svelte";
     import ListItem from "$lib/List/ListItem.svelte";
-    import Button from "$lib/Button.svelte";
+
+    export let secondaryNav = [{}];
+    export let url = "";
+    export let name = "";
+    export let description = "";
+    export let variante_item = "4";
+    export let variante_list = "4";
+    export let tipo = "4";
 </script>
 
-<List tipo={3} variante={4}>
+<List tipo={3} variante={variante_list}>
 
-    {#each secondaryNav as {url, name}}
+    {#each secondaryNav as {url, name, description}}
 
-        <ListItem tipo={2} variante={5}
-        href={url} alt={name}>{name}</ListItem>
+        <ListItem tipo={2} variante={variante_item}
+        href={url} alt={name}>
+            
+            {name} <span>{description}</span>
+        
+        </ListItem>
 
     {/each}
 

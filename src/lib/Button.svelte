@@ -133,6 +133,7 @@
         background-color: $grey_4;
         border: none;
         padding: $button_3;
+        display: block;
 
         &:hover {
             color: $grey_0;

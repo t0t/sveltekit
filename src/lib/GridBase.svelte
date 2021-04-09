@@ -37,12 +37,12 @@
         *:nth-child(1) {
             grid-area: subarea1;
             align-self: end;
-            /* margin-bottom: $h2; */
         }
         *:nth-child(2) {
             grid-area: subarea0;
-            min-width: 50vw;
-            /* margin-bottom: $h4; */
+            display: flex;
+            min-width: 40vw;
+            max-height: 50vh;
         }
         *:nth-child(3) {
             grid-area: subarea2;
@@ -75,12 +75,15 @@
         *:nth-child(2) {
             grid-area: subarea0;
             min-width: 50vw;
+            display: flex;
+            min-width: 40vw;
+            max-height: 50vh;
         }
         *:nth-child(3) {
             grid-area: subarea2;
             display: grid;
             align-self: start;
-            place-content: center;
+            text-align: center;
         }
     }
     .Grid_2 {
@@ -106,7 +109,9 @@
         *:nth-child(2) {
             grid-area: subarea0;
             min-width: 50vw;
-            /* margin-bottom: $h4; */
+            display: flex;
+            min-width: 40vw;
+            max-height: 50vh;
         }
         *:nth-child(3) {
             grid-area: subarea2;
@@ -212,12 +217,13 @@
                 "subarea0 subarea2"
                 "subarea0 subarea1"
             ;
+            grid-template-rows: auto auto; /* Ajusta contenido a toda el área */
         }
         *:nth-child(1) {
             grid-area: subarea1;
             justify-self: center;
+            background-color: pink;
                 
-            
             @include media(s2) {
                 justify-self: start;
                 align-self: start;
@@ -226,18 +232,21 @@
         *:nth-child(2) {
             grid-area: subarea0;
             min-width: 50vw;
+            align-self: end;
         }
         *:nth-child(3) {
             grid-area: subarea2;
             display: grid;
             margin-left: $h3;
             margin-right: $h3;
+            padding-bottom: $h2;
             text-align: center;
             
             @include media(s2) {
                 text-align: inherit;
-                padding-top: $h3;
+                padding-bottom: 0;
                 margin-left: 0;
+                align-self: end;
             }
         }
     }

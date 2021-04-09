@@ -2,7 +2,10 @@
 	import Form from '$lib/Form.svelte';
 	import Button from '$lib/Button.svelte';
 	import Input from '$lib/Input.svelte';
+	import Header from '$lib/Header.svelte';
 	import Alert from '$lib/Alert.svelte';
+	import List from '$lib/List/List.svelte';
+	import ListItem from '$lib/List/ListItem.svelte';
 
 	let gematria = new Map([
 		['\u05D0', 1], //'alef', '‎א'
@@ -117,13 +120,40 @@
 	}
 </script>
 
+<Header
+	tipo={3} variante={6}
+	title="Gematria App"
+	subtitle="Escribe o pega letras hebreas para conocer su equivalente numérico"
+/>
+
+<main>
+	<h2 class="result">{counter}</h2>
+
+	<div class="position-form">
+		<Form on:submit={handleSubmit} variante={1}>
+			<Input bind:value={valorinput} />
+			<Button variante={6} text="Go!" {valorinput} />
+		</Form>
+	</div>
+
+	{#if haserror == true}
+		<Alert>{errormessage}</Alert>
+	{/if}
+</main>
+
+<footer>
+	<small>בראשית ברא אלהים את השמים ואת הארץ (Génesis, 1)</small>
+	<List tipo={3} variante={5}>
+		<ListItem tipo={2} 
+		variante={6}
+		href="https://tanach.us/Server.txt?Genesis*&content=Consonants" target="_blank">
+			Codex de Leningrado
+		</ListItem>
+	</List>
+</footer>
+
 <style lang="scss">
 	@use "../../../app.scss"as *;
-
-	header {
-		text-align: center;
-		color: inherit;
-	}
 	
 	main {
 		margin-bottom: $h2;
@@ -145,47 +175,10 @@
 		font-weight: bold;
 		@include type-setting(4);
 	}
-	p,
+
 	small {
 		text-align: center;
 		color: inherit;
-	}
-	small {
 		display: block;
-		/* margin-top: $h1; */
-
-		a {
-			color: $highlight;
-			text-decoration: none;
-		}
 	}
 </style>
-
-<header>
-	<h2>Gematria App</h2>
-	<p>Lo que valen las palabras hebreas</p>
-</header>
-
-<main>
-	<h2 class="result">{counter}</h2>
-
-	<div class="position-form">
-		<Form on:submit={handleSubmit} variante={1}>
-			<Input bind:value={valorinput} />
-			<Button variante={6} text="Go!" {valorinput} />
-		</Form>
-	</div>
-
-	{#if haserror == true}
-		<Alert>{errormessage}</Alert>
-	{/if}
-</main>
-
-<footer>
-	<small>בראשית ברא אלהים את השמים ואת הארץ (Génesis, 1)</small>
-	<small>
-		<a href="https://tanach.us/Server.txt?Genesis*&content=Consonants" target="_blank"> 
-			Codex de Leningrado
-		</a>
-	</small>
-</footer>

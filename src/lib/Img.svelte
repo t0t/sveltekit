@@ -23,11 +23,12 @@
         max-width: 100%;
         min-height: 50vh;
     }
-    .Img_1 { 
+   
+    .Img_1 { /* Usado en index */
         min-height: 50vh;
         object-fit: fill;
-        @include media(s3) {
-            border-top: $h3 solid $grey_1;
+        @include media(s2) {
+            border-bottom: $h3 solid $grey_1;
         }
     }
     .Img_2 {
@@ -49,7 +50,7 @@
         border-left: $h3 solid $grey_1;
         border-top: $h3 solid $grey_3;
     }
-    .Img_4 {
+    .Img_4 { /* Usado en index */
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;

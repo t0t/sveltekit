@@ -9,20 +9,20 @@
 	import Button from "$lib/Button.svelte";
 	import Header from "$lib/Header.svelte";
 	import NavSecondary from "$lib/NavSecondary.svelte";
+	import { secondaryNav } from "$lib/data/pages.js";
+
 </script>
 
 <Section id="cover" variante={3}>
-	<Header
-		tipo={2}
-		title={coverData[0].title}
-		subtitle={coverData[0].subtitle}
-		text={coverData[0].text}
-		img={coverData[0].img}
-	/>
-</Section>
-
-<Section id="navsecondary" variante={3}>
-	<NavSecondary />
+	<Header tipo={2}
+			title={coverData[0].title}
+			subtitle={coverData[0].subtitle}
+			img={coverData[0].img}>
+	
+		<NavSecondary 	{secondaryNav} 
+						variante_item={7}
+						variante_list={4} />	
+	</Header>
 </Section>
 
 <Section id="quoterotator" variante={3}>
@@ -45,7 +45,7 @@
 		/>
 		
 		<div slot="subarea2">
-			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, exercitationem repudiandae iusto impedit sint magnam totam earum neque.</p>
+			<p>Descifrando la Creación, en la intersección del arte, la tecnología y los saberes tradicionales. Un cierto tipo de orden que conforma un cierto tipo de conexión.</p>
 		</div>
 
 		<div slot="subarea1">
@@ -69,7 +69,7 @@
 		/>
 		
 		<div slot="subarea1">
-			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, exercitationem repudiandae iusto impedit sint magnam totam earum neque, corporis, dolores pariatur. Maiores, perspiciatis praesentium? Totam sint libero hic laborum veniam.</p>
+			<p>El fundamento de la Creación radica en un orden arquetípico universal. ...Percibir ese orden conforma un tipo de conexión trascendental.</p>
 		</div>
 
 		<div slot="subarea2"></div>

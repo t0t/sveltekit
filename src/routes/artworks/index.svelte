@@ -49,7 +49,7 @@
 		</div>
 
 		<div slot="subarea2">
-			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum porro id debitis ullam sequi natus, et distinctio impedit reprehenderit quas in nihil, maxime consequuntur iste ut nesciunt sed laboriosam ex.</p>
+			<p>En la obra de arte, como símbolo que es, se produce un reconocimiento mutuo entre dos caras de una misma realidad que se encuentran. La realidad se reúne a sí misma, se completa a sí misma haciéndose presente como símbolo y  proporcionando la experiencia de descubrimiento de una realidad más original.</p>
 			
 			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum porro id debitis ullam sequi natus, et distinctio impedit reprehenderit quas in nihil, maxime consequuntur iste ut nesciunt sed laboriosam ex.</p>
 		</div>
@@ -65,13 +65,15 @@
 		/>
 		
 		<div slot="subarea2">
-			<h2>Mas info</h2>
-			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, exercitationem repudiandae iusto impedit sint magnam totam earum neque, corporis, dolores pariatur. Maiores, perspiciatis praesentium? Totam sint libero hic laborum veniam.</p>
+			<Header tipo={3}
+			variante={7} title="¿Interesado en alguna pieza?"
+			/>
+			<p>Puedes obtener más información contactándome en las redes o por Whatsapp</p>
 		</div>
 
 		<div slot="subarea1">
 			<Button
-				variante={1}
+				variante={7}
 				text="Chat-Whatsapp"
 				url="https://api.whatsapp.com/send?phone=+34619549032"
         	/>

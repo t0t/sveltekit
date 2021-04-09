@@ -1,3 +1,4 @@
+<!-- comentario -->
 <script>
     import Button from '$lib/Button.svelte';
 
@@ -10,12 +11,7 @@
     export let tipo = 0
     export let variante = 0
     const modificador = [
-        "Header_0",
-        "Header_1",
-        "Header_2",
-        "Header_3",
-        "Header_4",
-        "Header_5"
+        "Header_0", "Header_1", "Header_2", "Header_3", "Header_4", "Header_5", "Header_6", "Header_7"
     ]
 
     let innerWidth, innerHeight, y;
@@ -61,7 +57,7 @@
             text-align: center;
         }
         .CoverTitle {
-            color: $secondary;
+            color: $grey_3;
             span {
                 color: $grey_4;
             }
@@ -110,13 +106,35 @@
             @include type-setting(1);
         }
     }
+    .Header_6 {
+        text-align: center;
+        /* padding: $h3; */
+        color: $grey_2;
+        /* background-color: red; */
+        h1 {
+            @include type-setting(1);
+        }
+    }
+    .Header_7 {
+        text-align: center;
+        padding-bottom: $h3;
+        color: $grey_2;
+        /* background-color: red; */
+        h1 {
+            @include type-setting(1);
+        }
+    }
 </style>
 
 <svelte:window bind:innerWidth bind:innerHeight bind:scrollY={y} />
 
 {#if tipo === 1}
     <header class={modificador[variante]}>
-        <h1> {title} <span>{@html subtitle} </span></h1>
+        <h1> {title} <br>
+            <span>
+                {@html subtitle} 
+            </span>
+        </h1>
     </header>
      
 {:else if tipo === 2}
@@ -135,14 +153,20 @@
             <h2 class="CoverSubTitle"> {@html subtitle} </h2>
         </span>
     </h1>
-
     <div class="CoverText">
         <p>{text}</p>
-
         {#if is_products_page}
             <Button variante={5} text="ᐯ"/>
         {/if}
     </div>
+
+        <slot/>
+    
+    </header>
+{:else if tipo === 3}
+    <header class={modificador[variante]}>
+        <h2> {title} </h2>
+        <h3> {@html subtitle} </h3>
     </header>
 {:else}
 <header class={modificador[variante]}>
