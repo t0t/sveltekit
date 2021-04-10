@@ -16,11 +16,9 @@
 <!-- Holistic Prototype -->
 <Section id="cover" variante={3}>
 	<Header
-		tipo={2}
-		variante={1}
+		tipo={2} variante={1}
 		title={coverData[4].title}
 		subtitle={coverData[4].subtitle}
-		text={coverData[4].text}
 	/>
 </Section>
 
@@ -129,7 +127,7 @@
 
 <Header
 	tipo={1} variante={3}
-	title="Ceros y Unos."
+	title="Notas acerca de esta web"
 />
 
 <Section id="UIPrototype" variante={7} bg_color="bggrey_0">

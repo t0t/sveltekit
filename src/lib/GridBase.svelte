@@ -130,8 +130,8 @@
             grid-area: subarea0;
             min-width: 50vw;
             display: flex;
-            min-width: 40vw;
-            max-height: 50vh;
+            max-height: 70vh;
+            margin-top: -$h4;
         }
         *:nth-child(3) {
             grid-area: subarea2;

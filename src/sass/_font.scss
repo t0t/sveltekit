@@ -69,6 +69,10 @@ $line-heights: (
   @return map-get($size-scales, $level);
 }
 
+pre {
+  width: 100%;
+}
+
 body,
 main,
 header,
@@ -122,7 +126,7 @@ h2 {
     @include type-setting(1);
   }
   @include media(s5) {
-    @include type-setting(2);
+    @include type-setting(4);
     margin-left: $h5;
     margin-right: $h5;
   }
@@ -136,12 +140,11 @@ h4 {
   }
 }
 
-small,
 p {
   @include type-setting(0);
-}
-p {
-  // margin-bottom: $h0;
+  @include media(s5) {
+    @include type-setting(1);
+  }
 }
 
 hgroup {

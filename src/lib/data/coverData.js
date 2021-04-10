@@ -1,7 +1,7 @@
 export const coverData = [
     {
         title: "Sergio Forés",
-        subtitle: "Hermenéutica Holística",
+        subtitle: "Sentir la Creación",
         text: "Descifrando la Creación, en la intersección del arte, la tecnología y los saberes tradicionales. Un cierto tipo de orden que conforma un cierto tipo de conexión.",
         img: "./img/cover3.jpg"
     },

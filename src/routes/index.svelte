@@ -20,7 +20,7 @@
 				variante={6}
 				textalign = "align-left"
 				title="Sergio Forés"
-				subtitle="Hermenéutica Holística"/>
+				subtitle={coverData[0].subtitle}/>
 		</span>
 		<span slot="subarea1"> 
 			<NavSecondary {secondaryNav} 

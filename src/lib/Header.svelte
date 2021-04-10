@@ -55,6 +55,9 @@
         @include media(s3) {
             padding: 0;
         }
+        @include media(s5) {
+            min-height: $h8;
+        }
     }
     .Header_2 {
         display: grid;
@@ -68,10 +71,9 @@
         }
     }
     .Header_3 {
-        padding-top: $h2;
-        padding-bottom: $h2;
-        text-align: center;
-        /* color: $grey_2; */
+        padding-top: $h3;
+        padding-bottom: $h3;
+        padding-left: $h2;
         h1 {
             @include type-setting(1);
         }
@@ -89,9 +91,12 @@
         padding: $h3;
         background-color: $white;
     }
-    .Header_6 {
+    
+    .Header_6 { 
         color: inherit;
+        /* padding-left: $h5; */
         h2 {
+            padding-top: 0;
             color: $grey_2;
         }
     }
@@ -101,7 +106,7 @@
     }
 </style>
 
-<svelte:window bind:innerWidth bind:innerHeight bind:scrollY={y} />
+<!-- <svelte:window bind:innerWidth bind:innerHeight bind:scrollY={y} /> -->
 
 {#if tipo === 1}
     <header class="{modificador[variante]} {textalign}">
@@ -115,8 +120,7 @@
 {:else if tipo === 2}
     <!-- con foto de fondo -->
     <header 
-    class="{modificador[variante]} {textalign}"
-    style="opacity: { 1 - Math.max(0, y / (innerHeight/1.5)) };">
+    class="{modificador[variante]} {textalign}">
 
         <h1> {title} <br>
             <span>

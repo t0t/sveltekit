@@ -13,12 +13,12 @@ export const secondaryNav = [
         description: "Impresión 3D en gran formato"
     },
     {
-        name: "+0+1234", 
+        name: "Cosmovisión +0+1234", 
         url: "/philosophy",
-        description: "Cosmovisión filosófica de fondo"
+        description: "Hermenéutica Holística"
     },
     {
-        name: "Diseño de Interfaz de usuario", 
+        name: "Diseño UI Holistico", 
         url: "/prototype",
         description: "Prototipos de bajo nivel"
     },

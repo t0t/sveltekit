@@ -22,7 +22,7 @@ export const tabHeaders = [
         {
             id: 2,
             title: "Keep it simple",
-            subtitle: "La Mímesis",
+            subtitle: "Todo ya existe y funciona",
             img: "./img/dos.svg",
             tags: [
                 "Alma", "Agua", "Dualidad","Reshimó", "Identidad", "Separación","Caída", "Memoria", "Campo Sensible"
@@ -31,13 +31,13 @@ export const tabHeaders = [
         },
         {
             id: 3,
-            title: "3. Símbolo",
-            subtitle: "El Símbolo",
-            img: "./img/tres.svg",
+            title: "Pasión",
+            subtitle: "Belleza",
+            img: "./img/grafico-4.svg",
             tags: [
                 "Símbolo", "Lenguaje", "Aire","Encuentro", "Trasciende", "Conexión","Insight", "Neshamá"
             ],
-            content: "Se lo define como la representación perceptible de una idea. Símbolo viene de symballein, symbolon que en el relato griego es la tessera hospitalis o 'tablilla del recuerdo' que correspondía al objeto que, habiendo sido dividido, podía ser reunido, congregado, reencontrado. El símbolo es la relación de lo aparentemente diferente; no es simplemente objetivo ni puramente subjetivo, sino que es constitutivamente La relación. El símbolo es símbolo cuando simboliza, cuando se le reconoce en cuanto tal. Un símbolo que no hable directamente a quien lo percibe deja de ser símbolo. Es lo que amalgama, la mediación. Meditar es percibir lo simbólico. Lo real es símbolo. Todo se vela y revela como símbolo, no sólo a través de él sino en él. Si algo trasciende está siendo simbólico, ya que es el lenguaje de la Creación. "
+            content: "Aunque el placer que me produce hacer esta web es también, a veces, inversamente proporcional a los motivos de displacer. Creo que he conseguido mantener tantos años el interés por el diseño frontend porque está relacionado con todo lo demás. La percepción holística que he desarrollado con +0+1234 revivifica y estimula mi interés por lo analógico y también por lo digital. Conceptualmente no soy capaz de distinguir entre un 'div' y una sephira cabalistica. Al final todo son vasijas que reciben luz. El espacio, las proporciones en el diseño están intimamente unidas a las proporciones de la naturaleza. Y no se me ocurre cosa más poética que una función Javascript, por ejemplo, porque a un nivel muy profundo las acciones que suceden, los comportamientos, los símbolos, las estructuras y los ciclos que intervienen en los ecosistemas web son análogos a lo que nos ha transmitido la tradición del pensamiento filosófico más antiguo."
         },
         {
             id: 4,
