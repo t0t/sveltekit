@@ -128,11 +128,10 @@
 </Section>
 
 <Header
-	tipo={1} variante={1}
+	tipo={1} variante={3}
 	title="Ceros y Unos."
-	subtitle=""
 />
 
-<Section id="UIPrototype" variante={7}>
+<Section id="UIPrototype" variante={7} bg_color="bggrey_0">
 	<Tabs {tabHeaders} />
 </Section>

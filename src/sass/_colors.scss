@@ -10,18 +10,13 @@ $grey_3: #414141;
 $grey_4: #323232;
 $grey_5: #121212;
 
-// Main colors
-$primary: $grey_1;
-$secondary: $grey_2;
-$tertiary: $grey_3;
-$quaternary: $grey_5;
-
 // Specials
 $primary: #d3b39c;
 $secondary: #4bddc4;
 $tertiary: pink;
 $quaternary: $primary;
-$highlight: #d3b39c;
+$highlight: #d4b39c;
+// $highlight: #d3b39c;
 // $highlight: rgb(232, 178, 138);
 $highlight_1: rgba($white, 0.85);
 $highlight_2: lighten( $highlight, 3% );
@@ -69,5 +64,8 @@ $list4: $primary, $secondary, $tertiary, $primary, $secondary, $tertiary, $prima
 .bggrey_3 { background-color: $grey_3; }
 .bggrey_4 { background-color: $grey_4; }
 .bggrey_5 { background-color: $grey_5; }
+
 .bgwhite { background-color: $white; }
 .bgblack { background-color: $black; }
+
+.highlight { background-color: $highlight; }

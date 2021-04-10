@@ -13,7 +13,7 @@
     const modificador = [
         "Header_0", "Header_1", "Header_2", "Header_3", "Header_4", "Header_5", "Header_6", "Header_7"
     ]
-    export let textalign = "align-center" // Clases externas especificas para alinear texto
+    export let textalign = "tac" // Clases externas especificas para alinear texto
 
     let innerWidth, innerHeight, y;
 </script>
@@ -66,15 +66,6 @@
             @include type-setting(1);
             font-weight: normal;
         }
-        /* min-height: 50vh; */
-        /* background-color: $grey_1; */
-        
-        /* @include media(s2) {
-            min-height: 100vh;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        } */
     }
     .Header_3 {
         padding-top: $h2;
@@ -87,19 +78,16 @@
     }
     .Header_4 {
         padding: $h3;
-        color: $grey_2;
+        /* color: $grey_2; */
         background-color: $grey_4;
-        /* h1 {
+        h1 {
             @include type-setting(1);
-        } */
+        }
     }
     .Header_5 {
         color: inherit;
         padding: $h3;
         background-color: $white;
-        /* h1 {
-            @include type-setting(1);
-        } */
     }
     .Header_6 {
         color: inherit;
@@ -110,9 +98,6 @@
     .Header_7 {
         color: inherit;
         padding-bottom: $h2;
-        /* h1 {
-            @include type-setting(1);
-        } */
     }
 </style>
 

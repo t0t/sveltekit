@@ -24,21 +24,17 @@
 	/>
 </Section>
 
-<Section variante={1} id="video" bg_color="bggrey_2">
+<Section variante={1} id="video" bg_color="highlight">
 	<VideoBanner/>
 </Section>
 
 <Header tipo={1} variante={4} title="Galería" />
 
-<Section id="lightboxgallery" variante={0} bg_color="bggrey_2">
+<Section id="lightboxgallery" variante={0} bg_color="bggrey_1">
 	<LightboxGallery/>
 </Section>
 
-<Header tipo={1} variante={4} 
-textalign="align-center"
-title="El proceso es El Proceso" />
-
-<Section id="proceso" variante={7}>
+<Section id="proceso" variante={7} bg_color="bggrey_0">
 	<Tabs {tabHeaders} />
 </Section>
 

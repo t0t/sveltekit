@@ -19,7 +19,7 @@
 	<div slot="subarea1">
 		<Blockquote
 			align="tar"
-			color="primary"
+			color="grey_3"
 			variante={1}
 			text="Todo son formas de arte simbólicas con una función mediadora capaz de abrirle lo real a la conciencia." />
 	</div>
