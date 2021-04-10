@@ -132,25 +132,20 @@
 {:else if tipo === 2}
     <!-- con foto de fondo -->
     <header 
-    class={modificador[variante]}
-    class:is_home
+    class="{modificador[variante]} {textalign}"
     style=" 
     opacity: { 1 - Math.max(0, y / (innerHeight/1.5))};
     background-image: url( { innerWidth > 769 || is_home ? img : ''})
     ">
 
-    <h1 class="CoverTitle">
-        {title} <br>
-        <span>
-            <h2 class="CoverSubTitle"> {@html subtitle} </h2>
-        </span>
-    </h1>
-    <div class="CoverText">
+        <h1>
+            {title} <br>
+            <span>
+                <h2 class="CoverSubTitle"> {@html subtitle} </h2>
+            </span>
+        </h1>
+
         <p>{text}</p>
-        {#if is_products_page}
-            <Button variante={5} text="ᐯ"/>
-        {/if}
-    </div>
 
         <slot/>
     

@@ -1,6 +1,7 @@
 <script>
 	import { coverData } from "$lib/data/coverData.js";	
 	import Section from "$lib/Section.svelte";
+	import Cover from "$lib/Cover.svelte";
 	import GridBase from "$lib/GridBase.svelte";
 	// import GridBase from "$lib/GridBase.svelte";
 	import QuoteRotator from '$lib/quoterotator/QuoteRotator.svelte';
@@ -10,19 +11,18 @@
 	import Header from "$lib/Header.svelte";
 	import NavSecondary from "$lib/NavSecondary.svelte";
 	import { secondaryNav } from "$lib/data/pages.js";
-
 </script>
 
-<Section id="cover" variante={3}>
+
+<Section id="cover" variante={2}>	
 	<Header tipo={2}
-			title={coverData[0].title}
-			subtitle={coverData[0].subtitle}
-			img={coverData[0].img}>
-	
+	variante={6}
+	title="Sergio Forés"
+	subtitle="Hermenéutica Holística" 
+	textalign="align-center"/>
 		<NavSecondary 	{secondaryNav} 
 						variante_item={7}
 						variante_list={4} />	
-	</Header>
 </Section>
 
 <Section id="quoterotator" variante={3}>
