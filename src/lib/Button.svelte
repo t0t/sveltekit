@@ -6,7 +6,7 @@
     export let variante = 0;
     export let valorinput = "input";
 
-    $: modificador = [
+    let modificador = [
         "Button_0",
         "Button_1",
         "Button_2",

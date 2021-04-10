@@ -159,22 +159,6 @@ h4 {
   }
 }
 
-blockquote {
-  @include type-setting(0);
-  @include media(s1) {
-    @include type-setting(1);
-  }
-  @include media(s1) {
-    margin-left: $h3;
-    margin-right: $h3;
-  }
-  @include media(s2) {
-    max-width: $bp1;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
 sub {
   color: $grey_5;
   font-weight: $weight_normal;
@@ -187,13 +171,13 @@ figcaption {
   text-align: left;
 }
 
-
-.align-right {
+// Text align
+.tar {
   text-align: right;
 }
-.align-center {
+.tac {
   text-align: center;
 }
-.align-left {
+.tal {
   text-align: left;
 }

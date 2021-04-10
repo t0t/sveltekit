@@ -24,7 +24,7 @@
 	/>
 </Section>
 
-<Section variante={0}>
+<Section variante={0} bg_color="bggrey_0">
 	<GridBase variante={2}>
 
 		<Prism language="{codeData[1].language}" code="{codeData[1].text}" />
@@ -68,7 +68,7 @@
 	</GridBase>
 </Section>
 
-<Section variante={0}>
+<Section variante={0} bg_color="bggrey_0">
 	<GridBase variante={1}>
 
 		<Prism language="{codeData[2].language}" code="{codeData[2].text}" />
@@ -88,7 +88,7 @@
 
 
 
-<Section variante={4} bg_color={1}>
+<Section variante={4} bg_color="bgwhite">
 	<GridBase variante={2}>
 
 		<img src="./img/grafico-11.svg" alt="">

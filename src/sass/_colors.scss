@@ -7,8 +7,8 @@ $grey_0: #e5e5e5;
 $grey_1: #b4b4b4;
 $grey_2: #6c6c6c;
 $grey_3: #414141;
-$grey_4: #2a2929;
-$grey_5: #110e08;
+$grey_4: #323232;
+$grey_5: #121212;
 
 // Main colors
 $primary: $grey_1;
@@ -20,7 +20,7 @@ $quaternary: $grey_5;
 $primary: #d3b39c;
 $secondary: #4bddc4;
 $tertiary: pink;
-$quaternary: #857351;
+$quaternary: $primary;
 $highlight: #d3b39c;
 // $highlight: rgb(232, 178, 138);
 $highlight_1: rgba($white, 0.85);
@@ -29,6 +29,11 @@ $highlight_3: lighten( $highlight, 0.1% );
 
 $highlight_alpha: rgba( $highlight_2, .45 );
 
+
+
+/* BORDERS
+============================================= */
+$border_color: $grey_3;
 
 /* GRADIENT LISTS
 ============================================= */
@@ -46,10 +51,23 @@ $list4: $primary, $secondary, $tertiary, $primary, $secondary, $tertiary, $prima
 }
 
 
+// text colors
+.grey_0 { color: $grey_0; }
+.grey_1 { color: $grey_1; }
+.grey_2 { color: $grey_2; }
+.grey_3 { color: $grey_3; }
+.grey_4 { color: $grey_4; }
+.grey_5 { color: $grey_5; }
+.black { color: $black; }
+.white { color: $white; }
+.primary { color: $primary; }
 
-.bg_color_0 { background-color: $grey_0; }
-.bg_color_1 { background-color: $grey_1; }
-.bg_color_2 { background-color: $grey_2; }
-.bg_color_3 { background-color: $grey_3; }
-.bg_color_4 { background-color: $grey_4; }
-.bg_color_5 { background-color: $grey_5; }
+// background colors
+.bggrey_0 { background-color: $grey_0; }
+.bggrey_1 { background-color: $grey_1; }
+.bggrey_2 { background-color: $grey_2; }
+.bggrey_3 { background-color: $grey_3; }
+.bggrey_4 { background-color: $grey_4; }
+.bggrey_5 { background-color: $grey_5; }
+.bgwhite { background-color: $white; }
+.bgblack { background-color: $black; }

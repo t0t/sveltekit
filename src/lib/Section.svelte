@@ -4,14 +4,11 @@
     let modificador = [
         "Section_0", "Section_1", "Section_2", "Section_3", "Section_4", "Section_5", "Section_6", "Section_7", "Section_8"
     ];
-    export let bg_color = 0
-    const bg_colors = [
-        "bg_color_0", "bg_color_1", "bg_color_2", "bg_color_3", "bg_color_4", "bg_color_5"
-    ];
+    export let bg_color = "bggrey_1"
 </script>
 
 <section    {id}
-            class="{modificador[variante]} {bg_colors[bg_color]}"
+            class="{modificador[variante]} {bg_color}"
 >
     <slot />
 </section>
@@ -32,13 +29,12 @@
     .Section_1 {
         padding: 0;
         min-height: 50vh;
-        color: $white;
     }
 
     .Section_2 {
+        color: $grey_0;
         display: grid;
         place-content: center;
-        color: $grey_0;
     }
     
     .Section_3 {
@@ -53,11 +49,12 @@
         padding: 0;
         min-height: 50vh;
         color: $grey_5;
-        background-color: $white;
+        /* background-color: $white; */
     }
     .Section_6 {
         min-height: 50vh;
         color: $grey_0;
+        /* background-color: red; */
     }
     
     .Section_7 { /* timeline */

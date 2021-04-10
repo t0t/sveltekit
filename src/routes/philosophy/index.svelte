@@ -13,14 +13,12 @@
 </script>
 
 <!-- My Philosophy -->
-<Section id="philosophy" variante={3}>
+<Section id="philosophy" variante={3} bg_color="bggrey_4">
 	<Header
 		tipo={1}
 		variante={3}
 		title={coverData[3].title}
 		subtitle={coverData[3].subtitle}
-		text={coverData[3].text}
-		img={coverData[3].img}
 	/>
 </Section>
 
@@ -30,7 +28,7 @@
 	subtitle=""
 />
 
-<Section variante={0}>
+<Section variante={0} bg_color="bggrey_0">
 	<GridBase variante={1}>
 
 		<svg fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 193 169">
@@ -68,7 +66,7 @@
 	</GridBase>
 </Section>
 
-<Section variante={0}>
+<Section variante={0} bg_color="bggrey_0">
 	<GridBase variante={0}>
 
 		<img src="./img/logo.svg" alt="">
@@ -98,7 +96,7 @@
 	</GridBase>
 </Section>
 
-<Section variante={0}>
+<Section variante={0} bg_color="bggrey_0">
 	<GridBase variante={2}>
 
 		<img src="./img/01234_bn.svg" alt="">
@@ -119,7 +117,7 @@
 	</GridBase>
 </Section>
 
-<Section variante={4} bg_color={1}>
+<Section variante={4} bg_color="bggrey_1">
 	<GridBase variante={2}>
 
 		<img src="./img/grafico-8.svg" alt="">
@@ -142,6 +140,6 @@
 	subtitle=""
 />
 
-<Section id="principios" variante={7}>
+<Section id="principios" variante={7} bg_color="bggrey_0">
 	<Tabs {tabHeaders} />
 </Section>

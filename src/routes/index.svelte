@@ -3,6 +3,7 @@
 	import Section from "$lib/Section.svelte";
 	import Cover from "$lib/Cover.svelte";
 	import GridBase from "$lib/GridBase.svelte";
+	import Blockquote from "$lib/Blockquote.svelte";
 	import QuoteRotator from '$lib/quoterotator/QuoteRotator.svelte';
 	import Img from "$lib/Img.svelte";
 	import Button from "$lib/Button.svelte";
@@ -11,12 +12,13 @@
 	import { secondaryNav } from "$lib/data/pages.js";
 </script>
 
-<Section id="cover" variante={8} bg_color={5}>
+<Section id="cover" variante={8} bg_color="bggrey_5">
 	<GridBase tipo={1} variante={6}>
     
         <span>
 			<Header tipo={2}
 				variante={6}
+				textalign = "align-left"
 				title="Sergio Forés"
 				subtitle="Hermenéutica Holística"/>
 		</span>
@@ -53,13 +55,13 @@
 	<QuoteRotator />
 </Section>
 
-<Header
-	tipo={1} variante={3}
-	title="Percibir la conexión esencial de todo"
-	subtitle=""
-/>
 
-<Section variante={3} bg_color={1}>
+<Section variante={3} bg_color="bggrey_1">
+	<Header
+		tipo={1} variante={2}
+		title="Percibir la conexión esencial de todo"
+		subtitle=""
+	/>
 	<GridBase variante={5}>
 
 		<Img 
@@ -69,21 +71,21 @@
 		/>
 		
 		<div slot="subarea2">
-			<p>Descifrando la Creación, en la intersección del arte, la tecnología y los saberes tradicionales. Un cierto tipo de orden que conforma un cierto tipo de conexión.</p>
+			<Blockquote
+				align="tal"
+				color="grey_2"
+				variante={1}
+				text="El fundamento de la Creación radica en un orden arquetípico universal. ...Percibir ese orden conforma un tipo de conexión trascendental." />	
 		</div>
 
 		<div slot="subarea1">
-			<Button
-				variante={7}
-				text="Chat-Whatsapp"
-				url="https://api.whatsapp.com/send?phone=+34619549032"
-        	/>
+			
 		</div>
 
 	</GridBase>
 </Section>
 
-<Section variante={3} bg_color={1}>
+<Section variante={3} bg_color="bggrey_1">
 	<GridBase variante={4}>
 
 		<Img 
@@ -93,10 +95,19 @@
 		/>
 		
 		<div slot="subarea1">
-			<p>El fundamento de la Creación radica en un orden arquetípico universal. ...Percibir ese orden conforma un tipo de conexión trascendental.</p>
+			<Blockquote
+				variante={1}
+				color="grey_2"
+				text="Puedes obtener más información contactándome en las redes o por Whatsapp"/>
 		</div>
 
-		<div slot="subarea2"></div>
+		<div slot="subarea2">
+			<Button
+				variante={7}
+				text="Chat-Whatsapp"
+				url="https://api.whatsapp.com/send?phone=+34619549032"
+        	/>
+		</div>
 
 	</GridBase>
 </Section>

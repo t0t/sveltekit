@@ -61,6 +61,5 @@
         padding: $h3;
         min-height: 50vh;
         color: $grey_5;
-        background-color: $white;
     }
 </style>

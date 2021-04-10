@@ -316,29 +316,32 @@
                 }
                 &.c {
                     grid-area: C;
-                    background-color: $grey_5;
-                    border-left: 0.5px solid $grey_0;
+                    border-top: 0.5px solid $border_color;
+                    border-left: 0.5px solid $border_color;
                 }
                 &.d {
-                    background-color: $grey_5;
                     grid-area: D;
-                    border-left: 0.5px solid $grey_0;
-                    border-top: 0.5px solid $grey_0;
+                    border-left: 0.5px solid $border_color;
+                    border-top: 0.5px solid $border_color;
                 }
                 &.e {
                     grid-area: E;
                     @include type-setting(-1);
-                    background-color: $grey_1;
+                    border-top: 0.5px solid $border_color;
+                    border-left: 0.5px solid $border_color;
                 }
                 &.f {
                     grid-area: F;
                     @include type-setting(-1);
-                    background-color: $grey_0;
+                    border-top: 0.5px solid $border_color;
+                    border-left: 0.5px solid $border_color;
+
                 }
                 &.g {
                     grid-area: G;
                     @include type-setting(-1);
-                    background-color: $grey_5;
+                    border-top: 0.5px solid $border_color;
+                    border-left: 0.5px solid $border_color;
                 }
             }
         }

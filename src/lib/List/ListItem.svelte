@@ -12,7 +12,7 @@
 {:else if tipo === 1}
     <slot class={clase[variante]}></slot>
 {:else if tipo === 2}
-    <a class={clase[variante]} {href} {alt} {target}><slot/></a>
+    <a class={clase[variante]} {href} {alt} {target}><slot></slot></a>
 {:else if tipo === 3}
     <button class={clase[variante]} on:click><slot/></button>
 {:else}
@@ -50,25 +50,27 @@
 	.ListItem_1 {
 		color: $grey_1;
 		@include type-setting(0);
-        border-top: 0.5px solid $grey_1;
-		background-color: $grey_5;
+        border-top: 0.5px solid $border_color;
+		/* background-color: $grey_5; */
 		padding-top: $h0;
 		padding-bottom: $h0;
-		/* padding-left: 0; */
-		/* padding-left: 0; */
-		/* padding-left: 0; */
-		&:last-child,
+		padding-right: $h0;
+		/* &:last-child,
 		&:nth-child(3) {
-			/* border-top: none; */
+			border-top: none;
+		} */
+		&:hover {
+			background-color: $black;
 		}
 		@include media(s3) {
-			border-left: 0.5px solid $grey_1;
-			padding: $h0;
-			border-bottom: 0.5px solid $grey_1;
-			&:nth-child(3),
+			border-left: 0.5px solid $border_color;
+			padding-bottom: $h0;
+			padding-left: $h0;
+			/* border-bottom: 0.5px solid $grey_1; */
+			/* &:nth-child(3),
 			&:nth-child(4) {
-				/* border-bottom: none; */
-			}
+				border-bottom: none;
+			} */
 
 		}
 	}

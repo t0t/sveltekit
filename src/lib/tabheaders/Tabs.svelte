@@ -58,7 +58,7 @@
     }
     .active {
         color: $black;
-        background-color: $white;
+        background-color: $grey_0;
         width: 100%;
     }
     span {

@@ -24,13 +24,13 @@
 	/>
 </Section>
 
-<Section variante={1} id="video" bg_color={2}>
+<Section variante={1} id="video" bg_color="bggrey_2">
 	<VideoBanner/>
 </Section>
 
 <Header tipo={1} variante={4} title="Galería" />
 
-<Section id="lightboxgallery" variante={0} bg_color={2}>
+<Section id="lightboxgallery" variante={0} bg_color="bggrey_2">
 	<LightboxGallery/>
 </Section>
 
@@ -48,13 +48,11 @@ title="El proceso es El Proceso" />
 		<img src="./img/grafico-8.svg" alt="">
 		
 		<div slot="subarea1">
-			<p><strong>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum porro id debitis ullam sequi natus, et distinctio impedit reprehenderit quas in nihil, maxime consequuntur iste ut nesciunt sed laboriosam ex.</strong></p>
+			<p><strong>Me interesa recrear las condiciones necesarias para que las leyes de la física y el tiempo puedan quedar atrapadas en una forma.</strong></p>
 		</div>
 
 		<div slot="subarea2">
 			<p>En la obra de arte, como símbolo que es, se produce un reconocimiento mutuo entre dos caras de una misma realidad que se encuentran. La realidad se reúne a sí misma, se completa a sí misma haciéndose presente como símbolo y  proporcionando la experiencia de descubrimiento de una realidad más original.</p>
-			
-			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum porro id debitis ullam sequi natus, et distinctio impedit reprehenderit quas in nihil, maxime consequuntur iste ut nesciunt sed laboriosam ex.</p>
 		</div>
 	</GridBase>
 </Section>

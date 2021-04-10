@@ -42,41 +42,45 @@
     }
     .Header_1 {
         display: grid;
-        place-content: center;
-        min-height: 50vh;
+        min-height: $h7;
         color: $grey_4;
         background-color: $highlight;
         text-align: left;
-        padding: 0 $h2;
-        @include media(s2) {
+        padding: 0 $h2 $h2;
+        place-content: end;
+        @include media(s1) {
+            place-content: center;
             text-align: center;
         }
-        .CoverTitle {
-            color: $grey_3;
-            span {
-                color: $grey_4;
-            }
+        @include media(s3) {
+            padding: 0;
         }
     }
     .Header_2 {
         display: grid;
         place-content: center;
-        min-height: 50vh;
-        color: $grey_5;
-        background-color: $grey_1;
+        padding-top: $h2;
+        padding-bottom: $h2;
+        h1 {
+            color: $grey_3;
+            @include type-setting(1);
+            font-weight: normal;
+        }
+        /* min-height: 50vh; */
+        /* background-color: $grey_1; */
         
-        @include media(s2) {
+        /* @include media(s2) {
             min-height: 100vh;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-        }
+        } */
     }
     .Header_3 {
         padding-top: $h2;
         padding-bottom: $h2;
-        color: $grey_2;
-        background-color: $grey_1;
+        text-align: center;
+        /* color: $grey_2; */
         h1 {
             @include type-setting(1);
         }
@@ -99,9 +103,9 @@
     }
     .Header_6 {
         color: inherit;
-        /* h1 {
-            @include type-setting(1);
-        } */
+        h2 {
+            color: $grey_2;
+        }
     }
     .Header_7 {
         color: inherit;
@@ -129,14 +133,11 @@
     class="{modificador[variante]} {textalign}"
     style="opacity: { 1 - Math.max(0, y / (innerHeight/1.5)) };">
 
-        <h1>
-            {title} <br>
+        <h1> {title} <br>
             <span>
-                <h2 class="CoverSubTitle"> {@html subtitle} </h2>
+                <h2> {@html subtitle} </h2>
             </span>
         </h1>
-
-        <p>{text}</p>
 
         <slot/>
     

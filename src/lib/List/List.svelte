@@ -126,7 +126,7 @@
 			padding-left: 0;
 			height: 100%;
 			grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
-			grid-template-rows: auto;
+			grid-template-rows: auto auto;
 		}
 	}
 </style>

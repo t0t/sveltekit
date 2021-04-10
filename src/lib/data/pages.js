@@ -8,23 +8,23 @@ export const pages = [
 ]
 export const secondaryNav = [
     {
-        name: "Impresión 3D", 
+        name: "Arte Holistico", 
         url: "/artworks",
-        description: "Arte"
+        description: "Impresión 3D en gran formato"
     },
     {
-        name: "Cosmovisión", 
+        name: "+0+1234", 
         url: "/philosophy",
-        description: "+0+1234"
+        description: "Cosmovisión filosófica de fondo"
     },
     {
-        name: "Diseño Holistico", 
+        name: "Diseño de Interfaz de usuario", 
         url: "/prototype",
-        description: "Desarrollo prototipos"
+        description: "Prototipos de bajo nivel"
     },
     {
         name: "Laboratorio", 
         url: "/lab",
-        description: "Experimentación"
+        description: "Desarrollo y experimentación web"
     }
 ]
