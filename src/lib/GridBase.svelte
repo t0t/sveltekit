@@ -1,4 +1,5 @@
 <script>
+    export let tipo = 0
     export let variante = 0;
     const modificador = [
         "Grid_0",
@@ -6,15 +7,53 @@
         "Grid_2",
         "Grid_3",
         "Grid_4",
-        "Grid_5"
+        "Grid_5",
+        "Grid_6"
     ];
 </script>
 
-<div class={modificador[variante]}>
-    <div><slot name="subarea1"></slot></div>
-    <div><slot></slot></div>
-    <div><slot name="subarea2"></slot></div>
-</div>
+{#if tipo === 0}
+
+    <div class={modificador[variante]}>
+        <div><slot name="subarea1"></slot></div>
+        <div><slot></slot></div>
+        <div><slot name="subarea2"></slot></div>
+    </div>
+
+{:else if tipo === 1}
+
+    <div class={modificador[variante]}>
+        <div class="item a">
+            <slot/>
+        </div>
+        <div class="item b">
+            <slot name="subarea1"/> B
+        </div>
+        <div class="item c">
+            <slot name="subarea2"/>
+            C
+        </div>
+        <div class="item d">
+            <slot name="subarea3"/>
+            D
+        </div>
+        <div class="item e">
+            <slot name="subarea4"/>
+            E
+        </div>
+        <div class="item f">
+            <slot name="subarea5"/>
+            F
+        </div>
+        <div class="item g">
+            <slot name="subarea6"/>
+            G
+        </div>
+    </div>
+
+{:else}
+     "define un tipo de layout"
+{/if}
 
 <style lang="scss">
 	@use "../app.scss" as *;
@@ -247,5 +286,69 @@
                 align-self: end;
             }
         }
+    }
+
+    .Grid_6 {
+        $width: 100vw;
+        width: $width;
+        height: $width / 1.618;
+        max-height: 100vh;
+        max-width: 100vw;
+        border: 0.5 solid black;
+        display: grid;
+        
+        grid-template-columns: 61.8% 9.02% 5.58% 23.6%;
+        grid-template-rows: 61.8% 9.02% 5.58% 23.6%;
+        grid-template-areas: 
+            "A B B B"
+            "A E F C"
+            "A E G C"
+            "A D D C";  
+        }
+
+        .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            
+            color: #F2F2F2;
+            font-size: 1.5em;
+            font-weight: 700;
+            text-shadow: 1px 1px 1px #878787;
+            box-sizing: border-box;
+        
+            &.a {
+                grid-area: A;
+                background-color: $grey_5;
+            }
+            &.b {
+                grid-area: B;
+                background-color: $grey_4;
+            }
+            &.c {
+                grid-area: C;
+                background-color: $grey_3;
+            }
+            &.d {
+                grid-area: D;
+                background-color: $grey_2;
+            }
+            &.e {
+                grid-area: E;
+                font-size: 1.2em;
+                background-color: $grey_1;
+            }
+            &.f {
+                grid-area: F;
+                font-size: 1em;
+                background-color: $grey_0;
+            }
+            &.g {
+                grid-area: G;
+                font-size: 0.7em;
+                background-color: $grey_5;
+            }
     }
 </style>

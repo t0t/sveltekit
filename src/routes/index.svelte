@@ -13,6 +13,14 @@
 	import { secondaryNav } from "$lib/data/pages.js";
 </script>
 
+<GridBase tipo={1} variante={6}>
+    
+        <Header tipo={2}
+        variante={6}
+        title="Sergio Forés"
+        subtitle="Hermenéutica Holística"/>
+    
+</GridBase>
 
 <Section id="cover" variante={2}>	
 	<Header tipo={2}
