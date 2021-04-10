@@ -84,17 +84,18 @@
 		color: $grey_0;
         align-self: start;
 	}
-	.ListItem_4 {
+
+	.ListItem_4 { /* boton Download */
         @include type-setting(0);
 		padding: $h1;
-		border: 1px solid $grey_5;
-		color: $grey_4;
-        align-self: start;
+		color: $white;
+		background-color: $grey_4;
+		align-self: start;
 		&:hover {
-			color: $white;
-			background-color: $grey_4;
+			background-color: $black;
 		}
 	}
+
 	/* nav - circulos horizontales */
 	.ListItem_5 {
         @include type-setting(0);

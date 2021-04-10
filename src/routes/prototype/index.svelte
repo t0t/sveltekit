@@ -1,14 +1,14 @@
 <script>
     import { coverData } from "$lib/data/coverData.js";	
-    import { codeData } from "$lib/data/codeData.js";	
+    import { codeData } from "$lib/data/codeData.js";
+	import { tabHeaders } from "$lib/data/tabsContent.js";
+
     import Header from "$lib/Header.svelte";
-    // import Code from "$lib/Code/Code.svelte";
     import Section from "$lib/Section.svelte";
     import Button from "$lib/Button.svelte";
     import GridBase from "$lib/GridBase.svelte";
 	import List from "$lib/List/List.svelte"    
 	import ListItem from "$lib/List/ListItem.svelte"
-	import { tabHeaders } from "$lib/data/tabsContent.js";
 	import Tabs from "$lib/tabheaders/Tabs.svelte";
 	import Prism from "$lib/Code/PrismJS.svelte"; 
 </script>
