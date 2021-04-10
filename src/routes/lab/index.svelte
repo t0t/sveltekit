@@ -19,12 +19,12 @@
 </Section>
 
 <!-- Phi SVG -->
-<Section id="phi" variante={2}>
+<Section id="phi" variante={2} bg_color={4}>
 	<PhiSvg title="La Divina Proporción" text="<p>Sentir el Orden da Forma a la Conexión. Diseño generativo en <code>JS</code> y <code>SVG</code> de la proporción áurea. <br> <small><i>Basado en una demo de Tan Li Hau.</i></small></p>" />
 </Section>
 
 <!-- T0T -->
-<Section id="t0t" variante={0}>
+<Section id="t0t" variante={0} bg_color={0}>
 	<T0T />
 </Section>
 

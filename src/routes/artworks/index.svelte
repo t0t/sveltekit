@@ -24,13 +24,13 @@
 	/>
 </Section>
 
-<Section variante={1} id="video">
+<Section variante={1} id="video" bg_color={2}>
 	<VideoBanner/>
 </Section>
 
 <Header tipo={1} variante={4} title="Galería" />
 
-<Section id="lightboxgallery" variante={0}>
+<Section id="lightboxgallery" variante={0} bg_color={2}>
 	<LightboxGallery/>
 </Section>
 

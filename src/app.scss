@@ -58,3 +58,26 @@ a > svg {
 svg {
     width: 100%;
 }
+
+// Object-fit
+.wrap-object-fit {
+    height: inherit;
+}
+.object-fit {
+    object-fit: cover;
+    height: 100%;
+}
+
+.absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.relative {
+    position: relative;
+    width: inherit;
+}
+// img[class] { 
+//     width: 100%;
+// }

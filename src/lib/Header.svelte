@@ -20,13 +20,7 @@
 
 <style lang="scss">	
 	@use "../app.scss" as *;
-    
-    .is_home {
-        height: 27vh;
-        @include media(s2) {
-            height: 100vh;
-        }
-    }
+
     .Header_0 {
         display: grid;
         place-content: center;
@@ -133,10 +127,7 @@
     <!-- con foto de fondo -->
     <header 
     class="{modificador[variante]} {textalign}"
-    style=" 
-    opacity: { 1 - Math.max(0, y / (innerHeight/1.5))};
-    background-image: url( { innerWidth > 769 || is_home ? img : ''})
-    ">
+    style="opacity: { 1 - Math.max(0, y / (innerHeight/1.5)) };">
 
         <h1>
             {title} <br>

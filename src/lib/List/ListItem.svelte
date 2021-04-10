@@ -48,9 +48,29 @@
 		}
 	}
 	.ListItem_1 {
-		color: $grey_2;
-        padding: $h0;
-        border: 1px solid $grey_1;
+		color: $grey_1;
+		@include type-setting(0);
+        border-top: 0.5px solid $grey_1;
+		background-color: $grey_5;
+		padding-top: $h0;
+		padding-bottom: $h0;
+		/* padding-left: 0; */
+		/* padding-left: 0; */
+		/* padding-left: 0; */
+		&:last-child,
+		&:nth-child(3) {
+			/* border-top: none; */
+		}
+		@include media(s3) {
+			border-left: 0.5px solid $grey_1;
+			padding: $h0;
+			border-bottom: 0.5px solid $grey_1;
+			&:nth-child(3),
+			&:nth-child(4) {
+				/* border-bottom: none; */
+			}
+
+		}
 	}
 	.ListItem_2 {
         @include type-setting(0);

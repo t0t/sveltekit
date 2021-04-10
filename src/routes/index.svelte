@@ -3,9 +3,7 @@
 	import Section from "$lib/Section.svelte";
 	import Cover from "$lib/Cover.svelte";
 	import GridBase from "$lib/GridBase.svelte";
-	// import GridBase from "$lib/GridBase.svelte";
 	import QuoteRotator from '$lib/quoterotator/QuoteRotator.svelte';
-	// import VideoBanner from "$lib/VideoBanner.svelte";
 	import Img from "$lib/Img.svelte";
 	import Button from "$lib/Button.svelte";
 	import Header from "$lib/Header.svelte";
@@ -13,24 +11,42 @@
 	import { secondaryNav } from "$lib/data/pages.js";
 </script>
 
-<GridBase tipo={1} variante={6}>
+<Section id="cover" variante={8} bg_color={5}>
+	<GridBase tipo={1} variante={6}>
     
-        <Header tipo={2}
-        variante={6}
-        title="Sergio Forés"
-        subtitle="Hermenéutica Holística"/>
-    
-</GridBase>
+        <span>
+			<Header tipo={2}
+				variante={6}
+				title="Sergio Forés"
+				subtitle="Hermenéutica Holística"/>
+		</span>
+		<span slot="subarea1"> 
+			<NavSecondary {secondaryNav} 
+			variante_item={1}
+			variante_list={6} />
+		</span>
+		
+		<span slot="subarea2"> 
+			 
+		</span>
+		
+		<span slot="subarea3"> 
+			 
+		</span>
+		
+		<span slot="subarea4"> 
+			 
+		</span>
+		
+		<span slot="subarea5"> 
+			 
+		</span>
+		
+		<span slot="subarea6"> 
+			 
+		</span>
 
-<Section id="cover" variante={2}>	
-	<Header tipo={2}
-	variante={6}
-	title="Sergio Forés"
-	subtitle="Hermenéutica Holística" 
-	textalign="align-center"/>
-		<NavSecondary 	{secondaryNav} 
-						variante_item={7}
-						variante_list={4} />	
+	</GridBase>
 </Section>
 
 <Section id="quoterotator" variante={3}>
@@ -43,7 +59,7 @@
 	subtitle=""
 />
 
-<Section variante={3}>
+<Section variante={3} bg_color={1}>
 	<GridBase variante={5}>
 
 		<Img 
@@ -67,7 +83,7 @@
 	</GridBase>
 </Section>
 
-<Section variante={3}>
+<Section variante={3} bg_color={1}>
 	<GridBase variante={4}>
 
 		<Img 

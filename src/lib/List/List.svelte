@@ -2,7 +2,7 @@
 	export let tipo = 0;
 	export let variante = 0;
     export let marker = "";
-	const clase = ['List_0', 'List_1', 'List_2','List_3','List_4', 'List_5'];
+	const clase = ['List_0', 'List_1', 'List_2','List_3','List_4', 'List_5', 'List_6'];
 </script>
 
 {#if tipo === 0}
@@ -106,7 +106,6 @@
 		text-align: center;
 		place-content: center;
 		place-items: center;
-		/* padding: $h2 0; */
 
 		@include media(s3) {
 			grid-template-columns: repeat(auto-fit, minmax(245px, 0.186fr));
@@ -115,5 +114,19 @@
 	.List_5 {
 		display: grid;
 		place-items: center;
+	}
+	.List_6 {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		/* height: auto; */
+		/* width: 100%; */
+		padding-left: $h0;
+		
+		@include media(s2) {
+			padding-left: 0;
+			height: 100%;
+			grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+			grid-template-rows: auto;
+		}
 	}
 </style>

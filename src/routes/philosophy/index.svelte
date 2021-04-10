@@ -119,7 +119,7 @@
 	</GridBase>
 </Section>
 
-<Section variante={4}>
+<Section variante={4} bg_color={1}>
 	<GridBase variante={2}>
 
 		<img src="./img/grafico-8.svg" alt="">
