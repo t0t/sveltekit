@@ -10,8 +10,8 @@ export const quotes = [
 		image: "/img/bg2.jpg"
 	},
 	{
-		quote: "My grandmother started walking five miles a day when she was sixty. She's ninety-seven now, and we don't know where the hell she is.",
-		author: "Ellen Degeneres",
+		quote: "El mundo es un conglomerado de maneras diferentes de que ocurra siempre lo mismo.",
+		author: "+0+1234",
 		image: "/img/bg3.jpg"
 	},
 	{

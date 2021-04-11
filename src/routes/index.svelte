@@ -7,10 +7,15 @@
 	import QuoteRotator from '$lib/quoterotator/QuoteRotator.svelte';
 	import Img from "$lib/Img.svelte";
 	import Button from "$lib/Button.svelte";
+	import ContentSlider from "$lib/ContentSlider/ContentSlider.svelte";
 	import Header from "$lib/Header.svelte";
 	import NavSecondary from "$lib/NavSecondary.svelte";
 	import { secondaryNav } from "$lib/data/pages.js";
 </script>
+
+
+<ContentSlider/>
+
 
 <Section id="cover" variante={8} bg_color="bggrey_5">
 	<GridBase tipo={1} variante={6}>

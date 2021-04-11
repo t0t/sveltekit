@@ -30,6 +30,9 @@
         @include media(s2) {
             @include type-setting(1);
         }
+        @include media(s5) {
+            @include type-setting(2);
+        }
     }
 
     .Blockquote_0 {
