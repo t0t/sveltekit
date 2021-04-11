@@ -13,10 +13,6 @@
 	import { secondaryNav } from "$lib/data/pages.js";
 </script>
 
-
-<ContentSlider/>
-
-
 <Section id="cover" variante={8} bg_color="bggrey_5">
 	<GridBase tipo={1} variante={6}>
     
@@ -55,6 +51,8 @@
 
 	</GridBase>
 </Section>
+
+<ContentSlider/>
 
 <Section id="quoterotator" variante={3}>
 	<QuoteRotator />

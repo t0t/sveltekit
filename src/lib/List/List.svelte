@@ -2,7 +2,7 @@
 	export let tipo = 0;
 	export let variante = 0;
     export let marker = "";
-	const clase = ['List_0', 'List_1', 'List_2','List_3','List_4', 'List_5', 'List_6'];
+	const clase = ['List_0', 'List_1', 'List_2','List_3','List_4', 'List_5', 'List_6', 'List_7'];
 </script>
 
 {#if tipo === 0}
@@ -128,5 +128,9 @@
 			grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
 			grid-template-rows: auto auto;
 		}
+	}
+	.List_7 {
+		display: grid;
+		grid-auto-flow: column;
 	}
 </style>

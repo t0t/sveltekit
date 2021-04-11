@@ -4,17 +4,21 @@
 	export let target = "";
 	export let tipo = 0;
 	export let variante = 0;
-	const clase = ['ListItem_0', 'ListItem_1', 'ListItem_2','ListItem_3','ListItem_4','ListItem_5', 'ListItem_6','ListItem_7'];
+	const clase = ['ListItem_0', 'ListItem_1', 'ListItem_2','ListItem_3','ListItem_4','ListItem_5', 'ListItem_6','ListItem_7','ListItem_8'];
 </script>
 
 {#if tipo === 0}
 	<li class={clase[variante]}> <slot /> </li>
+
 {:else if tipo === 1}
     <slot class={clase[variante]}></slot>
+
 {:else if tipo === 2}
     <a class={clase[variante]} {href} {alt} {target}><slot></slot></a>
+
 {:else if tipo === 3}
     <button class={clase[variante]} on:click><slot/></button>
+
 {:else}
 	<div class={clase[variante]}> <slot /> </div>
 {/if}
@@ -154,6 +158,39 @@
 			@include type-setting(1);
 			width: $h6 + $h4;
 			height: $h6 + $h4;
+		}
+	}
+	
+	.ListItem_8 { /* nav - next-prev */
+		
+		:global(.next),
+		:global(.prev) {
+			position: absolute;
+			bottom: $h2;
+			color: $white;
+			background-color: $black;
+			width: $h3;
+			height: $h3;
+			display: grid;
+			place-content: center;
+			box-sizing: border-box;
+			border: none;
+			border-radius: 50%;
+			@include type-setting(1);
+		}
+		:global(.next:hover),
+		:global(.prev:hover) {
+			color: $black;
+			background-color: $white;
+			cursor: pointer;
+		}
+		
+		:global(.next) {
+			right: $h2;
+		}
+
+		:global(.prev) {
+			right: $h2 + $h3;
 		}
 	}
 </style>
