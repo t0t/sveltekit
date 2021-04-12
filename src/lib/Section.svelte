@@ -22,7 +22,10 @@
         }
     }
     .Section_0 {
-        min-height: 50vh;
+        height: 100%;
+        display: grid;
+        place-content: center;
+        /* place-items: center; */
         color: $grey_5;
     }
     

@@ -27,12 +27,12 @@
         padding-right: $h3;
         @include type-setting(0);
 
-        @include media(s2) {
+        /* @include media(s2) {
             @include type-setting(1);
-        }
-        @include media(s5) {
+        } */
+        /* @include media(s5) {
             @include type-setting(2);
-        }
+        } */
     }
 
     .Blockquote_0 {

@@ -94,9 +94,15 @@
     
     .Header_6 { 
         color: inherit;
-        /* padding-left: $h5; */
+        display: grid;
+        justify-content: space-around;
+        height: 100%;
+        align-items: self-end;
+        h1 {
+            padding: 0 $h2;
+        }
         h2 {
-            padding-top: 0;
+            /* padding-top: 0; */
             color: $grey_2;
         }
     }

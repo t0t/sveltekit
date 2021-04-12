@@ -26,6 +26,10 @@
 	<ul class={clase[variante]}>
 		<slot />
 	</ul>
+{:else if (tipo === 5)}
+	<article class={clase[variante]}>
+		<slot />
+	</article>
 {:else}
 	<ol class={clase[variante]}>
 		<slot />
@@ -71,18 +75,18 @@
 	.List_1 {
 		margin-top: $h1;
 		display: grid;
-		gap: $h1;
-		grid-template-columns: repeat(5, 1fr);
+		grid-auto-flow: column;
 		place-items: center;
+		gap: $h1;
 		color: $grey_2;
 	}
 	/* Grouped borderer buttons */
 	.List_2 {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(90px, 0.25fr));
+		grid-auto-flow: column;
 		margin-top: $h2;
 		place-content: center;
-
+		
 		:global(a:nth-child(1)) {
 			border-left: 1px solid $grey_3;
 		}
@@ -90,7 +94,8 @@
 	/* tabs */
 	.List_3 { 
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(90px, 0.25fr));
+		grid-auto-flow: column;
+		/* grid-template-columns: repeat(auto-fit, minmax(90px, 0.25fr)); */
 		place-content: center;
 		background-color: $grey_3;
 		:global(a:nth-child(1)) {
@@ -106,7 +111,7 @@
 		text-align: center;
 		place-content: center;
 		place-items: center;
-
+		
 		@include media(s3) {
 			grid-template-columns: repeat(auto-fit, minmax(245px, 0.186fr));
 		}
@@ -118,19 +123,25 @@
 	.List_6 {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-		/* height: auto; */
-		/* width: 100%; */
 		padding-left: $h0;
 		
-		@include media(s2) {
+		@include media(s1) {
 			padding-left: 0;
 			height: 100%;
-			grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 			grid-template-rows: auto auto;
 		}
+		@include media(s2) {
+			grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+		}
+		@include media(s3) {
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		}
 	}
-	.List_7 {
+	
+	.List_7 { /* listas horizontales de articulos */
 		display: grid;
 		grid-auto-flow: column;
+		
 	}
 </style>

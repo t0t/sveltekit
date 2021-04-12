@@ -11,7 +11,6 @@
 	import GridBase from "$lib/GridBase.svelte";
 	import List from "$lib/List/List.svelte"
 	import ListItem from "$lib/List/ListItem.svelte"
-	import Article from "$lib/Article.svelte"
 </script>
 
 <Section id="cover" variante={3}>

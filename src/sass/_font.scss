@@ -109,27 +109,28 @@ h1 {
   font-weight: bold;
 
   @include media(s2) {
-    @include type-setting(2);
+    @include type-setting(1);
   }
-  @include media(s3) {
-    @include type-setting(3);
-  }
-  @include media(s5) {
-    @include type-setting(4);
-  }
+  // @include media(s3) {
+  //   background-color: #fff;
+  //   @include type-setting(1);
+  // }
+  // @include media(s5) {
+  //   @include type-setting(3);
+  // }
 }
 
 h2 {
   font-weight: $weight_normal;
   @include type-setting(0);
-  @include media(s1) {
-    @include type-setting(1);
-  }
-  @include media(s5) {
-    @include type-setting(4);
-    margin-left: $h5;
-    margin-right: $h5;
-  }
+  // @include media(s1) {
+  //   @include type-setting(1);
+  // }
+  // @include media(s5) {
+  //   @include type-setting(4);
+  //   margin-left: $h5;
+  //   margin-right: $h5;
+  // }
 }
 
 h3,

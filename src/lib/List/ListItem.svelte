@@ -4,7 +4,7 @@
 	export let target = "";
 	export let tipo = 0;
 	export let variante = 0;
-	const clase = ['ListItem_0', 'ListItem_1', 'ListItem_2','ListItem_3','ListItem_4','ListItem_5', 'ListItem_6','ListItem_7','ListItem_8'];
+	const clase = ['ListItem_0', 'ListItem_1', 'ListItem_2','ListItem_3','ListItem_4','ListItem_5', 'ListItem_6','ListItem_7','ListItem_8','ListItem_9'];
 </script>
 
 {#if tipo === 0}
@@ -53,6 +53,9 @@
 	}
 	.ListItem_1 {
 		color: $grey_1;
+		display: grid;
+		place-content: center;
+		text-align: center;
 		@include type-setting(0);
         border-top: 0.5px solid $border_color;
 		/* background-color: $grey_5; */
@@ -64,7 +67,7 @@
 			border-top: none;
 		} */
 		&:hover {
-			background-color: $black;
+			background-color: $grey_0;
 		}
 		@include media(s3) {
 			border-left: 0.5px solid $border_color;
@@ -191,6 +194,16 @@
 
 		:global(.prev) {
 			right: $h2 + $h3;
+		}
+	}
+
+	.ListItem_9 { /* nav - Links footer */
+		:global(svg) {
+			width: $h2;
+			fill: $grey_2;
+			&:hover {
+				fill: $highlight;
+			}
 		}
 	}
 </style>

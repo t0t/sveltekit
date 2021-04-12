@@ -1,36 +1,55 @@
 <script>
-    export let tipo = 0
-    export let variante = 0;
-    const modificador = [
-        "Grid_0", "Grid_1", "Grid_2", "Grid_3", "Grid_4", "Grid_5", "Grid_6"
-    ];
-    // $: innerWidth = 0
+	export let tipo = 0;
+	export let variante = 0;
+	const modificador = ['Grid_0', 'Grid_1', 'Grid_2', 'Grid_3', 'Grid_4', 'Grid_5', 'Grid_6', 'Grid_7'];
+	// $: innerWidth = 0
 </script>
 
 <!-- <svelte:window bind:innerWidth /> -->
 
 {#if tipo === 0}
-
-    <div class={modificador[variante]}>
-        <div><slot name="subarea1"></slot></div>
-        <div><slot></slot></div>
-        <div><slot name="subarea2"></slot></div>
-    </div>
-
+	<div class={modificador[variante]}>
+		<div><slot name="subarea1" /></div>
+		<div><slot /></div>
+		<div><slot name="subarea2" /></div>
+	</div>
 {:else if tipo === 1}
+	<div class={modificador[variante]}>
+		<div class="subarea a">
+			<slot />
+		</div>
+		<div class="subarea b">
+			<slot name="subarea1" />
+		</div>
+		<div class="subarea c">
+			<slot name="subarea2" />
+		</div>
+		<div class="subarea d">
+			<slot name="subarea3" />
+		</div>
+		<div class="subarea e">
+			<slot name="subarea4" />
+		</div>
+		<div class="subarea f">
+			<slot name="subarea5" />
+		</div>
+		<div class="subarea g">
+			<slot name="subarea6" />
+		</div>
+	</div>
 
-    <div class={modificador[variante]}>
-        <div class="subarea a"> <slot/> </div>
-        <div class="subarea b"> <slot name="subarea1"/> </div>
-        <div class="subarea c"> <slot name="subarea2"/> </div>
-        <div class="subarea d"> <slot name="subarea3"/> </div>
-        <div class="subarea e"> <slot name="subarea4"/> </div>
-        <div class="subarea f"> <slot name="subarea5"/> </div>
-        <div class="subarea g"> <slot name="subarea6"/> </div>
-    </div>
+{:else if tipo === 2}
+	<div class={modificador[variante]}>
+		<div class="a1"> <slot name="a1" /> </div>
+		<div class="a3"> <slot name="a3" /> </div>
+		<div class="a4"> <slot name="a4" /> </div>
+		<div class="a2"> <slot name="a2" /> </div>
+		<div class="a5"> <slot name="a5" /> </div>
+		<div class="a6"> <slot name="a6" /> </div>
+	</div>
 
-{:else}
-     "define un tipo de layout"
+    {:else}
+	"define un tipo de layout"
 {/if}
 
 <style lang="scss">
@@ -143,8 +162,8 @@
             }
         }        
     }
-
-    .Grid_3 {
+    
+    .Grid_3 { /* Grid base para Listas de Articulos */
         display: grid;
         min-height: 50vh;
         gap: $h3;
@@ -153,6 +172,10 @@
             "subarea1"
             "subarea2"
         ;
+        padding-top: $h3;
+        padding-left: $h3;
+        padding-right: $h3;
+
         @include media(s2) {
             grid-template-areas: 
                 "subarea1 subarea0"
@@ -163,7 +186,6 @@
         *:nth-child(1) {
             grid-area: subarea1;
             /* align-self: center; */
-
         }
         *:nth-child(2) {
             grid-area: subarea0;
@@ -247,10 +269,12 @@
         }
         *:nth-child(2) {
             grid-area: subarea0;
-            min-width: 50vw;
+            min-width: 38vw;
             align-self: center;
         }
         *:nth-child(3) {
+            positin: relative;
+
             grid-area: subarea2;
             display: grid;
             margin-left: $h3;
@@ -271,11 +295,6 @@
         width: $width;
         max-height: 100vh;
         max-width: 100vw;
-        // grid-template-areas: 
-        //     "A A A A"
-        //     "B B F C"
-        //     "A E G C"
-        //     "A D D C";  
         
         @include media(s2) {
             height: $width / 1.618;
@@ -288,12 +307,12 @@
                 "A E F C"
                 "A E G C"
                 "A D D C";  
-            }
         }
         .subarea {
             &.a {
-                padding-top: $h3;
-                padding-bottom: $h3;
+                /* padding-top: $h3;
+                padding-bottom: $h3; */
+                z-index: 1;
             }
             &.b {
                 // background-color: red;
@@ -304,12 +323,14 @@
         @include media(s2) {        
             .subarea {
                 &.a {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    // display: flex;
+                    // justify-content: center;
+                    // align-items: center;
                     grid-area: A;
+                    // overflow:hidden;
                     // background-size: cover;
                     // background-repeat: no-repeat;
+                    z-index: 0;
                 }
                 &.b {
                     grid-area: B;
@@ -345,4 +366,64 @@
                 }
             }
         }
+    }
+    
+    .Grid_7 {
+        $gap: 1px;
+        $the_rows: 13;
+        $the_columns: 8;
+        
+        @include media(s1) {
+            display: grid;  
+            grid-template-columns: repeat($the_columns, 1fr);
+            grid-template-rows: repeat($the_rows, 1fr);
+            // grid-gap: $gap;
+            height: 100vh;
+
+            .a1 {
+                grid-column-start:6;
+                grid-column-end: 9;
+                grid-row-start: 1;
+                grid-row-end: 4;
+                background-color: $grey_5;
+            }
+            .a3 {
+                grid-column-start: 1;
+                grid-column-end: 9;
+                grid-row-start: 6;
+                grid-row-end: 14;
+                background-color: $grey_5;
+            }
+            .a4 {
+                grid-column-start: 1;
+                grid-column-end: 6;
+                grid-row-start: 1;
+                grid-row-end: 6;
+                background-color: $grey_5;
+                overflow: hidden;
+            }
+            .a2 {
+                grid-column-start: 7;
+                grid-column-end: 9;
+                grid-row-start: 4;
+                grid-row-end: 6;
+                background-color: $grey_5;
+                overflow: hidden;
+            }
+            .a5 {
+                grid-column-start: 6;
+                grid-column-end: 7;
+                grid-row-start: 4;
+                grid-row-end: 5;
+                background-color: $grey_5;
+            }
+            .a6 {
+                grid-column-start: 6;
+                grid-column-end: 7;
+                grid-row-start: 5;
+                grid-row-end: 6;
+                background-color: $grey_5;
+            }
+        }
+    }
 </style>

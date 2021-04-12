@@ -1,7 +1,7 @@
 export const contentSliderData = [
     {
         id: 0,
-        text: 'XXLorem ipsum dolor sit amet consectetur adipisicing elit. Enim deleniti atque iure, officia iste voluptates dolor, aperiam quaerat natus blanditiis totam debitis nesciunt a rem dolore est porro veritatis nostrum.',
+        text: 'Design Systems and Web Components. Voz Unificada.',
         img: '../img/bg1.jpg'
     },
     {
@@ -21,7 +21,7 @@ export const contentSliderData = [
     },
     {
         id: 4,
-        text: 'lore kajdfn akjdfn',
+        text: 'lore kajdfn akjdfn9999',
         img: '../img/cover4.jpg'
     }
 ];

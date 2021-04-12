@@ -1,116 +1,113 @@
 <script>
 	import { coverData } from "$lib/data/coverData.js";	
+	import { contentSliderData } from "$lib/data/contentSliderData.js"
+	import { secondaryNav } from "$lib/data/pages.js";
+
 	import Section from "$lib/Section.svelte";
 	import Cover from "$lib/Cover.svelte";
 	import GridBase from "$lib/GridBase.svelte";
 	import Blockquote from "$lib/Blockquote.svelte";
+	import SlideGallery from "$lib/slidegallery/SlideGallery.svelte";
 	import QuoteRotator from '$lib/quoterotator/QuoteRotator.svelte';
 	import Img from "$lib/Img.svelte";
 	import Button from "$lib/Button.svelte";
 	import ContentSlider from "$lib/ContentSlider/ContentSlider.svelte";
 	import Header from "$lib/Header.svelte";
 	import NavSecondary from "$lib/NavSecondary.svelte";
-	import { secondaryNav } from "$lib/data/pages.js";
+
+	// let data = []
+	// data = [...contentSliderData, data]
 </script>
 
-<Section id="cover" variante={8} bg_color="bggrey_5">
+<!-- <Section id="cover" variante={8} bg_color="bggrey_5">
+
 	<GridBase tipo={1} variante={6}>
     
-        <span>
-			<Header tipo={2}
-				variante={6}
-				textalign = "align-left"
-				title="Sergio Forés"
-				subtitle={coverData[0].subtitle}/>
-		</span>
-		<span slot="subarea1"> 
-			<NavSecondary {secondaryNav} 
-			variante_item={1}
-			variante_list={6} />
-		</span>
+		<Header tipo={2}
+			variante={6}
+			textalign = "align-left"
+			title="Sergio Forés"
+			subtitle={coverData[0].subtitle}/>
+
+		<svelte:fragment slot="subarea1"> 
+			<NavSecondary 	{secondaryNav} 
+							variante_item={1}
+							variante_list={6} />
+		</svelte:fragment>
 		
-		<span slot="subarea2"> 
-			 
-		</span>
-		
-		<span slot="subarea3"> 
-			 
-		</span>
-		
-		<span slot="subarea4"> 
-			 
-		</span>
-		
-		<span slot="subarea5"> 
-			 
-		</span>
-		
-		<span slot="subarea6"> 
-			 
-		</span>
+		<svelte:fragment slot="subarea2"></svelte:fragment>
+		<svelte:fragment slot="subarea3"></svelte:fragment>
+		<svelte:fragment slot="subarea4"></svelte:fragment>
+		<svelte:fragment slot="subarea5"></svelte:fragment>
+		<svelte:fragment slot="subarea6"></svelte:fragment>
 
 	</GridBase>
-</Section>
+</Section> -->
 
-<ContentSlider/>
+<!-- Cover -->
+<GridBase tipo={2} variante={7}>
+	<svelte:fragment slot="a1">
+		<Header tipo={2}
+		variante={6}
+		textalign = "align-left"
+		title="Sergio Forés"
+		subtitle={coverData[0].subtitle}/>
+	</svelte:fragment>
 
-<Section id="quoterotator" variante={3}>
-	<QuoteRotator />
-</Section>
+	<svelte:fragment slot="a2">
+		
+	</svelte:fragment>
+	
+	<svelte:fragment slot="a4">
+		<QuoteRotator />
+	</svelte:fragment>
+	
+	<svelte:fragment slot="a3">
+		<NavSecondary 	{secondaryNav} 
+		variante_item={1}
+		variante_list={6} />
+	</svelte:fragment>
 
+	<svelte:fragment slot="a5"></svelte:fragment>
+	<svelte:fragment slot="a6"></svelte:fragment>
+</GridBase>
 
-<Section variante={3} bg_color="bggrey_1">
-	<Header
-		tipo={1} variante={2}
+<GridBase tipo={2} variante={7}>
+	<svelte:fragment slot="a1">
+		<Header
+		tipo={1} variante={2} textalign="tal"
 		title="Percibir la conexión esencial de todo"
-		subtitle=""
-	/>
-	<GridBase variante={5}>
+		subtitle=""/>
+	</svelte:fragment>
 
-		<Img 
+	<svelte:fragment slot="a2">
+		<Img variante={1} src="./img/cover4.jpg" alt="Presentation" />
+	</svelte:fragment>
+	
+	<svelte:fragment slot="a3">
+		<Section variante={0} bg_color="bggrey_1">
+			<Blockquote
 			variante={1}
-			src="./img/02234-14.jpg" 
-			alt="Presentation"
+			color="grey_2"
+			text="Puedes obtener más información contactándome en las redes o por Whatsapp"/>
+		<Button 
+			variante={7}
+			text="Chat-Whatsapp"
+			url="https://api.whatsapp.com/send?phone=+34619549032" />
+		</Section>		
+	</svelte:fragment>
+	
+	<svelte:fragment slot="a4">
+		<Img 	variante={1}
+				src="./img/02234-14.jpg" 
+				alt="Presentation"
 		/>
-		
-		<div slot="subarea2">
-			<Blockquote
-				align="tal"
-				color="grey_2"
-				variante={1}
-				text="El fundamento de la Creación radica en un orden arquetípico universal. ...Percibir ese orden conforma un tipo de conexión trascendental." />	
-		</div>
+	</svelte:fragment>
+	
+	<svelte:fragment slot="a5">
 
-		<div slot="subarea1">
-			
-		</div>
-
-	</GridBase>
-</Section>
-
-<Section variante={3} bg_color="bggrey_1">
-	<GridBase variante={4}>
-
-		<Img 
-			variante={4}
-			src="./img/cover4.jpg" 
-			alt="Presentation"
-		/>
-		
-		<div slot="subarea1">
-			<Blockquote
-				variante={1}
-				color="grey_2"
-				text="Puedes obtener más información contactándome en las redes o por Whatsapp"/>
-		</div>
-
-		<div slot="subarea2">
-			<Button
-				variante={7}
-				text="Chat-Whatsapp"
-				url="https://api.whatsapp.com/send?phone=+34619549032"
-        	/>
-		</div>
-
-	</GridBase>
-</Section>
+	</svelte:fragment>
+	
+	<svelte:fragment slot="a6">
+	</svelte:fragment>
+</GridBase>
