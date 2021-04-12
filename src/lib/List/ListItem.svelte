@@ -56,6 +56,7 @@
 		display: grid;
 		place-content: center;
 		text-align: center;
+		/* height: auto; */
 		@include type-setting(0);
         border-top: 0.5px solid $border_color;
 		/* background-color: $grey_5; */
@@ -67,7 +68,8 @@
 			border-top: none;
 		} */
 		&:hover {
-			background-color: $grey_0;
+			color: $grey_5;
+			background-color: $grey_1;
 		}
 		@include media(s3) {
 			border-left: 0.5px solid $border_color;

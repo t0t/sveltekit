@@ -25,10 +25,11 @@
     }
    
     .Img_1 { /* Usado en index */
+        width: 100%;
         height: 100%;
         object-fit: cover;
-        border-top-right-radius: 50%;
-        background-color: transparent;
+        /* border-top-right-radius: 50%; */
+        /* background-color: $grey_5; */
         /* @include media(s2) {
             border-bottom: $h3 solid $grey_1;
         } */

@@ -26,6 +26,9 @@
         padding-bottom: $h1;
         padding-right: $h3;
         @include type-setting(0);
+        max-width: 60%;
+        margin-left: auto;
+        margin-right: auto;
 
         /* @include media(s2) {
             @include type-setting(1);
@@ -46,7 +49,11 @@
     }
 
     .Blockquote_1 {
-        /* padding-bottom: $h2; */
         font-weight: normal;
+        @include media(s2) {
+            /* padding: $h3 $h1; */
+            @include type-setting(1);
+
+        }
     }
 </style>

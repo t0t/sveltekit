@@ -133,7 +133,8 @@
         background-color: $grey_4;
         border: none;
         padding: $button_3;
-        display: block;
+        place-self: center;
+        width: fit-content;
 
         &:hover {
             color: $grey_0;

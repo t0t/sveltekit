@@ -74,10 +74,10 @@
 
 <GridBase tipo={2} variante={7}>
 	<svelte:fragment slot="a1">
-		<Header
-		tipo={1} variante={2} textalign="tal"
-		title="Percibir la conexión esencial de todo"
-		subtitle=""/>
+		<Blockquote
+			variante={1}
+			color="grey_1"
+			text="Percibir la conexión esencial de todo"/>
 	</svelte:fragment>
 
 	<svelte:fragment slot="a2">
@@ -88,7 +88,7 @@
 		<Section variante={0} bg_color="bggrey_1">
 			<Blockquote
 			variante={1}
-			color="grey_2"
+			color="grey_5"
 			text="Puedes obtener más información contactándome en las redes o por Whatsapp"/>
 		<Button 
 			variante={7}
@@ -109,5 +109,6 @@
 	</svelte:fragment>
 	
 	<svelte:fragment slot="a6">
+		<div class="bggrey_1 fullfill"></div>
 	</svelte:fragment>
-</GridBase>
+</GridBase>∫
