@@ -22,10 +22,9 @@
         }
     }
     .Section_0 {
+        align-content: space-evenly;
         height: 100%;
         display: grid;
-        place-content: center;
-        /* place-items: center; */
         color: $grey_5;
     }
     

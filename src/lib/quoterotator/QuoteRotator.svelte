@@ -95,8 +95,10 @@
 		left: 0;
 		margin-left: 43%;
 		width: 15%;
+		display: none;
 		@include media(s2) {
 			/* width: 30%; */
+			display: inherit;
 		}
 	}
 	

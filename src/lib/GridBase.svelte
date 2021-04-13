@@ -40,12 +40,11 @@
 
 {:else if tipo === 2}
 	<div class={modificador[variante]}>
-		<div class="a1"> <slot name="a1" /> </div>
-		<div class="a3"> <slot name="a3" /> </div>
-		<div class="a4"> <slot name="a4" /> </div>
-		<div class="a2"> <slot name="a2" /> </div>
-		<div class="a5"> <slot name="a5" /> </div>
-		<div class="a6"> <slot name="a6" /> </div>
+		<div class="_3x3"> <slot name="_3x3" /> </div>
+		<div class="_5x5"> <slot name="_5x5" /> </div>
+		<div class="_8x8"> <slot name="_8x8" /> </div>
+		<div class="_2x2"> <slot name="_2x2" /> </div>
+		<div class="_1x1"> <slot name="_1x1" /> </div>
 	</div>
 
     {:else}
@@ -369,61 +368,117 @@
     }
     
     .Grid_7 {
-        $gap: 1px;
-        $the_rows: 13;
-        $the_columns: 8;
-        
-        @include media(s1) {
-            display: grid;  
-            grid-template-columns: repeat($the_columns, 1fr);
-            grid-template-rows: repeat($the_rows, 1fr);
-            // grid-gap: $gap;
-            height: 100vh;
+        width:100%;
+        height: 100vh;
+        display: grid;
+        color: $grey_5;
+        grid-template-columns: repeat(13, 1fr);
+        grid-template-rows: repeat(8, 1fr);
 
-            .a1 {
-                grid-column-start:6;
-                grid-column-end: 9;
-                grid-row-start: 1;
-                grid-row-end: 4;
-                background-color: $grey_5;
-            }
-            .a3 {
-                grid-column-start: 1;
-                grid-column-end: 9;
-                grid-row-start: 6;
-                grid-row-end: 14;
-                background-color: $grey_5;
-            }
-            .a4 {
-                grid-column-start: 1;
-                grid-column-end: 6;
-                grid-row-start: 1;
-                grid-row-end: 6;
-                background-color: $grey_5;
-                overflow: hidden;
-            }
-            .a2 {
-                grid-column-start: 7;
-                grid-column-end: 9;
-                grid-row-start: 4;
-                grid-row-end: 6;
-                background-color: $grey_5;
-                overflow: hidden;
-            }
-            .a5 {
-                grid-column-start: 6;
-                grid-column-end: 7;
-                grid-row-start: 4;
-                grid-row-end: 5;
-                background-color: $grey_5;
-            }
-            .a6 {
-                grid-column-start: 6;
-                grid-column-end: 7;
-                grid-row-start: 5;
-                grid-row-end: 6;
-                background-color: $grey_5;
-            }
+        > * {
+            overflow: hidden; 
         }
+        
+        ._1x1 {
+            grid-area: _1x1;
+            background-color: $grey_5;
+        }
+        ._2x2 {
+            grid-area: _2x2;
+            background-color: $grey_2;
+        }
+        ._8x8 {
+            grid-area: _8x8;
+            // border: none;
+            // min-height: 60vh;
+            background-color: $grey_5;
+        }
+        ._5x5 {
+            grid-area: _5x5;
+        }
+
+        ._3x3 {
+            grid-area: _3x3;
+        }
+        
+        grid-template-areas: 
+        "_3x3 _3x3 _3x3 _3x3 _3x3 _3x3 _3x3 _3x3 _3x3 _3x3 _3x3 _3x3 _3x3"
+        "_8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+        "_8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+        "_8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+        "_5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5"
+        "_5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5"
+        "_5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5"
+        "_5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5"
+        ;
+
+        @include media(s2) {
+            grid-template-areas: 
+            "_8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+            "_8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+            "_8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+            "_8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+            "_5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _3x3 _3x3 _3x3 _3x3 _3x3 _3x3"
+            "_5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _3x3 _3x3 _3x3 _3x3 _3x3 _3x3"
+            "_5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _3x3 _3x3 _3x3 _3x3 _3x3 _3x3"
+            "_5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _3x3 _3x3 _3x3 _3x3 _3x3 _3x3"
+            ;
+        }
+        
+        @include media(s3) {
+            grid-template-areas: 
+            "_5x5 _5x5 _5x5 _5x5 _5x5 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+            "_5x5 _5x5 _5x5 _5x5 _5x5 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+            "_5x5 _5x5 _5x5 _5x5 _5x5 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+            "_5x5 _5x5 _5x5 _5x5 _5x5 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+            "_5x5 _5x5 _5x5 _5x5 _5x5 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+            "_2x2 _2x2 _3x3 _3x3 _3x3 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+            "_2x2 _2x2 _3x3 _3x3 _3x3 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+            "_1x1 _1x1 _3x3 _3x3 _3x3 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+            ;
+        }
+        
+        // &_1 {
+
+        //     grid-template-areas: 
+
+        //     "_8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+        //     "_8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+        //     "_8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+        //     "_5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _2x2 _2x2 _2x2 _1x1 _1x1 _1x1"
+        //     "_5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _2x2 _2x2 _2x2 _1x1 _1x1 _1x1"
+        //     "_5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _2x2 _2x2 _2x2 _1x1 _1x1 _1x1"
+        //     "_5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _3x3 _3x3 _3x3 _3x3 _3x3 _3x3"
+        //     "_5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _3x3 _3x3 _3x3 _3x3 _3x3 _3x3"
+        //     ;
+
+        //     @media only screen and (min-width: 400px) {
+            
+        //     grid-template-areas: 
+
+        //     "_3x3 _3x3 _3x3 _2x2 _2x2 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+        //     "_3x3 _3x3 _3x3 _2x2 _2x2 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+        //     "_3x3 _3x3 _3x3 _1x1 _1x1 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+        //     "_5x5 _5x5 _5x5 _5x5 _5x5 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+        //     "_5x5 _5x5 _5x5 _5x5 _5x5 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+        //     "_5x5 _5x5 _5x5 _5x5 _5x5 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+        //     "_5x5 _5x5 _5x5 _5x5 _5x5 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+        //     "_5x5 _5x5 _5x5 _5x5 _5x5 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+        //     ;
+        //     }
+            
+        //     @media only screen and (min-width: 600px) {
+        //     grid-template-areas: 
+        //         "_1x1 _1x1 _2x2 _2x2 _2x2 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+        //         "_3x3 _3x3 _3x3 _3x3 _3x3 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+        //         "_3x3 _3x3 _3x3 _3x3 _3x3 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+        //         "_5x5 _5x5 _5x5 _5x5 _5x5 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+        //         "_5x5 _5x5 _5x5 _5x5 _5x5 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+        //         "_5x5 _5x5 _5x5 _5x5 _5x5 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+        //         "_5x5 _5x5 _5x5 _5x5 _5x5 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+        //         "_5x5 _5x5 _5x5 _5x5 _5x5 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+        //         ;
+        //     }
+        // }
     }
 </style>

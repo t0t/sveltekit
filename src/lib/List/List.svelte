@@ -127,8 +127,9 @@
 		
 		@include media(s1) {
 			padding-left: 0;
+			padding-right: 0;
 			height: 100%;
-			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			/* grid-template-columns: repeat(auto-fit, minmax(250px, auto)); */
 			grid-template-rows: auto auto;
 		}
 		@include media(s2) {

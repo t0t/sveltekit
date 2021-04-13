@@ -15,7 +15,7 @@
         height: 15px;
         width: 15px;
         /* margin: 0 5px; */
-        background-color: $grey_5;
+        background-color: $grey_2;
         border-radius: 50%;
         /* border: 1px solid $grey_0; */
         display: inline-block;

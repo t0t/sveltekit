@@ -23,8 +23,8 @@
     
     blockquote {
         font-style: italic;
-        padding-bottom: $h1;
-        padding-right: $h3;
+        /* padding-bottom: $h1; */
+        /* padding-right: $h3; */
         @include type-setting(0);
         max-width: 60%;
         margin-left: auto;
@@ -49,7 +49,10 @@
     }
 
     .Blockquote_1 {
+        display: grid;
         font-weight: normal;
+        place-items: center;
+        height: 100%;
         @include media(s2) {
             /* padding: $h3 $h1; */
             @include type-setting(1);

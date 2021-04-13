@@ -97,7 +97,8 @@
         display: grid;
         justify-content: space-around;
         height: 100%;
-        align-items: self-end;
+        align-items: center;
+        background-color: $grey_0;
         h1 {
             padding: 0 $h2;
         }

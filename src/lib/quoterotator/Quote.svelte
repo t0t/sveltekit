@@ -28,9 +28,9 @@ style="background-image: url({image});">
 		background-size: cover;
 		display: grid;
 		place-items: center;
-		place-content: center;
+		/* place-content: center; */
 		width: 100%;
-		height: inherit;
+		height: min-content;
 		text-align: center;
 		position: absolute;
 		/* margin-bottom: $h5; */

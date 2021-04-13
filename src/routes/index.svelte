@@ -1,17 +1,17 @@
 <script>
 	import { coverData } from "$lib/data/coverData.js";	
-	import { contentSliderData } from "$lib/data/contentSliderData.js"
+	// import { contentSliderData } from "$lib/data/contentSliderData.js"
 	import { secondaryNav } from "$lib/data/pages.js";
 
 	import Section from "$lib/Section.svelte";
 	import Cover from "$lib/Cover.svelte";
 	import GridBase from "$lib/GridBase.svelte";
 	import Blockquote from "$lib/Blockquote.svelte";
-	import SlideGallery from "$lib/slidegallery/SlideGallery.svelte";
+	// import SlideGallery from "$lib/slidegallery/SlideGallery.svelte";
 	import QuoteRotator from '$lib/quoterotator/QuoteRotator.svelte';
 	import Img from "$lib/Img.svelte";
 	import Button from "$lib/Button.svelte";
-	import ContentSlider from "$lib/ContentSlider/ContentSlider.svelte";
+	// import ContentSlider from "$lib/ContentSlider/ContentSlider.svelte";
 	import Header from "$lib/Header.svelte";
 	import NavSecondary from "$lib/NavSecondary.svelte";
 
@@ -46,7 +46,7 @@
 
 <!-- Cover -->
 <GridBase tipo={2} variante={7}>
-	<svelte:fragment slot="a1">
+	<svelte:fragment slot="_3x3">
 		<Header tipo={2}
 		variante={6}
 		textalign = "align-left"
@@ -54,37 +54,48 @@
 		subtitle={coverData[0].subtitle}/>
 	</svelte:fragment>
 
-	<svelte:fragment slot="a2">
-		
-	</svelte:fragment>
-	
-	<svelte:fragment slot="a4">
-		<QuoteRotator />
-	</svelte:fragment>
-	
-	<svelte:fragment slot="a3">
+	<svelte:fragment slot="_5x5">
 		<NavSecondary 	{secondaryNav} 
 		variante_item={1}
 		variante_list={6} />
 	</svelte:fragment>
+	
+	<svelte:fragment slot="_8x8">
+		<QuoteRotator />
+	</svelte:fragment>
+	
+	<!-- <svelte:fragment slot="_2x2">
+		
+	</svelte:fragment> -->
 
-	<svelte:fragment slot="a5"></svelte:fragment>
-	<svelte:fragment slot="a6"></svelte:fragment>
+	<!-- <svelte:fragment slot="_1x1"∫></svelte:fragment> -->
 </GridBase>
 
 <GridBase tipo={2} variante={7}>
-	<svelte:fragment slot="a1">
+	<svelte:fragment slot="_3x3">
 		<Blockquote
 			variante={1}
 			color="grey_1"
+			align = "tal"
 			text="Percibir la conexión esencial de todo"/>
+		
+		
 	</svelte:fragment>
 
-	<svelte:fragment slot="a2">
-		<Img variante={1} src="./img/cover4.jpg" alt="Presentation" />
+	<svelte:fragment slot="_5x5">
+		<Img 	variante={1}
+				src="./img/02234-14.jpg" 
+				alt="Presentation"
+		/>
+		
 	</svelte:fragment>
 	
-	<svelte:fragment slot="a3">
+	<svelte:fragment slot="_2x2">
+				
+	</svelte:fragment>
+	
+	<svelte:fragment slot="_8x8">
+		<!-- <Img variante={1} src="./img/cover4.jpg" alt="Presentation" /> -->
 		<Section variante={0} bg_color="bggrey_1">
 			<Blockquote
 			variante={1}
@@ -94,21 +105,10 @@
 			variante={7}
 			text="Chat-Whatsapp"
 			url="https://api.whatsapp.com/send?phone=+34619549032" />
-		</Section>		
+		</Section>
 	</svelte:fragment>
 	
-	<svelte:fragment slot="a4">
-		<Img 	variante={1}
-				src="./img/02234-14.jpg" 
-				alt="Presentation"
-		/>
+	<svelte:fragment slot="_1x1">
+		<div class="bggrey_3 fullfill"></div>
 	</svelte:fragment>
-	
-	<svelte:fragment slot="a5">
-
-	</svelte:fragment>
-	
-	<svelte:fragment slot="a6">
-		<div class="bggrey_1 fullfill"></div>
-	</svelte:fragment>
-</GridBase>∫
+</GridBase>
