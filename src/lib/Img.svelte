@@ -25,20 +25,23 @@
     }
    
     .Img_1 { /* Usado en index */
-        min-height: 50vh;
-        object-fit: fill;
-        @include media(s2) {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* border-top-right-radius: 50%; */
+        /* background-color: $grey_5; */
+        /* @include media(s2) {
             border-bottom: $h3 solid $grey_1;
-        }
+        } */
     }
     .Img_2 {
-        min-height: 50vh;
+        height: auto;
         position: relative;
         figcaption {
             @include type-setting(-1);
             position: absolute;
             left: $h2;
-            bottom: $h2;
+            bottom: $h1;
         }
     }
     .Img_3 {

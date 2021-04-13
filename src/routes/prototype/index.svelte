@@ -1,14 +1,14 @@
 <script>
     import { coverData } from "$lib/data/coverData.js";	
-    import { codeData } from "$lib/data/codeData.js";	
+    import { codeData } from "$lib/data/codeData.js";
+	import { tabHeaders } from "$lib/data/tabsContent.js";
+
     import Header from "$lib/Header.svelte";
-    // import Code from "$lib/Code/Code.svelte";
     import Section from "$lib/Section.svelte";
     import Button from "$lib/Button.svelte";
     import GridBase from "$lib/GridBase.svelte";
 	import List from "$lib/List/List.svelte"    
 	import ListItem from "$lib/List/ListItem.svelte"
-	import { tabHeaders } from "$lib/data/tabsContent.js";
 	import Tabs from "$lib/tabheaders/Tabs.svelte";
 	import Prism from "$lib/Code/PrismJS.svelte"; 
 </script>
@@ -16,15 +16,13 @@
 <!-- Holistic Prototype -->
 <Section id="cover" variante={3}>
 	<Header
-		tipo={2}
-		variante={1}
+		tipo={2} variante={1}
 		title={coverData[4].title}
 		subtitle={coverData[4].subtitle}
-		text={coverData[4].text}
 	/>
 </Section>
 
-<Section variante={0}>
+<Section variante={0} bg_color="bggrey_0">
 	<GridBase variante={2}>
 
 		<Prism language="{codeData[1].language}" code="{codeData[1].text}" />
@@ -33,6 +31,7 @@
 			<Header
 				tipo={3}
 				variante={6}
+				textalign="align-left"
 				title="Svelte Kit"
 				subtitle="El mejor hábitat para CSS, HTML y JS"
 			/>
@@ -53,6 +52,7 @@
 			<Header
 				tipo={3}
 				variante={6}
+				textalign="align-left"
 				title="SCSS"
 				subtitle="Diseño y prototipado al más bajo nivel"
 			/>
@@ -66,7 +66,7 @@
 	</GridBase>
 </Section>
 
-<Section variante={0}>
+<Section variante={0} bg_color="bggrey_0">
 	<GridBase variante={1}>
 
 		<Prism language="{codeData[2].language}" code="{codeData[2].text}" />
@@ -86,7 +86,7 @@
 
 
 
-<Section variante={4}>
+<Section variante={4} bg_color="bgwhite">
 	<GridBase variante={2}>
 
 		<img src="./img/grafico-11.svg" alt="">
@@ -95,6 +95,7 @@
 			<Header
 				tipo={3}
 				variante={6}
+				textalign="align-left"
 				title="Download"
 				subtitle="Actualización y mejora contínua"
 			/>
@@ -125,11 +126,10 @@
 </Section>
 
 <Header
-	tipo={1} variante={1}
-	title="Ceros y Unos."
-	subtitle=""
+	tipo={1} variante={3}
+	title="Notas acerca de esta web"
 />
 
-<Section id="UIPrototype" variante={7}>
+<Section id="UIPrototype" variante={7} bg_color="bggrey_0">
 	<Tabs {tabHeaders} />
 </Section>

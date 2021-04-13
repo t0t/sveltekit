@@ -85,11 +85,7 @@
 	/* Slideshow container */
 	.slideshow-container {
 		position: relative;
-		height: 50vh;
-		
-		@include media(s3) {
-			height: 75vh;
-		}
+		height: 100%;
 	}
 
 	/* The dot/bullet/indicator container */
@@ -99,8 +95,10 @@
 		left: 0;
 		margin-left: 43%;
 		width: 15%;
+		display: none;
 		@include media(s2) {
 			/* width: 30%; */
+			display: inherit;
 		}
 	}
 	

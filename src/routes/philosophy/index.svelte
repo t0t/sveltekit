@@ -13,14 +13,12 @@
 </script>
 
 <!-- My Philosophy -->
-<Section id="philosophy" variante={3}>
+<Section id="philosophy" variante={3} bg_color="bggrey_4">
 	<Header
 		tipo={1}
 		variante={3}
 		title={coverData[3].title}
 		subtitle={coverData[3].subtitle}
-		text={coverData[3].text}
-		img={coverData[3].img}
 	/>
 </Section>
 
@@ -30,7 +28,7 @@
 	subtitle=""
 />
 
-<Section variante={0}>
+<Section variante={0} bg_color="bggrey_0">
 	<GridBase variante={1}>
 
 		<svg fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 193 169">
@@ -68,14 +66,16 @@
 	</GridBase>
 </Section>
 
-<Section variante={0}>
+<Section variante={0} bg_color="bggrey_0">
 	<GridBase variante={0}>
 
 		<img src="./img/logo.svg" alt="">
 	
 		<div slot="subarea1">
 			<Header tipo={3}
-			variante={7} title="Hay una verdad que puede ser conocida…"
+					variante={7} 
+					textalign="align-left"
+					title="Hay una verdad que puede ser conocida…"
 			/>
 			<p>¿Percibes 2 
 				ese orden 1 
@@ -96,14 +96,16 @@
 	</GridBase>
 </Section>
 
-<Section variante={0}>
+<Section variante={0} bg_color="bggrey_0">
 	<GridBase variante={2}>
 
 		<img src="./img/01234_bn.svg" alt="">
 		
 		<div slot="subarea1">
 			<Header tipo={3}
-			variante={6} title="Percibes cualquier cosa como lo que és; un símbolo"
+					variante={6} 
+					textalign="align-left"
+					title="Percibes cualquier cosa como lo que és; un símbolo"
 			/>
 		</div>
 
@@ -115,7 +117,7 @@
 	</GridBase>
 </Section>
 
-<Section variante={4}>
+<Section variante={4} bg_color="bggrey_1">
 	<GridBase variante={2}>
 
 		<img src="./img/grafico-8.svg" alt="">
@@ -138,6 +140,6 @@
 	subtitle=""
 />
 
-<Section id="principios" variante={7}>
+<Section id="principios" variante={7} bg_color="bggrey_0">
 	<Tabs {tabHeaders} />
 </Section>

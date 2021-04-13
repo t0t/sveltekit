@@ -2,7 +2,6 @@
     import GridBase from "$lib/GridBase.svelte";
 	import List from "$lib/List/List.svelte"
 	import ListItem from "$lib/List/ListItem.svelte"
-	import Article from "$lib/Article.svelte"
     import Button from "$lib/Button.svelte";
 
     export let tabHeaders = []
@@ -25,7 +24,7 @@
 
 {#each tabHeaders as item}
     {#if activeTabValue == item.id}
-    <Article variante={6}>
+    <List tipo={5} variante={7}>
 
         <GridBase variante={3}>
             <figure slot="subarea1">
@@ -35,6 +34,7 @@
                 </figcaption>
             </figure>
             <p>{@html item.content}</p>
+
             <div slot="subarea2">
                 <List tipo={0} variante={1}>
                     {#each item.tags as tag}
@@ -46,7 +46,7 @@
             </div>
         </GridBase>
 
-    </Article>
+    </List>
     {/if}
 {/each}
 
@@ -58,7 +58,7 @@
     }
     .active {
         color: $black;
-        background-color: $white;
+        background-color: $grey_0;
         width: 100%;
     }
     span {

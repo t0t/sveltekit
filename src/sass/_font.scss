@@ -69,6 +69,10 @@ $line-heights: (
   @return map-get($size-scales, $level);
 }
 
+pre {
+  width: 100%;
+}
+
 body,
 main,
 header,
@@ -103,28 +107,30 @@ li {}
 h1 {
   @include type-setting(1);
   font-weight: bold;
+
   @include media(s2) {
-    @include type-setting(3);
+    @include type-setting(1);
   }
-  @include media(s3) {
-    @include type-setting(2);
-  }
-  @include media(s5) {
-    @include type-setting(4);
-  }
+  // @include media(s3) {
+  //   background-color: #fff;
+  //   @include type-setting(1);
+  // }
+  // @include media(s5) {
+  //   @include type-setting(3);
+  // }
 }
 
 h2 {
   font-weight: $weight_normal;
   @include type-setting(0);
-  @include media(s1) {
-    @include type-setting(1);
-  }
-  @include media(s5) {
-    @include type-setting(2);
-    margin-left: $h5;
-    margin-right: $h5;
-  }
+  // @include media(s1) {
+  //   @include type-setting(1);
+  // }
+  // @include media(s5) {
+  //   @include type-setting(4);
+  //   margin-left: $h5;
+  //   margin-right: $h5;
+  // }
 }
 
 h3,
@@ -135,12 +141,11 @@ h4 {
   }
 }
 
-small,
 p {
   @include type-setting(0);
-}
-p {
-  // margin-bottom: $h0;
+  @include media(s5) {
+    @include type-setting(1);
+  }
 }
 
 hgroup {
@@ -158,22 +163,6 @@ h4 {
   }
 }
 
-blockquote {
-  @include type-setting(0);
-  @include media(s1) {
-    @include type-setting(1);
-  }
-  @include media(s1) {
-    margin-left: $h3;
-    margin-right: $h3;
-  }
-  @include media(s2) {
-    max-width: $bp1;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
 sub {
   color: $grey_5;
   font-weight: $weight_normal;
@@ -183,5 +172,16 @@ sub {
 }
 
 figcaption {
+  text-align: left;
+}
+
+// Text align
+.tar {
+  text-align: right;
+}
+.tac {
+  text-align: center;
+}
+.tal {
   text-align: left;
 }

@@ -12,7 +12,6 @@
 
     .AboutMe {
         position: relative;
-        background-color: $white;
         display: grid;
         align-items: center;
         text-align: center;
@@ -22,16 +21,13 @@
             max-width: $h9;
             margin-top: $h2;
             margin-bottom: $h2;
-            color: $highlight_1;
             margin-left: auto;
             margin-right: auto;
         }
         .AboutMeText {
             color: $grey_4;
         }
-        p {
-            color: $grey_2;
-        }
+        
     }
     .Avatar {
         justify-self: center;
@@ -50,7 +46,7 @@
             top: 0;
             border: none;
             background-color: transparent;
-            color: $highlight;
+            color: $quaternary;
             &:hover {
                 color: $grey_2;
                 cursor: pointer;
@@ -59,10 +55,11 @@
     }
     .timeline {
         text-align: left;
+        color: $grey_5;
     }
 </style>
 
-<section class="AboutMe">
+<div class="AboutMe">
 
     <img class="Avatar" src={img} alt={title}>
 
@@ -84,4 +81,4 @@
         {@html textingles}
     {/if}
     </dl>
-</section>
+</div>

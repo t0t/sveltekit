@@ -1,78 +1,111 @@
 <script>
 	import { coverData } from "$lib/data/coverData.js";	
-	import Section from "$lib/Section.svelte";
-	import GridBase from "$lib/GridBase.svelte";
-	// import GridBase from "$lib/GridBase.svelte";
-	import QuoteRotator from '$lib/quoterotator/QuoteRotator.svelte';
-	// import VideoBanner from "$lib/VideoBanner.svelte";
-	import Img from "$lib/Img.svelte";
-	import Button from "$lib/Button.svelte";
-	import Header from "$lib/Header.svelte";
-	import NavSecondary from "$lib/NavSecondary.svelte";
+	// import { contentSliderData } from "$lib/data/contentSliderData.js"
 	import { secondaryNav } from "$lib/data/pages.js";
 
+	import Section from "$lib/Section.svelte";
+	import Cover from "$lib/Cover.svelte";
+	import GridBase from "$lib/GridBase.svelte";
+	import Blockquote from "$lib/Blockquote.svelte";
+	// import SlideGallery from "$lib/slidegallery/SlideGallery.svelte";
+	import QuoteRotator from '$lib/quoterotator/QuoteRotator.svelte';
+	import Img from "$lib/Img.svelte";
+	import Button from "$lib/Button.svelte";
+	// import ContentSlider from "$lib/ContentSlider/ContentSlider.svelte";
+	import Header from "$lib/Header.svelte";
+	import NavSecondary from "$lib/NavSecondary.svelte";
+
+	// let data = []
+	// data = [...contentSliderData, data]
 </script>
 
-<Section id="cover" variante={3}>
-	<Header tipo={2}
-			title={coverData[0].title}
-			subtitle={coverData[0].subtitle}
-			img={coverData[0].img}>
-	
+<!-- <Section id="cover" variante={8} bg_color="bggrey_5">
+
+	<GridBase tipo={1} variante={6}>
+    
+		<Header tipo={2}
+			variante={6}
+			textalign = "align-left"
+			title="Sergio Forés"
+			subtitle={coverData[0].subtitle}/>
+
+		<svelte:fragment slot="subarea1"> 
+			<NavSecondary 	{secondaryNav} 
+							variante_item={1}
+							variante_list={6} />
+		</svelte:fragment>
+		
+		<svelte:fragment slot="subarea2"></svelte:fragment>
+		<svelte:fragment slot="subarea3"></svelte:fragment>
+		<svelte:fragment slot="subarea4"></svelte:fragment>
+		<svelte:fragment slot="subarea5"></svelte:fragment>
+		<svelte:fragment slot="subarea6"></svelte:fragment>
+
+	</GridBase>
+</Section> -->
+
+<!-- Cover -->
+<GridBase tipo={2} variante={7}>
+	<svelte:fragment slot="_3x3">
+		<Header tipo={2}
+		variante={6}
+		textalign = "align-left"
+		title="Sergio Forés"
+		subtitle={coverData[0].subtitle}/>
+	</svelte:fragment>
+
+	<svelte:fragment slot="_5x5">
 		<NavSecondary 	{secondaryNav} 
-						variante_item={7}
-						variante_list={4} />	
-	</Header>
-</Section>
+		variante_item={1}
+		variante_list={6} />
+	</svelte:fragment>
+	
+	<svelte:fragment slot="_8x8">
+		<QuoteRotator />
+	</svelte:fragment>
+	
+	<!-- <svelte:fragment slot="_2x2">
+		
+	</svelte:fragment> -->
 
-<Section id="quoterotator" variante={3}>
-	<QuoteRotator />
-</Section>
+	<!-- <svelte:fragment slot="_1x1"∫></svelte:fragment> -->
+</GridBase>
 
-<Header
-	tipo={1} variante={3}
-	title="Percibir la conexión esencial de todo"
-	subtitle=""
-/>
-
-<Section variante={3}>
-	<GridBase variante={5}>
-
-		<Img 
+<GridBase tipo={2} variante={7}>
+	<svelte:fragment slot="_3x3">
+		<Blockquote
 			variante={1}
-			src="./img/02234-14.jpg" 
-			alt="Presentation"
+			color="grey_1"
+			align = "tal"
+			text="Percibir la conexión esencial de todo"/>
+	</svelte:fragment>
+
+	<svelte:fragment slot="_5x5">
+		<Img 	variante={1}
+				src="./img/02234-14.jpg" 
+				alt="Presentation"
 		/>
-		
-		<div slot="subarea2">
-			<p>Descifrando la Creación, en la intersección del arte, la tecnología y los saberes tradicionales. Un cierto tipo de orden que conforma un cierto tipo de conexión.</p>
-		</div>
-
-		<div slot="subarea1">
-			<Button
-				variante={7}
-				text="Chat-Whatsapp"
-				url="https://api.whatsapp.com/send?phone=+34619549032"
-        	/>
-		</div>
-
-	</GridBase>
-</Section>
-
-<Section variante={3}>
-	<GridBase variante={4}>
-
-		<Img 
-			variante={4}
-			src="./img/cover4.jpg" 
-			alt="Presentation"
-		/>
-		
-		<div slot="subarea1">
-			<p>El fundamento de la Creación radica en un orden arquetípico universal. ...Percibir ese orden conforma un tipo de conexión trascendental.</p>
-		</div>
-
-		<div slot="subarea2"></div>
-
-	</GridBase>
-</Section>
+	</svelte:fragment>
+	
+	<svelte:fragment slot="_2x2">
+				
+	</svelte:fragment>
+	
+	<svelte:fragment slot="_8x8">
+		<!-- <Img variante={1} src="./img/cover4.jpg" alt="Presentation" /> -->
+		<Section variante={0} bg_color="bggrey_1">
+			<Blockquote
+			variante={1}
+			color="grey_5"
+			text="Puedes obtener más información contactándome en las redes o por Whatsapp"/>
+		<Button 
+			variante={7}
+			text="Chat-Whatsapp"
+			url="https://api.whatsapp.com/send?phone=+34619549032" />
+		</Section>
+	</svelte:fragment>
+	
+	<svelte:fragment slot="_1x1">
+		<div class="bggrey_3 fullfill"></div>
+	</svelte:fragment>
+</GridBase>

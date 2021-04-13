@@ -4,17 +4,21 @@
 	export let target = "";
 	export let tipo = 0;
 	export let variante = 0;
-	const clase = ['ListItem_0', 'ListItem_1', 'ListItem_2','ListItem_3','ListItem_4','ListItem_5', 'ListItem_6','ListItem_7'];
+	const clase = ['ListItem_0', 'ListItem_1', 'ListItem_2','ListItem_3','ListItem_4','ListItem_5', 'ListItem_6','ListItem_7','ListItem_8','ListItem_9'];
 </script>
 
 {#if tipo === 0}
 	<li class={clase[variante]}> <slot /> </li>
+
 {:else if tipo === 1}
     <slot class={clase[variante]}></slot>
+
 {:else if tipo === 2}
-    <a class={clase[variante]} {href} {alt} {target}><slot/></a>
+    <a class={clase[variante]} {href} {alt} {target}><slot></slot></a>
+
 {:else if tipo === 3}
     <button class={clase[variante]} on:click><slot/></button>
+
 {:else}
 	<div class={clase[variante]}> <slot /> </div>
 {/if}
@@ -48,9 +52,36 @@
 		}
 	}
 	.ListItem_1 {
-		color: $grey_2;
-        padding: $h0;
-        border: 1px solid $grey_1;
+		color: $grey_1;
+		display: grid;
+		place-content: center;
+		text-align: center;
+		/* height: auto; */
+		@include type-setting(0);
+        border-top: 0.5px solid $border_color;
+		/* background-color: $grey_5; */
+		padding-top: $h0;
+		padding-bottom: $h0;
+		padding-right: $h0;
+		/* &:last-child,
+		&:nth-child(3) {
+			border-top: none;
+		} */
+		&:hover {
+			color: $grey_5;
+			background-color: $grey_1;
+		}
+		@include media(s3) {
+			border-left: 0.5px solid $border_color;
+			padding-bottom: $h0;
+			padding-left: $h0;
+			/* border-bottom: 0.5px solid $grey_1; */
+			/* &:nth-child(3),
+			&:nth-child(4) {
+				border-bottom: none;
+			} */
+
+		}
 	}
 	.ListItem_2 {
         @include type-setting(0);
@@ -62,17 +93,18 @@
 		color: $grey_0;
         align-self: start;
 	}
-	.ListItem_4 {
+
+	.ListItem_4 { /* boton Download */
         @include type-setting(0);
 		padding: $h1;
-		border: 1px solid $grey_5;
-		color: $grey_4;
-        align-self: start;
+		color: $white;
+		background-color: $grey_4;
+		align-self: start;
 		&:hover {
-			color: $white;
-			background-color: $grey_4;
+			background-color: $black;
 		}
 	}
+
 	/* nav - circulos horizontales */
 	.ListItem_5 {
         @include type-setting(0);
@@ -131,6 +163,49 @@
 			@include type-setting(1);
 			width: $h6 + $h4;
 			height: $h6 + $h4;
+		}
+	}
+	
+	.ListItem_8 { /* nav - next-prev */
+		
+		:global(.next),
+		:global(.prev) {
+			position: absolute;
+			bottom: $h2;
+			color: $white;
+			background-color: $black;
+			width: $h3;
+			height: $h3;
+			display: grid;
+			place-content: center;
+			box-sizing: border-box;
+			border: none;
+			border-radius: 50%;
+			@include type-setting(1);
+		}
+		:global(.next:hover),
+		:global(.prev:hover) {
+			color: $black;
+			background-color: $white;
+			cursor: pointer;
+		}
+		
+		:global(.next) {
+			right: $h2;
+		}
+
+		:global(.prev) {
+			right: $h2 + $h3;
+		}
+	}
+
+	.ListItem_9 { /* nav - Links footer */
+		:global(svg) {
+			width: $h2;
+			fill: $grey_2;
+			&:hover {
+				fill: $highlight;
+			}
 		}
 	}
 </style>

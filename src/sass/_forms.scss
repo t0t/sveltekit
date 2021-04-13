@@ -19,7 +19,7 @@ input[type=text] {
 // Tipo NUMBER
 input[type=number] {
   color: $primary;
-  background-color: $quaternary;
+  background-color: $primary;
   padding: $h0;
 
   &:focus {

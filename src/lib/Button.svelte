@@ -6,7 +6,7 @@
     export let variante = 0;
     export let valorinput = "input";
 
-    $: modificador = [
+    let modificador = [
         "Button_0",
         "Button_1",
         "Button_2",
@@ -133,7 +133,8 @@
         background-color: $grey_4;
         border: none;
         padding: $button_3;
-        display: block;
+        place-self: center;
+        width: fit-content;
 
         &:hover {
             color: $grey_0;

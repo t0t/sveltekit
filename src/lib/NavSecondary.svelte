@@ -18,7 +18,7 @@
         <ListItem tipo={2} variante={variante_item}
         href={url} alt={name}>
             
-            {name} <span>{description}</span>
+            {name} <br><span>{description}</span>
         
         </ListItem>
 
@@ -26,6 +26,9 @@
 
 </List>
 
-<!-- <style lang="scss">
+<style lang="scss">
     @use "../app.scss" as *;
-</style> -->
+    span {
+        color: $grey_2
+    }
+</style>
