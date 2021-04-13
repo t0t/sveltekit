@@ -137,7 +137,7 @@
 			grid-template-rows: auto;
 		}
 		@include media(s3) {
-			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 		}
 	}
 	
