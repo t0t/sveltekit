@@ -78,8 +78,6 @@
 			color="grey_1"
 			align = "tal"
 			text="Percibir la conexión esencial de todo"/>
-		
-		
 	</svelte:fragment>
 
 	<svelte:fragment slot="_5x5">
@@ -87,7 +85,6 @@
 				src="./img/02234-14.jpg" 
 				alt="Presentation"
 		/>
-		
 	</svelte:fragment>
 	
 	<svelte:fragment slot="_2x2">
