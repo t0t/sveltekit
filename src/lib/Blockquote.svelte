@@ -53,10 +53,9 @@
         font-weight: normal;
         place-items: center;
         height: 100%;
+        max-width: 80%;
         @include media(s2) {
-            /* padding: $h3 $h1; */
             @include type-setting(1);
-
         }
     }
 </style>

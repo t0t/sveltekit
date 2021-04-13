@@ -1,7 +1,7 @@
 <script>
 	export let tipo = 0;
 	export let variante = 0;
-	const modificador = ['Grid_0', 'Grid_1', 'Grid_2', 'Grid_3', 'Grid_4', 'Grid_5', 'Grid_6', 'Grid_7'];
+	const modificador = ['Grid_0', 'Grid_1', 'Grid_2', 'Grid_3', 'Grid_4', 'Grid_5', 'Grid_6', 'Grid_7', 'Grid_8'];
 	// $: innerWidth = 0
 </script>
 
@@ -446,6 +446,93 @@
             "_5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
             "_5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
             "_5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+            ;
+        }
+    }
+    .Grid_8 {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        color: $grey_5;
+        grid-template-columns: repeat(13, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+
+        > * {
+            overflow: hidden; 
+        }
+        
+        ._1x1 {
+            grid-area: _1x1;
+            background-color: $grey_5;
+        }
+        ._2x2 {
+            grid-area: _2x2;
+            background-color: $grey_2;
+        }
+        ._8x8 {
+            grid-area: _8x8;
+            background-color: $grey_2;
+        }
+        ._5x5 {
+            grid-area: _5x5;
+            display: grid;
+            gap: $h3;
+            place-content: center;
+            background-color: $highlight;
+        }
+
+        ._3x3 {
+            grid-area: _3x3;
+        }
+        
+        grid-template-areas: 
+        "_3x3 _3x3 _3x3 _3x3 _3x3 _3x3 _3x3 _3x3 _3x3 _3x3 _3x3 _3x3 _3x3"
+        "_3x3 _3x3 _3x3 _3x3 _3x3 _3x3 _3x3 _3x3 _3x3 _3x3 _3x3 _3x3 _3x3"
+        "_8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+        "_8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+        "_5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5"
+        "_5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5"
+        "_5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5"
+        "_1x1 _1x1 _1x1 _1x1 _1x1 _1x1 _1x1 _2x2 _2x2 _2x2 _2x2 _2x2 _2x2"
+        ;
+
+        @include media(s2) {
+            grid-template-areas: 
+            "_8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+            "_8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+            "_8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+            "_8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+            "_8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+            "_5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _3x3 _3x3 _3x3 _3x3 _3x3"
+            "_5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _3x3 _3x3 _3x3 _3x3 _3x3"
+            "_5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _3x3 _3x3 _3x3 _3x3 _3x3"
+            ;
+        }
+        
+        @include media(s3) {
+            grid-template-areas: 
+            "_5x5 _5x5 _5x5 _5x5 _5x5 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+            "_5x5 _5x5 _5x5 _5x5 _5x5 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+            "_5x5 _5x5 _5x5 _5x5 _5x5 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+            "_5x5 _5x5 _5x5 _5x5 _5x5 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+            "_5x5 _5x5 _5x5 _5x5 _5x5 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+            "_5x5 _5x5 _5x5 _5x5 _5x5 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+            "_5x5 _5x5 _5x5 _5x5 _5x5 _3x3 _3x3 _3x3 _2x2 _2x2 _2x2 _2x2 _2x2"
+            "_5x5 _5x5 _5x5 _5x5 _5x5 _3x3 _3x3 _3x3 _2x2 _2x2 _2x2 _2x2 _2x2"
+            ;
+        }
+        
+        @include media(s4) {
+            // background-color: red;
+            grid-template-areas: 
+            "_5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _3x3 _3x3 _3x3 _3x3 _3x3 _3x3"
+            "_5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+            "_5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+            "_5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+            "_5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+            "_5x5 _5x5 _5x5 _5x5 _5x5 _5x5 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8 _8x8"
+            "_1x1 _1x1 _1x1 _1x1 _1x1 _1x1 _1x1 _1x1 _1x1 _1x1 _2x2 _2x2 _2x2"
+            "_1x1 _1x1 _1x1 _1x1 _1x1 _1x1 _1x1 _1x1 _1x1 _1x1 _2x2 _2x2 _2x2"
             ;
         }
     }

@@ -7,6 +7,7 @@
 	import Img from "$lib/Img.svelte";
 	import Button from "$lib/Button.svelte";
 	import Section from "$lib/Section.svelte";
+	import Blockquote from "$lib/Blockquote.svelte";
 	import VideoBanner from "$lib/VideoBanner.svelte";
 	import GridBase from "$lib/GridBase.svelte";
 	import List from "$lib/List/List.svelte"
@@ -14,17 +15,39 @@
 </script>
 
 <Section id="cover" variante={3}>
-	<Header
-		tipo={2}
-		variante={1}
-		title={coverData[1].title}
-		subtitle={coverData[1].subtitle}
-		text={coverData[1].text}
-	/>
-</Section>
 
-<Section variante={1} id="video" bg_color="highlight">
-	<VideoBanner/>
+	<GridBase tipo={2} variante={8}>
+		<svelte:fragment slot="_3x3">
+			<div class="bghighlight fullfill"></div>
+		</svelte:fragment>
+
+		<svelte:fragment slot="_5x5">
+			<Header
+				tipo={2}
+				variante={6}
+				title={coverData[1].title}
+				subtitle={coverData[1].subtitle}
+				text={coverData[1].text}
+			/>
+			<Blockquote align="tac"
+						color="grey_3"
+						variante={1}
+						text="Todo son formas de arte simbólicas con una función mediadora capaz de abrirle lo real a la conciencia." />
+		</svelte:fragment>
+		
+		<svelte:fragment slot="_2x2">
+			<div class="bggrey_4 fullfill"></div>
+		</svelte:fragment>
+		
+		<svelte:fragment slot="_8x8">
+			<VideoBanner/>
+		</svelte:fragment>
+		
+		<svelte:fragment slot="_1x1">
+			<div class="bggrey_3 fullfill"></div>
+		</svelte:fragment>
+	</GridBase>
+
 </Section>
 
 <Header tipo={1} variante={4} title="Galería" />
@@ -33,49 +56,65 @@
 	<LightboxGallery/>
 </Section>
 
-<Section id="proceso" variante={7} bg_color="bggrey_0">
+<!-- <Section id="proceso" variante={7} bg_color="bggrey_0">
 	<Tabs {tabHeaders} />
-</Section>
+</Section> -->
 
-<Section variante={4}>
-	<GridBase variante={2}>
+<Section id="cover" variante={3}>
 
-		<img src="./img/grafico-8.svg" alt="">
+	<GridBase tipo={2} variante={8}>
+		<svelte:fragment slot="_3x3">
+			
+		</svelte:fragment>
 		
-		<div slot="subarea1">
-			<p><strong>Me interesa recrear las condiciones necesarias para que las leyes de la física y el tiempo puedan quedar atrapadas en una forma.</strong></p>
-		</div>
-
-		<div slot="subarea2">
-			<p>En la obra de arte, como símbolo que es, se produce un reconocimiento mutuo entre dos caras de una misma realidad que se encuentran. La realidad se reúne a sí misma, se completa a sí misma haciéndose presente como símbolo y  proporcionando la experiencia de descubrimiento de una realidad más original.</p>
-		</div>
+		<svelte:fragment slot="_5x5">
+			<Blockquote align="tar"
+			color="grey_3" variante={1}
+			text="En la obra de arte, como símbolo que es, se produce un reconocimiento mutuo entre dos caras de una misma realidad que se encuentran. La realidad se reúne a sí misma, se completa a sí misma haciéndose presente como símbolo y  proporcionando la experiencia de descubrimiento de una realidad más original." />
+		</svelte:fragment>
+		
+		<svelte:fragment slot="_2x2">
+			<!-- <Blockquote align="tar"
+			color="grey_3" variante={1}
+			text="Me interesa recrear las condiciones necesarias para que las leyes de la física y el tiempo puedan quedar atrapadas en una forma." /> -->
+		</svelte:fragment>
+		
+		<svelte:fragment slot="_8x8">
+			<img src="./img/bg3.jpg" alt="">
+		</svelte:fragment>
+		
+		<svelte:fragment slot="_1x1">
+			<div class="bggrey_3 fullfill"></div>
+		</svelte:fragment>
 	</GridBase>
-</Section>
 
-<Section variante={3}>
-	<GridBase variante={5}>
-
-		<Img 	variante={4}
-				src="./img/cover4.jpg" 
-				alt="Presentation"
-		/>
+	<GridBase tipo={2} variante={8}>
+		<svelte:fragment slot="_3x3">
+			<div class="bghighlight fullfill"></div>
+		</svelte:fragment>
 		
-		<div slot="subarea2">
-			<Header tipo={3}
-			variante={7} 
-			textalign="align-left"
-			title="¿Interesado en alguna pieza?"
-			/>
-			<p>Puedes obtener más información contactándome en las redes o por Whatsapp</p>
-		</div>
-
-		<div slot="subarea1">
+		<svelte:fragment slot="_5x5">
+			<Blockquote align="tac"
+			color="grey_3" variante={1}
+			text="Puedes obtener más información contactándome en las redes o por Whatsapp" />
+			
 			<Button
 				variante={7}
 				text="Chat-Whatsapp"
 				url="https://api.whatsapp.com/send?phone=+34619549032"
         	/>
-		</div>
+		</svelte:fragment>
+		
+		<svelte:fragment slot="_2x2">
+			<div class="bggrey_4 fullfill"></div>
 
+		</svelte:fragment>
+		
+		<svelte:fragment slot="_8x8">
+			<img src="./img/bg2.jpg" alt="">
+		</svelte:fragment>
+		
+		<svelte:fragment slot="_1x1">
+		</svelte:fragment>
 	</GridBase>
 </Section>

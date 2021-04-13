@@ -42,12 +42,11 @@
     }
     .Header_1 {
         display: grid;
-        min-height: $h7;
+        align-content: center;
+        height: 100%;
         color: $grey_4;
         background-color: $highlight;
-        text-align: left;
-        padding: 0 $h2 $h2;
-        place-content: end;
+
         @include media(s1) {
             place-content: center;
             text-align: center;
@@ -98,7 +97,7 @@
         justify-content: space-around;
         height: 100%;
         align-items: center;
-        background-color: $grey_0;
+        background-color: $highlight;
         h1 {
             padding: 0 $h2;
         }
