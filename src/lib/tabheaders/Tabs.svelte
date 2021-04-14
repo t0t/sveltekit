@@ -1,8 +1,9 @@
 <script>
-    import GridBase from "$lib/GridBase.svelte";
+    import Grid from "$lib/Grid.svelte";
 	import List from "$lib/List/List.svelte"
 	import ListItem from "$lib/List/ListItem.svelte"
     import Button from "$lib/Button.svelte";
+    import Img from "$lib/Img.svelte";
 
     export let tabHeaders = []
     let activeTabValue = 1;
@@ -26,25 +27,30 @@
     {#if activeTabValue == item.id}
     <List tipo={5} variante={7}>
 
-        <GridBase variante={3}>
-            <figure slot="subarea1">
-                <img src={item.img} alt={item.subtitle}>
-                <figcaption>
-                    {item.subtitle}
-                </figcaption>
-            </figure>
-            <p>{@html item.content}</p>
+        <Grid tipo={2} variante={9}>
+            
+            <svelte:fragment slot="slot_4">
+                    <Img variante={5}
+                    src={item.img} alt={item.subtitle}/>
+            </svelte:fragment>
+        
+            <svelte:fragment slot="slot_5">
+                <p>{@html item.content}</p>
+            </svelte:fragment>
+            
+            <!-- <svelte:fragment slot="slot_3"> -->
+                <!-- <div>
+                    <List tipo={0} variante={1}>
+                        {#each item.tags as tag}
+                        <ListItem tipo={0} variante={2}>
+                            {tag}
+                        </ListItem>
+                        {/each}
+                    </List>
+                </div> -->
+            <!-- </svelte:fragment> -->
 
-            <div slot="subarea2">
-                <List tipo={0} variante={1}>
-                    {#each item.tags as tag}
-                    <ListItem tipo={0} variante={2}>
-                        {tag}
-                    </ListItem>
-                    {/each}
-                </List>
-            </div>
-        </GridBase>
+        </Grid>
 
     </List>
     {/if}

@@ -11,7 +11,7 @@
 </div>
 
 <style lang="scss">
-    @use "../../app.scss"as *;
+    @use "../../app.scss" as *;
     $size: 15px;
 
     .switch-cont {

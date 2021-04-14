@@ -1,6 +1,6 @@
 <script>
 	// import {fade} from 'svelte/transition';
-	import GridBase from '$lib/GridBase.svelte';
+	import Grid from '$lib/Grid.svelte';
 	import Draggable from './Draggable.svelte';
 	import Form from '$lib/Form.svelte';
 	import Input from '$lib/Input.svelte';
@@ -50,7 +50,7 @@
 	};
 </script>
 
-<GridBase variante={0}>
+<Grid variante={0}>
 	<svg bind:this={svg} viewBox="-1 -1 {canvas.width} {canvas.height}">
 		<g transform="translate(150,150) scale(0.7)">
 			{#each circles as circle}
@@ -93,7 +93,7 @@
 			</ListItem>
 		</List>
 	</div>
-</GridBase>
+</Grid>
 
 <style lang="scss">
 	@use "../../../app.scss" as *;

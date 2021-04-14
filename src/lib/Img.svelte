@@ -3,6 +3,7 @@
     export let alt = "Imagen";
     export let href = undefined;
     export let variante = 0;
+    let tipo = 0;
     const modificadores = [
         "Img_0",
         "Img_1",
@@ -28,11 +29,6 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        /* border-top-right-radius: 50%; */
-        /* background-color: $grey_5; */
-        /* @include media(s2) {
-            border-bottom: $h3 solid $grey_1;
-        } */
     }
     .Img_2 {
         height: auto;
@@ -76,10 +72,8 @@
 
 {#if (variante === 0 || variante === 3 || variante === 4)}
 
-    <div 
-        class={modificadores[variante]}
-        style="background-image:url({src});"
-    ></div>
+    <div class={modificadores[variante]}
+        style="background-image:url({src});"></div>
 
 {:else if (variante === 1 || variante === 5)}
 

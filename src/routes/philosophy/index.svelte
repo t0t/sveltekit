@@ -1,15 +1,14 @@
 <script>
     import { coverData } from "$lib/data/coverData.js";	
     import { tabHeaders } from "$lib/data/tabsContent.js";	
-	import GridBase from "$lib/GridBase.svelte";
-    import Header from "$lib/Header.svelte";
+	import Grid from "$lib/Grid.svelte"
+	import Header from "$lib/Header.svelte";
     import Svg from "$lib/Svg.svelte";
     import Section from "$lib/Section.svelte";
     import Tabs from "$lib/tabheaders/Tabs.svelte";
 	import List from "$lib/List/List.svelte"    
 	import ListItem from "$lib/List/ListItem.svelte" 
 	import Button from "$lib/Button.svelte";
-
 </script>
 
 <!-- My Philosophy -->
@@ -29,7 +28,7 @@
 />
 
 <Section variante={0} bg_color="bggrey_0">
-	<GridBase variante={1}>
+	<Grid variante={1}>
 
 		<svg fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 193 169">
 			<path fill="none" stroke="#000" stroke-width=".7" d="M4 165l31-53 30 53H4zm62 0l30-53 31 53H66zm61 0l31-53 30 53h-61zm-92-54l31-53 30 53H35zm61 0l31-53 31 53H96zM66 58L96 5l31 53H66z"/>
@@ -63,11 +62,11 @@
 				</ListItem>
 			</List>
 		</span>
-	</GridBase>
+	</Grid>
 </Section>
 
 <Section variante={0} bg_color="bggrey_0">
-	<GridBase variante={0}>
+	<Grid variante={0}>
 
 		<img src="./img/logo.svg" alt="">
 	
@@ -93,11 +92,11 @@
 			<p>A medida que uno va averiguando cosas se va dando cuenta de que las cosas que uno puede llegar a saber quieren ser conocidas. Están ocultas y a la vez no lo están. Hay un juego ahí entre lo velado y lo revelado, como si lo uno no tuviera sentido sin lo otro.
 			</p>
 		</div>
-	</GridBase>
+	</Grid>
 </Section>
 
 <Section variante={0} bg_color="bggrey_0">
-	<GridBase variante={2}>
+	<Grid variante={2}>
 
 		<img src="./img/01234_bn.svg" alt="">
 		
@@ -114,11 +113,11 @@
 			
 			<p>Los 5 arjés. Estructura dinámica sobre la que se asienta toda la Creación.</p>
 		</div>
-	</GridBase>
+	</Grid>
 </Section>
 
 <Section variante={4} bg_color="bggrey_1">
-	<GridBase variante={2}>
+	<Grid variante={2}>
 
 		<img src="./img/grafico-8.svg" alt="">
 		
@@ -131,7 +130,7 @@
 			
 			<p>Del griego hermeneutikos; Hermeneuo (Yo descifro) y Tekné (Arte, técnica, tejer). La Hermenéutica nace como "el arte o la técnica de explicar, descifrar o interpretar". Así que para explicar o descifrar algo, luego veremos el qué, primeramente yo tengo que hacer una hermenéutica de ese "algo", averiguar algo que vendrá recogido en alguna otra parte. </p>
 		</div>
-	</GridBase>
+	</Grid>
 </Section>
 
 <Header

@@ -6,7 +6,7 @@
     import Header from "$lib/Header.svelte";
     import Section from "$lib/Section.svelte";
     import Button from "$lib/Button.svelte";
-    import GridBase from "$lib/GridBase.svelte";
+    import Grid from "$lib/Grid.svelte";
 	import List from "$lib/List/List.svelte"    
 	import ListItem from "$lib/List/ListItem.svelte"
 	import Tabs from "$lib/tabheaders/Tabs.svelte";
@@ -23,7 +23,7 @@
 </Section>
 
 <Section variante={0} bg_color="bggrey_0">
-	<GridBase variante={2}>
+	<Grid variante={2}>
 
 		<Prism language="{codeData[1].language}" code="{codeData[1].text}" />
 		
@@ -41,11 +41,11 @@
 			<p>Svelte es el mejor framework de desarrollo que he probado. Cuando lo descubrí me enamoré al instante y supe que ese sería mi motor de templates y mi generador de sitios web estáticos.</p>
 			<p>Su simplicidad y belleza saltan a la vista. <strong>Encapsulamiento holístico:</strong> Estoy trabajando en un sistema de componentes embebidos o anidados unos dentro de otros. Se trata de economizar recursos al igual que sucede en la naturaleza.</p>
 		</div>
-	</GridBase>
+	</Grid>
 </Section>
 
 <Section variante={0}>
-	<GridBase variante={0}>
+	<Grid variante={0}>
 		<Prism language="{codeData[0].language}" code="{codeData[0].text}" />
 
 		<div slot="subarea1">
@@ -63,11 +63,11 @@
 			<p>Una serie de mixins y funciones desde el preprocesador Sass facilitan la generación de un CSS limpio y ordenado. El ritmo vertical y todas las proporciones de nuestra UI se basan en el número áureo.</p>
 		
 		</div>
-	</GridBase>
+	</Grid>
 </Section>
 
 <Section variante={0} bg_color="bggrey_0">
-	<GridBase variante={1}>
+	<Grid variante={1}>
 
 		<Prism language="{codeData[2].language}" code="{codeData[2].text}" />
 	
@@ -81,13 +81,11 @@
 		<div slot="subarea2">
 			
 		</div>
-	</GridBase>
+	</Grid>
 </Section>
 
-
-
 <Section variante={4} bg_color="bgwhite">
-	<GridBase variante={2}>
+	<Grid variante={2}>
 
 		<img src="./img/grafico-11.svg" alt="">
 		
@@ -122,7 +120,7 @@
 				</ListItem>
 			</List>
 		</div>
-	</GridBase>
+	</Grid>
 </Section>
 
 <Header
