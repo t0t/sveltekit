@@ -5,13 +5,9 @@
     let modificador = [
         "Blockquote_0", "Blockquote_1"
     ];
-    export let align = "tac"
-    export let color = "grey_0"
 </script>
 
-<blockquote class="
-{modificador[variante]} {align} {color}
-">
+<blockquote class="{modificador[variante]} ">
     <slot>
         <q>{text}</q>
     </slot>
@@ -23,19 +19,10 @@
     
     blockquote {
         font-style: italic;
-        /* padding-bottom: $h1; */
-        /* padding-right: $h3; */
         @include type-setting(0);
         max-width: 60%;
         margin-left: auto;
         margin-right: auto;
-
-        /* @include media(s2) {
-            @include type-setting(1);
-        } */
-        /* @include media(s5) {
-            @include type-setting(2);
-        } */
     }
 
     .Blockquote_0 {

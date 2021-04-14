@@ -30,7 +30,7 @@ style="background-image: url({image});">
 		place-items: center;
 		/* place-content: center; */
 		width: 100%;
-		height: min-content;
+		height: 100%;
 		text-align: center;
 		position: absolute;
 		/* margin-bottom: $h5; */

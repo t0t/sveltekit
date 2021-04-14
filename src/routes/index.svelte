@@ -11,69 +11,55 @@
 	import Button from "$lib/Button.svelte";
 	import Header from "$lib/Header.svelte";
 	import NavSecondary from "$lib/NavSecondary.svelte";
-
-	// let data = []
-	// data = [...contentSliderData, data]
 </script>
 
 <!-- Cover -->
-<Grid tipo={2} variante={7}>
-	<svelte:fragment slot="slot_3">
+<div class="dg">
+
+	<div class="col_5 bgc_primary c_5 mh_0">
 		<Header tipo={2}
 		variante={6}
 		textalign = "align-left"
 		title="Sergio Forés"
 		subtitle={coverData[0].subtitle}/>
-	</svelte:fragment>
+	</div>
 
-	<svelte:fragment slot="slot_5">
-		<NavSecondary 	{secondaryNav} 
+	<div class="col_8">
+		<NavSecondary {secondaryNav} 
 		variante_item={1}
 		variante_list={6} />
-	</svelte:fragment>
-	
-	<svelte:fragment slot="slot_4">
+	</div>
+
+	<div class="col_13 mh_0">
 		<QuoteRotator />
-	</svelte:fragment>
-	
-	<svelte:fragment slot="slot_2">
-	</svelte:fragment>
+	</div>
 
-	<svelte:fragment slot="slot_1"></svelte:fragment>
-</Grid>
+</div>
 
-<Grid tipo={2} variante={7}>
-	<svelte:fragment slot="slot_3">
+<div class="dg p_3 bgc_primary">
+
+	<div class="col_8 c_5">
+		<Blockquote variante={1}
+		text="Percibir la conexión esencial de todo"/>
+	</div>
+
+	<div class="col_5">
+		<Img variante={1}
+		src="./img/02234-14.jpg" 
+		alt="Presentation"/>
+	</div>
+</div>
+
+	<div class="col_13 mh_0 dg_0 pcc bgc_0 c_4 tac">
 		<Blockquote
 			variante={1}
-			color="grey_1"
-			align = "tal"
-			text="Percibir la conexión esencial de todo"/>
-	</svelte:fragment>
-
-	<svelte:fragment slot="slot_4">
-		<Img 	variante={1}
-				src="./img/02234-14.jpg" 
-				alt="Presentation"
-		/>
-	</svelte:fragment>
-	
-	<svelte:fragment slot="slot_2"></svelte:fragment>
-	
-	<svelte:fragment slot="slot_5">
-		<Section variante={0} bg_color="bggrey_1">
-			<Blockquote
-			variante={1}
-			color="grey_5"
 			text="Puedes obtener más información contactándome en las redes o por Whatsapp"/>
 		<Button 
 			variante={7}
 			text="Chat-Whatsapp"
 			url="https://api.whatsapp.com/send?phone=+34619549032" />
-		</Section>
-	</svelte:fragment>
+	</div>
+
 	
-	<svelte:fragment slot="slot_1">
-		<div class="bggrey_3 fullfill"></div>
-	</svelte:fragment>
-</Grid>
+
+

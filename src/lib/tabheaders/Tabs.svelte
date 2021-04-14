@@ -27,18 +27,16 @@
     {#if activeTabValue == item.id}
     <List tipo={5} variante={7}>
 
-        <Grid tipo={2} variante={9}>
+        <div class="dg p_3 gap_3 bgc_0">
             
-            <svelte:fragment slot="slot_4">
-                    <Img variante={5}
-                    src={item.img} alt={item.subtitle}/>
-            </svelte:fragment>
-        
-            <svelte:fragment slot="slot_5">
+            <div class="grid-5">
+                <Img variante={5} src={item.img} alt={item.subtitle}/>
+            </div>
+            
+            <div class="grid-8">
                 <p>{@html item.content}</p>
-            </svelte:fragment>
+            </div>
             
-            <!-- <svelte:fragment slot="slot_3"> -->
                 <!-- <div>
                     <List tipo={0} variante={1}>
                         {#each item.tags as tag}
@@ -48,9 +46,9 @@
                         {/each}
                     </List>
                 </div> -->
-            <!-- </svelte:fragment> -->
+            <!-- </div> -->
 
-        </Grid>
+        </div>
 
     </List>
     {/if}

@@ -47,28 +47,28 @@ $list4: $primary, $secondary, $tertiary, $primary, $secondary, $tertiary, $prima
 
 
 // text colors
-.grey_0 { color: $grey_0; }
-.grey_1 { color: $grey_1; }
-.grey_2 { color: $grey_2; }
-.grey_3 { color: $grey_3; }
-.grey_4 { color: $grey_4; }
-.grey_5 { color: $grey_5; }
-.black { color: $black; }
-.white { color: $white; }
-.primary { color: $primary; }
+.c_0 { color: $grey_0; }
+.c_1 { color: $grey_1; }
+.c_2 { color: $grey_2; }
+.c_3 { color: $grey_3; }
+.c_4 { color: $grey_4; }
+.c_5 { color: $grey_5; }
+.c_black { color: $black; }
+.c_white { color: $white; }
+.c_primary { color: $primary; }
 
 // background colors
-.bggrey_0 { background-color: $grey_0; }
-.bggrey_1 { background-color: $grey_1; }
-.bggrey_2 { background-color: $grey_2; }
-.bggrey_3 { background-color: $grey_3; }
-.bggrey_4 { background-color: $grey_4; }
-.bggrey_5 { background-color: $grey_5; }
+.bgc_0 { background-color: $grey_0; }
+.bgc_1 { background-color: $grey_1; }
+.bgc_2 { background-color: $grey_2; }
+.bgc_3 { background-color: $grey_3; }
+.bgc_4 { background-color: $grey_4; }
+.bgc_5 { background-color: $grey_5; }
 
 .bgwhite { background-color: $white; }
 .bgblack { background-color: $black; }
 
-.bghighlight { background-color: $highlight; }
+.bgc_primary { background-color: $highlight; }
 
 .fullfill {
   width: 100%;

@@ -61,7 +61,6 @@
         }
     }
     .Img_5 {
-        border-bottom: $h3 solid $grey_4;
         background-size: cover;
         // border-radius: 50%;
         // width: 50vh;

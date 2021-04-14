@@ -4,7 +4,7 @@
     let modificador = [
         "Section_0", "Section_1", "Section_2", "Section_3", "Section_4", "Section_5", "Section_6", "Section_7", "Section_8"
     ];
-    export let bg_color = "bggrey_1"
+    export let bg_color = "bgc_1"
 </script>
 
 <section    {id}
@@ -16,6 +16,7 @@
 <style lang="scss">	
 	@use "../app.scss" as *;
     section {
+        /* min-height: 100vh; */
         padding: $h2;
         @include media(s2){
             padding: $h3;
@@ -25,16 +26,15 @@
         align-content: space-evenly;
         height: 100%;
         display: grid;
-        color: $grey_5;
+        color: inherit;
     }
     
     .Section_1 {
         padding: 0;
-        min-height: 50vh;
     }
 
     .Section_2 {
-        color: $grey_0;
+        color: inherit;
         display: grid;
         place-content: center;
     }

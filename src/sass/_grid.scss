@@ -1,19 +1,56 @@
+.dg {
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+}
+.dg_0 {
+    display: grid;
+}
+
+@for $i from 1 through 13 {
+    .col_#{$i} {
+      grid-column: span ($i);
+    }
+}
+
 .slot_1 {
-    grid-area: slot_1;
+    grid-area: __1;
 }
 
 .slot_2 {
-    grid-area: slot_2;
+    grid-area: __2;
 }
 
 .slot_3 {
-    grid-area: slot_3;
+    grid-area: __3;
 }
 
 .slot_4 {
-    grid-area: slot_4;
+    grid-area: __4;
 }
 
 .slot_5 {
-    grid-area: slot_5;
+    grid-area: __5;
+}
+
+.pic {
+    height: 100%;
+    place-items: center;
+}
+.pcc {
+    height: 100%;
+    place-content: center;
+    align-content: space-evenly;
+}
+
+.gap_0 {
+    gap: 0px;
+}
+.gap_1 {
+    gap: $h1;
+}
+.gap_2 {
+    gap: $h2;
+}
+.gap_3 {
+    gap: $h3;
 }

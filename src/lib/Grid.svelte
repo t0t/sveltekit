@@ -41,11 +41,11 @@
 
 {:else if tipo === 2}
 	<div class={modificador[variante]}>
-		<div class="slot_5"> <slot name="slot_5" /> </div>
-		<div class="slot_4"> <slot name="slot_4" /> </div>
-		<div class="slot_3"> <slot name="slot_3" /> </div>
-		<div class="slot_2"> <slot name="slot_2" /> </div>
-		<div class="slot_1"> <slot name="slot_1" /> </div>
+		<slot name="slot_5" />
+		<slot name="slot_4" />
+		<slot name="slot_3" />
+		<slot name="slot_2" />
+		<slot name="slot_1" />
 	</div>
 
     {:else}
