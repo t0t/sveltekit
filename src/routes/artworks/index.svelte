@@ -12,20 +12,20 @@
 	import Grid from "$lib/Grid.svelte";
 	import List from "$lib/List/List.svelte"
 	import ListItem from "$lib/List/ListItem.svelte"
-	</script>
+</script>
 
 <Section id="cover" variante={3}>
-	<div class="dg">
-		<div class="col_13 col_s2_5 mh_3 bgc_primary dg_0 pcc">
-			<Header tipo={2} variante={6}
+	<div class="dg c_1 bgc_4">
+		<div class="col_13 mh_3 bgc_primary dg_0 pcc c_4">
+			<Header tipo={2} variante={5}
 				title={coverData[1].title}
 				subtitle={coverData[1].subtitle}
-				text={coverData[1].text}/>
+			/>
 		</div>
 		<div class="col_13 col_s2_8">
 			<VideoBanner/>
 		</div>
-		<div class="col_13 mh_2 mh_s2_5 tac">
+		<div class="col_13 col_s2_5 mh_2 mh_s2_5 tac dg_0 pcc p_2">
 			<Blockquote variante={1}
 			text="Todo son formas de arte simbólicas con una función mediadora capaz de abrirle lo real a la conciencia." />
 		</div>
@@ -59,8 +59,10 @@
 	<div class="col_13">
 		<Img variante={1} src="./img/bg2.jpg" alt="Presentation" />
 	</div>
-	<div class="col_13 mh_0 dg_0 pt_3 pb_3 tac bgc_0 pcc c_4 gap_2">
-		<Blockquote variante={1} text="Puedes obtener más información contactándome en las redes o por Whatsapp" />
+	<div class="col_13 mh_0 dg_0 pt_3 pb_3 tac bgc_0 pcc_0 c_3 mh_s2_5 rg_1">
+		<div class="mw_7">
+			<Blockquote variante={1} text="Puedes obtener más información contactándome en las redes o por Whatsapp" />
+		</div>
 		
 		<Button variante={7} text="Chat-Whatsapp" 
 		url="https://api.whatsapp.com/send?phone=+34619549032" />

@@ -20,7 +20,7 @@
 		<Header tipo={2} variante={6} title="Sergio Forés" subtitle={coverData[0].subtitle} />
 	</div>
 
-	<div class="col_13 col_s2_8">
+	<div class="col_13 col_s2_8 col_s2_8 mh_s2_5">
 		<NavSecondary {secondaryNav} variante_item={1} variante_list={6} />
 	</div>
 
@@ -30,7 +30,7 @@
 
 </div>
 
-<div class="dg p_3 bgc_primary rg_1">
+<div class="dg p_3 bgc_primary rg_1 mh_s2_5">
 
 	<div class="col_13 col_s2_8 c_5 tac">
 		<Blockquote variante={1} text="Percibir la conexión esencial de todo" />
@@ -41,10 +41,12 @@
 	</div>
 </div>
 
-<div class="col_s2_13 rg_1 p_3 dg_0 pcc bgc_0 c_4 tac">
-	<Blockquote
+<div class="col_s2_13 rg_1 p_3 dg_0 pcc bgc_0 c_4 tac mh_2 mh_s2_5">
+	<div class="mw_6">
+		<Blockquote
 		variante={1}
 		text="Puedes obtener más información contactándome en las redes o por Whatsapp" />
+	</div>
 	<Button
 		variante={7}
 		text="Chat-Whatsapp"

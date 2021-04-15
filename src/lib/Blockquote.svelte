@@ -20,16 +20,12 @@
     blockquote {
         font-style: italic;
         @include type-setting(0);
-        max-width: 60%;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     .Blockquote_0 {
         max-width: 75%;
         
         :global(span) {
-            color: $grey_1;
             @include type-setting(0);
             font-style: normal;
         }
@@ -40,9 +36,9 @@
         font-weight: normal;
         place-items: center;
         height: 100%;
-        max-width: 80%;
+        /* width: 100%; */
         @include media(s2) {
-            max-width: 60%;
+            /* max-width: 60%; */
             @include type-setting(1);
         }
     }

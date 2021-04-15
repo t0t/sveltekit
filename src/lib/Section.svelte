@@ -38,7 +38,7 @@
     }
     
     .Section_3 {
-        color: $black;
+        color: inherit;
         padding: 0;
     }
     .Section_4 {

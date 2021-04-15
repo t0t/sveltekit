@@ -1,9 +1,13 @@
+.dg_0 {
+    display: grid;
+}
 .dg {
     display: grid;
     grid-template-columns: repeat(13, 1fr);
 }
-.dg_0 {
+.dg_12 {
     display: grid;
+    grid-template-columns: repeat(12, 1fr);
 }
 
 @for $i from 1 through 13 {
@@ -64,6 +68,10 @@
     height: 100%;
     place-content: center;
     align-content: space-evenly;
+}
+.pcc_0 {
+    height: 100%;
+    place-content: center;
 }
 
 .gap_0 {
