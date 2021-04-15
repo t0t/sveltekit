@@ -98,7 +98,7 @@
         @include type-setting(0);
 		padding: $h1;
 		color: $white;
-		background-color: $grey_4;
+		background-color: $grey_5;
 		align-self: start;
 		&:hover {
 			background-color: $black;

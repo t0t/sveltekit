@@ -12,6 +12,30 @@
     }
 }
 
+@include media(s2) {
+    @for $i from 1 through 13 {
+        .col_s2_#{$i} {
+          grid-column: span ($i);
+        }
+    }
+}
+
+@include media(s3) {
+    @for $i from 1 through 13 {
+        .col_s3_#{$i} {
+          grid-column: span ($i);
+        }
+    }
+}
+
+@include media(s4) {
+    @for $i from 1 through 13 {
+        .col_s4_#{$i} {
+          grid-column: span ($i);
+        }
+    }
+}
+
 .slot_1 {
     grid-area: __1;
 }
@@ -53,4 +77,48 @@
 }
 .gap_3 {
     gap: $h3;
+}
+
+// @import "./_sizes.scss";
+$size-scales: (
+  -2: $h-1,
+  -1: $h0,
+  0: $h1,
+  1: $h2,
+  2: $h3,
+  3: $h4,
+  4: $h5,
+  5: $h6,
+  6: $h6
+);
+
+@function sizes($level) {
+    @return map-get($size-scales, $level);
+}
+
+// Gaps verticales
+// .gr_2 {
+//     row-gap: 2.618rem;
+// }
+@for $i from 1 through 5 {
+    .rg_#{$i} {
+      row-gap: sizes($i);
+    }
+}
+
+// Gaps horizontales
+// .cg_2 {
+//     column-gap: 2.618rem;
+// }
+@for $i from 1 through 5 {
+    .cg_#{$i} {
+      column-gap: sizes($i);
+    }
+}
+@include media(s2) {
+    @for $i from 1 through 5 {
+        .cg_s2_#{$i} {
+          column-gap: sizes($i);
+        }
+    }
 }

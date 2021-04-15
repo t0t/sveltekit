@@ -16,8 +16,6 @@
 <style lang="scss">	
 	@use "../app.scss" as *;
     section {
-        /* min-height: 100vh; */
-        padding: $h2;
         @include media(s2){
             padding: $h3;
         }

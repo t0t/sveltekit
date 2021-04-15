@@ -12,7 +12,7 @@
 */
 pre[class*="language-"],
 code[class*="language-"] {
-  color: $primary;
+  color: $grey_4;
   @include type-setting(0);
   text-shadow: none;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
@@ -29,7 +29,7 @@ code[class*="language-"]::selection,
 pre[class*="language-"]::mozselection,
 code[class*="language-"]::mozselection {
   text-shadow: none;
-  background: $highlight;
+  background: red;
 }
 @media print {
   pre[class*="language-"],
@@ -39,14 +39,14 @@ code[class*="language-"]::mozselection {
 }
 pre[class*="language-"] {
   padding: 1em;
-  margin: .5em 0;
+  margin: $h0 0;
   overflow: auto;
   background: $grey_4;
 }
 :not(pre) > code[class*="language-"] {
   padding: .1em .3em;
   border-radius: .3em;
-  color: white;
+  color: $white;
   background: red;
 }
 /*********************************************************
@@ -86,21 +86,21 @@ pre[class*="language-"] {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-  color: $primary;
-  background: $grey_3;
+  color: $grey_0;
+  // background: $grey_3;
 }
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-  color: $grey_1;
+  color: $grey_0;
 }
 .token.function {
-  color: $secondary;
+  color: $white;
 }
 .token.regex,
 .token.important,
 .token.variable {
-  color: $primary;
+  color: $grey_3;
 }
 .token.important,
 .token.bold {

@@ -27,13 +27,13 @@
     {#if activeTabValue == item.id}
     <List tipo={5} variante={7}>
 
-        <div class="dg p_3 gap_3 bgc_0">
+        <div class="dg cg_s2_1 p_2 bgc_0 c_5">
             
-            <div class="grid-5">
+            <div class="col_13 col_s2_5">
                 <Img variante={5} src={item.img} alt={item.subtitle}/>
             </div>
             
-            <div class="grid-8">
+            <div class="col_13 col_s2_8">
                 <p>{@html item.content}</p>
             </div>
             

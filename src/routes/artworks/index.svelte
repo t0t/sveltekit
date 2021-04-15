@@ -16,16 +16,16 @@
 
 <Section id="cover" variante={3}>
 	<div class="dg">
-		<div class="col_5 bgc_primary">
+		<div class="col_13 col_s2_5 mh_3 bgc_primary dg_0 pcc">
 			<Header tipo={2} variante={6}
 				title={coverData[1].title}
 				subtitle={coverData[1].subtitle}
 				text={coverData[1].text}/>
 		</div>
-		<div class="col_8">
+		<div class="col_13 col_s2_8">
 			<VideoBanner/>
 		</div>
-		<div class="col_13 p_5">
+		<div class="col_13 mh_2 mh_s2_5 tac">
 			<Blockquote variante={1}
 			text="Todo son formas de arte simbólicas con una función mediadora capaz de abrirle lo real a la conciencia." />
 		</div>
@@ -41,16 +41,16 @@
 <Section variante={1}>
 
 	<div class="dg c_4">
-		<div class="col_5">
+		<div class="col_13 col_s2_5">
 			<Img variante={1} src="./img/bg3.jpg"  alt="Presentation" />
 		</div>
-		<div class="col_8 pt_3 pb_3 pr_3">
+		<div class="col_13 col_s2_8 p_3 tac">
 			<Blockquote variante={1}
 				text="En la obra de arte, como símbolo que es, se produce un reconocimiento mutuo entre dos caras de una misma realidad que se encuentran. La realidad se reúne a sí misma, se completa a sí misma haciéndose presente como símbolo y  proporcionando la experiencia de descubrimiento de una realidad más original." />
 		</div>
 	</div>
 </Section>
-<Section id="proceso" variante={7}>
+<Section id="proceso" variante={2}>
 	<Tabs {tabHeaders} />
 </Section>
 

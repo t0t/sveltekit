@@ -17,26 +17,60 @@
     let innerWidth, innerHeight, y;
 </script>
 
+<!-- <svelte:window bind:innerWidth bind:innerHeight bind:scrollY={y} /> -->
+
+{#if tipo === 1}
+    <header class="{modificador[variante]} ">
+        <h1> {title} <br>
+            <span>
+                {@html subtitle} 
+            </span>
+        </h1>
+    </header>
+     
+{:else if tipo === 2}
+    <!-- con imagen de fondo -->
+    <header class="{modificador[variante]}"
+    style="background-image: url('{img}')"
+    >
+
+        <h1> {title} <br>
+            <span>
+                <h2> {@html subtitle} </h2>
+            </span>
+        </h1>
+    
+    </header>
+
+{:else if tipo === 3}
+
+    <header class="{modificador[variante]} ">
+        <h2> {title} </h2>
+        <h3> {@html subtitle} </h3>
+    </header>
+{:else}
+
+<header class="{modificador[variante]} ">
+    <slot></slot>
+</header>
+
+{/if}
+
 <style lang="scss">	
 	@use "../app.scss" as *;
 
     .Header_0 {
         display: grid;
         place-content: center;
-        min-height: 50vh;
-        background-color: $grey_4;
-        text-align: center;
-        padding: 0 $h2;
-        color: $grey_1;
+        color: inherit;
+        height: 100%;
+        background-position: center;
+        background-size: 120%;
+        background-repeat: no-repeat;
         
         @include media(s2) {
-            color: $grey_0;
-            grid-template-areas: "title" "text";
-            background-size: cover;
-            background-position: top center;
-            background-attachment: fixed;
-            height: 100vh;
-            background-position: center;
+            /* background-position: $h7 50%; */
+            /* background-attachment: fixed; */
         }
     }
     .Header_1 {
@@ -63,47 +97,15 @@
     
     .Header_6 { 
         color: inherit;
+        margin-bottom: $h1;
+        h2 {
+            font-weight: bold;
+        }
+        h3 {
+            font-style: italic;
+        }
     }
     .Header_7 {
         color: inherit;
     }
 </style>
-
-<!-- <svelte:window bind:innerWidth bind:innerHeight bind:scrollY={y} /> -->
-
-{#if tipo === 1}
-    <header class="{modificador[variante]} ">
-        <h1> {title} <br>
-            <span>
-                {@html subtitle} 
-            </span>
-        </h1>
-    </header>
-     
-{:else if tipo === 2}
-    <!-- con foto de fondo -->
-    <header 
-    class="{modificador[variante]}">
-
-        <h1> {title} <br>
-            <span>
-                <h2> {@html subtitle} </h2>
-            </span>
-        </h1>
-
-        <slot/>
-    
-    </header>
-{:else if tipo === 3}
-    <header class="{modificador[variante]} ">
-        <h2> {title} </h2>
-        <h3> {@html subtitle} </h3>
-    </header>
-{:else}
-<header class="{modificador[variante]} ">
-    <slot></slot>
-</header>
-
-{/if}
-
-

@@ -24,8 +24,8 @@ export const coverData = [
         img: "./img/circle.svg"
     },
     {
-        title: "Holistic Prototype",
-        subtitle: "A Frontend Design System",
+        title: "TOT PHI",
+        subtitle: "Un sistema de prototipado holístico",
         text: "Svelte.js, Sass...",
         img: "./img/bg2.jpg"
     }

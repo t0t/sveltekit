@@ -42,6 +42,7 @@
         height: 100%;
         max-width: 80%;
         @include media(s2) {
+            max-width: 60%;
             @include type-setting(1);
         }
     }

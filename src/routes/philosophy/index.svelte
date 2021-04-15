@@ -18,15 +18,11 @@
 		<div class="col_13 c_5 bgc_0 tac p_1">
 			<Header tipo={1} variante={3} title={coverData[3].title} subtitle={coverData[3].subtitle} />
 		</div>
-
-		<div class="col_13 c_5 bgc_0 tac p_1">
-			<Header tipo={1} variante={1} title="Sentir Orden Forma Conexión" />
-		</div>
 	</div>
 </Section>
 
-<div class="dg p_3 bgc_primary c_4">
-	<div class="col_5">
+<div class="dg rg_1 cg_s2_1 p_3 bgc_primary c_4">
+	<div class="col_13 col_s2_5">
 		<svg fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 193 169">
 			<path
 				fill="none"
@@ -46,41 +42,41 @@
 			<circle cx="123.2" cy="98.5" r="6" transform="translate(-17 -8) scale(.67024)" />
 		</svg>
 	</div>
-	<div class="col_8">
-		<Header tipo={3} variante={7} title="Tetractys" />
-		<h3>Hacia el encuentro con todo lo que Es</h3>
-		<h4>
-			+0+1234 consiste en una hermenéutica de la Creación que observa experiencialmente sus
-			principios universales. Ancestralmente 5 símbolos numéricos representan las partes de Todo.
-		</h4>
-		<List tipo={3} variante={2}>
-			<ListItem tipo={2} variante={0} href="https://slides.com/sergiofores/" alt="" target="_blank">
-				<Button variante={3} text="Slides" />
-			</ListItem>
-			<ListItem
-				tipo={2}
-				variante={0}
-				href="https://docs.google.com/document/d/15oUQRghNb_lihCFGJ9Ls0z1PyihD_a18v1V3AohVqQ4/edit?usp=sharing"
-				alt=""
-				target="_blank">
-				<Button variante={3} text="Libro" />
-			</ListItem>
-		</List>
+	<div class="col_13 col_s2_8">
+		<div class="dg">
+			<div class="col_13">
+				<Header tipo={2} variante={7} title="Tetractys" />
+			</div>
+			<div class="col_13">
+				<h3>Hacia el encuentro con todo lo que Es</h3>
+				<h4>+0+1234 consiste en una hermenéutica de la Creación que observa experiencialmente sus
+				principios universales. Ancestralmente 5 símbolos numéricos representan las partes de Todo</h4>	
+			</div>
+			<List tipo={3} variante={2}>
+				<ListItem tipo={2} variante={0} href="https://slides.com/sergiofores/" alt="" target="_blank">
+					<Button variante={3} text="Slides" />
+				</ListItem>
+				<ListItem
+					tipo={2}
+					variante={0}
+					href="https://docs.google.com/document/d/15oUQRghNb_lihCFGJ9Ls0z1PyihD_a18v1V3AohVqQ4/edit?usp=sharing"
+					alt=""
+					target="_blank">
+					<Button variante={3} text="Libro" />
+				</ListItem>
+			</List>
+		</div>
 	</div>
 </div>
 
+<div class="dg p_3 bgc_0 c_4 rg_1 cg_s2_1">
 
-
-<div class="dg p_3 bgc_0 c_4 gap_3">
-
-	<div class="col_5">
+	<div class="col_13 col_s2_8">
 		<Img src="./img/logo.svg" alt="" />
 	</div>
 
-	<div class="col_8">
-		<Header tipo={2}
-		variante={7}
-		textalign="align-left"
+	<div class="col_13 col_s2_5 dg_0 gap_1">
+		<Header tipo={2} variante={7}
 		title="Hay una verdad que puede ser conocida…" />
 		<p>
 			¿Percibes 2 ese orden 1 atravesándote 0 en la forma 4 del encuentro 3? Es lo inefable
@@ -94,19 +90,20 @@
 		</p>
 	</div>
 
-	<div class="col_5 dg_0 pcc gap_1">
-		<Header tipo={3} variante={4}
-			title="Percibes cualquier cosa como lo que és; un símbolo" />
+	<div class="col_13 col_s2_5 dg_0 rg_1">
+		<Header tipo={1} variante={1} 
+		title="Sentir Orden Forma Conexión" />
 		<p>
-			Funciona como un Tetris; el objetivo no es amontonar piezas sino disolverlas, ¡que
-			desaparezcan!
+			Percibes cualquier cosa como lo que és; un símbolo. Funciona como un Tetris; el objetivo no es amontonar piezas sino disolverlas, ¡que desaparezcan!
 		</p>
-		<p>Los 5 arjés. Estructura dinámica sobre la que se asienta toda la Creación.</p>
+		<p>
+			Los 5 arjés. Estructura dinámica sobre la que se asienta toda la Creación.
+		</p>
 		<p>
 			<strong>Y cuanto más perceptible es su inexistencia más presente está.</strong>
 		</p>
 	</div>
-	<div class="col_8">
+	<div class="col_13 col_s2_8">
 		<img src="./img/01234_bn.svg" alt="" />
 	</div>
 
@@ -115,14 +112,11 @@
 	</div>
 
 
-	<div class="col_8">
+	<div class="col_13">
 		<p>
 			En ocasiones ni siquiera necesitas no estar viendo algo para estar viendo algo. Si vamos a
 			descifrar la Creación vamos a tener que acostumbrarnos a las paradojas.
 		</p>
-	</div>
-	
-	<div class="col_5">
 		<p>
 			Del griego hermeneutikos; Hermeneuo (Yo descifro) y Tekné (Arte, técnica, tejer). La
 			Hermenéutica nace como "el arte o la técnica de explicar, descifrar o interpretar". Así que
@@ -132,7 +126,11 @@
 	</div>
 </div>
 
-<Header tipo={1} variante={3} title="Los 5 Principios Universales" subtitle="" />
+<div class="dg">
+	<div class="col_13 tac p_3">
+		<Header tipo={1} variante={3} title="Los 5 Principios Universales" subtitle="" />
+	</div>
+</div>
 
 <Section id="principios" variante={7} bg_color="bgc_0">
 	<Tabs {tabHeaders} />

@@ -68,9 +68,9 @@
     pre {
         padding: $h2;
         border-radius: 20px;
-        background: linear-gradient(
-            to left, $grey_3
-            10%, $grey_5
-            );
+        /* background: linear-gradient(
+          to left, $grey_3
+          10%, $grey_5
+        ); */
     }
 </style>

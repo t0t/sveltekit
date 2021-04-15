@@ -23,6 +23,7 @@
         background-position: center;
         max-width: 100%;
         min-height: 50vh;
+        height: 100%;
     }
    
     .Img_1 { /* Usado en index */
@@ -67,7 +68,6 @@
         min-height: 50vh;
     }
 </style>
-
 
 {#if (variante === 0 || variante === 3 || variante === 4)}
 

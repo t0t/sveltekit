@@ -94,12 +94,16 @@
 	/* tabs */
 	.List_3 { 
 		display: grid;
-		grid-auto-flow: column;
-		/* grid-template-columns: repeat(auto-fit, minmax(90px, 0.25fr)); */
-		place-content: center;
+		grid-template-columns: repeat(auto-fill, minmax(187px, 0.186fr));
+		place-content: space-evenly;
 		background-color: $grey_3;
 		:global(a:nth-child(1)) {
 			border-left: 1px solid $grey_3;
+		}
+		@include media(s1) {
+			grid-template-columns: none;
+			grid-auto-flow: column;
+			place-content: center;
 		}
 	}
 	/* Nav horizontal grande */
