@@ -18,8 +18,8 @@ input[type=text] {
 
 // Tipo NUMBER
 input[type=number] {
-  color: $primary;
-  background-color: $primary;
+  color: inherit;
+  // background-color: $primary;
   padding: $h0;
 
   &:focus {
