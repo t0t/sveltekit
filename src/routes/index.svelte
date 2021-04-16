@@ -1,111 +1,53 @@
 <script>
-	import { coverData } from "$lib/data/coverData.js";	
-	// import { contentSliderData } from "$lib/data/contentSliderData.js"
-	import { secondaryNav } from "$lib/data/pages.js";
+	import { coverData } from '$lib/data/coverData.js';
+	import { secondaryNav } from '$lib/data/pages.js';
 
-	import Section from "$lib/Section.svelte";
-	import Cover from "$lib/Cover.svelte";
-	import GridBase from "$lib/GridBase.svelte";
-	import Blockquote from "$lib/Blockquote.svelte";
-	// import SlideGallery from "$lib/slidegallery/SlideGallery.svelte";
+	// import Section from '$lib/Section.svelte';
+	// import Cover from '$lib/Cover.svelte';
+	// import Grid from '$lib/Grid.svelte';
+	import Blockquote from '$lib/Blockquote.svelte';
 	import QuoteRotator from '$lib/quoterotator/QuoteRotator.svelte';
-	import Img from "$lib/Img.svelte";
-	import Button from "$lib/Button.svelte";
-	// import ContentSlider from "$lib/ContentSlider/ContentSlider.svelte";
-	import Header from "$lib/Header.svelte";
-	import NavSecondary from "$lib/NavSecondary.svelte";
-
-	// let data = []
-	// data = [...contentSliderData, data]
+	import Img from '$lib/Img.svelte';
+	import Button from '$lib/Button.svelte';
+	import Header from '$lib/Header.svelte';
+	import NavSecondary from '$lib/NavSecondary.svelte';
 </script>
 
-<!-- <Section id="cover" variante={8} bg_color="bggrey_5">
-
-	<GridBase tipo={1} variante={6}>
-    
-		<Header tipo={2}
-			variante={6}
-			textalign = "align-left"
-			title="Sergio Forés"
-			subtitle={coverData[0].subtitle}/>
-
-		<svelte:fragment slot="subarea1"> 
-			<NavSecondary 	{secondaryNav} 
-							variante_item={1}
-							variante_list={6} />
-		</svelte:fragment>
-		
-		<svelte:fragment slot="subarea2"></svelte:fragment>
-		<svelte:fragment slot="subarea3"></svelte:fragment>
-		<svelte:fragment slot="subarea4"></svelte:fragment>
-		<svelte:fragment slot="subarea5"></svelte:fragment>
-		<svelte:fragment slot="subarea6"></svelte:fragment>
-
-	</GridBase>
-</Section> -->
-
 <!-- Cover -->
-<GridBase tipo={2} variante={7}>
-	<svelte:fragment slot="_3x3">
-		<Header tipo={2}
-		variante={6}
-		textalign = "align-left"
-		title="Sergio Forés"
-		subtitle={coverData[0].subtitle}/>
-	</svelte:fragment>
+<div class="dg">
+	<div class="bgc_primary c_5 mh_3 dg_0 pcc col_13 col_s2_5">
+		<Header tipo={2} variante={6} title="Sergio Forés" subtitle={coverData[0].subtitle} />
+	</div>
 
-	<svelte:fragment slot="_5x5">
-		<NavSecondary 	{secondaryNav} 
-		variante_item={1}
-		variante_list={6} />
-	</svelte:fragment>
-	
-	<svelte:fragment slot="_8x8">
+	<div class="col_13 col_s2_8 col_s2_8 mh_s2_5">
+		<NavSecondary {secondaryNav} variante_item={1} variante_list={6} />
+	</div>
+
+	<div class="col_13 mh_5">
 		<QuoteRotator />
-	</svelte:fragment>
-	
-	<!-- <svelte:fragment slot="_2x2">
-		
-	</svelte:fragment> -->
+	</div>
+</div>
 
-	<!-- <svelte:fragment slot="_1x1"∫></svelte:fragment> -->
-</GridBase>
+<div class="dg p_3 bgc_primary rg_1 mh_s2_5">
+	<div class="col_13 col_s2_8 c_5 tac">
+		<Blockquote variante={1} text="Percibir la conexión esencial de todo" />
+	</div>
 
-<GridBase tipo={2} variante={7}>
-	<svelte:fragment slot="_3x3">
+	<div class="col_13 col_s2_5 ">
+		<Img variante={1} src="./img/02234-14.jpg" alt="Presentation" />
+	</div>
+</div>
+
+<div class="col_s2_13 rg_1 p_3 dg_0 pcc bgc_0 c_4 tac mh_2 mh_s2_5">
+	<div class="mw_6">
 		<Blockquote
 			variante={1}
-			color="grey_1"
-			align = "tal"
-			text="Percibir la conexión esencial de todo"/>
-	</svelte:fragment>
-
-	<svelte:fragment slot="_5x5">
-		<Img 	variante={1}
-				src="./img/02234-14.jpg" 
-				alt="Presentation"
+			text="Puedes obtener más información contactándome en las redes o por Whatsapp"
 		/>
-	</svelte:fragment>
-	
-	<svelte:fragment slot="_2x2">
-				
-	</svelte:fragment>
-	
-	<svelte:fragment slot="_8x8">
-		<!-- <Img variante={1} src="./img/cover4.jpg" alt="Presentation" /> -->
-		<Section variante={0} bg_color="bggrey_1">
-			<Blockquote
-			variante={1}
-			color="grey_5"
-			text="Puedes obtener más información contactándome en las redes o por Whatsapp"/>
-		<Button 
-			variante={7}
-			text="Chat-Whatsapp"
-			url="https://api.whatsapp.com/send?phone=+34619549032" />
-		</Section>
-	</svelte:fragment>
-	
-	<svelte:fragment slot="_1x1">
-		<div class="bggrey_3 fullfill"></div>
-	</svelte:fragment>
-</GridBase>
+	</div>
+	<Button
+		variante={7}
+		text="Chat-Whatsapp"
+		url="https://api.whatsapp.com/send?phone=+34619549032"
+	/>
+</div>

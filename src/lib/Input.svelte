@@ -4,6 +4,8 @@
 	const onInput = (e) => (value = e.target.value);
 </script>
 
+<input {value} {placeholder} type="" name="" on:input={onInput} />
+
 <style lang="scss">
 	@use "../app.scss" as *;
 
@@ -15,7 +17,7 @@
 		padding: $h1;
 		border: none;
 		background-color: $white;
-		
+
 		@include media(s3) {
 			border-top-left-radius: $h2;
 			border-bottom-left-radius: $h2;
@@ -35,5 +37,3 @@
 		}
 	}
 </style>
-
-<input {value} {placeholder} type="" name="" on:input={onInput} />

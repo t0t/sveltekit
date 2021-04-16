@@ -1,0 +1,125 @@
+/*********************************************************
+* General
+*/
+pre,
+code {
+	color: $grey_2;
+	text-shadow: none;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	direction: ltr;
+	font-size: 13px;
+	font-weight: bold;
+
+	// text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	line-height: 1.5;
+	tab-size: 4;
+	hyphens: none;
+}
+pre::selection,
+code::selection {
+	text-shadow: none;
+	background: $secondary;
+}
+
+pre {
+	color: inherit;
+	padding: $h0;
+	// margin: .5em 0;
+	overflow: auto;
+	background: $white;
+}
+:not(pre) > code {
+	padding: 0;
+	border-radius: 0.3em;
+	color: $primary;
+	background: #f9f2f4;
+}
+/*********************************************************
+* Tokens
+*/
+.namespace {
+	opacity: 0.7;
+}
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #93a1a1;
+}
+.token.punctuation {
+	color: #999999;
+}
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #990055;
+}
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #669900;
+}
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #a67f59;
+	background: #ffffff;
+}
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #0077aa;
+}
+.token.function {
+	color: #dd4a68;
+}
+.token.regex,
+.token.important,
+.token.variable {
+	color: #ee9900;
+}
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+.token.entity {
+	cursor: help;
+}
+/*********************************************************
+* Line highlighting
+*/
+pre[data-line] {
+	position: relative;
+}
+pre[class*='language-'] > code[class*='language-'] {
+	position: relative;
+	z-index: 1;
+}
+.line-highlight {
+	position: absolute;
+	left: 0;
+	right: 0;
+	padding: inherit 0;
+	margin-top: 1em;
+	background: #f7ebc6;
+	box-shadow: inset 5px 0 0 #f7d87c;
+	z-index: 0;
+	pointer-events: none;
+	line-height: inherit;
+	white-space: pre;
+}

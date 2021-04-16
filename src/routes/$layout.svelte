@@ -3,10 +3,10 @@
 	import Nav from '$lib/Nav.svelte';
 	import Footer from '$lib/Footer.svelte';
 
-	let current_page = "";
+	let current_page = '';
 	const setCurrentPage = (e) => {
-        current_page = e.srcElement.firstChild.data
-    }
+		current_page = e.srcElement.firstChild.data;
+	};
 </script>
 
 <svelte:head>
@@ -14,11 +14,8 @@
 </svelte:head>
 
 <main>
-	<Nav 	on:click={setCurrentPage} 
-			{current_page} 
-			variante={1}
-	/>
-	
+	<Nav on:click={setCurrentPage} {current_page} variante={1} />
+
 	<slot />
 
 	<Footer />

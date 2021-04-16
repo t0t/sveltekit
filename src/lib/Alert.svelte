@@ -2,6 +2,10 @@
 	export let haserror = false;
 </script>
 
+<div class="Alert" class:haserror={!haserror}>
+	<slot />
+</div>
+
 <style lang="scss">
 	@use "../app.scss" as *;
 
@@ -38,8 +42,3 @@
 		}
 	}
 </style>
-
-
-<div class="Alert" class:haserror={!haserror}>
-	<slot />
-</div>

@@ -1,25 +1,29 @@
 <script>
 	export let back_txt;
+	export let code;
 	export let foto;
 	export let showCarBack;
+	// import Prism from '$lib/Code/PrismJS.svelte';
 </script>
 
-<div class="flip-box-front">
-	<div class="image" style="background-image: url({foto})"></div>
+<div class="col_5 backFlipBox" class:NoRebelesTxt={showCarBack}>
+	<h2>{back_txt}</h2>
+	<code class="code language-">{code}</code>
 </div>
 
-<div class="flip-box-back" class:NoRebelesTxt={showCarBack}>
-	<h2>{back_txt}</h2>
+<div class="col_8 frontFlipBox">
+	<div class="image" style="background-image: url({foto})" />
 </div>
+
 <style>
 	@keyframes revealTextSlowly {
 		to {
-			color: white
+			color: black;
 		}
 	}
 
-	.flip-box-front,
-	.flip-box-back {
+	.frontFlipBox,
+	.backFlipBox {
 		position: absolute;
 		width: 100%;
 		height: 100%;
@@ -28,17 +32,19 @@
 		backface-visibility: hidden;
 	}
 
-	.flip-box-front {}
-
-	.flip-box-back {
+	.backFlipBox {
 		color: black;
 		transform: rotateY(180deg);
 	}
 
 	.image {
-		background-size: cover;
+		background-size: contain;
 		background-position: center;
-		background-repeat: none;
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 80%;
+	}
+	.code {
 		width: 100%;
 		height: 100%;
 	}

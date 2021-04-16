@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import * as THREE from "three";
 // import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
+=======
+import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+>>>>>>> main
 // import { fetchData } from "./fetch.js"
 // import * as dat from "dat.gui"
 // import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
@@ -12,25 +17,33 @@ import * as THREE from "three";
 
 // Sizes
 const sizes = {
+<<<<<<< HEAD
   width: 300,
   height: 150
   // width: window.innerWidth,
   // height: window.innerHeight
 }
+=======
+	// width: 300,
+	// height: 150
+	width: window.innerWidth,
+	height: window.innerHeight
+};
+>>>>>>> main
 
 // Cámara
-const fov = 20
-const aspect = sizes.width / sizes.height
-const camera = new THREE.PerspectiveCamera( fov, aspect, 0.1, 1000 )
+const fov = 20;
+const aspect = sizes.width / sizes.height;
+const camera = new THREE.PerspectiveCamera(fov, aspect, 0.1, 1000);
 camera.position.x = 5;
 camera.position.y = 3;
 camera.position.z = 10;
 
 // Material
-// const material = new THREE.MeshStandardMaterial( 
+// const material = new THREE.MeshStandardMaterial(
 //   {
 //     // map: doorColorTexture,
-//     color: "#666666", 
+//     color: "#666666",
 //     // side: THREE.DoubleSide
 //     wireframe: true
 //   }
@@ -51,44 +64,56 @@ camera.position.z = 10;
 // pointLight.position.x = 1
 // pointLight.position.y = 3
 // pointLight.position.z = 5
-// color, intensidad, distancia, angulo, penumbra, 
+// color, intensidad, distancia, angulo, penumbra,
 // const spotLight = new THREE.SpotLight( 0xffffff, 3.4, 70, 13, 20, 0.05)
 // pointLight.position.set(10,15,25)
 
 // Geometria
 const geometry2 = new THREE.BufferGeometry();
 const coords = [
-  0, 0,  0,
-  1.0, -1.0,  1.0,
-  1.0,  1.0,  1.0,
+	0,
+	0,
+	0,
+	1.0,
+	-1.0,
+	1.0,
+	1.0,
+	1.0,
+	1.0,
 
-  1.0,  1.0,  1.0,
-  -1.0,  1.0,  1.0,
-  -1.0, -1.0,  1.0
-]
+	1.0,
+	1.0,
+	1.0,
+	-1.0,
+	1.0,
+	1.0,
+	-1.0,
+	-1.0,
+	1.0
+];
 
-const vertices = new Float32Array( coords );
+const vertices = new Float32Array(coords);
 
-geometry2.setAttribute( 'position', new THREE.BufferAttribute( vertices, 3 ) );
-const material2 = new THREE.MeshBasicMaterial( {
-  color: "white", 
-  // side: THREE.DoubleSide
-  wireframe: true
+geometry2.setAttribute('position', new THREE.BufferAttribute(vertices, 3));
+const material2 = new THREE.MeshBasicMaterial({
+	color: 'white',
+	// side: THREE.DoubleSide
+	wireframe: true
 });
-const mesh2 = new THREE.Mesh( geometry2, material2 );
+const mesh2 = new THREE.Mesh(geometry2, material2);
 
 // Escena
 const scene = new THREE.Scene();
 // scene.background = new THREE.Color();
-scene.add( mesh2 )
+scene.add(mesh2);
 
 // Helpers
-const axesHelper = new THREE.AxesHelper( 10 );
-scene.add( axesHelper );
+const axesHelper = new THREE.AxesHelper(10);
+scene.add(axesHelper);
 const size = 20;
 const divisions = 2;
-const gridHelper = new THREE.GridHelper( size, divisions );
-scene.add( gridHelper );
+const gridHelper = new THREE.GridHelper(size, divisions);
+scene.add(gridHelper);
 
 // Model loader
 // const dracoLoader = new DRACOLoader()
@@ -96,13 +121,13 @@ scene.add( gridHelper );
 // const loader = new GLTFLoader();
 // loader.setDRACOLoader(dracoLoader)
 
-// loader.load( 
-//   '/models/draco2.glb', 
+// loader.load(
+//   '/models/draco2.glb',
 //   ( gltf ) => {
-//     gltf.scene.traverse( node => 
-//       { if (node.isMesh) { 
-//         node.material = material; 
-//         node.position.x = 0; 
+//     gltf.scene.traverse( node =>
+//       { if (node.isMesh) {
+//         node.material = material;
+//         node.position.x = 0;
 //         camera.lookAt(node.position)
 //       } }
 //     );
@@ -133,27 +158,28 @@ scene.add( gridHelper );
 // const canvas = document.querySelectorAll(".wegl")
 
 // Animations
-const clock = new THREE.Clock()
+const clock = new THREE.Clock();
 const animate = () => {
-  const elapsedTime = clock.getElapsedTime()
-  scene.rotation.y = 0.09 * elapsedTime
-  renderer.render(scene, camera);
-  requestAnimationFrame(animate);
+	const elapsedTime = clock.getElapsedTime();
+	scene.rotation.y = 0.09 * elapsedTime;
+	renderer.render(scene, camera);
+	requestAnimationFrame(animate);
 };
 
 // Renderer
 let renderer;
 
 const resize = () => {
-  sizes.width = window.innerWidth - 100;
-  sizes.height = window.innerHeight - 400;
-  camera.aspect = sizes.width / sizes.height;
-  camera.updateProjectionMatrix();
-  renderer.setSize(sizes.width, sizes.height);
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+	sizes.width = window.innerWidth - 100;
+	sizes.height = window.innerHeight - 400;
+	camera.aspect = sizes.width / sizes.height;
+	camera.updateProjectionMatrix();
+	renderer.setSize(sizes.width, sizes.height);
+	renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 };
 
 export const createScene = (el) => {
+<<<<<<< HEAD
   // const controls = new OrbitControls(camera,el)
   // controls.enabled = false;
   // controls.enableZoom = false;
@@ -167,6 +193,19 @@ export const createScene = (el) => {
   );
   resize();
   animate();
+=======
+	const controls = new OrbitControls(camera, el);
+	controls.enabled = false;
+	controls.enableZoom = false;
+	controls.enableDamping = true;
+	controls.update();
+	renderer = new THREE.WebGLRenderer({
+		antialias: true,
+		canvas: el
+	});
+	resize();
+	animate();
+>>>>>>> main
 };
 
-window.addEventListener("resize", resize);
+window.addEventListener('resize', resize);

@@ -1,17 +1,16 @@
 <script>
-    import Section from "$lib/Section.svelte";
-    import AboutMeTxt from "$lib/aboutmetxt/AboutMeTxt.svelte";
-    import Skillsbar from "$lib/skillsbar/Skillsbar.svelte";
-    import Header from "$lib/Header.svelte";
+	import Section from '$lib/Section.svelte';
+	import AboutMeTxt from '$lib/aboutmetxt/AboutMeTxt.svelte';
+	import Skillsbar from '$lib/skillsbar/Skillsbar.svelte';
+	import Header from '$lib/Header.svelte';
 </script>
 
-<Section id="aboutmetxt" variante={7} bg_color="bggrey_0">
+<Section id="aboutmetxt">
 	<AboutMeTxt />
 </Section>
 
-<Header tipo={1} variante={4}
-	title="Technical Skills" />
+<Header tipo={1} variante={4} title="Technical Skills" />
 
-<Section id="skillsbar" variante={1} bg_color="bggrey_4">
+<Section id="skillsbar">
 	<Skillsbar />
 </Section>

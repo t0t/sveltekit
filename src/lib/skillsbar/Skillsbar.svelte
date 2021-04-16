@@ -5,8 +5,6 @@
 
 <section>
 	{#each skillLevels as { skill, percent, color, delTime }}
-
 		<Skillbar {skill} {percent} {color} {delTime} />
-
 	{/each}
 </section>

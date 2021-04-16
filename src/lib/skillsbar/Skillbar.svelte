@@ -1,12 +1,8 @@
 <script>
 	// https://svelte.dev/docs#tweened
-	import {
-		tweened
-	} from 'svelte/motion';
+	import { tweened } from 'svelte/motion';
 	// https://svelte.dev/docs#svelte_easing
-	import {
-		backInOut
-	} from 'svelte/easing';
+	import { backInOut } from 'svelte/easing';
 
 	export let skill;
 	export let percent;
@@ -20,7 +16,7 @@
 	});
 
 	// Changes the initial value of 30 to percent value in skillLevels array
-	progress.set(percent)
+	progress.set(percent);
 </script>
 
 <div class="container">
@@ -29,7 +25,6 @@
 		{percent}%
 	</div>
 </div>
-
 
 <style lang="scss">
 	@use "../../app.scss"as *;
@@ -53,6 +48,6 @@
 		padding: $h0 $h0 $h0 0;
 		/* font-weight: 300; */
 		color: $white;
-		transition: .5s ease-out;
+		transition: 0.5s ease-out;
 	}
 </style>

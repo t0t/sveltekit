@@ -27,161 +27,160 @@ $base_font_size: $basesize;
 $base_line_height: $base_font_size * 1.8;
 
 // 6 Escalas de tamaño
-$size-scales: (
-  -2: $h-1,
-  -1: $h0,
-  0: $h1,
-  1: $h2,
-  2: $h3,
-  3: $h4,
-  4: $h5,
-  5: $h6,
-  6: $h6
-);
+$size-scales: (-2: $h-1, -1: $h0, 0: $h1, 1: $h2, 2: $h3, 3: $h4, 4: $h5, 5: $h6, 6: $h6);
 @function font-scale($level) {
-  @return map-get($size-scales, $level);
+	@return map-get($size-scales, $level);
 }
 
 // 5 Escalas de alto de linea
 $line-heights: (
-  -2: $base-line-height / 2.62,
-  -1: $base-line-height / 1.62,
-  0: $base-line-height,
-  1: $base-line-height * 1.42,
-  2: $base-line-height * 2,
-  3: $base-line-height * 3,
-  4: $base-line-height * 5,
-  5: $base-line-height * 5,
-  6: $base-line-height * 6
+	-2: $base-line-height / 2.62,
+	-1: $base-line-height / 1.62,
+	0: $base-line-height,
+	1: $base-line-height * 1.42,
+	2: $base-line-height * 2,
+	3: $base-line-height * 3,
+	4: $base-line-height * 5,
+	5: $base-line-height * 5,
+	6: $base-line-height * 6
 );
 
 @function line-height($level) {
-  @return map-get($line-heights, $level);
+	@return map-get($line-heights, $level);
 }
 
 // Funcion magica :)))
-@mixin type-setting($level:0) {
-  font-size: font-scale($level);
-  line-height: line-height($level);
+@mixin type-setting($level: 0) {
+	font-size: font-scale($level);
+	line-height: line-height($level);
 }
 
 @function size($level) {
-  @return map-get($size-scales, $level);
+	@return map-get($size-scales, $level);
 }
 
 pre {
-  width: 100%;
+	width: 100%;
 }
 
 body,
 main,
 header,
 small {
-  font-family: $primary_font;
-  letter-spacing: $base_letter_spacing;
-  font-weight: $weight_normal;
-  color: $grey_1;
+	font-family: $primary_font;
+	letter-spacing: $base_letter_spacing;
+	font-weight: $weight_normal;
+	color: $grey_1;
 }
 
 i {
-  font-style: italic;
+	font-style: italic;
 }
 
 em {
-  color: $grey_2;
-  font-weight: $weight_normal;
+	color: $grey_2;
+	font-weight: $weight_normal;
 }
 
 strong {
-  font-weight: $weight_strong;
+	font-weight: $weight_strong;
+}
+
+small {
+	color: inherit;
 }
 
 ul,
 ol,
 dl {
-  @include type-setting(0);
-  margin-top: $h2;
+	@include type-setting(0);
+	margin-top: $h2;
 }
-li {}
+li {
+}
 
 h1 {
-  @include type-setting(1);
-  font-weight: bold;
+	@include type-setting(1);
+	font-weight: bold;
 
-  @include media(s2) {
-    @include type-setting(1);
-  }
-  // @include media(s3) {
-  //   background-color: #fff;
-  //   @include type-setting(1);
-  // }
-  // @include media(s5) {
-  //   @include type-setting(3);
-  // }
+	@include media(s2) {
+		@include type-setting(1);
+	}
+	// @include media(s3) {
+	//   background-color: #fff;
+	//   @include type-setting(1);
+	// }
+	// @include media(s5) {
+	//   @include type-setting(3);
+	// }
 }
 
 h2 {
-  font-weight: $weight_normal;
-  @include type-setting(0);
-  // @include media(s1) {
-  //   @include type-setting(1);
-  // }
-  // @include media(s5) {
-  //   @include type-setting(4);
-  //   margin-left: $h5;
-  //   margin-right: $h5;
-  // }
+	font-weight: $weight_normal;
+	@include type-setting(0);
+	// @include media(s1) {
+	//   @include type-setting(1);
+	// }
+	// @include media(s5) {
+	//   @include type-setting(4);
+	//   margin-left: $h5;
+	//   margin-right: $h5;
+	// }
 }
 
 h3,
 h4 {
-  @include type-setting(-1);
-  @include media(s1) {
-    @include type-setting(0);
-  }
+	@include type-setting(-1);
+	@include media(s1) {
+		@include type-setting(0);
+	}
 }
 
 p {
-  @include type-setting(0);
-  @include media(s5) {
-    @include type-setting(1);
-  }
+	@include type-setting(0);
+	@include media(s5) {
+		@include type-setting(1);
+	}
 }
 
 hgroup {
-  margin-bottom: $h2;
+	margin-bottom: $h2;
 }
 // p:not(:first-child) {
 //   background-color: red;
 // }
 p,
 h4 {
-  @include media(s2) {
-    max-width: $bp2;
-    margin-left: auto;
-    margin-right: auto;
-  }
+	@include media(s2) {
+		max-width: $bp2;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 sub {
-  color: $grey_5;
-  font-weight: $weight_normal;
-  padding-left: 2px;
-  padding-top: 0px;
-  @include type-setting(-1);
+	color: $grey_5;
+	font-weight: $weight_normal;
+	padding-left: 2px;
+	padding-top: 0px;
+	@include type-setting(-1);
 }
 
 figcaption {
-  text-align: left;
+	text-align: left;
+}
+
+q {
+	color: inherit;
 }
 
 // Text align
 .tar {
-  text-align: right;
+	text-align: right;
 }
 .tac {
-  text-align: center;
+	text-align: center;
 }
 .tal {
-  text-align: left;
+	text-align: left;
 }

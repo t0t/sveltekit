@@ -1,76 +1,73 @@
 <script>
-  import { onMount } from 'svelte';
-  
-  export let language;
-  export let code;
-  
-  onMount(() => {
+	import { onMount } from 'svelte';
 
-   let script = document.createElement('script');
-   script.src = "https://tutsplus.github.io/syntax-highlighter-demos/highlighters/Prism/prism.js"
-   document.head.append(script);
+	export let language;
+	export let code;
+	export let clases = '';
 
-   script.onload = function() {
+	onMount(() => {
+		let script = document.createElement('script');
+		script.src = 'https://tutsplus.github.io/syntax-highlighter-demos/highlighters/Prism/prism.js';
+		document.head.append(script);
 
-     let langJS = false;
-     let lang_script;
-     let lang_module;
+		script.onload = function () {
+			let langJS = false;
+			let lang_script;
+			let lang_module;
 
-     // This switch statement, evaluates what language is being used, if one of a key language is being used, it will
-     // load the proper Prisim support tool, like Python requires "prism-python.js" to modify the raw code so that
-     // Prisim can render it properly.
-     switch (language) {
+			// This switch statement, evaluates what language is being used, if one of a key language is being used, it will
+			// load the proper Prisim support tool, like Python requires "prism-python.js" to modify the raw code so that
+			// Prisim can render it properly.
+			switch (language) {
+				case 'json':
+					lang_module = 'https://prismjs.com/components/prism-json.js';
+					langJS = true;
+					break;
 
-        case "json":
-            lang_module = "https://prismjs.com/components/prism-json.js"
-            langJS = true;
-            break    
+				case 'python':
+					lang_module = 'https://prismjs.com/components/prism-python.js';
+					langJS = true;
+					break;
 
-        case "python":
-            lang_module = "https://prismjs.com/components/prism-python.js"
-            langJS = true;
-            break                 
+				case 'r':
+					lang_module = 'https://prismjs.com/components/prism-r.js';
+					langJS = true;
+					break;
+			}
 
-        case "r":
-            lang_module = "https://prismjs.com/components/prism-r.js"
-            langJS = true;
-            break          
-     }
+			if (langJS == true) {
+				lang_script = document.createElement('script');
+				lang_script.src = lang_module;
+				lang_script.async = true;
+				document.head.append(lang_script);
 
-     if (langJS == true) {
-
-        lang_script = document.createElement('script');
-        lang_script.src = lang_module
-        lang_script.async = true
-        document.head.append(lang_script);
-
-        lang_script.onload = () => {
-          Prism.highlightAll();
-         }
-     }
-     else {
-       Prism.highlightAll();
-     }
-   };
-
-  });
-
+				lang_script.onload = () => {
+					Prism.highlightAll();
+				};
+			} else {
+				Prism.highlightAll();
+			}
+		};
+	});
 </script>
 
-<pre>
+<div class={clases}>
+	<pre>
     <code class="language-{language}">
-          {code}
+      {code}
     </code>
-</pre>
+  </pre>
+</div>
 
-<style lang="scss">	
+<!-- <style lang="scss">	
 	@use "../../app.scss" as *;
     pre {
-        padding: $h2;
-        border-radius: 20px;
-        background: linear-gradient(
-            to left, $grey_3
-            10%, $grey_5
-            );
+        /* padding: $h2; */
+        /* border-radius: 20px; */
+        overflow: auto;
+        /* background: linear-gradient(
+          to left, $grey_3
+          10%, $grey_5
+        ); */
     }
-</style>
+</style> -->

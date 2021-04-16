@@ -1,11 +1,12 @@
 @forward "./sass/_reset.scss";
-@import "./sass/_mediaqueries.scss";
-@import "./sass/_colors.scss";
-@import "./sass/_sizes.scss";
-@import "./sass/_font.scss";
-@import "./sass/_forms.scss";
-@import "./sass/_animation.scss";
-@import "./sass/_prism-theme.scss";
+@import './sass/_mediaqueries.scss';
+@import './sass/_colors.scss';
+@import './sass/_sizes.scss';
+@import './sass/_grid.scss';
+@import './sass/_font.scss';
+@import './sass/_forms.scss';
+// @import './sass/_code.scss';
+@import './sass/_animation.scss';
 
 // :root {
 // 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
@@ -14,71 +15,75 @@
 
 // Accesibility
 *:focus {
-    outline-color: $grey_2;
-    outline-style: dashed;
-    outline-width: 1px;
-    outline-style: dotted;
+	outline-color: $grey_2;
+	outline-style: dashed;
+	outline-width: 1px;
+	outline-style: dotted;
 }
 
 body {
-    background-color: $grey_4;
+	background-color: $grey_4;
 }
 
-::selection { 
-    color: $black; 
-    background-color: $white; 
-    text-shadow: none;
+::selection {
+	color: $black;
+	background-color: $white;
+	text-shadow: none;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 // Extras
 .tachado {
-    text-decoration: line-through;
+	text-decoration: line-through;
 }
 .not-clickable {
-    pointer-events: none;
+	pointer-events: none;
 }
 
 video {
-    width: 100%;
-    object-fit: cover;
-    height: -webkit-fill-available;
-    /* mix-blend-mode: luminosity; */
+	width: 100%;
+	object-fit: cover;
+	height: -webkit-fill-available;
+	/* mix-blend-mode: luminosity; */
 }
 
 // Centra svg's dentro de links
 a > svg {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 svg {
-    width: 100%;
+	width: 100%;
 }
 
 // Object-fit
 .wrap-object-fit {
-    height: inherit;
+	height: inherit;
 }
 .object-fit {
-    object-fit: cover;
-    height: 100%;
+	object-fit: cover;
+	height: 100%;
 }
 
 .absolute {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
 }
 .relative {
-    position: relative;
-    width: inherit;
+	position: relative;
+	width: inherit;
 }
-// img[class] { 
+// img[class] {
 //     width: 100%;
 // }
+
+.dn {
+	display: none;
+}

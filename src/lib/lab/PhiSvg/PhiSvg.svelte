@@ -20,6 +20,49 @@
 	$: $tweenedCount = numDots;
 </script>
 
+<svelte:window bind:innerWidth bind:innerHeight />
+
+<main class="dg bgc_4">
+	<div class="col_13 p_3 bgc_3">
+		<Header tipo={3} variante={6} {title} subtitle={text} />
+	</div>
+
+	<div class="col_12 col_s2_5 dg_0 p_3 pcc">
+		<div class="controls">
+			<input type="number" bind:value={angle} step="0.001" />
+			<input type="range" bind:value={$tweenedCount} min={0} max={numDots} />
+		</div>
+
+		<List tipo={3} variante={5}>
+			<ListItem
+				tipo={3}
+				variante={6}
+				on:click={() => {
+					$tweenedCount = $tweenedCount > 0 ? 0 : numDots;
+				}}
+			>
+				Play
+			</ListItem>
+		</List>
+	</div>
+
+	<div class="col_13 col_s2_8">
+		<slot name="hasvideo">
+			<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+				<g>
+					{#each { length: $tweenedCount } as _, index (index)}
+						<circle
+							r={dotsize}
+							cx={Math.cos(index * angle * 2 * Math.PI) * index * 0.2}
+							cy={Math.sin(index * angle * 2 * Math.PI) * index * 0.2}
+						/>
+					{/each}
+				</g>
+			</svg>
+		</slot>
+	</div>
+</main>
+
 <style lang="scss">
 	@use "../../../app.scss" as *;
 
@@ -68,49 +111,3 @@
 		}
 	}
 </style>
-
-<svelte:window bind:innerWidth bind:innerHeight />
-
-
-<Header
-	tipo={3} variante={6}
-	{title}
-	subtitle={text} />
-
-<main class="PhiSvg">
-
-	<div class="BannerMedia">
-
-		<slot name="hasvideo">
-			<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-				<g>
-					{#each { length: $tweenedCount } as _, index (index)}
-						<circle
-							r={dotsize}
-							cx={Math.cos(index * angle * 2 * Math.PI) * index * 0.2}
-							cy={Math.sin(index * angle * 2 * Math.PI) * index * 0.2} />
-					{/each}
-				</g>
-			</svg>
-		</slot>
-	</div>
-
-	<div class="PhiSvgText">
-
-		<div class="controls">
-			<input type="number" bind:value={angle} step="0.001" />
-			<input type="range" bind:value={$tweenedCount} min={0} max={numDots} />
-		</div>
-	
-		<List tipo={3} variante={5}>
-			<ListItem tipo={3} 
-			variante={6}
-			on:click={() => {
-				$tweenedCount = $tweenedCount > 0 ? 0 : numDots;
-			}}>
-				Play
-			</ListItem>
-		</List>
-	</div>
-
-</main>

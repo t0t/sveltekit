@@ -2,7 +2,7 @@
 	import ContentSlide from '$lib/ContentSlider/ContentSlide.svelte';
 	import List from '$lib/List/List.svelte';
 	import ListItem from '$lib/List/ListItem.svelte';
-	import GridBase from '$lib/GridBase.svelte';
+	import Grid from '$lib/Grid.svelte';
 
 	export let img = '',
 		id = 0,
@@ -22,7 +22,7 @@
 	};
 </script>
 
-<GridBase tipo={1} variante={6}>
+<Grid tipo={1} variante={6}>
 	<div class="slides" style="transform: translate(-{pos}vw)">
 		{#each contentSliderData as { img, text }}
 			<article class="slide" style="background-image:url('{img}')">
@@ -31,9 +31,7 @@
 		{/each}
 	</div>
 
-	<span slot="subarea1"> 
-		
-	</span>
+	<span slot="subarea1" />
 
 	<span slot="subarea2">
 		<List tipo={3} variante={7}>
@@ -47,11 +45,11 @@
 			{/if}
 		</List>
 	</span>
-	<span slot="subarea3"></span>
-	<span slot="subarea4"></span>
-	<span slot="subarea5"></span>
-	<span slot="subarea6"></span>
-</GridBase>
+	<span slot="subarea3" />
+	<span slot="subarea4" />
+	<span slot="subarea5" />
+	<span slot="subarea6" />
+</Grid>
 
 <style lang="scss">
 	@use "../../app.scss" as *;
