@@ -3,6 +3,13 @@
 	import { images } from '$lib/data/imageData.js';
 </script>
 
+<!-- Image Row -->
+<div class="DemoGallery">
+	{#each images as { id, imgurl, name }}
+		<img {id} src={imgurl} alt={name} on:click />
+	{/each}
+</div>
+
 <style lang="scss">
 	@use "../../app.scss" as *;
 
@@ -19,31 +26,23 @@
 			gap: $h2;
 		}
 	}
-	
+
 	img {
 		border-radius: 50%;
-		transition: .2s;
+		transition: 0.2s;
 		cursor: pointer;
 		place-self: center;
-		
+
 		@include media(s2) {
 			margin: $h2;
 			/* max-width: 50vw; */
 		}
 	}
-	
+
 	@include media(s2) {
-		img:hover {   
+		img:hover {
 			box-shadow: 0 $h1 $h2 rgba($grey_5, 0.5);
 			transform: scale(1.05);
 		}
 	}
 </style>
-
-
-<!-- Image Row -->
-<div class="DemoGallery">
-	{#each images as {id, imgurl, name}}
-		<img {id} src={imgurl} alt={name} on:click />
-	{/each}
-</div>

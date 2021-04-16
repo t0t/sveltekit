@@ -1,1 +1,219 @@
-@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap);@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap);.svelte-1dul694.svelte-1dul694,.svelte-1dul694.svelte-1dul694:after,.svelte-1dul694.svelte-1dul694:before{box-sizing:border-box}div.svelte-1dul694.svelte-1dul694,h2.svelte-1dul694.svelte-1dul694,img.svelte-1dul694.svelte-1dul694,section.svelte-1dul694.svelte-1dul694,span.svelte-1dul694.svelte-1dul694{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;text-size-adjust:none}section.svelte-1dul694.svelte-1dul694{display:block}dl.svelte-1dul694.svelte-1dul694{font-size:1rem;line-height:28.8px;margin-top:1.618rem}h2.svelte-1dul694.svelte-1dul694{font-weight:500;font-size:1rem;line-height:28.8px}@media(min-width:374px){h2.svelte-1dul694.svelte-1dul694{font-size:1.618rem;line-height:40.896px}}@media(min-width:2140px){h2.svelte-1dul694.svelte-1dul694{font-size:2.618rem;line-height:57.6px;margin-left:6.854rem;margin-right:6.854rem}}@keyframes svelte-1dul694-fade{0%{opacity:.5}100%{opacity:1}}@keyframes svelte-1dul694-slide{0%{transform:translateY(-70px);opacity:.5}90%{transform:translateY(5px);opacity:1}100%{transform:translateY(0);opacity:1}}@keyframes svelte-1dul694-loading{50%{transform:scale(1.2);opacity:.7}}:root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif}.svelte-1dul694.svelte-1dul694:focus{outline-color:#6c6c6c;outline-style:dashed;outline-width:1px;outline-style:dotted}.svelte-1dul694.svelte-1dul694::selection{color:#000;background-color:#fff;text-shadow:none}img.svelte-1dul694.svelte-1dul694{max-width:100%;height:auto}.AboutMe.svelte-1dul694.svelte-1dul694{position:relative;background-color:#fff;display:grid;align-items:center;text-align:center;padding:2.618rem}.AboutMe.svelte-1dul694 .AboutMeHeader.svelte-1dul694{max-width:46.971rem;margin-top:1.618rem;margin-bottom:1.618rem;color:rgba(255,255,255,.85);margin-left:auto;margin-right:auto}.AboutMe.svelte-1dul694 .AboutMeText.svelte-1dul694{color:#323232}.Avatar.svelte-1dul694.svelte-1dul694{justify-self:center;max-width:11.089rem;height:11.089rem;border-radius:50%}.idioma_switch.svelte-1dul694.svelte-1dul694{position:relative;margin-bottom:1rem;display:flex;justify-items:flex-end}.idioma_switch.svelte-1dul694 button.svelte-1dul694:nth-child(1){position:absolute;right:0;top:0;border:none;background-color:transparent;color:#d3b39c}.idioma_switch.svelte-1dul694 button.svelte-1dul694:nth-child(1):hover{color:#6c6c6c;cursor:pointer}.timeline.svelte-1dul694.svelte-1dul694{text-align:left}.svelte-39746r,.svelte-39746r:after,.svelte-39746r:before{box-sizing:border-box}div.svelte-39746r,span.svelte-39746r{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;text-size-adjust:none}@keyframes svelte-39746r-fade{0%{opacity:.5}100%{opacity:1}}@keyframes svelte-39746r-slide{0%{transform:translateY(-70px);opacity:.5}90%{transform:translateY(5px);opacity:1}100%{transform:translateY(0);opacity:1}}@keyframes svelte-39746r-loading{50%{transform:scale(1.2);opacity:.7}}:root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif}.svelte-39746r:focus{outline-color:#6c6c6c;outline-style:dashed;outline-width:1px;outline-style:dotted}.svelte-39746r::selection{color:#000;background-color:#fff;text-shadow:none}.container.svelte-39746r{width:100%;margin-top:.618rem;position:relative}span.svelte-39746r{position:absolute;top:32%;left:8px;color:#fff}.skills.svelte-39746r{text-align:right;padding:.618rem .618rem .618rem 0;color:#fff;transition:.5s ease-out}
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap);
+.svelte-1dul694.svelte-1dul694,
+.svelte-1dul694.svelte-1dul694:after,
+.svelte-1dul694.svelte-1dul694:before {
+	box-sizing: border-box;
+}
+div.svelte-1dul694.svelte-1dul694,
+h2.svelte-1dul694.svelte-1dul694,
+img.svelte-1dul694.svelte-1dul694,
+section.svelte-1dul694.svelte-1dul694,
+span.svelte-1dul694.svelte-1dul694 {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	text-size-adjust: none;
+}
+section.svelte-1dul694.svelte-1dul694 {
+	display: block;
+}
+dl.svelte-1dul694.svelte-1dul694 {
+	font-size: 1rem;
+	line-height: 28.8px;
+	margin-top: 1.618rem;
+}
+h2.svelte-1dul694.svelte-1dul694 {
+	font-weight: 500;
+	font-size: 1rem;
+	line-height: 28.8px;
+}
+@media (min-width: 374px) {
+	h2.svelte-1dul694.svelte-1dul694 {
+		font-size: 1.618rem;
+		line-height: 40.896px;
+	}
+}
+@media (min-width: 2140px) {
+	h2.svelte-1dul694.svelte-1dul694 {
+		font-size: 2.618rem;
+		line-height: 57.6px;
+		margin-left: 6.854rem;
+		margin-right: 6.854rem;
+	}
+}
+@keyframes svelte-1dul694-fade {
+	0% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes svelte-1dul694-slide {
+	0% {
+		transform: translateY(-70px);
+		opacity: 0.5;
+	}
+	90% {
+		transform: translateY(5px);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+@keyframes svelte-1dul694-loading {
+	50% {
+		transform: scale(1.2);
+		opacity: 0.7;
+	}
+}
+:root {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+		'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.svelte-1dul694.svelte-1dul694:focus {
+	outline-color: #6c6c6c;
+	outline-style: dashed;
+	outline-width: 1px;
+	outline-style: dotted;
+}
+.svelte-1dul694.svelte-1dul694::selection {
+	color: #000;
+	background-color: #fff;
+	text-shadow: none;
+}
+img.svelte-1dul694.svelte-1dul694 {
+	max-width: 100%;
+	height: auto;
+}
+.AboutMe.svelte-1dul694.svelte-1dul694 {
+	position: relative;
+	background-color: #fff;
+	display: grid;
+	align-items: center;
+	text-align: center;
+	padding: 2.618rem;
+}
+.AboutMe.svelte-1dul694 .AboutMeHeader.svelte-1dul694 {
+	max-width: 46.971rem;
+	margin-top: 1.618rem;
+	margin-bottom: 1.618rem;
+	color: rgba(255, 255, 255, 0.85);
+	margin-left: auto;
+	margin-right: auto;
+}
+.AboutMe.svelte-1dul694 .AboutMeText.svelte-1dul694 {
+	color: #323232;
+}
+.Avatar.svelte-1dul694.svelte-1dul694 {
+	justify-self: center;
+	max-width: 11.089rem;
+	height: 11.089rem;
+	border-radius: 50%;
+}
+.idioma_switch.svelte-1dul694.svelte-1dul694 {
+	position: relative;
+	margin-bottom: 1rem;
+	display: flex;
+	justify-items: flex-end;
+}
+.idioma_switch.svelte-1dul694 button.svelte-1dul694:nth-child(1) {
+	position: absolute;
+	right: 0;
+	top: 0;
+	border: none;
+	background-color: transparent;
+	color: #d3b39c;
+}
+.idioma_switch.svelte-1dul694 button.svelte-1dul694:nth-child(1):hover {
+	color: #6c6c6c;
+	cursor: pointer;
+}
+.timeline.svelte-1dul694.svelte-1dul694 {
+	text-align: left;
+}
+.svelte-39746r,
+.svelte-39746r:after,
+.svelte-39746r:before {
+	box-sizing: border-box;
+}
+div.svelte-39746r,
+span.svelte-39746r {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	text-size-adjust: none;
+}
+@keyframes svelte-39746r-fade {
+	0% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes svelte-39746r-slide {
+	0% {
+		transform: translateY(-70px);
+		opacity: 0.5;
+	}
+	90% {
+		transform: translateY(5px);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+@keyframes svelte-39746r-loading {
+	50% {
+		transform: scale(1.2);
+		opacity: 0.7;
+	}
+}
+:root {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+		'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.svelte-39746r:focus {
+	outline-color: #6c6c6c;
+	outline-style: dashed;
+	outline-width: 1px;
+	outline-style: dotted;
+}
+.svelte-39746r::selection {
+	color: #000;
+	background-color: #fff;
+	text-shadow: none;
+}
+.container.svelte-39746r {
+	width: 100%;
+	margin-top: 0.618rem;
+	position: relative;
+}
+span.svelte-39746r {
+	position: absolute;
+	top: 32%;
+	left: 8px;
+	color: #fff;
+}
+.skills.svelte-39746r {
+	text-align: right;
+	padding: 0.618rem 0.618rem 0.618rem 0;
+	color: #fff;
+	transition: 0.5s ease-out;
+}

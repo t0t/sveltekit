@@ -123,16 +123,20 @@
 <div class="dg bgc_primary c_5 p_3 rg_1 cg_s2_2 tal">
 	<div class="col_6">
 		<Header
-		tipo={3} variante={6}
-		title="Gematria App"
-		subtitle="Escribe o pega letras hebreas para conocer su equivalente numérico"
+			tipo={3}
+			variante={6}
+			title="Gematria App"
+			subtitle="Escribe o pega letras hebreas para conocer su equivalente numérico"
 		/>
 		<footer>
 			<small>בראשית ברא אלהים את השמים ואת הארץ (Génesis, 1)</small>
 			<List tipo={3} variante={5}>
-				<ListItem tipo={2} 
-				variante={6}
-				href="https://tanach.us/Server.txt?Genesis*&content=Consonants" target="_blank">
+				<ListItem
+					tipo={2}
+					variante={6}
+					href="https://tanach.us/Server.txt?Genesis*&content=Consonants"
+					target="_blank"
+				>
 					Codex de Leningrado
 				</ListItem>
 			</List>
@@ -140,36 +144,32 @@
 	</div>
 	<div class="col_7">
 		<h2 class="result">{counter}</h2>
-	
+
 		<div class="position-form">
 			<Form on:submit={handleSubmit} variante={1}>
 				<Input bind:value={valorinput} />
 				<Button variante={6} text="Go!" {valorinput} />
 			</Form>
 		</div>
-	
+
 		{#if haserror == true}
 			<Alert>{errormessage}</Alert>
 		{/if}
 	</div>
-	<div class="col_5">
-
-	
-	</div>
+	<div class="col_5" />
 </div>
 
 <style lang="scss">
 	@use "../../../app.scss"as *;
-	
+
 	main {
 		margin-bottom: $h2;
 		text-align: center;
 		display: grid;
 		place-content: center;
-		grid-template-areas: 
-			"resultado"
-			"form"
-		;
+		grid-template-areas:
+			'resultado'
+			'form';
 		color: inherit;
 	}
 	.position-form {
@@ -177,7 +177,7 @@
 	}
 	.result {
 		grid-area: resultado;
-		
+
 		font-weight: bold;
 		@include type-setting(4);
 	}

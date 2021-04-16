@@ -1,7 +1,7 @@
 export const codeData = [
-    {
-        language: "scss",
-        text: `
+	{
+		language: 'scss',
+		text: `
 // Gaps horizontales
 // .cg_2 {
 //     column-gap: 2.618rem;
@@ -19,11 +19,10 @@ export const codeData = [
     }
 }
 `
-    },
-    {
-        language: "javascript",
-        text: 
-`
+	},
+	{
+		language: 'javascript',
+		text: `
 // Componente hijo
 <script>
     export let tipo = 0; export let variante = 0;
@@ -42,11 +41,10 @@ export const codeData = [
         title={coverData[4].title}
         subtitle={coverData[4].subtitle} />
 `
-    },
-    {
-        language: "markup",
-        text: 
-`
+	},
+	{
+		language: 'markup',
+		text: `
 <!-- Con la orden 'git push' nuestro prototipo
 viaja mágicamente por la red hasta su repositorio 
 y también se despliega en producción. -->
@@ -58,5 +56,5 @@ un entorno moderno de desarrollo necesita -->
 > npm run dev
 > npm run build
 `
-    }
-]
+	}
+];

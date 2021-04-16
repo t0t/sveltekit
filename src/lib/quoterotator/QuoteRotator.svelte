@@ -1,7 +1,5 @@
 <script>
-	import {
-		quotes
-	} from '$lib/data/quoteData.js';
+	import { quotes } from '$lib/data/quoteData.js';
 	import Quote from './Quote.svelte';
 	import Dot from './Dot.svelte';
 	import AutoPlayBtn from './AutoPlayBtn.svelte';
@@ -18,7 +16,7 @@
 		} else {
 			quoteIndex += 1;
 		}
-	}
+	};
 
 	const prevQuote = () => {
 		if (quoteIndex === 0) {
@@ -26,7 +24,7 @@
 		} else {
 			quoteIndex -= 1;
 		}
-	}
+	};
 
 	/* AUTO PLAY */
 	let switchOn = false;
@@ -41,47 +39,51 @@
 			clearInterval(autoAdvance);
 			autoPlaying = false;
 		}
-	}
+	};
 </script>
 
 <div class="slideshow-container">
-
 	<!-- THE QUOTE -->
 	{#key quote}
-		<Quote {quote} {author} {image}/>
+		<Quote {quote} {author} {image} />
 	{/key}
-	
+
 	<!-- Next/prev buttons -->
-	<span 	href="#prev" 
-			class="prev" 
-			class:not-clickable={autoPlaying}
-			title="previous quote" 
-			on:click={prevQuote}>&#10094;</span>
-	
-	<span 	href="#next" 
-			class="next" 
-			class:not-clickable={autoPlaying}
-			title="next quote" 
-			on:click={nextQuote}>&#10095;</span>
-			
+	<span
+		href="#prev"
+		class="prev"
+		class:not-clickable={autoPlaying}
+		title="previous quote"
+		on:click={prevQuote}>&#10094;</span
+	>
+
+	<span
+		href="#next"
+		class="next"
+		class:not-clickable={autoPlaying}
+		title="next quote"
+		on:click={nextQuote}>&#10095;</span
+	>
+
 	<!-- Dots/bullets/indicators -->
 	<div class="dot-container">
 		{#each quotes as quote, i}
-			<Dot counter={i} 
+			<Dot
+				counter={i}
 				{quoteIndex}
 				{autoPlaying}
 				attribution={quote.author}
-				on:click={() => quoteIndex = i}/>
+				on:click={() => (quoteIndex = i)}
+			/>
 		{/each}
-		
+
 		<AutoPlayBtn bind:switchOn on:change={handleAutoAdv} />
 	</div>
 </div>
 
-
-<style lang="scss">	
+<style lang="scss">
 	@use "../../app.scss" as *;
-	
+
 	/* Slideshow container */
 	.slideshow-container {
 		position: relative;
@@ -101,9 +103,10 @@
 			display: inherit;
 		}
 	}
-	
+
 	/* Next & previous buttons */
-	.prev, .next {
+	.prev,
+	.next {
 		cursor: pointer;
 		position: absolute;
 		top: 50%;
@@ -116,7 +119,7 @@
 		border-radius: 50%;
 		user-select: none;
 	}
-	
+
 	.prev {
 		left: 0;
 	}
@@ -126,8 +129,9 @@
 		right: 0;
 	}
 
-	.prev:hover, .next:hover {
-		background-color: rgba($black,0.8);
+	.prev:hover,
+	.next:hover {
+		background-color: rgba($black, 0.8);
 		color: $white;
 		text-decoration: none;
 	}

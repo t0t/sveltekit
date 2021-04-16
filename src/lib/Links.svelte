@@ -4,15 +4,10 @@
 </script>
 
 <aside class="Links">
-	
 	<small>Follow me at:</small>
 
 	<List tipo={3} variante={1}>
-	
-		<ListItem tipo={2} variante={9}
-			href="https://www.linkedin.com/in/sergiofores/"
-			target="_blank" rel="noopener"
-		>
+		<ListItem tipo={2} variante={9} href="https://www.linkedin.com/in/sergiofores/" target="_blank">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
 				<title>Linkedin</title>
 				<path
@@ -21,22 +16,16 @@
 			</svg>
 		</ListItem>
 
-		<ListItem tipo={2} variante={9}
-			href="https://medium.com/@todh"
-			target="_blank" rel="noopener"
-		>
+		<ListItem tipo={2} variante={9} href="https://medium.com/@todh" target="_blank">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-					<title>Algunos artículos en Medium</title>
-					<path
-						d="M15,0H1A1,1,0,0,0,0,1V15a1,1,0,0,0,1,1H15a1,1,0,0,0,1-1V1A1,1,0,0,0,15,0ZM13.292,3.791l-.858.823a.251.251,0,0,0-.1.241V10.9a.251.251,0,0,0,.1.241l.838.823v.181H9.057v-.181l.868-.843c.085-.085.085-.11.085-.241V5.993L7.6,12.124H7.271l-2.81-6.13V10.1a.567.567,0,0,0,.156.472l1.129,1.37v.181h-3.2v-.181l1.129-1.37a.547.547,0,0,0,.146-.472V5.351A.416.416,0,0,0,3.683,5l-1-1.209V3.61H5.8L8.2,8.893,10.322,3.61h2.971Z"
-					/>
+				<title>Algunos artículos en Medium</title>
+				<path
+					d="M15,0H1A1,1,0,0,0,0,1V15a1,1,0,0,0,1,1H15a1,1,0,0,0,1-1V1A1,1,0,0,0,15,0ZM13.292,3.791l-.858.823a.251.251,0,0,0-.1.241V10.9a.251.251,0,0,0,.1.241l.838.823v.181H9.057v-.181l.868-.843c.085-.085.085-.11.085-.241V5.993L7.6,12.124H7.271l-2.81-6.13V10.1a.567.567,0,0,0,.156.472l1.129,1.37v.181h-3.2v-.181l1.129-1.37a.547.547,0,0,0,.146-.472V5.351A.416.416,0,0,0,3.683,5l-1-1.209V3.61H5.8L8.2,8.893,10.322,3.61h2.971Z"
+				/>
 			</svg>
 		</ListItem>
-		
-		<ListItem tipo={2} variante={9}
-			href="https://twitter.com/t0tinspire"
-			target="_blank" rel="noopener"
-		>
+
+		<ListItem tipo={2} variante={9} href="https://twitter.com/t0tinspire" target="_blank">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
 				<title>Twitter</title>
 				<path
@@ -44,11 +33,8 @@
 				/>
 			</svg>
 		</ListItem>
-		
-		<ListItem tipo={2} variante={9}
-			href="https://github.com/t0t"
-			target="_blank" rel="noopener"
-		>
+
+		<ListItem tipo={2} variante={9} href="https://github.com/t0t" target="_blank">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
 				<title>Mi repositorio en Github</title>
 				<path
@@ -59,9 +45,11 @@
 			</svg>
 		</ListItem>
 
-		<ListItem tipo={2} variante={9}
+		<ListItem
+			tipo={2}
+			variante={9}
 			href="https://www.facebook.com/TODH-2139705836275088"
-			target="_blank" rel="noopener"
+			target="_blank"
 		>
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
 				<title>Facebook</title>
@@ -70,7 +58,6 @@
 				/>
 			</svg>
 		</ListItem>
-
 	</List>
 </aside>
 

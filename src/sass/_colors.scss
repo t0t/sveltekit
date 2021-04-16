@@ -1,6 +1,6 @@
 // B/N
 $black: black;
-$white: white;
+$white: rgb(255, 255, 255);
 
 // Greys
 $grey_0: #e5e5e5;
@@ -19,12 +19,10 @@ $highlight: #d4b39c;
 // $highlight: #d3b39c;
 // $highlight: rgb(232, 178, 138);
 $highlight_1: rgba($white, 0.85);
-$highlight_2: lighten( $highlight, 3% );
-$highlight_3: lighten( $highlight, 0.1% );
+$highlight_2: lighten($highlight, 3%);
+$highlight_3: lighten($highlight, 0.1%);
 
-$highlight_alpha: rgba( $highlight_2, .45 );
-
-
+$highlight_alpha: rgba($highlight_2, 0.45);
 
 /* BORDERS
 ============================================= */
@@ -33,40 +31,87 @@ $border_color: $grey_3;
 /* GRADIENT LISTS
 ============================================= */
 
-$list1: $primary, $secondary, $tertiary; 
+$list1: $primary, $secondary, $tertiary;
 
-$list2: $primary 0%,$primary 33%,$secondary 33%,$secondary 66%, $tertiary 66%, $tertiary 100%; 
+$list2: $primary 0%, $primary 33%, $secondary 33%, $secondary 66%, $tertiary 66%, $tertiary 100%;
 
-$list3: $primary 0%,$primary 10%,$secondary 25%,$secondary 39%,$tertiary 79%,$tertiary 100%; 
+$list3: $primary 0%, $primary 10%, $secondary 25%, $secondary 39%, $tertiary 79%, $tertiary 100%;
 
-$list4: $primary, $secondary, $tertiary, $primary, $secondary, $tertiary, $primary, $secondary, $tertiary; 
+$list4: $primary, $secondary, $tertiary, $primary, $secondary, $tertiary, $primary, $secondary,
+	$tertiary;
 
-@mixin gradient($direction, $list) { 
-  background: linear-gradient($direction, $list);  
+@mixin gradient($direction, $list) {
+	background: linear-gradient($direction, $list);
 }
 
-
 // text colors
-.c_0 { color: $grey_0; }
-.c_1 { color: $grey_1; }
-.c_2 { color: $grey_2; }
-.c_3 { color: $grey_3; }
-.c_4 { color: $grey_4; }
-.c_5 { color: $grey_5; }
-.c_black { color: $black; }
-.c_white { color: $white; }
-.c_primary { color: $primary; }
+.c_0 {
+	color: $grey_0;
+}
+.c_1 {
+	color: $grey_1;
+}
+.c_2 {
+	color: $grey_2;
+}
+.c_3 {
+	color: $grey_3;
+}
+.c_4 {
+	color: $grey_4;
+}
+.c_5 {
+	color: $grey_5;
+}
+.c_black {
+	color: $black;
+}
+.c_white {
+	color: $white;
+}
+.c_primary {
+	color: $primary;
+}
+.c_secondary {
+	color: $secondary;
+}
 
 // background colors
-.bgc_0 { background-color: $grey_0; }
-.bgc_1 { background-color: $grey_1; }
-.bgc_2 { background-color: $grey_2; }
-.bgc_3 { background-color: $grey_3; }
-.bgc_4 { background-color: $grey_4; }
-.bgc_5 { background-color: $grey_5; }
+.bgc_0 {
+	background-color: $grey_0;
+}
+.bgc_1 {
+	background-color: $grey_1;
+}
+.bgc_2 {
+	background-color: $grey_2;
+}
+.bgc_3 {
+	background-color: $grey_3;
+}
+.bgc_4 {
+	background-color: $grey_4;
+}
+.bgc_5 {
+	background-color: $grey_5;
+}
 
-.bgwhite { background-color: $white; }
-.bgblack { background-color: $black; }
+.bgc_white {
+	background-color: $white;
+}
+.bgc_black {
+	background-color: $black;
+}
 
-.bgc_primary { background-color: $highlight; }
-
+.bgc_primary {
+	background-color: $highlight;
+}
+.bgc_secondary {
+	background-color: $secondary;
+}
+.bgc_tertiary {
+	background-color: $tertiary;
+}
+.bgc_quaternary {
+	background-color: $quaternary;
+}

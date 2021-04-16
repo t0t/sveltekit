@@ -5,6 +5,15 @@
 	const dispatch = createEventDispatcher();
 </script>
 
+<div class="caption-container">
+	<!-- Previous Arrow -->
+	<a href="#arrowL" class="arrow prev" on:click={() => dispatch('prevClick')}>&#10094;</a>
+	<!-- Caption -->
+	<p id="caption">{caption}</p>
+	<!-- Next Arrow -->
+	<a href="#arrowR" class="arrow next" on:click={() => dispatch('nextClick')}>&#10095;</a>
+</div>
+
 <style lang="scss">
 	@use "../../app.scss"as *;
 
@@ -47,12 +56,3 @@
 		margin-bottom: 0;
 	}
 </style>
-
-<div class="caption-container">
-	<!-- Previous Arrow -->
-	<a href="#arrowL" class="arrow prev" on:click={() => dispatch('prevClick')}>&#10094;</a>
-	<!-- Caption -->
-	<p id="caption">{caption}</p>
-	<!-- Next Arrow -->
-	<a href="#arrowR" class="arrow next" on:click={() => dispatch('nextClick')}>&#10095;</a>
-</div>

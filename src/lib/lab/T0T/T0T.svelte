@@ -74,9 +74,11 @@
 
 	<div slot="subarea1">
 		<Header
-			tipo={3} variante={7}
+			tipo={3}
+			variante={7}
 			title="Meta-Mapa +0+1234"
-			subtitle="Escribe y ordena conceptos en el mapa +0+1234" />
+			subtitle="Escribe y ordena conceptos en el mapa +0+1234"
+		/>
 
 		<Form on:submit={addItem} variante={1}>
 			<Input bind:value placeholder="Your word" />
@@ -86,11 +88,7 @@
 
 	<div slot="subarea2">
 		<List tipo={3} variante={5}>
-			<ListItem tipo={3} 
-			variante={6}
-			on:click={() => save(svg)}>
-				Download svg
-			</ListItem>
+			<ListItem tipo={3} variante={6} on:click={() => save(svg)}>Download svg</ListItem>
 		</List>
 	</div>
 </Grid>

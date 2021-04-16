@@ -70,11 +70,10 @@
 		left: 0;
 		top: 0;
 		display: grid;
-		grid-template-areas: 
-			"slide thumb"
-			"slide thumb"
-			"captio thumb"
-		;
+		grid-template-areas:
+			'slide thumb'
+			'slide thumb'
+			'captio thumb';
 		width: 100%;
 		height: 100vh;
 		overflow: hidden;
@@ -82,9 +81,7 @@
 
 		@include media(s3) {
 			overflow: auto;
-			grid-template-areas: 
-				"captio slide thumb"
-			;
+			grid-template-areas: 'captio slide thumb';
 		}
 	}
 
@@ -93,7 +90,7 @@
 		width: $h4;
 		margin-top: $h4;
 		overflow-y: auto;
-    	/* height: 60vh; */
+		/* height: 60vh; */
 		@include media(s2) {
 			width: $h5;
 			gap: $h2;

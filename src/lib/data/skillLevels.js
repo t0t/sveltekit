@@ -1,4 +1,5 @@
-export const skillLevels = [{
+export const skillLevels = [
+	{
 		skill: 'HTML / CSS-Sass / SVG',
 		percent: 85,
 		color: 'red',

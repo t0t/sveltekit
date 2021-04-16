@@ -1,8 +1,6 @@
 <script>
-	import {
-		fade
-	} from 'svelte/transition';
-	import Blockquote from "$lib/Blockquote.svelte";
+	import { fade } from 'svelte/transition';
+	import Blockquote from '$lib/Blockquote.svelte';
 	//   export let selectedQuote;
 	// 	export let qIndex
 	export let quote;
@@ -11,13 +9,10 @@
 </script>
 
 <!-- Quote template -->
-<div class="mySlides" transition:fade
-style="background-image: url({image});">
+<div class="mySlides" transition:fade style="background-image: url({image});">
 	<Blockquote>
-		<q>{quote}</q> <br>
-		<span slot="author">
-			&mdash; {author}
-		</span>
+		<q>{quote}</q> <br />
+		<span slot="author">&mdash; {author}</span>
 	</Blockquote>
 </div>
 
@@ -28,7 +23,6 @@ style="background-image: url({image});">
 		background-size: cover;
 		display: grid;
 		place-items: center;
-		/* place-content: center; */
 		width: 100%;
 		height: 100%;
 		text-align: center;

@@ -31,9 +31,7 @@
 		{/each}
 	</div>
 
-	<span slot="subarea1"> 
-		
-	</span>
+	<span slot="subarea1" />
 
 	<span slot="subarea2">
 		<List tipo={3} variante={7}>
@@ -47,10 +45,10 @@
 			{/if}
 		</List>
 	</span>
-	<span slot="subarea3"></span>
-	<span slot="subarea4"></span>
-	<span slot="subarea5"></span>
-	<span slot="subarea6"></span>
+	<span slot="subarea3" />
+	<span slot="subarea4" />
+	<span slot="subarea5" />
+	<span slot="subarea6" />
 </Grid>
 
 <style lang="scss">
