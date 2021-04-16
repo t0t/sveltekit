@@ -32,9 +32,6 @@
 		backface-visibility: hidden;
 	}
 
-	.frontFlipBox {
-	}
-
 	.backFlipBox {
 		color: black;
 		transform: rotateY(180deg);

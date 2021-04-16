@@ -1,6 +1,6 @@
 <script>
 	// import {fade} from 'svelte/transition';
-	import Grid from '$lib/Grid.svelte';
+	// import Grid from '$lib/Grid.svelte';
 	import Draggable from './Draggable.svelte';
 	import Form from '$lib/Form.svelte';
 	import Input from '$lib/Input.svelte';
@@ -50,48 +50,42 @@
 	};
 </script>
 
-<Grid variante={0}>
-	<svg bind:this={svg} viewBox="-1 -1 {canvas.width} {canvas.height}">
-		<g transform="translate(150,150) scale(0.7)">
-			{#each circles as circle}
-				<circle
-					cx={circle.cx}
-					cy={circle.cy}
-					r={circle.r}
-					id={circle.id}
-					fill="none"
-					stroke="black"
-				/>
-			{/each}
-			{#each items as item}
-				<Draggable x={item.xpos} y={item.ypos}>{item.id}</Draggable>
-			{/each}
-			{#each new_items as new_i}
-				<Draggable {x} {y}>{new_i}</Draggable>
-			{/each}
-		</g>
-	</svg>
+<svg bind:this={svg} viewBox="-1 -1 {canvas.width} {canvas.height}">
+	<g transform="translate(150,150) scale(0.7)">
+		{#each circles as circle}
+			<circle
+				cx={circle.cx}
+				cy={circle.cy}
+				r={circle.r}
+				id={circle.id}
+				fill="none"
+				stroke="black"
+			/>
+		{/each}
+		{#each items as item}
+			<Draggable x={item.xpos} y={item.ypos}>{item.id}</Draggable>
+		{/each}
+		{#each new_items as new_i}
+			<Draggable {x} {y}>{new_i}</Draggable>
+		{/each}
+	</g>
+</svg>
 
-	<div slot="subarea1">
-		<Header
-			tipo={3}
-			variante={7}
-			title="Meta-Mapa +0+1234"
-			subtitle="Escribe y ordena conceptos en el mapa +0+1234"
-		/>
+<Header
+	tipo={3}
+	variante={7}
+	title="Meta-Mapa +0+1234"
+	subtitle="Escribe y ordena conceptos en el mapa +0+1234"
+/>
 
-		<Form on:submit={addItem} variante={1}>
-			<Input bind:value placeholder="Your word" />
-			<Button variante={6} text="Add" />
-		</Form>
-	</div>
+<Form on:submit={addItem} variante={1}>
+	<Input bind:value placeholder="Your word" />
+	<Button variante={6} text="Add" />
+</Form>
 
-	<div slot="subarea2">
-		<List tipo={3} variante={5}>
-			<ListItem tipo={3} variante={6} on:click={() => save(svg)}>Download svg</ListItem>
-		</List>
-	</div>
-</Grid>
+<List tipo={3} variante={5}>
+	<ListItem tipo={3} variante={6} on:click={() => save(svg)}>Download svg</ListItem>
+</List>
 
 <style lang="scss">
 	@use "../../../app.scss" as *;

@@ -7,7 +7,13 @@
 	<small>Follow me at:</small>
 
 	<List tipo={3} variante={1}>
-		<ListItem tipo={2} variante={9} href="https://www.linkedin.com/in/sergiofores/" target="_blank">
+		<ListItem
+			tipo={2}
+			variante={9}
+			href="https://www.linkedin.com/in/sergiofores/"
+			target="_blank"
+			rel="external"
+		>
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
 				<title>Linkedin</title>
 				<path
@@ -16,7 +22,7 @@
 			</svg>
 		</ListItem>
 
-		<ListItem tipo={2} variante={9} href="https://medium.com/@todh" target="_blank">
+		<ListItem tipo={2} variante={9} href="https://medium.com/@todh" target="_blank" rel="external">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
 				<title>Algunos artículos en Medium</title>
 				<path
@@ -25,7 +31,13 @@
 			</svg>
 		</ListItem>
 
-		<ListItem tipo={2} variante={9} href="https://twitter.com/t0tinspire" target="_blank">
+		<ListItem
+			tipo={2}
+			variante={9}
+			href="https://twitter.com/t0tinspire"
+			target="_blank"
+			rel="external"
+		>
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
 				<title>Twitter</title>
 				<path
@@ -34,7 +46,7 @@
 			</svg>
 		</ListItem>
 
-		<ListItem tipo={2} variante={9} href="https://github.com/t0t" target="_blank">
+		<ListItem tipo={2} variante={9} href="https://github.com/t0t" target="_blank" rel="external">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
 				<title>Mi repositorio en Github</title>
 				<path
@@ -50,6 +62,7 @@
 			variante={9}
 			href="https://www.facebook.com/TODH-2139705836275088"
 			target="_blank"
+			rel="external"
 		>
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
 				<title>Facebook</title>

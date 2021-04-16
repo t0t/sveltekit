@@ -63,6 +63,7 @@
 					href="https://slides.com/sergiofores/"
 					alt=""
 					target="_blank"
+					rel="external"
 				>
 					<Button variante={3} text="Slides" />
 				</ListItem>
@@ -72,6 +73,7 @@
 					href="https://docs.google.com/document/d/15oUQRghNb_lihCFGJ9Ls0z1PyihD_a18v1V3AohVqQ4/edit?usp=sharing"
 					alt=""
 					target="_blank"
+					rel="external"
 				>
 					<Button variante={3} text="Libro" />
 				</ListItem>

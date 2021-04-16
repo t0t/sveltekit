@@ -1,5 +1,5 @@
 <script>
-	import Grid from '$lib/Grid.svelte';
+	// import Grid from '$lib/Grid.svelte';
 	import List from '$lib/List/List.svelte';
 	import ListItem from '$lib/List/ListItem.svelte';
 	import Button from '$lib/Button.svelte';
@@ -52,7 +52,7 @@
 
 <style lang="scss">
 	@use "../../app.scss"as *;
-	
+
 	figcaption {
 		padding-top: $h1;
 		text-align: center;

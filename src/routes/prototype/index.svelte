@@ -4,11 +4,10 @@
 	import { tabHeaders } from '$lib/data/tabsContent.js';
 
 	import Header from '$lib/Header.svelte';
-	import Blockquote from '$lib/Blockquote.svelte';
+	// import Blockquote from '$lib/Blockquote.svelte';
 	import Img from '$lib/Img.svelte';
 	import Section from '$lib/Section.svelte';
 	import Button from '$lib/Button.svelte';
-	import Grid from '$lib/Grid.svelte';
 	import List from '$lib/List/List.svelte';
 	import Code from '$lib/Code/Code.svelte';
 	import ListItem from '$lib/List/ListItem.svelte';
@@ -77,8 +76,7 @@
 	<Prism
 		clases="col_12 col_s2_6"
 		language="markup"
-		code="
-	&#x26;#x3C;!-- let fruits = [&#x27;apple&#x27;,&#x27;banana&#x27;] --&#x26;#x3E;
+		code="&#x26;#x3C;!-- let fruits = [&#x27;apple&#x27;,&#x27;banana&#x27;] --&#x26;#x3E;
 	&#x26;#x3Cdiv class=&#x27;dg_12 rg_1 p_3&#x27;/&#x26;#x3E;
 	&#x9;&#x26;#x3Cdiv class=&#x27;col_12&#x27;/&#x26;#x3E;
 	&#x9;&#x9;&#x26;#x3CHeader/&#x26;#x3E;
@@ -86,9 +84,7 @@
 	&#x9;&#x26;#x3C;!-- Code.svelte --&#x26;#x3E;
 	(each fruits as fruit,i)
 	&#x9;&#x26;#x3C;div class=&#x26;#x22;col_6&#x26;#x22;&#x26;#x3E; (fruit) &#x26;#x3C;/div&#x26;#x3E;
-	(/each)
-	&#x26;#x3Cdiv/&#x26;#x3E;"
-	/>
+	(/each) &#x26;#x3Cdiv/&#x26;#x3E;"/>
 	<FlipCard clases="col_12 col_s2_6" />
 
 	<!-- Clases -->
@@ -153,6 +149,9 @@
 	<Header tipo={4} clases="col_12 tac c_4" title="Colores" />
 
 	<List tipo={1} clases="col_12 dg_12 c_1">
+		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1 bgc_white pt_3 pr_1 pl_1 pb_1">
+			<Code clases="language-scss">$white</Code>
+		</ListItem>
 		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1 bgc_0 pt_3 pr_1 pl_1 pb_1">
 			<Code clases="language-scss">$grey_0</Code>
 		</ListItem>
@@ -170,9 +169,6 @@
 		</ListItem>
 		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1 bgc_5 pt_3 pr_1 pl_1 pb_1">
 			<Code clases="language-scss">$grey_5</Code>
-		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1 bgc_white pt_3 pr_1 pl_1 pb_1">
-			<Code clases="language-scss">$white</Code>
 		</ListItem>
 		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1 bgc_black pt_3 pr_1 pl_1 pb_1">
 			<Code clases="language-scss">$black</Code>
@@ -223,7 +219,7 @@
 		<div class="col_5 bgc_5"><small class="">.col_5</small></div>
 		<div class="col_5 bgc_5"><small class="">.col_5</small></div>
 		<div class="col_8 bgc_2"><small class="">.col_8</small></div>
-		<div class="col_1 bgc_0"><small class=" c_3">.col_1</small></div>
+		<div class="col_1 bgc_0"><small class="c_3">.col_1</small></div>
 		<div class="col_1 bgc_1"><small class="">.col_1</small></div>
 		<div class="col_3 bgc_3"><small class="">.col_3</small></div>
 		<div class="col_5 bgc_5"><small class="">.col_5</small></div>

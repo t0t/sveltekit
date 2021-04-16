@@ -2,6 +2,7 @@
 	export let href = '';
 	export let alt = '';
 	export let target = '';
+	export let rel = '';
 	export let clases = '';
 	export let tipo = 0;
 	export let variante = 0;
