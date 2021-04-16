@@ -9,8 +9,6 @@ code {
 	direction: ltr;
 	font-size: 13px;
 	font-weight: bold;
-
-	// text-align: left;
 	white-space: pre;
 	word-spacing: normal;
 	word-break: normal;
@@ -27,7 +25,6 @@ code::selection {
 pre {
 	color: inherit;
 	padding: $h0;
-	// margin: .5em 0;
 	overflow: auto;
 	background: $white;
 }

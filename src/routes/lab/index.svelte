@@ -1,20 +1,10 @@
 <script>
-<<<<<<< HEAD
-    import { coverData } from "$lib/data/coverData.js";	
-    import Header from "$lib/Header.svelte";
-    import Section from "$lib/Section.svelte";
-    import PhiSvg from '$lib/lab/PhiSvg/PhiSvg.svelte';
-    import T0T from '$lib/lab/T0T/T0T.svelte';
-    import Gematria from '$lib/lab/GematriaApp/Gematria.svelte';
-    // import ThreeBanner from '$lib/lab/ThreeBanner/ThreeBanner.svelte';
-=======
 	import { coverData } from '$lib/data/coverData.js';
 	import Header from '$lib/Header.svelte';
 	import Section from '$lib/Section.svelte';
 	import PhiSvg from '$lib/lab/PhiSvg/PhiSvg.svelte';
 	import T0T from '$lib/lab/T0T/T0T.svelte';
 	import Gematria from '$lib/lab/GematriaApp/Gematria.svelte';
->>>>>>> main
 </script>
 
 <!-- LAB Experiments-->
@@ -42,14 +32,4 @@
 </Section>
 
 <!-- Gematria App -->
-<<<<<<< HEAD
-<Section id="gematria" variante={4}>
-	<Gematria />
-</Section>
-
-<!-- <Section id="threebanner" variante={1}>
-	<ThreeBanner variante={3} title="efe" text="rgr" />
-</Section> -->
-=======
 <Gematria />
->>>>>>> main

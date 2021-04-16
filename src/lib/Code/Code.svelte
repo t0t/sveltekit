@@ -27,7 +27,7 @@
 		color: $grey_2;
 		color: $secondary;
 		padding: $h-1;
-		background: $grey_1;
+		background: $grey_4;
 		border-radius: 0.3em;
 	}
 	pre > code {

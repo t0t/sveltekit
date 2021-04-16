@@ -28,16 +28,12 @@
 
 <Section clases="c_4 bgc_0 rg_1 bgwhite p_3 pt_1 cg_s2_1 dg">
 	<!-- <Prism clases="col_13 col_s2_8 mt_-4" language={codeData[1].language} code={codeData[1].text} /> -->
-	<Code clases="col_13 col_s2_8 mt_-4">
-<span class="c_tertiary">&lt;Header</span>
-	clases = <span class="c_primary">mh_5 tac c_primary</span>
-	tipo = ''
-	variante = ''
-	img = <span class="c_black">./img/bg5.png</span>
-	title = ''
-	subtitle = '' 
-<span class="c_tertiary">/&gt;</span>
-
+	<Code clases="col_13 col_s2_8 mt_-4 dg_0 pcc">
+&#x3C;Header
+&#x9;clases = 'mh_5 tac c_white' tipo = '' variante = ''
+&#x9;img = &#x22;./img/bg5.png&#x22;
+&#x9;title = ''&#x9;subtitle = ''
+/&#x3E;
 	</Code>
 	<div class="col_13 col_s2_5 dg_0 pcc">
 		<Header
@@ -68,15 +64,15 @@
 	</div>
 	<Code clases="col_13 col_s2_8">
 @for $i from 1 through 13 (
-&#x9;.col_(i)
-&#x9;&#x9;grid-column: span (i);
-&#x9;
-@include media(s2) (
-&#x9;@for i from 1 through 13 (
-&#x9;&#x9;.col_s2_#(i) (
-&#x9;&#x9;&#x9;grid-column: span (i);
-&#x9;&#x9;)
-&#x9;)
+	&#x9;.col_(i)
+	&#x9;&#x9;grid-column: span (i);
+	&#x9;
+	@include media(s2) (
+	&#x9;@for i from 1 through 13 (
+	&#x9;&#x9;.col_s2_#(i) (
+	&#x9;&#x9;&#x9;grid-column: span (i);
+	&#x9;&#x9;)
+	&#x9;)
 )
 	</Code>
 	<!-- <Prism clases="col_13 col_s2_8" language={codeData[0].language} code={codeData[0].text} /> -->
@@ -88,14 +84,14 @@
 //	Con la orden 'git push' nuestro prototipo
 	viaja mágicamente por la red hasta su repositorio 
 	y también se despliega en producción</span>
-&gt; git push
+> git push
 <span class="c_2">
 	// Hot reloading, preprocesado, todo lo que
 un entorno moderno de desarrollo necesita
 </span>
-&gt; npm i
-&gt; npm run dev
-&gt; npm run build
+> npm i
+> npm run dev
+> npm run build
 	</Code>
 	<!-- <Prism clases="col_13 col_s2_8" language={codeData[2].language} code={codeData[2].text} /> -->
 	<List clases="col_13 col_s2_5" tipo={2} variante={0}>
