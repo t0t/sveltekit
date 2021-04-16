@@ -28,23 +28,16 @@
 
 <Section clases="c_4 bgc_0 rg_1 bgwhite p_3 pt_1 cg_s2_1 dg">
 	<!-- <Prism clases="col_13 col_s2_8 mt_-4" language={codeData[1].language} code={codeData[1].text} /> -->
-	<Code clases="ccol_13 col_s2_8 mt_-4">$h13: 321.916rem; $h12: 198.959rem; 
-		$h11: 122.966rem;
-		$h10: 75.999rem;
-		$h9: 46.971rem;
-		$h8: 29.03rem;
-		$h7: 17.942rem;
-		$h6: 11.089rem;
-		$h5: 6.854rem;
-		$h4: 4.236rem;
-		$h3: 2.618rem;
-		$h2: 1.618rem;
-		$h1: 1rem;
-		$h0: 0.618rem;
-		$h-1: 0.382rem;
-		$h-2: 0.236rem;
-		$h-3: 0.146rem;
-		$h-4: 0.09rem;
+	<Code clases="col_13 col_s2_8 mt_-4">
+<span class="c_tertiary">&lt;Header</span>
+	clases = <span class="c_primary">mh_5 tac c_primary</span>
+	tipo = ''
+	variante = ''
+	img = <span class="c_black">./img/bg5.png</span>
+	title = ''
+	subtitle = '' 
+<span class="c_tertiary">/&gt;</span>
+
 	</Code>
 	<div class="col_13 col_s2_5 dg_0 pcc">
 		<Header
@@ -73,45 +66,36 @@
 			de economizar recursos al igual que sucede en la naturaleza.
 		</p>
 	</div>
-	<Code clases="col_13 col_s2_8">$h13: 321.916rem; $h12: 198.959rem; 
-		$h11: 122.966rem;
-		$h10: 75.999rem;
-		$h9: 46.971rem;
-		$h8: 29.03rem;
-		$h7: 17.942rem;
-		$h6: 11.089rem;
-		$h5: 6.854rem;
-		$h4: 4.236rem;
-		$h3: 2.618rem;
-		$h2: 1.618rem;
-		$h1: 1rem;
-		$h0: 0.618rem;
-		$h-1: 0.382rem;
-		$h-2: 0.236rem;
-		$h-3: 0.146rem;
-		$h-4: 0.09rem;
+	<Code clases="col_13 col_s2_8">
+@for $i from 1 through 13 (
+&#x9;.col_(i)
+&#x9;&#x9;grid-column: span (i);
+&#x9;
+@include media(s2) (
+&#x9;@for i from 1 through 13 (
+&#x9;&#x9;.col_s2_#(i) (
+&#x9;&#x9;&#x9;grid-column: span (i);
+&#x9;&#x9;)
+&#x9;)
+)
 	</Code>
 	<!-- <Prism clases="col_13 col_s2_8" language={codeData[0].language} code={codeData[0].text} /> -->
 </Section>
 
 <Section clases="dg bgc_0 c_4 p_3 rg_1 cg_s2_2">
-	<Code clases="col_13 col_s2_8">$h13: 321.916rem; $h12: 198.959rem; 
-		$h11: 122.966rem;
-		$h10: 75.999rem;
-		$h9: 46.971rem;
-		$h8: 29.03rem;
-		$h7: 17.942rem;
-		$h6: 11.089rem;
-		$h5: 6.854rem;
-		$h4: 4.236rem;
-		$h3: 2.618rem;
-		$h2: 1.618rem;
-		$h1: 1rem;
-		$h0: 0.618rem;
-		$h-1: 0.382rem;
-		$h-2: 0.236rem;
-		$h-3: 0.146rem;
-		$h-4: 0.09rem;
+	<Code clases="col_13 col_s2_8">
+<span class="c_2">
+//	Con la orden 'git push' nuestro prototipo
+	viaja mágicamente por la red hasta su repositorio 
+	y también se despliega en producción</span>
+&gt; git push
+<span class="c_2">
+	// Hot reloading, preprocesado, todo lo que
+un entorno moderno de desarrollo necesita
+</span>
+&gt; npm i
+&gt; npm run dev
+&gt; npm run build
 	</Code>
 	<!-- <Prism clases="col_13 col_s2_8" language={codeData[2].language} code={codeData[2].text} /> -->
 	<List clases="col_13 col_s2_5" tipo={2} variante={0}>
@@ -126,141 +110,132 @@
 <!-- Nomenclatura -->
 <Section id="Nomenclatura" clases="c_4 bgc_0 dg_12 rg_1 bgwhite pl_3 pr_3 pb_3 cg_s2_1">
 	<Header clases="col_12 tac c_3" title="Guía de estilos" />
-	<!-- <Prism -->
-		<!-- clases="col_12 col_s2_6"
-		language="markup"
-		code="&#x26;#x3C;!-- let fruits = [&#x27;apple&#x27;,&#x27;banana&#x27;] --&#x26;#x3E;
-	&#x26;#x3Cdiv class=&#x27;dg_12 rg_1 p_3&#x27;/&#x26;#x3E;
-	&#x9;&#x26;#x3Cdiv class=&#x27;col_12&#x27;/&#x26;#x3E;
-	&#x9;&#x9;&#x26;#x3CHeader/&#x26;#x3E;
-	&#x9;&#x26;#x3C/&#x26;#x3E;div&#x3E;
-	&#x9;&#x26;#x3C;!-- Code.svelte --&#x26;#x3E;
-	(each fruits as fruit,i)
-	&#x9;&#x26;#x3C;div class=&#x26;#x22;col_6&#x26;#x22;&#x26;#x3E; (fruit) &#x26;#x3C;/div&#x26;#x3E;
-	(/each) &#x26;#x3Cdiv/&#x26;#x3E;"/> -->
-	<Code clases="col_12 col_s2_6">$h13: 321.916rem; $h12: 198.959rem; 
-		$h11: 122.966rem;
-		$h10: 75.999rem;
-		$h9: 46.971rem;
-		$h8: 29.03rem;
-		$h7: 17.942rem;
-		$h6: 11.089rem;
-		$h5: 6.854rem;
-		$h4: 4.236rem;
-		$h3: 2.618rem;
-		$h2: 1.618rem;
-		$h1: 1rem;
-		$h0: 0.618rem;
-		$h-1: 0.382rem;
-		$h-2: 0.236rem;
-		$h-3: 0.146rem;
-		$h-4: 0.09rem;
+	<Code clases="col_12 col_s2_6">
+<span class="c_2">// Sizes</span>
+$h13: 321.916rem; 
+$h12: 198.959rem; 
+$h11: 122.966rem;
+$h10: 75.999rem;
+$h9: 46.971rem;
+$h8: 29.03rem;
+$h7: 17.942rem;
+$h6: 11.089rem;
+$h5: 6.854rem;
+$h4: 4.236rem;
+$h3: 2.618rem;
+$h2: 1.618rem;
+$h1: 1rem;
+$h0: 0.618rem;
+$h-1: 0.382rem;
+$h-2: 0.236rem;
+$h-3: 0.146rem;
+$h-4: 0.09rem;
 	</Code>
 	<FlipCard clases="col_12 col_s2_6" />
 
 	<!-- Clases -->
 	<Header tipo={4} clases="col_12 tac c_4" title="Clases" />
 
-	<List tipo={1} clases="col_12 gap_1 dg_12 c_1">
+	<List tipo={1} clases="col_12 gap_1 dg_12 c_2">
 		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
 			<small>min-height: (*)vh; </small>
-			<Code clases="language-scss">.mh_(*)</Code>
+			<Code>.mh_(*)</Code>
 		</ListItem>
 		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
 			<small>min-width: (*)vw; </small>
-			<Code clases="language-scss">.mw_*</Code>
+			<Code>.mw_*</Code>
 		</ListItem>
 		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
 			<small>row-gap: span (*);</small>
-			<Code clases="language-scss">.gr_*</Code>
+			<Code>.gr_*</Code>
 		</ListItem>
 		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
 			<small> gap: $h3; </small>
-			<Code clases="language-scss">.gap_3</Code>
+			<Code>.gap_3</Code>
 		</ListItem>
 		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
 			<small>display: grid; </small>
-			<Code clases="language-scss">.dg_0</Code>
+			<Code>.dg_0</Code>
 		</ListItem>
 		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
 			<small>css </small>
-			<Code clases="language-scss">.dg_12</Code>
+			<Code>.dg_12</Code>
 		</ListItem>
 		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
 			<small>css </small>
-			<Code clases="language-scss">.dg_12</Code>
+			<Code>.dg_12</Code>
 		</ListItem>
 		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
 			<small>padding: 1.62rem; </small>
-			<Code clases="language-scss">.p_3</Code>
+			<Code>.p_3</Code>
 		</ListItem>
 		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
 			<small>css </small>
-			<Code clases="language-scss">.col_s2_*</Code>
+			<Code>.col_s2_*</Code>
 		</ListItem>
 		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
 			<small>css </small>
-			<Code clases="language-scss">.col_s2_*</Code>
+			<Code>.col_s2_*</Code>
 		</ListItem>
 		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
 			<small>padding-top: *rem; </small>
-			<Code clases="language-scss">.pt_*</Code>
+			<Code>.pt_*</Code>
 		</ListItem>
 		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
 			<small>padding-bottom: 1.62*; </small>
-			<Code clases="language-scss">.pb_*</Code>
+			<Code>.pb_*</Code>
 		</ListItem>
 		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
 			<small>text-align: center; </small>
-			<Code clases="language-scss">.tac</Code>
+			<Code>.tac</Code>
 		</ListItem>
 		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
 			<small>text-align: left; </small>
-			<Code clases="language-scss">.tal</Code>
+			<Code>.tal</Code>
 		</ListItem>
 		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
 			<small>text-align: right; </small>
-			<Code clases="language-scss">.tar</Code>
+			<Code>.tar</Code>
 		</ListItem>
 		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
 			<small>place-content: center; </small>
-			<Code clases="language-scss">.ppc</Code>
+			<Code>.ppc</Code>
 		</ListItem>
 		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
 			<small>color: *; </small>
-			<Code clases="language-scss">.c_*</Code>
+			<Code>.c_*</Code>
 		</ListItem>
 		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
 			<small>background-color: *; </small>
-			<Code clases="language-scss">.bgc_*</Code>
+			<Code>.bgc_*</Code>
 		</ListItem>
 		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
 			<small>overflow: hidden; </small>
-			<Code clases="language-scss">.oh</Code>
+			<Code>.oh</Code>
 		</ListItem>
 		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
 			<small>text-align: right; </small>
-			<Code clases="language-scss">.tar</Code>
+			<Code>.tar</Code>
 		</ListItem>
 		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
 			<small>text-align: right; </small>
-			<Code clases="language-scss">.tar</Code>
+			<Code>.tar</Code>
 		</ListItem>
 		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
 			<small>text-align: right; </small>
-			<Code clases="language-scss">.tar</Code>
+			<Code>.tar</Code>
 		</ListItem>
 		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
 			<small>text-align: right; </small>
-			<Code clases="language-scss">.tar</Code>
+			<Code>.tar</Code>
 		</ListItem>
 		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
 			<small>text-align: right; </small>
-			<Code clases="language-scss">.tar</Code>
+			<Code>.tar</Code>
 		</ListItem>
 		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
 			<small>text-align: right; </small>
-			<Code clases="language-scss">.tar</Code>
+			<Code>.tar</Code>
 		</ListItem>
 	</List>
 
@@ -268,41 +243,53 @@
 	<Header tipo={4} clases="col_12 tac c_4" title="Colores" />
 
 	<List tipo={1} clases="col_12 dg_12 c_1">
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1 bgc_white pt_3 pr_1 pl_1 pb_1">
-			<Code clases="language-scss">$white</Code>
+		<ListItem tipo={4} 
+			clases="col_6 col_s2_3 dg_0 rg_-1 bgc_white pt_3 pr_1 pl_1 pb_1">
+			<Code clases="c_white"> $white </Code>
 		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1 bgc_0 pt_3 pr_1 pl_1 pb_1">
-			<Code clases="language-scss">$grey_0</Code>
+		<ListItem tipo={4} 
+			clases="col_6 col_s2_3 dg_0 rg_-1 bgc_0 pt_3 pr_1 pl_1 pb_1">
+			<Code clases="c_0"> $grey_0 </Code>
 		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1 bgc_1 pt_3 pr_1 pl_1 pb_1">
-			<Code clases="language-scss">$grey_1</Code>
+		<ListItem tipo={4} 
+			clases="col_6 col_s2_3 dg_0 rg_-1 bgc_1 pt_3 pr_1 pl_1 pb_1">
+			<Code clases="c_1"> $grey_1 </Code>
 		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1 bgc_2 pt_3 pr_1 pl_1 pb_1">
-			<Code clases="language-scss">$grey_2</Code>
+		<ListItem tipo={4} 
+			clases="col_6 col_s2_3 dg_0 rg_-1 bgc_2 pt_3 pr_1 pl_1 pb_1">
+			<Code clases="c_1"> $grey_2 </Code>
 		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1 bgc_3 pt_3 pr_1 pl_1 pb_1">
-			<Code clases="language-scss">$grey_3</Code>
+		<ListItem tipo={4} 
+			clases="col_6 col_s2_3 dg_0 rg_-1 bgc_3 pt_3 pr_1 pl_1 pb_1">
+			<Code clases="c_1"> $grey_3 </Code>
 		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1 bgc_4 pt_3 pr_1 pl_1 pb_1">
-			<Code clases="language-scss">$grey_4</Code>
+		<ListItem tipo={4} 
+			clases="col_6 col_s2_3 dg_0 rg_-1 bgc_4 pt_3 pr_1 pl_1 pb_1">
+			<Code clases="c_1"> $grey_4 </Code>
 		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1 bgc_5 pt_3 pr_1 pl_1 pb_1">
-			<Code clases="language-scss">$grey_5</Code>
+		<ListItem tipo={4} 
+			clases="col_6 col_s2_3 dg_0 rg_-1 bgc_5 pt_3 pr_1 pl_1 pb_1">
+			<Code clases="c_1"> $grey_5 </Code>
 		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1 bgc_black pt_3 pr_1 pl_1 pb_1">
-			<Code clases="language-scss">$black</Code>
+		<ListItem tipo={4} 
+			clases="col_6 col_s2_3 dg_0 rg_-1 bgc_black pt_3 pr_1 pl_1 pb_1">
+			<Code clases="c_1"> $black </Code>
 		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1 bgc_primary pt_3 pr_1 pl_1 pb_1">
-			<Code clases="language-scss">$primary</Code>
+		<ListItem tipo={4} 
+			clases="col_6 col_s2_3 dg_0 rg_-1 bgc_primary pt_3 pr_1 pl_1 pb_1">
+			<Code clases="c_primary"> $primary </Code>
 		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1 bgc_secondary pt_3 pr_1 pl_1 pb_1">
-			<Code clases="language-scss">$seconday</Code>
+		<ListItem tipo={4} 
+			clases="col_6 col_s2_3 dg_0 rg_-1 bgc_secondary pt_3 pr_1 pl_1 pb_1">
+			<Code clases="c_seconday"> $seconday </Code>
 		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1 bgc_tertiary pt_3 pr_1 pl_1 pb_1">
-			<Code clases="language-scss">$tertiary</Code>
+		<ListItem tipo={4} 
+			clases="col_6 col_s2_3 dg_0 rg_-1 bgc_tertiary pt_3 pr_1 pl_1 pb_1">
+			<Code clases="c_tertiary"> $tertiary </Code>
 		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1 bgc_quaternary pt_3 pr_1 pl_1 pb_1">
-			<Code clases="language-scss">$quaternary</Code>
+		<ListItem tipo={4} 
+			clases="col_6 col_s2_3 dg_0 rg_-1 bgc_quaternary pt_3 pr_1 pl_1 pb_1">
+			<Code clases="c_quaternary"> $quaternary </Code>
 		</ListItem>
 	</List>
 </Section>
@@ -310,56 +297,40 @@
 <!-- Componentes -->
 <Section id="Componentes" clases="c_4 bgc_0 dg_12 rg_1 bgwhite pl_3 pr_3 pb_3 cg_s2_1">
 	<Header tipo={4} clases="col_12 tac c_4" title="Componentes" />
-	<Code clases="col_6 col_s2_3 oh">&#x3C;Alert /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;Blockquote /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;Section /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;List /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;List tipo='ul'/&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;List tipo='div'/&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;List tipo='dl'/&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;List tipo='ol'/&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;List tipo='a'/&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;ListItem /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;ListItem tipo='button'/&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;ListItem tipo='div'/&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;ListItem tipo='a'/&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;ListItem tipo='li'/&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;Button /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;Nav /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;Nav tipo='secondary' /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;Nav tipo='fixed' /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;Form /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;Alert /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;Input /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;Header /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;Header tipo='bgimg'/&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;Footer /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;Tabs /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;ContentSlider /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;FlashCard /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;LightboxGallery /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;SlideGallery /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;QuoteRotator /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;Img /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;Img tipo='figure'/&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;Svg /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3 oh">&#x3C;Svg tipo='inline' /&#x3E;</Code>
-	<!-- <Prism clases="col_6 col_s2_3 oh" language="markup" code="&#x3C;Alert /&#x3E;" /> -->
-	<!-- <Prism clases="col_6 col_s2_3 oh" language="markup" code="&#x3C;Button variante='n'/&#x3E" /> -->
-	<!-- <Prism clases="col_6 col_s2_3 oh" language="markup" code="&#x3C;Section variante='n'/&#x3E" /> -->
-	<!-- <Prism clases="col_6 col_s2_3 oh" language="markup" code="&#x3C;Header clases='dg p_1'/&#x3E" /> -->
-	<!-- <Prism -->
-		<!-- clases="col_6 col_s2_3 oh"
-		language="markup"
-		code="&#x3C;List tipo='' variante='n'/&#x3E"
-	/> -->
-	<!-- <Prism clases="col_6 col_s2_3 oh" language="markup" code="&#x3C;ListItem tipo='' /&#x3E" /> -->
-	<!-- <Prism clases="col_6 col_s2_3 oh" language="markup" code="&#x3C;Nav tipo='' /&#x3E" /> -->
-	<!-- <Prism clases="col_6 col_s2_3 oh" language="markup" code="&#x3C;Img tipo='' /&#x3E" /> -->
-	<!-- <Prism clases="col_6 col_s2_3 oh" language="markup" code="&#x3C;Input tipo='' /&#x3E" /> -->
-	<!-- <Prism clases="col_6 col_s2_3 oh" language="markup" code="&#x3C;Nav tipo='' /&#x3E" /> -->
-	<!-- <Prism clases="col_6 col_s2_3 oh" language="markup" code="&#x3C;Code clases='' /&#x3E" /> -->
-	<!-- <Prism clases="col_6 col_s2_3 oh" language="markup" code="&#x3C;Blockquote tipo='' /&#x3E" /> -->
+	<Code clases="col_6 col_s2_3">&#x3C;Alert /&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;Blockquote /&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;Section /&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;List /&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;List tipo='ul'/&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;List tipo='div'/&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;List tipo='dl'/&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;List tipo='ol'/&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;List tipo='a'/&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;ListItem /&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;ListItem tipo='button'/&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;ListItem tipo='div'/&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;ListItem tipo='a'/&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;ListItem tipo='li'/&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;Button /&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;Nav /&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;Nav tipo='secondary' /&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;Nav tipo='fixed' /&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;Form /&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;Alert /&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;Input /&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;Header /&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;Header tipo='bgimg'/&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;Footer /&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;Tabs /&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;ContentSlider /&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;FlashCard /&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;LightboxGallery /&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;SlideGallery /&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;QuoteRotator /&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;Img /&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;Img tipo='figure'/&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;Svg /&#x3E;</Code>
+	<Code clases="col_6 col_s2_3">&#x3C;Svg tipo='inline' /&#x3E;</Code>
 </Section>
 
 <!-- Grid -->

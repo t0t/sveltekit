@@ -13,7 +13,7 @@
 	pre,
 	code {
 		font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-		font-size: 13px;
+		font-size: 16px;
 		line-height: 1.7;
 		white-space: pre;
 		word-spacing: normal;
@@ -21,15 +21,17 @@
 		tab-size: 4;
 		hyphens: none;
 		font-weight: bold;
+		overflow: auto;
 	}
 	pre {
 		color: $grey_2;
+		color: $secondary;
 		padding: $h-1;
-		background: $white;
+		background: $grey_1;
 		border-radius: 0.3em;
 	}
 	pre > code {
-		// color:$secondary;
+		// color: $secondary;
 		// background-color: $grey_0;
 	}
 	pre::selection,

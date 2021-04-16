@@ -14,7 +14,7 @@ $grey_5: #121212;
 $primary: #d3b39c;
 $secondary: #4bddc4;
 $tertiary: pink;
-$quaternary: $primary;
+$quaternary: #5906ff;
 $highlight: #d4b39c;
 // $highlight: #d3b39c;
 // $highlight: rgb(232, 178, 138);
@@ -74,6 +74,12 @@ $list4: $primary, $secondary, $tertiary, $primary, $secondary, $tertiary, $prima
 }
 .c_secondary {
 	color: $secondary;
+}
+.c_tertiary {
+	color: $tertiary;
+}
+.c_quaternary {
+	color: $quaternary;
 }
 
 // background colors
