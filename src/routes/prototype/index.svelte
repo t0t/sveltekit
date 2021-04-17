@@ -110,15 +110,10 @@ un entorno moderno de desarrollo necesita
 <!-- Nomenclatura -->
 <Section id="Nomenclatura" clases="c_4 bgc_0 dg_12 rg_1 bgwhite pl_3 pr_3 pb_3 cg_s2_1">
 	<Header clases="col_12 tac c_3" title="Guía de estilos" />
-	<Code clases="col_12 col_s2_6">
-<span class="c_2">// Sizes</span>
-$h13: 321.916rem; 
-$h12: 198.959rem; 
-$h11: 122.966rem;
-$h10: 75.999rem;
-$h9: 46.971rem;
-$h8: 29.03rem;
-$h7: 17.942rem;
+	<Code clases="col_12 col_s2_6 mh_5 dg_0 pcc">
+<span class="c_2">
+	// All sizes are based 
+	on these Phi proportions</span>
 $h6: 11.089rem;
 $h5: 6.854rem;
 $h4: 4.236rem;
@@ -127,9 +122,7 @@ $h2: 1.618rem;
 $h1: 1rem;
 $h0: 0.618rem;
 $h-1: 0.382rem;
-$h-2: 0.236rem;
-$h-3: 0.146rem;
-$h-4: 0.09rem;
+...
 	</Code>
 	<FlipCard clases="col_12 col_s2_6" />
 

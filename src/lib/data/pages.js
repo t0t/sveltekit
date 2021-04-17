@@ -8,15 +8,15 @@ export const pages = [
 		url: '/artworks'
 	},
 	{
-		name: 'Philosophy',
+		name: '+0+1234',
 		url: '/philosophy'
 	},
 	{
-		name: 'Frontend Design',
+		name: 'TotPhi',
 		url: '/prototype'
 	},
 	{
-		name: 'Lab',
+		name: 'Code Lab',
 		url: '/lab'
 	},
 	{

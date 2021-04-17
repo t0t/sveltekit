@@ -31,14 +31,17 @@
 	</div>
 </Section>
 
-<Section id="lightboxgallery">
-	<Header tipo={1} variante={3} title="Galería" />
-	<LightboxGallery />
+<Section id="lightboxgallery" clases="dg pcc tac p_3">
+	<Header tipo={1} variante={3} 
+			title="Galería" 
+			clases="col_13 pb_3"
+	/>
+	<LightboxGallery clases="col_13" />
 </Section>
 
 <Section>
 	<div class="dg c_4">
-		<div class="col_13 col_s2_5">
+		<div class="col_13 col_s2_5 mh_5 pb_3">
 			<Img variante={1} src="./img/bg3.jpg" alt="Presentation" />
 		</div>
 		<div class="col_13 col_s2_8 p_3 tac c_1">
@@ -53,9 +56,9 @@
 	<Tabs {tabHeaders} />
 </Section>
 
-<Section>
-	<div class="col_13">
-		<Img variante={1} src="./img/bg2.jpg" alt="Presentation" />
+<Section clases="dg">
+	<div class="col_13 dg_0 ">
+		<Img clases="mh_5" variante={1} src="./img/bg2.jpg" alt="Presentation" />
 	</div>
 	<div class="col_13 mh_0 dg_0 pt_3 pb_3 tac bgc_0 pcc_0 c_3 mh_s2_5 rg_1">
 		<div class="mw_7">

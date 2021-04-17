@@ -2,7 +2,7 @@
 	import Lightbox from './Lightbox.svelte';
 	import Button from '$lib/Button.svelte';
 	import ImageDisplay from './ImageDisplay.svelte';
-
+	export let clases= "";
 	let modalOpen = false;
 
 	let imageShowingIndex = 0;
@@ -14,27 +14,21 @@
 </script>
 
 <!-- The Modal/Lightbox -->
-{#if modalOpen}
-	<Lightbox on:click={() => (modalOpen = false)} {imageShowingIndex} />
-{:else}
-	<ImageDisplay on:click={handleImgClick} />
-{/if}
+<div class={clases}>
+	{#if modalOpen}
+		<Lightbox on:click={() => (modalOpen = false)} {imageShowingIndex} />
+	{:else}
+		<div class="col_13">
+			<ImageDisplay on:click={handleImgClick} />
+		</div>
+	{/if}
+	
+	<!-- Button to open Lightbox -->
+	<aside class="col_13">
+		<Button variante={2} text="View All" on:click={() => (modalOpen = true)} />
+	</aside>
+</div>
 
-<!-- Button to open Lightbox -->
-<aside>
-	<Button variante={2} text="View All" on:click={() => (modalOpen = true)} />
-</aside>
-
-<style lang="scss">
+<!-- <style lang="scss">
 	@use "../../app.scss"as *;
-
-	aside {
-		display: grid;
-		place-items: center;
-		padding-bottom: $h3;
-	}
-
-	/* .container {
-		position: relative;
-	} */
-</style>
+</style> -->
