@@ -62,6 +62,7 @@
 			de economizar recursos al igual que sucede en la naturaleza.
 		</p>
 	</div>
+
 	<Code clases="col_13 col_s2_8">
 @for $i from 1 through 13 (
 	&#x9;.col_(i)
