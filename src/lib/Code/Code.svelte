@@ -1,12 +1,15 @@
 <script>
+	import Typewriter from 'svelte-typewriter'
 	export let clases = '';
 </script>
 
 <pre class={clases}>
+	<Typewriter interval={100}>
 	<code>
-		<slot />
-	</code>
-</pre>
+			<slot />
+		</code>
+	</Typewriter>
+	</pre>
 
 <style lang="scss">	
 	@use "../../app.scss" as *;

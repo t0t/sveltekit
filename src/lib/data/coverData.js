@@ -25,7 +25,7 @@ export const coverData = [
 		img: './img/circle.svg'
 	},
 	{
-		title: 'TOT PHI',
+		title: 'TotPhi',
 		subtitle: 'Un sistema de prototipado holístico',
 		text: 'Svelte.js, Sass...',
 		img: './img/bg2.jpg'

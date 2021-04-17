@@ -18,21 +18,24 @@
 
 <!-- Holistic Prototype -->
 <Header
-	clases="mh_5 tac c_white"
-	tipo={2}
-	variante={0}
+	clases="mh_5 tac c_secondary bgc_5"
+	tipo={5}
+	variante={4}
 	img="./img/bg5.png"
 	title={coverData[4].title}
 	subtitle={coverData[4].subtitle}
 />
 
-<Section clases="c_4 bgc_0 rg_1 bgwhite p_3 pt_1 cg_s2_1 dg">
+<Section clases="c_4 bgc_0 rg_1 bgwhite pr_3 pl_3 pt_1 cg_s2_1 dg">
 	<!-- <Prism clases="col_13 col_s2_8 mt_-4" language={codeData[1].language} code={codeData[1].text} /> -->
-	<Code clases="col_13 col_s2_8 mt_-4 dg_0 pcc">
+	<Code clases="col_13 col_s2_8 mt_-4 mh_5 dg_0 pcc">
 &#x3C;Header
-&#x9;clases = 'mh_5 tac c_white' tipo = '' variante = ''
+&#x9;clases = 'mh_5 tac c_white' 
+	tipo = ''
+	variante = ''
 &#x9;img = &#x22;./img/bg5.png&#x22;
-&#x9;title = ''&#x9;subtitle = ''
+&#x9;title = ''
+&#x9;subtitle = ''
 /&#x3E;
 	</Code>
 	<div class="col_13 col_s2_5 dg_0 pcc">
@@ -46,7 +49,7 @@
 			En mi opinión éste es el mejor framework de desarrollo. Cuando lo descubrí me enamoré al
 			instante y supe que ese sería mi motor de templates y mi generador de sitios web estáticos.
 		</p>
-		<p><code class="language-scss">.mw_*</code></p>
+		<p><Code>.mw_*</Code></p>
 	</div>
 </Section>
 
@@ -63,7 +66,7 @@
 		</p>
 	</div>
 
-	<Code clases="col_13 col_s2_8">
+	<Code clases="col_13 col_s2_8 dg_0 pcc mh_5">
 @for $i from 1 through 13 (
 	&#x9;.col_(i)
 	&#x9;&#x9;grid-column: span (i);

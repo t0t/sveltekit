@@ -1,6 +1,8 @@
 <!-- comentario -->
 <script>
 	import Button from '$lib/Button.svelte';
+	import Code from '$lib/Code/Code.svelte';
+	import Typewriter from 'svelte-typewriter';
 
 	export let clases = '';
 	export let tipo = 4;
@@ -59,6 +61,16 @@
 	<header class="{modificador[variante]} {clases}">
 		<h1>{title}</h1>
 	</header>
+	
+{:else if tipo === 5}
+	<header class="{modificador[variante]} {clases}"
+	style="background-image: url('{img}')">
+	<!-- Typewritter Header -->
+		<Typewriter interval={100}>
+			<code>&#x3C;{title} /&#x3E;</code>
+			<h1>{subtitle}</h1>
+		</Typewriter>
+	</header>
 {:else}
 	<header class={modificador[variante]}>
 		<slot />
@@ -100,6 +112,15 @@
 		color: inherit;
 	}
 	.Header_4 {
+		display: grid;
+		place-content: center;
+		/* color: inherit; */
+		height: 100%;
+		font-size: 400%;
+		font-weight: bold;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
 	}
 	.Header_5 {
 		color: inherit;
