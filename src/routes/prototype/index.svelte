@@ -203,6 +203,14 @@ $h-1: 0.382rem;
 			<Code>.bgc_*</Code>
 		</ListItem>
 		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
+			<small>max-width: $bp2; </small>
+			<Code>.maxw_s2</Code>
+		</ListItem>
+		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
+			<small>max-width: $bp3; </small>
+			<Code>.maxw_s3</Code>
+		</ListItem>
+		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
 			<small>overflow: hidden; </small>
 			<Code>.oh</Code>
 		</ListItem>
@@ -229,6 +237,10 @@ $h-1: 0.382rem;
 		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
 			<small>text-align: right; </small>
 			<Code>.tar</Code>
+		</ListItem>
+		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
+			<small>margin-top: 0; </small>
+			<Code>.mt0</Code>
 		</ListItem>
 	</List>
 
@@ -331,15 +343,15 @@ $h-1: 0.382rem;
 	<Header tipo={4} clases="tac c_4 pb_2" title="Grid 13" />
 
 	<div class="dg rg_-1 c_0">
-		<div class="col_8 bgc_2 dg_0 pcc p_1">.col_8</div>
-		<div class="col_5 bgc_5 dg_0 pcc p_1">.col_5</div>
-		<div class="col_5 bgc_5 dg_0 pcc p_1">.col_5</div>
-		<div class="col_8 bgc_2 dg_0 pcc p_1">.col_8</div>
-		<div class="col_1 bgc_3 dg_0 pcc p_1">.col_1</div>
-		<div class="col_1 bgc_1 c_4 dg_0 p_1 pcc">.col_1</div>
-		<div class="col_3 bgc_3 dg_0 pcc p_1">.col_3</div>
-		<div class="col_5 bgc_5 dg_0 pcc p_1">.col_5</div>
-		<div class="col_3 bgc_3 dg_0 pcc p_1">.col_3</div>
+		<div class="col_13 col_s1_5 col_s2_8  bgc_2 dg_0 pcc p_1">.col_8</div>
+		<div class="col_13 col_s1_8 col_s2_5  bgc_5 dg_0 pcc p_1">.col_5</div>
+		<div class="col_13 col_s1_8 col_s2_5  bgc_5 dg_0 pcc p_1">.col_5</div>
+		<div class="col_13 col_s1_5 col_s2_8  bgc_2 dg_0 pcc p_1">.col_8</div>
+		<div class="col_13 col_s2_1  bgc_3 dg_0 pcc p_1">.col_1</div>
+		<div class="col_13 col_s2_1 col_s2_1  bgc_1 c_4 dg_0 p_1 pcc">.col_1</div>
+		<div class="col_13 col_s1_5 col_s2_3  bgc_3 dg_0 pcc p_1">.col_3</div>
+		<div class="col_13 col_s1_3 col_s2_5  bgc_5 dg_0 pcc p_1">.col_5</div>
+		<div class="col_13 col_s1_5 col_s2_3  bgc_3 dg_0 pcc p_1">.col_3</div>
 		<div class="col_13 bgc_4 dg_0 pcc p_1">.col_13</div>
 	</div>
 
@@ -370,7 +382,8 @@ $h-1: 0.382rem;
 	<Img clases="col_13 col_s2_8 p_1" src="./img/grafico-11.svg" alt="" />
 	<div class="col_13 col_s2_5 dg_0 pcc c_4 p_3">
 		<Header tipo={3} variante={6} title="Download" subtitle="Actualización y mejora contínua" />
-		<List tipo={0} variante={0} marker="./img/marker.svg">
+
+		<List clases="mt_0" tipo={0} variante={0} marker="./img/marker.svg">
 			<ListItem tipo={0} variante={6}>Simple, ligero, limpio y claro.</ListItem>
 			<ListItem tipo={0} variante={6}>Completo, funcional, versátil y ordenado.</ListItem>
 			<ListItem tipo={0} variante={6}>Work in progress...</ListItem>

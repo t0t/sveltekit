@@ -40,7 +40,7 @@
 	@use "../../app.scss" as *;
 
 	:global(ul) {
-		margin-top: $h1;
+		margin-top: 0;
 		@include media(s3) {
 			max-width: $bp2;
 			margin-left: auto;
@@ -54,7 +54,7 @@
 			@include type-setting(1);
 		}
 	}
-	:global(dt) {
+	/* :global(dt) {
 		font-weight: bold;
 		margin-top: $h2;
 		margin-bottom: $h0;
@@ -62,7 +62,7 @@
 	:global(dd) {
 		margin-bottom: $h0;
 		margin-left: $h2;
-	}
+	} */
 
 	:global(::marker) {
 		/* revisar */
@@ -74,7 +74,7 @@
 		text-align: left;
 	}
 	.List_1 {
-		margin-top: $h1;
+		/* margin-top: $h1; */
 		display: grid;
 		grid-auto-flow: column;
 		place-items: center;
@@ -85,7 +85,7 @@
 	.List_2 {
 		display: grid;
 		grid-auto-flow: column;
-		margin-top: $h2;
+		/* margin-top: $h2; */
 		place-content: center;
 
 		:global(a:nth-child(1)) {

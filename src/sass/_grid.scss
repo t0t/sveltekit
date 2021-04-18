@@ -16,6 +16,14 @@
 	}
 }
 
+@include media(s1) {
+	@for $i from 1 through 13 {
+		.col_s1_#{$i} {
+			grid-column: span ($i);
+		}
+	}
+}
+
 @include media(s2) {
 	@for $i from 1 through 13 {
 		.col_s2_#{$i} {
