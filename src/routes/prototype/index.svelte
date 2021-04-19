@@ -4,7 +4,7 @@
 	import { tabHeaders } from '$lib/data/tabsContent.js';
 
 	import Header from '$lib/Header.svelte';
-	// import Blockquote from '$lib/Blockquote.svelte';
+	import Blockquote from '$lib/Blockquote.svelte';
 	import Img from '$lib/Img.svelte';
 	import Section from '$lib/Section.svelte';
 	import Button from '$lib/Button.svelte';
@@ -12,8 +12,16 @@
 	import Code from '$lib/Code/Code.svelte';
 	import ListItem from '$lib/List/ListItem.svelte';
 	import Tabs from '$lib/tabheaders/Tabs.svelte';
-	// import Prism from '$lib/Code/PrismJS.svelte';
+
+	// Styleguide
 	import FlipCard from '$lib/flashcard/FlipCard.svelte';
+	import Colores from '$lib/styleguide/Colores.svelte';
+	import Grid from '$lib/styleguide/Grid.svelte';
+	import BasicHtml from '$lib/styleguide/BasicHtml.svelte';
+	import Componentes from '$lib/styleguide/Componentes.svelte';
+	import Clases from '$lib/styleguide/Clases.svelte';
+	import Buttons from '$lib/styleguide/Buttons.svelte';
+
 </script>
 
 <!-- Holistic Prototype -->
@@ -107,275 +115,22 @@ un entorno moderno de desarrollo necesita
 	</List>
 </Section>
 
-<!-- Nomenclatura -->
-<Section id="Nomenclatura" clases="c_4 bgc_0 dg_12 rg_1 bgwhite pl_3 pr_3 pb_3 cg_s2_1">
+
+<!-- Styleguide -->
+<Section id="Styleguide" clases="c_4 bgc_0 dg_12 rg_1 bgwhite pl_3 pr_3 pb_3 cg_s2_1">
 	<Header clases="col_12 tac c_3" title="Guía de estilos" />
-	<Code clases="col_12 col_s2_6 mh_5 dg_0 pcc">
-<span class="c_2">
-	// All sizes are based 
-	on these Phi proportions</span>
-$h6: 11.089rem;
-$h5: 6.854rem;
-$h4: 4.236rem;
-$h3: 2.618rem;
-$h2: 1.618rem;
-$h1: 1rem;
-$h0: 0.618rem;
-$h-1: 0.382rem;
-...
-	</Code>
-	<FlipCard clases="col_12 col_s2_6" />
-
-	<!-- Clases -->
-	<Header tipo={4} clases="col_12 tac c_4" title="Clases" />
-
-	<List tipo={1} clases="col_12 gap_1 dg_12 c_2">
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
-			<small>min-height: (*)vh; </small>
-			<Code>.mh_(*)</Code>
-		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
-			<small>min-width: (*)vw; </small>
-			<Code>.mw_*</Code>
-		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
-			<small>row-gap: span (*);</small>
-			<Code>.gr_*</Code>
-		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
-			<small> gap: $h3; </small>
-			<Code>.gap_3</Code>
-		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
-			<small>display: grid; </small>
-			<Code>.dg_0</Code>
-		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
-			<small>css </small>
-			<Code>.dg_12</Code>
-		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
-			<small>css </small>
-			<Code>.dg_12</Code>
-		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
-			<small>padding: 1.62rem; </small>
-			<Code>.p_3</Code>
-		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
-			<small>css </small>
-			<Code>.col_s2_*</Code>
-		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
-			<small>css </small>
-			<Code>.col_s2_*</Code>
-		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
-			<small>padding-top: *rem; </small>
-			<Code>.pt_*</Code>
-		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
-			<small>padding-bottom: 1.62*; </small>
-			<Code>.pb_*</Code>
-		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
-			<small>text-align: center; </small>
-			<Code>.tac</Code>
-		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
-			<small>text-align: left; </small>
-			<Code>.tal</Code>
-		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
-			<small>text-align: right; </small>
-			<Code>.tar</Code>
-		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
-			<small>place-content: center; </small>
-			<Code>.ppc</Code>
-		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
-			<small>color: *; </small>
-			<Code>.c_*</Code>
-		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
-			<small>background-color: *; </small>
-			<Code>.bgc_*</Code>
-		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
-			<small>max-width: $bp2; </small>
-			<Code>.maxw_s2</Code>
-		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
-			<small>max-width: $bp3; </small>
-			<Code>.maxw_s3</Code>
-		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
-			<small>overflow: hidden; </small>
-			<Code>.oh</Code>
-		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
-			<small>text-align: right; </small>
-			<Code>.tar</Code>
-		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
-			<small>text-align: right; </small>
-			<Code>.tar</Code>
-		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
-			<small>text-align: right; </small>
-			<Code>.tar</Code>
-		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
-			<small>text-align: right; </small>
-			<Code>.tar</Code>
-		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
-			<small>text-align: right; </small>
-			<Code>.tar</Code>
-		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
-			<small>text-align: right; </small>
-			<Code>.tar</Code>
-		</ListItem>
-		<ListItem tipo={4} clases="col_6 col_s2_3 dg_0 rg_-1">
-			<small>margin-top: 0; </small>
-			<Code>.mt0</Code>
-		</ListItem>
-	</List>
-
-	<!-- Colores -->
-	<Header tipo={4} clases="col_12 tac c_4" title="Colores" />
-
-	<List tipo={1} clases="col_12 dg_12 c_1">
-		<ListItem tipo={4} 
-			clases="col_6 col_s2_3 dg_0 rg_-1 bgc_white pt_3 pr_1 pl_1 pb_1">
-			<Code clases="c_white"> $white </Code>
-		</ListItem>
-		<ListItem tipo={4} 
-			clases="col_6 col_s2_3 dg_0 rg_-1 bgc_0 pt_3 pr_1 pl_1 pb_1">
-			<Code clases="c_0"> $grey_0 </Code>
-		</ListItem>
-		<ListItem tipo={4} 
-			clases="col_6 col_s2_3 dg_0 rg_-1 bgc_1 pt_3 pr_1 pl_1 pb_1">
-			<Code clases="c_1"> $grey_1 </Code>
-		</ListItem>
-		<ListItem tipo={4} 
-			clases="col_6 col_s2_3 dg_0 rg_-1 bgc_2 pt_3 pr_1 pl_1 pb_1">
-			<Code clases="c_1"> $grey_2 </Code>
-		</ListItem>
-		<ListItem tipo={4} 
-			clases="col_6 col_s2_3 dg_0 rg_-1 bgc_3 pt_3 pr_1 pl_1 pb_1">
-			<Code clases="c_1"> $grey_3 </Code>
-		</ListItem>
-		<ListItem tipo={4} 
-			clases="col_6 col_s2_3 dg_0 rg_-1 bgc_4 pt_3 pr_1 pl_1 pb_1">
-			<Code clases="c_1"> $grey_4 </Code>
-		</ListItem>
-		<ListItem tipo={4} 
-			clases="col_6 col_s2_3 dg_0 rg_-1 bgc_5 pt_3 pr_1 pl_1 pb_1">
-			<Code clases="c_1"> $grey_5 </Code>
-		</ListItem>
-		<ListItem tipo={4} 
-			clases="col_6 col_s2_3 dg_0 rg_-1 bgc_black pt_3 pr_1 pl_1 pb_1">
-			<Code clases="c_1"> $black </Code>
-		</ListItem>
-		<ListItem tipo={4} 
-			clases="col_6 col_s2_3 dg_0 rg_-1 bgc_primary pt_3 pr_1 pl_1 pb_1">
-			<Code clases="c_primary"> $primary </Code>
-		</ListItem>
-		<ListItem tipo={4} 
-			clases="col_6 col_s2_3 dg_0 rg_-1 bgc_secondary pt_3 pr_1 pl_1 pb_1">
-			<Code clases="c_seconday"> $seconday </Code>
-		</ListItem>
-		<ListItem tipo={4} 
-			clases="col_6 col_s2_3 dg_0 rg_-1 bgc_tertiary pt_3 pr_1 pl_1 pb_1">
-			<Code clases="c_tertiary"> $tertiary </Code>
-		</ListItem>
-		<ListItem tipo={4} 
-			clases="col_6 col_s2_3 dg_0 rg_-1 bgc_quaternary pt_3 pr_1 pl_1 pb_1">
-			<Code clases="c_quaternary"> $quaternary </Code>
-		</ListItem>
-	</List>
+	
+	<FlipCard clases="col_12">
+		<Clases />
+		<Colores/>
+		<BasicHtml />
+		<Buttons />
+		<Componentes />
+		<Grid />
+	</FlipCard>
+	
 </Section>
 
-<!-- Componentes -->
-<Section id="Componentes" clases="c_4 bgc_0 dg_12 rg_1 bgwhite pl_3 pr_3 pb_3 cg_s2_1">
-	<Header tipo={4} clases="col_12 tac c_4" title="Componentes" />
-	<Code clases="col_6 col_s2_3">&#x3C;Alert /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;Blockquote /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;Section /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;List /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;List tipo='ul'/&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;List tipo='div'/&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;List tipo='dl'/&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;List tipo='ol'/&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;List tipo='a'/&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;ListItem /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;ListItem tipo='button'/&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;ListItem tipo='div'/&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;ListItem tipo='a'/&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;ListItem tipo='li'/&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;Button /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;Nav /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;Nav tipo='secondary' /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;Nav tipo='fixed' /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;Form /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;Alert /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;Input /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;Header /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;Header tipo='bgimg'/&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;Footer /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;Tabs /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;ContentSlider /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;FlashCard /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;LightboxGallery /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;SlideGallery /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;QuoteRotator /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;Img /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;Img tipo='figure'/&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;Svg /&#x3E;</Code>
-	<Code clases="col_6 col_s2_3">&#x3C;Svg tipo='inline' /&#x3E;</Code>
-</Section>
-
-<!-- Grid -->
-<Section id="Grid" clases="c_4 bgc_0 pl_3 pr_3 pb_3">
-	<Header tipo={4} clases="tac c_4 pb_2" title="Grid 13" />
-
-	<div class="dg rg_-1 c_0">
-		<div class="col_13 col_s1_5 col_s2_8  bgc_2 dg_0 pcc p_1">.col_8</div>
-		<div class="col_13 col_s1_8 col_s2_5  bgc_5 dg_0 pcc p_1">.col_5</div>
-		<div class="col_13 col_s1_8 col_s2_5  bgc_5 dg_0 pcc p_1">.col_5</div>
-		<div class="col_13 col_s1_5 col_s2_8  bgc_2 dg_0 pcc p_1">.col_8</div>
-		<div class="col_13 col_s2_1  bgc_3 dg_0 pcc p_1">.col_1</div>
-		<div class="col_13 col_s2_1 col_s2_1  bgc_1 c_4 dg_0 p_1 pcc">.col_1</div>
-		<div class="col_13 col_s1_5 col_s2_3  bgc_3 dg_0 pcc p_1">.col_3</div>
-		<div class="col_13 col_s1_3 col_s2_5  bgc_5 dg_0 pcc p_1">.col_5</div>
-		<div class="col_13 col_s1_5 col_s2_3  bgc_3 dg_0 pcc p_1">.col_3</div>
-		<div class="col_13 bgc_4 dg_0 pcc p_1">.col_13</div>
-	</div>
-
-	<Header tipo={4} clases="tac c_4 pb_2 pt_2" title="Grid 12" />
-
-	<div class="dg_12 rg_-1 c_0">
-		<div class="col_1 bgc_2 dg_0 pcc p_1"><small class="">.col_1</small></div>
-		<div class="col_11 bgc_3 dg_0 pcc p_1"><small class="">.col_11</small></div>
-		<div class="col_2 bgc_5 dg_0 pcc p_1"><small class="">.col_2</small></div>
-		<div class="col_10 bgc_3 dg_0 pcc p_1"><small class="">.col_10</small></div>
-		<div class="col_3 bgc_5 dg_0 pcc p_1"><small class="">.col_3</small></div>
-		<div class="col_9 bgc_3 dg_0 pcc p_1"><small class="">.col_9</small></div>
-		<div class="col_4 bgc_2 dg_0 pcc p_1"><small class="">.col_4</small></div>
-		<div class="col_4 bgc_2 dg_0 pcc p_1"><small class="">.col_4</small></div>
-		<div class="col_4 bgc_1 c_4 dg_0 p_1 pcc"><small class="">.col_4</small></div>
-		<div class="col_4 bgc_2 dg_0 pcc p_1"><small class="">.col_4</small></div>
-		<div class="col_8 bgc_5 dg_0 pcc p_1"><small class="">.col_8</small></div>
-		<div class="col_5 bgc_white dg_0 pcc p_1"><small class="c_3">.col_5</small></div>
-		<div class="col_7 bgc_3 dg_0 pcc p_1"><small class="">.col_7</small></div>
-		<div class="col_6 bgc_1 c_4 dg_0 pcc p_1"><small class="">.col_6</small></div>
-		<div class="col_6 bgc_2 dg_0 pcc p_1"><small class="">.col_6</small></div>
-		<div class="col_12 bgc_4 dg_0 pcc p_1"><small class="">.col_12</small></div>
-	</div>
-</Section>
 
 <!-- Banner -->
 <Section clases="dg rg_1 bgc_1 mh_10 mh_s2_5">

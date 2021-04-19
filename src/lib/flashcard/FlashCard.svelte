@@ -1,6 +1,6 @@
 <script>
 	export let back_txt;
-	export let code;
+	// export let code;
 	export let foto;
 	export let showCarBack;
 	// import Prism from '$lib/Code/PrismJS.svelte';
@@ -8,7 +8,7 @@
 
 <div class="col_5 backFlipBox" class:NoRebelesTxt={showCarBack}>
 	<h2>{back_txt}</h2>
-	<code class="code language-">{code}</code>
+	<slot name="flipcontent">Contenido slot flipcontent</slot>
 </div>
 
 <div class="col_8 frontFlipBox">

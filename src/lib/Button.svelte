@@ -4,8 +4,8 @@
 	export let is_submit = false;
 	export let target = false;
 	export let variante = 0;
+	export let clases = "";
 	export let valorinput = 'input';
-
 	let modificador = [
 		'Button_0',
 		'Button_1',
@@ -20,19 +20,19 @@
 </script>
 
 {#if target}
-	<a class="button {modificador[variante]}" href={url} {target}>
+	<a class="button {modificador[variante]} {clases}" href={url} {target}>
 		{text}
 	</a>
 {:else if !target && url}
-	<a class="button {modificador[variante]}" href={url}>
+	<a class="button {modificador[variante]} {clases}" href={url}>
 		{text}
 	</a>
 {:else if is_submit}
-	<button on:click type="submit" class={modificador[variante]}>
+	<button on:click type="submit" class="{modificador[variante]} {clases}">
 		{text}
 	</button>
 {:else}
-	<button on:click class={modificador[variante]} class:not-clickable={valorinput == ''}>
+	<button on:click class="{modificador[variante]} {clases}" class:not-clickable={valorinput == ''}>
 		{text}
 	</button>
 {/if}
