@@ -46,3 +46,35 @@ export const secondaryNav = [
 		description: 'Desarrollo y experimentación web'
 	}
 ];
+export const styleGuideNav = [
+	{
+		id: 0,
+		name: 'BasicHtml',
+		component: 'BasicHtml'
+	},
+	{
+		id: 1,
+		name: 'Clases',
+		component: 'Clases'
+	},
+	{
+		id: 2,
+		name: 'Colores',
+		component: 'Colores'
+	},
+	{
+		id: 3,
+		name: 'Buttons',
+		component: 'Buttons'
+	},
+	{
+		id: 4,
+		name: 'Componentes',
+		component: 'Componentes'
+	},
+	{
+		id: 5,
+		name: 'Grid',
+		component: 'Grid'
+	}
+];

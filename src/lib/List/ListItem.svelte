@@ -1,12 +1,14 @@
 <script>
+	// import Button from "$lib/Button.svelte";
 	export let href = '';
 	export let alt = '';
 	export let target = '';
+	export let id = '';
 	export let rel = '';
 	export let clases = '';
 	export let tipo = 0;
 	export let variante = 0;
-	const clase = [
+	const modificador = [
 		'ListItem_0',
 		'ListItem_1',
 		'ListItem_2',
@@ -21,17 +23,17 @@
 </script>
 
 {#if tipo === 0}
-	<li class={clase[variante]}><slot /></li>
+	<li class={modificador[variante]}><slot /></li>
 {:else if tipo === 1}
-	<slot class={clase[variante]} />
+	<slot class={modificador[variante]} />
 {:else if tipo === 2}
-	<a class={clase[variante]} {href} {alt} {target}><slot /></a>
+	<a class={modificador[variante]} {href} {alt} {target}><slot /></a>
 {:else if tipo === 3}
-	<button class={clase[variante]} on:click> <slot /></button>
+	<button class="{clases} {modificador[variante]}" {id} on:click> <slot /></button>
 {:else if tipo === 4}
 	<div class={clases}><slot /></div>
 {:else}
-	<div class={clase[variante]}><slot /></div>
+	<div class={modificador[variante]}><slot /></div>
 {/if}
 
 <style lang="scss">
@@ -47,7 +49,7 @@
 			margin-right: auto;
 		}
 	}
-
+	
 	.ListItem_0 {
 		text-align: center;
 		padding: $h1;
@@ -108,11 +110,17 @@
 		/* boton Download */
 		@include type-setting(0);
 		padding: $h1;
-		color: $white;
-		background-color: $grey_5;
+		/* color: inherit; */
 		align-self: start;
+		background-color: $secondary;
 		&:hover {
-			background-color: $black;
+			color: $grey_5;
+			filter: opacity(70%);
+			/* background-color: $grey_3; */
+		}
+		&.active {
+			color: $grey_1;
+			background-color: $grey_4;
 		}
 	}
 

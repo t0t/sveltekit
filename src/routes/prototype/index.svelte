@@ -2,6 +2,8 @@
 	import { coverData } from '$lib/data/coverData.js';
 	import { codeData } from '$lib/data/codeData.js';
 	import { tabHeaders } from '$lib/data/tabsContent.js';
+	import { styleGuideNav as navOptions} from '$lib/data/pages.js';
+	import NavSecondary from '$lib/NavSecondary.svelte';
 
 	import Header from '$lib/Header.svelte';
 	import Blockquote from '$lib/Blockquote.svelte';
@@ -12,9 +14,9 @@
 	import Code from '$lib/Code/Code.svelte';
 	import ListItem from '$lib/List/ListItem.svelte';
 	import Tabs from '$lib/tabheaders/Tabs.svelte';
+	import FlipCard from '$lib/flashcard/FlipCard.svelte';
 
 	// Styleguide
-	import FlipCard from '$lib/flashcard/FlipCard.svelte';
 	import Colores from '$lib/styleguide/Colores.svelte';
 	import Grid from '$lib/styleguide/Grid.svelte';
 	import BasicHtml from '$lib/styleguide/BasicHtml.svelte';
@@ -22,6 +24,14 @@
 	import Clases from '$lib/styleguide/Clases.svelte';
 	import Buttons from '$lib/styleguide/Buttons.svelte';
 
+	// styleguide component
+	let selected = navOptions[0];
+	let intSelected = 0;
+	function changeComponent(event) {
+		selected = navOptions[event.srcElement.id];
+		intSelected = event.srcElement.id;
+		console.log(intSelected)
+	}
 </script>
 
 <!-- Holistic Prototype -->
@@ -115,22 +125,53 @@ un entorno moderno de desarrollo necesita
 	</List>
 </Section>
 
-
-<!-- Styleguide -->
-<Section id="Styleguide" clases="c_4 bgc_0 dg_12 rg_1 bgwhite pl_3 pr_3 pb_3 cg_s2_1">
+<!-- Nomenclatura -->
+<Section id="Nomenclatura" clases="c_4 bgc_0 dg_12 rg_1 bgwhite pl_3 pr_3 pb_3 cg_s2_1">
 	<Header clases="col_12 tac c_3" title="Guía de estilos" />
-	
-	<FlipCard clases="col_12">
-		<Clases />
-		<Colores/>
-		<BasicHtml />
-		<Buttons />
-		<Componentes />
-		<Grid />
-	</FlipCard>
-	
+	<Code clases="col_12 col_s2_6 mh_5 dg_0 pcc">
+<span class="c_2">
+	// All sizes are based 
+	on these Phi proportions</span>
+$h6: 11.089rem;
+$h5: 6.854rem;
+$h4: 4.236rem;
+$h3: 2.618rem;
+$h2: 1.618rem;
+$h1: 1rem;
+$h0: 0.618rem;
+$h-1: 0.382rem;
+...
+	</Code>
+	<FlipCard clases="col_12 col_s2_6" />
 </Section>
 
+<!-- Styleguide -->
+<div class="col_12 dg">
+	<List tipo={3} variante={4} 
+	clases="col_13 col_s2_4 dg_0 pt_4 pl_3 pr_3 pb_3 pcs bgc_0 c_4">
+		{#each navOptions as option, i}
+			<ListItem tipo={3} alt={option.name} id={i} 
+			variante={4}
+			clases={intSelected==i ? "active" : ""}
+			on:click={changeComponent}>
+				{option.name}
+			</ListItem>
+		{/each}
+	</List>
+	
+	<div class="col_13 col_s2_9">
+		{#if intSelected == 0} 		<BasicHtml />
+		{:else if intSelected == 1} <Clases />
+		{:else if intSelected == 2} <Colores />
+		{:else if intSelected == 3} <Buttons />
+		{:else if intSelected == 4} <Componentes />
+		{:else if intSelected == 5} <Grid />
+		{:else}
+		No component loaded
+		{/if}
+	</div>
+
+</div>
 
 <!-- Banner -->
 <Section clases="dg rg_1 bgc_1 mh_10 mh_s2_5">

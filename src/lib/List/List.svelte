@@ -109,17 +109,22 @@
 	}
 	/* Nav horizontal grande */
 	.List_4 {
-		display: grid;
-		width: 100vw;
-		min-height: 50vh;
-		grid-template-columns: repeat(auto-fit, minmax(177px, 0.186fr));
+		/* display: grid;
+		width: 100vw; */
+		/* min-height: 50vh; */
+		grid-template-columns: repeat(auto-fit, minmax(170px, 1fr) );
+		grid-auto-rows: min-content;
+		grid-auto-flow: dense;
 		text-align: center;
-		place-content: center;
-		place-items: center;
+		/* place-content: center;
+		place-items: center; */
 
-		@include media(s3) {
-			grid-template-columns: repeat(auto-fit, minmax(245px, 0.186fr));
+		@include media(s2) {
+			padding-right: 0;
 		}
+		/* @include media(s3) {
+			grid-template-columns: repeat(auto-fit, minmax(245px, 0.186fr));
+		} */
 	}
 	.List_5 {
 		display: grid;
