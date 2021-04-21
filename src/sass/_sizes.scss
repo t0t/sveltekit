@@ -160,8 +160,8 @@ $button_4: ($h3 $h4);
 }
 
 // Box vertical sizing (based on viewport)
-// .mh_s2_3 {
-//     min-height: 75vh;
+// .mh_5 {
+//     min-height: 50vh;
 // }
 @for $i from 0 through 10 {
 	.mh_#{$i} {
@@ -175,7 +175,19 @@ $button_4: ($h3 $h4);
 		}
 	}
 }
-
+//Max height
+@for $i from 0 through 10 {
+	.maxh_#{$i} {
+		max-height: $i * 10vh;
+	}
+}
+@include media(s2) {
+	@for $i from 0 through 10 {
+		.maxh_s2_#{$i} {
+			max-height: $i * 10vh;
+		}
+	}
+}
 // Max width
 @for $i from 1 through 10 {
 	.mw_#{$i} {

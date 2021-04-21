@@ -12,12 +12,12 @@
 
 <style lang="scss">
 	@use "../../app.scss" as *;
-	$size: 15px;
+	$size: $h0;
 
 	.switch-cont {
-		position: absolute;
-		right: 0;
-		bottom: 1px;
+		position: relative;
+		/* right: 0;
+		top: 0; */
 
 		&:hover:after {
 			content: 'Auto-play';
@@ -25,7 +25,8 @@
 			position: absolute;
 			right: -$h3;
 			top: -$h2;
-			background-color: $highlight;
+			color: $grey_5;
+			background-color: $secondary;
 			text-align: center;
 			border-radius: $h0;
 			@include type-setting(-1);
@@ -35,7 +36,7 @@
 	/* The switch - the box around the slider */
 	.switch {
 		position: relative;
-		display: inline-block;
+		display: flex;
 		width: $size;
 		height: $size;
 	}
@@ -55,7 +56,7 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background-color: $grey_0;
+		background-color: red;
 		transition: 0.4s;
 	}
 
@@ -66,12 +67,13 @@
 		width: $size;
 		left: 0;
 		bottom: 0;
-		background-color: $highlight_1;
+		background-color: $secondary;
 		transition: 0.4s;
 	}
 
 	input:checked + .slider {
-		background-color: $highlight;
+		background-color: transparent;
+		border: 1px dashed white;
 	}
 
 	input:focus + .slider {

@@ -24,9 +24,9 @@
 
 	.Img_0 {
 		background-repeat: no-repeat;
-		background-size: cover;
+		background-size: contain;
 		background-position: center;
-		max-width: 100%;
+		width: 100%;
 		min-height: 50vh;
 		height: 100%;
 	}
@@ -70,8 +70,8 @@
 	}
 	.Img_5 {
 		background-size: cover;
-		// border-radius: 50%;
-		// width: 50vh;
+		/* // border-radius: 50%; */
+		/* // width: 50vh; */
 		min-height: 50vh;
 	}
 </style>

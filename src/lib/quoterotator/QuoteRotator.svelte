@@ -42,7 +42,7 @@
 	};
 </script>
 
-<div class="slideshow-container">
+<div class="slideshow-container dg">
 	<!-- THE QUOTE -->
 	{#key quote}
 		<Quote {quote} {author} {image} />
@@ -87,36 +87,42 @@
 	/* Slideshow container */
 	.slideshow-container {
 		position: relative;
-		height: 100%;
+		/* height: 100%; */
 	}
 
 	/* The dot/bullet/indicator container */
 	.dot-container {
-		position: absolute;
-		bottom: 20px;
-		left: 0;
-		margin-left: 43%;
-		width: 15%;
 		display: none;
 		@include media(s2) {
-			/* width: 30%; */
-			display: inherit;
+			position: absolute;
+			height: 50vh;
+			top: 0;
+			width: 10vw;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax($h0, 1fr) );
+			padding-bottom: $h2;
+			/* justify-content: space-evenly; */
+			place-items: center;
+			/* place-content: center; */
+			justify-self: center;
+			align-items: end;
 		}
 	}
 
 	/* Next & previous buttons */
 	.prev,
 	.next {
-		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		position: absolute;
-		top: 50%;
-		width: auto;
-		margin-top: -$h2;
-		padding: $h2;
+		top: 0;
+		height: 50vh;
+		width: $h4;
+		cursor: pointer;
 		color: $grey_0;
 		font-weight: bold;
 		@include type-setting(1);
-		border-radius: 50%;
 		user-select: none;
 	}
 
@@ -131,7 +137,7 @@
 
 	.prev:hover,
 	.next:hover {
-		background-color: rgba($black, 0.8);
+		background-color: rgba($black, 0.5);
 		color: $white;
 		text-decoration: none;
 	}

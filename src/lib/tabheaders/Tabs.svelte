@@ -24,15 +24,13 @@
 
 	{#each tabHeaders as item}
 		{#if activeTabValue == item.id}
-			<List tipo={5} variante={7}>
-				<div class="dg cg_s2_1 p_2 bgc_0 c_5">
-					<div class="col_13 col_s2_5">
-						<Img variante={5} src={item.img} alt={item.subtitle} />
-					</div>
 
-					<div class="col_13 col_s2_8">
-						<p>{@html item.content}</p>
-					</div>
+			<List tipo={5} variante={0}
+			clases="dg gc_58 gc_bp1_1 rg_1 p_3 bgc_0 cg_1 c_5">
+
+					<Img variante={1} src={item.img} alt={item.subtitle} clases="maxh_s2_5"/>
+
+					<p>{@html item.content}</p>
 
 					<!-- <div>
                         <List tipo={0} variante={1}>
@@ -44,8 +42,8 @@
                         </List>
                     </div> -->
 					<!-- </div> -->
-				</div>
 			</List>
+
 		{/if}
 	{/each}
 </div>

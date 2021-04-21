@@ -3,7 +3,7 @@
 	import ListItem from '$lib/List/ListItem.svelte';
 </script>
 
-<aside class="Links">
+<aside class="Links dg_0 rg_1">
 	<small>Follow me at:</small>
 
 	<List tipo={3} variante={1}>

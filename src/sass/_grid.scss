@@ -1,103 +1,3 @@
-.dg_0 {
-	display: grid;
-}
-.dg {
-	display: grid;
-	grid-template-columns: repeat(13, 1fr);
-}
-.dg_12 {
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-}
-
-@for $i from 1 through 13 {
-	.col_#{$i} {
-		grid-column: span ($i);
-	}
-}
-
-@include media(s1) {
-	@for $i from 1 through 13 {
-		.col_s1_#{$i} {
-			grid-column: span ($i);
-		}
-	}
-}
-
-@include media(s2) {
-	@for $i from 1 through 13 {
-		.col_s2_#{$i} {
-			grid-column: span ($i);
-		}
-	}
-}
-
-@include media(s3) {
-	@for $i from 1 through 13 {
-		.col_s3_#{$i} {
-			grid-column: span ($i);
-		}
-	}
-}
-
-@include media(s4) {
-	@for $i from 1 through 13 {
-		.col_s4_#{$i} {
-			grid-column: span ($i);
-		}
-	}
-}
-
-.slot_1 {
-	grid-area: __1;
-}
-
-.slot_2 {
-	grid-area: __2;
-}
-
-.slot_3 {
-	grid-area: __3;
-}
-
-.slot_4 {
-	grid-area: __4;
-}
-
-.slot_5 {
-	grid-area: __5;
-}
-
-.pic {
-	height: 100%;
-	place-items: center;
-}
-.pcc {
-	height: 100%;
-	place-content: center;
-	align-content: space-evenly;
-}
-.pcs {
-	place-content: start;
-}
-.pcc_0 {
-	height: 100%;
-	place-content: center;
-}
-
-.gap_0 {
-	gap: 0px;
-}
-.gap_1 {
-	gap: $h1;
-}
-.gap_2 {
-	gap: $h2;
-}
-.gap_3 {
-	gap: $h3;
-}
-
 // @import "./_sizes.scss";
 $size-scales: (-2: $h-1, -1: $h0, 0: $h1, 1: $h2, 2: $h3, 3: $h4, 4: $h5, 5: $h6, 6: $h6);
 
@@ -105,6 +5,47 @@ $size-scales: (-2: $h-1, -1: $h0, 0: $h1, 1: $h2, 2: $h3, 3: $h4, 4: $h5, 5: $h6
 	@return map-get($size-scales, $level);
 }
 
+.dg {
+	display: grid;
+}
+
+// columnas proporcionadas en base phi
+.gc_85 {
+	grid-template-columns: 8fr 5fr;
+}
+.gc_58 {
+	grid-template-columns: 5fr 8fr;
+}
+
+//columnas iguales
+.gc_22 {
+	grid-template-columns: 1fr 1fr;
+}
+
+.gc_333 {
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.gc_4444 {
+	grid-template-columns: repeat(4,1fr);
+}
+.gc_bp1_4444 {
+	@media (max-width: 700px) {
+		grid-template-columns: repeat(2,1fr);
+	}
+}
+.gc_bp0_1 {
+	@media (max-width: $bp2) {
+		grid-template-columns: 1fr;
+	}
+}
+.gc_bp1_1 {
+	@media (max-width: 700px) {
+		grid-template-columns: 1fr;
+	}
+}
+
+
+// Gaps
 // Gaps verticales
 // .gr_2 {
 //     row-gap: 2.618rem;
@@ -134,6 +75,81 @@ $size-scales: (-2: $h-1, -1: $h0, 0: $h1, 1: $h2, 2: $h3, 3: $h4, 4: $h5, 5: $h6
 		}
 	}
 }
+
+.cg_1 {
+	column-gap: 1rem;
+}
+
+.gap_0 {
+	gap: 0;
+}
+@for $i from 1 through 5 {
+	.g_#{$i} {
+		gap: sizes($i);
+	}
+}
+
+.gtcaf {
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.garmc {
+	grid-auto-rows: min-content;
+}
+.gafr {
+	grid-auto-flow: row;
+}
+
+// Place Items (afect children)
+.pic {
+	height: 100%;
+	place-items: center;
+}
+.pic_bp2 {
+	@media (min-width: 600px) {
+		place-items: center;
+	}
+}
+.pcc {
+	height: 100%;
+	place-content: center;
+	align-content: space-evenly;
+}
+.pcs {
+	place-content: start;
+}
+.pcc_0 {
+	height: 100%;
+	place-content: center;
+}
+.pse {
+	place-self: end;
+}
+.psc {
+	place-self: center;
+}
+.jse {
+	justify-self: end;
+}
+.jsc {
+	justify-self: center;
+}
+.jss {
+	justify-self: start;
+}
+
+// @for $i from 1 through 13 {
+// 	.col_#{$i} {
+// 		grid-column: span ($i);
+// 	}
+// }
+
+// @include media(s1) {
+// 	@for $i from 1 through 13 {
+// 		.col_s1_#{$i} {
+// 			grid-column: span ($i);
+// 		}
+// 	}
+// }
 
 .oh {
 	overflow: hidden;

@@ -9,7 +9,7 @@
 </script>
 
 <!-- Quote template -->
-<div class="mySlides" transition:fade style="background-image: url({image});">
+<div class="mySlides dg mh_5 p_3" transition:fade style="background-image: url({image});">
 	<Blockquote>
 		<q>{quote}</q> <br />
 		<span slot="author">&mdash; {author}</span>
@@ -21,10 +21,8 @@
 
 	.mySlides {
 		background-size: cover;
-		display: grid;
 		place-items: center;
 		width: 100%;
-		height: 100%;
 		text-align: center;
 		position: absolute;
 		/* margin-bottom: $h5; */

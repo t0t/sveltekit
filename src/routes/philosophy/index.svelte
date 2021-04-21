@@ -22,9 +22,8 @@
 	</div>
 </Section>
 
-<div class="dg rg_1 cg_s2_1 p_3 bgc_primary c_4">
-	<div class="col_13 col_s2_5">
-		<svg fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 193 169">
+<div class="dg gc_85 gc_bp0_1 rg_1 pic_bp2 p_3 bgc_primary cg_1 c_5">
+	<svg class="psc jse maxh_10 maxh_s2_5" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 193 169">
 			<path
 				fill="none"
 				stroke="#000"
@@ -42,53 +41,43 @@
 			<circle cx="76.9" cy="178.2" r="6" transform="translate(-17 -8) scale(.67024)" />
 			<circle cx="168.3" cy="178.2" r="6" transform="translate(-17 -8) scale(.67024)" />
 			<circle cx="123.2" cy="98.5" r="6" transform="translate(-17 -8) scale(.67024)" />
-		</svg>
-	</div>
-	<div class="col_13 col_s2_8">
-		<div class="dg">
-			<div class="col_13">
-				<Header tipo={2} variante={7} title="Tetractys" />
-			</div>
-			<div class="col_13">
-				<h3>Hacia el encuentro con todo lo que Es</h3>
-				<h4>
-					+0+1234 consiste en una hermenéutica de la Creación que observa experiencialmente sus
-					principios universales. Ancestralmente 5 símbolos numéricos representan las partes de Todo
-				</h4>
-			</div>
-			<List tipo={3} variante={2}>
-				<ListItem
-					tipo={2}
-					variante={0}
-					href="https://slides.com/sergiofores/"
-					alt=""
-					target="_blank"
-					rel="external"
-				>
-					<Button variante={3} text="Slides" />
-				</ListItem>
-				<ListItem
-					tipo={2}
-					variante={0}
-					href="https://docs.google.com/document/d/15oUQRghNb_lihCFGJ9Ls0z1PyihD_a18v1V3AohVqQ4/edit?usp=sharing"
-					alt=""
-					target="_blank"
-					rel="external"
-				>
-					<Button variante={3} text="Libro" />
-				</ListItem>
-			</List>
-		</div>
+	</svg>
+
+	<div class="dg garmc rg_1 jss">
+		<Header tipo={2} variante={7} title="Tetractys" />
+		<p>
+			<strong>Hacia el encuentro con todo lo que Es.</strong>
+			+0+1234 consiste en una hermenéutica de la Creación que observa experiencialmente sus principios universales. Ancestralmente 5 símbolos numéricos representan las partes de Todo.
+		</p>
+		<List tipo={3} variante={2} clases="">
+			<ListItem
+				tipo={2}
+				variante={0}
+				href="https://slides.com/sergiofores/"
+				target="_blank"
+				rel="external"
+			>
+				<Button variante={3} text="Slides" />
+			</ListItem>
+			<ListItem
+				tipo={2}
+				variante={0}
+				href="https://docs.google.com/document/d/15oUQRghNb_lihCFGJ9Ls0z1PyihD_a18v1V3AohVqQ4/edit?usp=sharing"
+				target="_blank"
+				rel="external"
+			>
+				<Button variante={3} text="Libro" />
+			</ListItem>
+		</List>
 	</div>
 </div>
 
-<div class="dg p_3 bgc_0 c_4 rg_1 cg_s2_1">
-	<div class="col_13 col_s2_8">
-		<Img src="./img/logo.svg" alt="" />
-	</div>
+<div class="dg gc_58 gc_bp0_1 rg_1 pic_bp2 pt_3 pr_3 pl_3 bgc_0 cg_1 c_5">
+	<Img clases="psc jse maxh_10 maxh_s2_5" src="./img/logo.svg" alt="" />
 
-	<div class="col_13 col_s2_5 dg_0 gap_1">
-		<Header tipo={2} variante={7} title="Hay una verdad que puede ser conocida…" />
+	<div class="dg garmc rg_1 jss">
+		<Header tipo={2} variante={7} 
+		title="Hay una verdad que puede ser conocida…" />
 		<p>
 			¿Percibes 2 ese orden 1 atravesándote 0 en la forma 4 del encuentro 3? Es lo inefable
 			conociéndose a través de la Creación. 01234 son las llaves de tus ojos. Éstas son las cosas
@@ -100,30 +89,24 @@
 			velado y lo revelado, como si lo uno no tuviera sentido sin lo otro.
 		</p>
 	</div>
+</div>
 
-	<div class="col_13 col_s2_5 dg_0 rg_1">
+<div class="dg gc_85 gc_bp0_1 rg_1 pic_bp2 pl_3 pr_3 pt_3 bgc_0 cg_1 c_5">
+	<div class="dg garmc rg_1 jss">
 		<Header tipo={1} variante={1} title="Sentir Orden Forma Conexión" />
-		<p>
-			Percibes cualquier cosa como lo que és; un símbolo. Funciona como un Tetris; el objetivo no es
-			amontonar piezas sino disolverlas, ¡que desaparezcan!
-		</p>
-		<p>Los 5 arjés. Estructura dinámica sobre la que se asienta toda la Creación.</p>
-		<p>
-			<strong>Y cuanto más perceptible es su inexistencia más presente está.</strong>
-		</p>
+		<p>Percibes cualquier cosa como lo que és; un símbolo. Funciona como un Tetris; el objetivo no es amontonar piezas sino disolverlas, ¡que desaparezcan!</p>
+		<p>Los 5 arjés. Estructura dinámica sobre la que se asienta toda la Creación. <strong>Y cuanto más perceptible es su inexistencia más presente está.</strong></p>
 	</div>
-	<div class="col_13 col_s2_8">
-		<img src="./img/01234_bn.svg" alt="" />
-	</div>
+	<img src="./img/01234_bn.svg" alt="" />
+</div>
 
-	<div class="col_13">
-		<Img src="./img/grafico-8.svg" alt="" />
-	</div>
+<div class="dg gc_85 gc_bp0_1 rg_1 pic_bp2 p_3 bgc_0 cg_1 c_5">
 
-	<div class="col_13">
+	<Img src="./img/grafico-8.svg" alt="" />
+
+	<div>
 		<p>
-			En ocasiones ni siquiera necesitas no estar viendo algo para estar viendo algo. Si vamos a
-			descifrar la Creación vamos a tener que acostumbrarnos a las paradojas.
+			En ocasiones ni siquiera necesitas no estar viendo algo para estar viendo algo. Si vamos a descifrar la Creación vamos a tener que acostumbrarnos a las paradojas.
 		</p>
 		<p>
 			Del griego hermeneutikos; Hermeneuo (Yo descifro) y Tekné (Arte, técnica, tejer). La
@@ -134,12 +117,9 @@
 	</div>
 </div>
 
-<div class="dg">
-	<div class="col_13 tac p_3">
-		<Header tipo={1} variante={3} title="Los 5 Principios Universales" subtitle="" />
-	</div>
-</div>
+<div class="dg tac">
+	<Header tipo={1} variante={3} clases="pt_3 pb_3"
+	title="Los 5 Principios Universales" subtitle="" />
 
-<Section id="principios">
 	<Tabs {tabHeaders} />
-</Section>
+</div>

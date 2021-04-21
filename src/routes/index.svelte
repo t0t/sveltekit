@@ -14,28 +14,21 @@
 </script>
 
 <!-- Cover -->
-<div class="dg">
-	<div class="bgc_primary c_5 mh_3 dg_0 pcc col_13 col_s2_5">
-		<Header tipo={2} variante={6} title="Sergio Forés" subtitle={coverData[0].subtitle} />
-	</div>
 
-	<div class="col_13 col_s2_8 col_s2_8 mh_s2_5">
-		<NavSecondary {secondaryNav} variante_item={1} variante_list={6} />
-	</div>
+<Header tipo={2} variante={6} 
+clases="dg pcc pt_3 pb_3" title="Sergio Forés" subtitle={coverData[0].subtitle} />
 
-	<div class="col_13 mh_5">
-		<QuoteRotator />
-	</div>
+<NavSecondary {secondaryNav} variante_item={1} variante_list={6} />
+
+<div class="mh_5">
+	<QuoteRotator />
 </div>
 
-<div class="dg p_3 bgc_primary rg_1 mh_s2_5">
-	<div class="col_13 col_s2_8 c_5 tac">
-		<Blockquote variante={1} text="Percibir la conexión esencial de todo" />
-	</div>
 
-	<div class="col_13 col_s2_5 ">
-		<Img variante={1} src="./img/02234-14.jpg" alt="Presentation" />
-	</div>
+<div class="dg p_3 bgc_primary rg_1 mh_s2_5">
+	<Blockquote variante={1} text="Percibir la conexión esencial de todo" />
+
+	<Img variante={1} src="./img/02234-14.jpg" alt="Presentation" />
 </div>
 
 <div class="col_s2_13 rg_1 p_3 dg_0 pcc bgc_0 c_4 tac mh_2 mh_s2_5">

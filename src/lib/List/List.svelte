@@ -70,7 +70,6 @@
 	}
 
 	.List_0 {
-		color: inherit;
 		text-align: left;
 	}
 	.List_1 {
@@ -79,7 +78,7 @@
 		grid-auto-flow: column;
 		place-items: center;
 		gap: $h1;
-		color: $grey_2;
+		/* color: $grey_2; */
 	}
 	/* Grouped borderer buttons */
 	.List_2 {

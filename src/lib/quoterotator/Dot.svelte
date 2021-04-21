@@ -18,13 +18,13 @@
 
 	.dot {
 		cursor: pointer;
-		height: 15px;
-		width: 15px;
+		height: $h0;
+		width: $h0;
 		/* margin: 0 5px; */
 		background-color: $grey_2;
 		border-radius: 50%;
 		/* border: 1px solid $grey_0; */
-		display: inline-block;
+		/* display: inline-block; */
 		transition: background-color 0.3s ease;
 	}
 
