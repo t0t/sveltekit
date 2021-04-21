@@ -26,11 +26,11 @@
 
 	// styleguide component
 	let selected = navOptions[0];
-	let intSelected = 0;
+	let selectedComp = 0;
 	function changeComponent(event) {
 		selected = navOptions[event.srcElement.id];
-		intSelected = event.srcElement.id;
-		console.log(intSelected)
+		selectedComp = event.srcElement.id;
+		console.log(selectedComp)
 	}
 </script>
 
@@ -146,37 +146,35 @@ $h-1: 0.382rem;
 </Section>
 
 <!-- Styleguide -->
-<div class="dg gc_58">
+<div class="dg gc_58 gc_bp0_1">
 	<List tipo={3} variante={4} 
 	clases="pl_3 pr_3 pb_3 pcs bgc_0 c_4">
 		{#each navOptions as option, i}
 			<ListItem 	tipo={3} alt={option.name} id={i} 
 						variante={4}
-						clases={intSelected==i ? "active" : ""}
+						clases={selectedComp==i ? "active" : ""}
 						on:click={changeComponent}>
 				{option.name}
 			</ListItem>
 		{/each}
 	</List>
 	
-	<div class="">
-		{#if intSelected == 0} 		<BasicHtml />
-		{:else if intSelected == 1} <Clases />
-		{:else if intSelected == 2} <Colores />
-		{:else if intSelected == 3} <Buttons />
-		{:else if intSelected == 4} <Componentes />
-		{:else if intSelected == 5} <Grid />
-		{:else}
-		No component loaded
-		{/if}
-	</div>
+	{#if selectedComp == 0} 	 <BasicHtml />
+	{:else if selectedComp == 1} <Clases />
+	{:else if selectedComp == 2} <Colores />
+	{:else if selectedComp == 3} <Buttons />
+	{:else if selectedComp == 4} <Componentes />
+	{:else if selectedComp == 5} <Grid />
+	{:else}
+	No component loaded
+	{/if}
 
 </div>
 
 <!-- Banner -->
-<Section clases="dg rg_1 bgc_1 mh_10 mh_s2_5">
-	<Img clases="col_13 col_s2_8 p_1" src="./img/grafico-11.svg" alt="" />
-	<div class="col_13 col_s2_5 dg_0 pcc c_4 p_3">
+<Section clases="dg gc_85 gc_bp0_1 rg_1 bgc_1 mh_10 mh_s2_5">
+	<Img clases="p_1" src="./img/grafico-11.svg" alt="" />
+	<div class="dg pcc c_4 p_3">
 		<Header tipo={3} variante={6} title="Download" subtitle="Actualización y mejora contínua" />
 
 		<List clases="mt_0" tipo={0} variante={0} marker="./img/marker.svg">

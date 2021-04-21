@@ -35,6 +35,7 @@ $size-scales: (-2: $h-1, -1: $h0, 0: $h1, 1: $h2, 2: $h3, 3: $h4, 4: $h5, 5: $h6
 		grid-template-columns: repeat(2,1fr);
 	}
 }
+// 1 columna para mobile
 .gc_bp0_1 {
 	@media (max-width: $bp2) {
 		grid-template-columns: 1fr;
