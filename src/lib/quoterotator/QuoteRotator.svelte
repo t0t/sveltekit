@@ -4,6 +4,7 @@
 	import Dot from './Dot.svelte';
 	import AutoPlayBtn from './AutoPlayBtn.svelte';
 
+	export let clases = "";
 	/* ADVANCE QUOTE */
 	let quoteIndex = 0;
 	$: quote = quotes[quoteIndex].quote;
@@ -42,7 +43,7 @@
 	};
 </script>
 
-<div class="slideshow-container dg">
+<div class="slideshow-container {clases}">
 	<!-- THE QUOTE -->
 	{#key quote}
 		<Quote {quote} {author} {image} />

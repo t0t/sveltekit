@@ -1,29 +1,26 @@
 <script>
     import Header from "$lib/Header.svelte"
     import Section from "$lib/Section.svelte"
-    // import Button from "$lib/Button.svelte"
-    // import Blockquote from "$lib/Blockquote.svelte"
-    // import Code from "$lib/Code/Code.svelte"
-    // import List from "$lib/List/List.svelte"
-    // import ListItem from "$lib/List/ListItem.svelte"
 </script>
 
+<!-- <Header tipo={4} clases="tac c_4 pb_2" title="Grid 13" /> -->
 
-<Section id="Grid" clases="c_4 bgc_0 pl_3 pr_3 pb_3">
-	<Header tipo={4} clases="tac c_4 pb_2" title="Grid 13" />
+<Section id="Grid" clases="c_4 bgc_0 pl_3 pr_3 pb_3 g_1">
 
-	<div class="dg rg_-1 c_0">
-		<div class="col_13 col_s1_5 col_s2_8  bgc_2 dg_0 pcc p_1">.col_8</div>
-		<div class="col_13 col_s1_8 col_s2_5  bgc_5 dg_0 pcc p_1">.col_5</div>
-		<div class="col_13 col_s1_8 col_s2_5  bgc_5 dg_0 pcc p_1">.col_5</div>
-		<div class="col_13 col_s1_5 col_s2_8  bgc_2 dg_0 pcc p_1">.col_8</div>
-		<div class="col_13 col_s2_1  bgc_3 dg_0 pcc p_1">.col_1</div>
-		<div class="col_13 col_s2_1 col_s2_1  bgc_1 c_4 dg_0 p_1 pcc">.col_1</div>
-		<div class="col_13 col_s1_5 col_s2_3  bgc_3 dg_0 pcc p_1">.col_3</div>
-		<div class="col_13 col_s1_3 col_s2_5  bgc_5 dg_0 pcc p_1">.col_5</div>
-		<div class="col_13 col_s1_5 col_s2_3  bgc_3 dg_0 pcc p_1">.col_3</div>
-		<div class="col_13 bgc_4 dg_0 pcc p_1">.col_13</div>
+	<div class="dg gc_58 bgc_5 pcc p_1">
+		<i>.col_5</i>
+		<i>.col_8</i>
 	</div>
+	<div class="dg gc_85 bgc_5 pcc p_1">.col_8</div>
+	<div class="dg gc_333 bgc_2 pcc p_1">
+		<i>.col_3</i>
+		<i>.col_3</i>
+		<i>.col_3</i>
+	</div>
+	<div class="dg gc_4444 bgc_3 pcc p_1">.col_3</div>
+	<div class="dg gc_4444 bgc_5 pcc p_1">.col_5</div>
+	<div class="dg gc_4444 bgc_3 pcc p_1">.col_3</div>
+	<div class="dg gc_4444 bgc_4 pcc p_1">.col_13</div>
 
 	<Header tipo={4} clases="tac c_4 pb_2 pt_2" title="Grid 12" />
 

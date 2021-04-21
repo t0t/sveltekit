@@ -4,7 +4,9 @@ $size-scales: (-2: $h-1, -1: $h0, 0: $h1, 1: $h2, 2: $h3, 3: $h4, 4: $h5, 5: $h6
 @function sizes($level) {
 	@return map-get($size-scales, $level);
 }
-
+.df {
+	display: flex;
+}
 .dg {
 	display: grid;
 }
@@ -110,9 +112,9 @@ $size-scales: (-2: $h-1, -1: $h0, 0: $h1, 1: $h2, 2: $h3, 3: $h4, 4: $h5, 5: $h6
 	}
 }
 .pcc {
-	height: 100%;
+	// height: 100%;
 	place-content: center;
-	align-content: space-evenly;
+	// align-content: space-evenly;
 }
 .pcs {
 	place-content: start;

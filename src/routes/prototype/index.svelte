@@ -44,9 +44,9 @@
 	subtitle={coverData[4].subtitle}
 />
 
-<Section clases="c_4 bgc_0 rg_1 bgwhite pr_3 pl_3 pt_1 cg_s2_1 dg">
-	<!-- <Prism clases="col_13 col_s2_8 mt_-4" language={codeData[1].language} code={codeData[1].text} /> -->
-	<Code clases="col_13 col_s2_8 mt_-4 mh_5 dg_0 pcc">
+<Section clases="dg gc_85 bgc_0 rg_1 bgwhite pr_3 pl_3 pt_1 cg_s2_1 c_4">
+
+	<Code clases="mt_-4 mh_5 dg_0 pcc">
 &#x3C;Header
 &#x9;clases = 'mh_5 tac c_white' 
 	tipo = ''
@@ -56,9 +56,9 @@
 &#x9;subtitle = ''
 /&#x3E;
 	</Code>
-	<div class="col_13 col_s2_5 dg_0 pcc">
-		<Header
-			tipo={3}
+
+	<div class="dg pcc">
+		<Header tipo={3}
 			variante={6}
 			title="Svelte Kit"
 			subtitle="Simbiosis perfecta entre CSS, HTML y JS"
@@ -71,8 +71,8 @@
 	</div>
 </Section>
 
-<Section clases="dg bgc_0 c_4 p_3 rg_1 cg_s2_2 pb_0">
-	<div class="col_13 col_s2_5">
+<Section clases="dg gc_58 bgc_0 c_4 p_3 rg_1 cg_s2_2 pb_0">
+	<div>
 		<p>
 			<strong>Un sistema de diseño basado en Sass con sintaxis minimalista.</strong>
 		</p>
@@ -97,11 +97,10 @@
 	&#x9;)
 )
 	</Code>
-	<!-- <Prism clases="col_13 col_s2_8" language={codeData[0].language} code={codeData[0].text} /> -->
 </Section>
 
-<Section clases="dg bgc_0 c_4 p_3 rg_1 cg_s2_2">
-	<Code clases="col_13 col_s2_8">
+<Section clases="dg gc_85 bgc_0 c_4 p_3 rg_1 cg_s2_2">
+	<Code>
 <span class="c_2">
 //	Con la orden 'git push' nuestro prototipo
 	viaja mágicamente por la red hasta su repositorio 
@@ -115,8 +114,8 @@ un entorno moderno de desarrollo necesita
 > npm run dev
 > npm run build
 	</Code>
-	<!-- <Prism clases="col_13 col_s2_8" language={codeData[2].language} code={codeData[2].text} /> -->
-	<List clases="col_13 col_s2_5" tipo={2} variante={0}>
+
+	<List tipo={2} variante={0}>
 		<dt>Control de versiones</dt>
 		<dd>
 			Gracias a Git tenemos diferentes ramas temporales de nuestro prototipo. Literalmente nuestro
@@ -126,9 +125,10 @@ un entorno moderno de desarrollo necesita
 </Section>
 
 <!-- Nomenclatura -->
-<Section id="Nomenclatura" clases="c_4 bgc_0 dg_12 rg_1 bgwhite pl_3 pr_3 pb_3 cg_s2_1">
-	<Header clases="col_12 tac c_3" title="Guía de estilos" />
-	<Code clases="col_12 col_s2_6 mh_5 dg_0 pcc">
+<Header clases="pb_3 bgc_0 tac c_3" title="Guía de estilos" />
+
+<Section id="Nomenclatura" clases="dg gc_22 c_4 bgc_0 rg_1 bgwhite pl_3 pr_3 pb_3 cg_s2_1">
+	<Code clases="mh_5 dg_0 pcc">
 <span class="c_2">
 	// All sizes are based 
 	on these Phi proportions</span>
@@ -142,24 +142,24 @@ $h0: 0.618rem;
 $h-1: 0.382rem;
 ...
 	</Code>
-	<FlipCard clases="col_12 col_s2_6" />
+	<FlipCard />
 </Section>
 
 <!-- Styleguide -->
-<div class="col_12 dg">
+<div class="dg gc_58">
 	<List tipo={3} variante={4} 
-	clases="col_13 col_s2_4 dg_0 pt_4 pl_3 pr_3 pb_3 pcs bgc_0 c_4">
+	clases="pl_3 pr_3 pb_3 pcs bgc_0 c_4">
 		{#each navOptions as option, i}
-			<ListItem tipo={3} alt={option.name} id={i} 
-			variante={4}
-			clases={intSelected==i ? "active" : ""}
-			on:click={changeComponent}>
+			<ListItem 	tipo={3} alt={option.name} id={i} 
+						variante={4}
+						clases={intSelected==i ? "active" : ""}
+						on:click={changeComponent}>
 				{option.name}
 			</ListItem>
 		{/each}
 	</List>
 	
-	<div class="col_13 col_s2_9">
+	<div class="">
 		{#if intSelected == 0} 		<BasicHtml />
 		{:else if intSelected == 1} <Clases />
 		{:else if intSelected == 2} <Colores />

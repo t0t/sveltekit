@@ -15,15 +15,13 @@
 
 <!-- My Philosophy -->
 <Section id="philosophy">
-	<div class="dg">
-		<div class="col_13 c_5 bgc_0 tac p_1">
-			<Header tipo={1} variante={3} title={coverData[3].title} subtitle={coverData[3].subtitle} />
-		</div>
-	</div>
+	<Header tipo={1} 
+	clases="c_2 bgc_0 tac mh_2"
+	title={coverData[3].title} subtitle={coverData[3].subtitle} />
 </Section>
 
-<div class="dg gc_85 gc_bp0_1 rg_1 pic_bp2 p_3 bgc_primary cg_1 c_5">
-	<svg class="psc jse maxh_10 maxh_s2_5" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 193 169">
+<div class="dg gc_85 gc_bp0_1 rg_1 pic_bp2 p_3 bgc_primary cg_1 c_5 mh_8">
+	<svg class="jse maxh_10 maxh_s2_5" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 193 169">
 			<path
 				fill="none"
 				stroke="#000"

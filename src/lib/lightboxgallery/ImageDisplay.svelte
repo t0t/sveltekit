@@ -14,7 +14,7 @@
 	@use "../../app.scss" as *;
 
 	.DemoGallery {
-		padding-bottom: $h3;
+		/* padding-bottom: $h3; */
 		text-align: center;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -34,7 +34,7 @@
 		place-self: center;
 
 		@include media(s2) {
-			margin: $h2;
+			/* margin: $h2; */
 			/* max-width: 50vw; */
 		}
 	}

@@ -1,11 +1,12 @@
 <script>
 	export let text = 'blockquote';
 
+	export let clases = "";
 	export let variante = 0;
 	let modificador = ['Blockquote_0', 'Blockquote_1'];
 </script>
 
-<blockquote class="{modificador[variante]} ">
+<blockquote class="{modificador[variante]} {clases}">
 	<slot>
 		<q>{text}</q>
 	</slot>
@@ -22,7 +23,6 @@
 
 	.Blockquote_0 {
 		max-width: 75%;
-
 		:global(span) {
 			@include type-setting(0);
 			font-style: normal;
@@ -34,9 +34,7 @@
 		font-weight: normal;
 		place-items: center;
 		height: 100%;
-		/* width: 100%; */
 		@include media(s2) {
-			/* max-width: 60%; */
 			@include type-setting(1);
 		}
 	}

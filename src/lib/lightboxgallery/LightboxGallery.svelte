@@ -15,16 +15,19 @@
 
 <!-- The Modal/Lightbox -->
 <div class={clases}>
+	
 	{#if modalOpen}
+	
 		<Lightbox on:click={() => (modalOpen = false)} {imageShowingIndex} />
+	
 	{:else}
-		<div class="col_13">
-			<ImageDisplay on:click={handleImgClick} />
-		</div>
+
+		<ImageDisplay on:click={handleImgClick} />
+	
 	{/if}
 	
 	<!-- Button to open Lightbox -->
-	<aside class="col_13">
+	<aside class="pt_3">
 		<Button variante={2} text="View All" on:click={() => (modalOpen = true)} />
 	</aside>
 </div>
