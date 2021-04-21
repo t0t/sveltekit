@@ -38,6 +38,7 @@
 
 <style lang="scss">
 	@use "../../app.scss" as *;
+
 	:global(a) {
 		@include type-setting(0);
 	}
@@ -69,17 +70,12 @@
 		display: grid;
 		place-content: center;
 		text-align: center;
-		/* height: auto; */
 		@include type-setting(0);
 		border-top: 0.5px solid $border_color;
-		/* background-color: $grey_5; */
 		padding-top: $h0;
 		padding-bottom: $h0;
 		padding-right: $h0;
-		/* &:last-child,
-		&:nth-child(3) {
-			border-top: none;
-		} */
+
 		&:hover {
 			color: $grey_5;
 			background-color: $grey_1;
@@ -88,11 +84,6 @@
 			border-left: 0.5px solid $border_color;
 			padding-bottom: $h0;
 			padding-left: $h0;
-			/* border-bottom: 0.5px solid $grey_1; */
-			/* &:nth-child(3),
-			&:nth-child(4) {
-				border-bottom: none;
-			} */
 		}
 	}
 	.ListItem_2 {
@@ -105,18 +96,16 @@
 		color: $grey_0;
 		align-self: start;
 	}
-
+	
+	/* Botonera styleguide */
 	.ListItem_4 {
-		/* boton Download */
 		@include type-setting(0);
 		padding: $h1;
-		/* color: inherit; */
 		align-self: start;
 		background-color: $secondary;
 		&:hover {
 			color: $grey_5;
 			filter: opacity(70%);
-			/* background-color: $grey_3; */
 		}
 		&.active {
 			color: $grey_1;

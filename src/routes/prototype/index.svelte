@@ -44,7 +44,7 @@
 	subtitle={coverData[4].subtitle}
 />
 
-<Section clases="dg gc_85 bgc_0 rg_1 bgwhite pr_3 pl_3 pt_1 cg_s2_1 c_4">
+<Section clases="dg gc_85 gc_bp0_1 bgc_0 rg_1 bgwhite pr_3 pl_3 pt_1 cg_s2_1 c_4">
 
 	<Code clases="mt_-4 mh_5 dg_0 pcc">
 &#x3C;Header
@@ -71,7 +71,7 @@
 	</div>
 </Section>
 
-<Section clases="dg gc_58 bgc_0 c_4 p_3 rg_1 cg_s2_2 pb_0">
+<Section clases="dg gc_58 gc_bp0_1 bgc_0 c_4 p_3 rg_1 cg_s2_2 pb_0">
 	<div>
 		<p>
 			<strong>Un sistema de diseño basado en Sass con sintaxis minimalista.</strong>
@@ -84,7 +84,7 @@
 		</p>
 	</div>
 
-	<Code clases="col_13 col_s2_8 dg_0 pcc mh_5">
+	<Code clases="dg pcc mh_5">
 @for $i from 1 through 13 (
 	&#x9;.col_(i)
 	&#x9;&#x9;grid-column: span (i);
@@ -99,7 +99,7 @@
 	</Code>
 </Section>
 
-<Section clases="dg gc_85 bgc_0 c_4 p_3 rg_1 cg_s2_2">
+<Section clases="dg gc_85 gc_bp0_1 bgc_0 c_4 p_3 rg_1 cg_s2_2">
 	<Code>
 <span class="c_2">
 //	Con la orden 'git push' nuestro prototipo
@@ -127,13 +127,11 @@ un entorno moderno de desarrollo necesita
 <!-- Nomenclatura -->
 <Header clases="pb_3 bgc_0 tac c_3" title="Guía de estilos" />
 
-<Section id="Nomenclatura" clases="dg gc_22 c_4 bgc_0 rg_1 bgwhite pl_3 pr_3 pb_3 cg_s2_1">
+<Section id="Nomenclatura" clases="dg gc_22 gc_bp0_1 c_4 bgc_0 rg_1 bgwhite pl_3 pr_3 pb_3 cg_s2_1">
 	<Code clases="mh_5 dg_0 pcc">
 <span class="c_2">
 	// All sizes are based 
 	on these Phi proportions</span>
-$h6: 11.089rem;
-$h5: 6.854rem;
 $h4: 4.236rem;
 $h3: 2.618rem;
 $h2: 1.618rem;
@@ -142,7 +140,9 @@ $h0: 0.618rem;
 $h-1: 0.382rem;
 ...
 	</Code>
-	<FlipCard />
+
+	<FlipCard clases="mh_5" />
+
 </Section>
 
 <!-- Styleguide -->
@@ -172,10 +172,11 @@ $h-1: 0.382rem;
 </div>
 
 <!-- Banner -->
-<Section clases="dg gc_85 gc_bp0_1 rg_1 bgc_1 mh_10 mh_s2_5">
-	<Img clases="p_1" src="./img/grafico-11.svg" alt="" />
-	<div class="dg pcc c_4 p_3">
-		<Header tipo={3} variante={6} title="Download" subtitle="Actualización y mejora contínua" />
+<Section clases="dg gc_85 gc_bp0_1 rg_1 bgc_1  mh_s2_5 p_3">
+	<Img src="./img/grafico-11.svg" alt="" />
+	<div class="dg pcc c_4">
+		<Header tipo={3} variante={6} title="Download" 
+		subtitle="Actualización y mejora contínua" />
 
 		<List clases="mt_0" tipo={0} variante={0} marker="./img/marker.svg">
 			<ListItem tipo={0} variante={6}>Simple, ligero, limpio y claro.</ListItem>
@@ -188,8 +189,8 @@ $h-1: 0.382rem;
 	</div>
 </Section>
 
-<Section id="UIPrototype" clases="dg pt_3 tac bgc_4">
-	<Header clases="col_13 pb_3" tipo={1} variante={1} title="Notas acerca de esta web" />
+<Section id="UIPrototype" clases="dg tac bgc_4">
+	<Header clases="pt_3 pb_3" tipo={1} variante={1} title="Notas acerca de esta web" />
 
-	<Tabs clases="col_13 pl_3 pr_3" {tabHeaders} />
+	<Tabs clases="" {tabHeaders} />
 </Section>
